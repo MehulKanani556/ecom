@@ -1,0 +1,1020 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+}
+
+/* Login with Email & Mobile */
+.dk_login_with_email{
+    padding: 90px 0px;
+}
+.dk_login_with_email_info h4{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: center;
+    color: #000000;
+    padding-top: 60px;
+}
+.dk_login_form{
+    padding-top: 100px;
+    width: 500px;
+    height: 458px;
+}
+.dk_login_sub{
+    padding: 50px 50px 30px 50px;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+
+}
+.dk_login_sub h4{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31.47px;
+    text-align: center;
+    color: #000000;    
+}
+.dk_login_sub p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: center;
+    color: #727272;
+}
+
+.dk_custom_label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: gray;
+  }
+  
+.dk_custom_input_group {
+    position: relative;
+    margin-top: 20px;
+  }
+.dk_register{
+    padding-top: 80px;
+  }
+  
+.dk_custom_input {
+    border-radius: 8px;
+    border: 1px solid #727272 !important;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: none;
+  }
+  
+.dk_custom_input:focus {
+    border-color: #727272 !important;
+    box-shadow: none !important;
+  }
+.dk_login_sub h5{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: center;  
+    padding-top: 40px;
+    padding-bottom: 24px;
+}  
+.dk_deco{
+    font-weight: 500;
+    color: #000000;
+} 
+.dk_deco:hover{
+    color: #000000;
+} 
+.dk_continue{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #FFFFFF;
+    background-color: #040404;
+    width: 100%;
+    padding: 13px 0px;
+}
+.dk_login_sub h6{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #727272;
+    text-align: center;
+    padding-top: 44px;
+}
+/* ********verify with password********** */
+.dk_checkbox{
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+}
+.dk_checkbox input{
+    width: 15px;
+    height: 15px;
+}
+.dk_checkbox p{
+    font-weight: 400;
+    font-size: 14px; 
+    color: #000000;
+    padding-left: 8px;
+}
+/* ***************************************/
+/**************forget password ********* */
+.dk_continue_main{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+/************* otp verification**********/
+.dk_otp_main {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    justify-content: space-between;
+}
+
+.dk_otp_box {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 20px;
+    border: 0.75px solid #727272;
+    border-radius: 2px;
+}
+
+.dk_otp_box:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* **************************************** */
+
+/* ********** reset password  ************ */
+.dk_reset_password{
+    padding-top: 50px;
+}
+/* **************************************** */
+
+/* *********** signup page *************** */
+.dk_verify{
+    padding-top: 40px;
+}
+
+/* **************************************** */
+
+/* ************** home page *************** */
+.logo{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.dk_location{
+    font-size: 18px;
+}
+.dk_language_dropdown{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.dk_dropdown{
+    padding-left: 15px;
+}
+.dk_country{
+    padding-left: 10px;
+}
+.dk_dropdown .btn:focus{
+    box-shadow: none !important;
+}
+.dk_country_img img{
+    width: 24px;
+    height: 24px;
+}
+.dk_second_nav{
+    background-color: #000;
+    padding: 10px 0;
+    color: #fff;
+}
+.dk_second_nav_sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.dk_logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.dk_categories select {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+}
+.dk_categories select option{
+    background-color: #fff;
+    color: #000;
+}
+.dk_search_bar{
+    width: 800px;
+}
+.dk_search_bar input {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+.dk_icons {
+    display: flex;
+    gap: 20px;
+}
+
+.dk_icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.dk_icons a:hover{
+    color: #fff;
+}
+
+.dk_icon i {
+    margin-right: 5px;
+}
+.btn-secondary {
+    background-color: #000 !important;
+    color: #fff;
+    border: none !important;
+}
+.btn-secondary:focus{
+    box-shadow: none !important;
+}
+.dk_categories_name{
+    margin-left: 50px;
+}
+
+/******** deals_discounts******/
+.dk_banner{
+    background-image: url(../img/leptop.jfif);
+    width: 100%;
+    height: 825px;
+    background-position:center center;
+    background-position-y: 56%;
+    background-size: cover;
+    position: relative;
+}
+.dk_banner::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dk_banner2{
+    background-image: url(../img/watch.png);
+    width: 100%;
+    height: 825px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.dk_banner2::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.dk_banner3{
+    background-image: url(../img/young-friends-sitting-curb-city\ 1.png);
+    width: 100%;
+    height: 825px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.dk_banner3::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.dk_banner_info{
+    text-align: center;
+    position: absolute;
+    bottom: 9%;
+    right: 37%;
+    z-index: 999;
+}
+.dk_banner_info p{
+    /* width: 468px; */
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 40.28px;
+    letter-spacing: 3px;
+    /* text-align: center; */
+    color: #FFFFFF;
+}
+.dk_shop_now{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 13px 50px;
+    border: none;
+    border-radius: 4px solid white;
+}
+.dk_shop_now:hover{
+    color: #FFFFFF;
+    background-color: #000000;
+}
+.dk_banner2_info p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.3px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+    text-align: center;
+}
+.dk_banner2_info h2{
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 87.84px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+}
+.dk_banner2_info{
+    position: absolute;
+    top: 32%;
+    right: 37%;
+    z-index: 999;
+}
+.dk_banner3_info p{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;  
+    color: #FFFFFF;
+}
+.dk_banner3_info h2{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.dk_banner3_info{
+    position: absolute;
+    top: 76%;
+    right: 41%;
+    z-index: 999;
+}
+.dk_watch{
+    font-size: 70px;
+    font-weight: 600;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}
+
+/* *********fashion list********** */
+.dk_fashion_list{
+    padding: 50px 0px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .swiper-slide img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .swiper-slide p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+.dk_men_slider{
+    display: block !important;
+}
+
+/* *************shoes***************** */
+.product-section {
+    background-image: url(../img/FOOTWEAR\ &\ HANDBAGS.png);
+    /* padding: 60px 0px; */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white; 
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: 90%;
+    background-position-y: 30%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 120px 0px 40px 0px;
+  }
+  
+  .product-item {
+    width: 213px;
+  }
+  .product-item img {
+    width: 213px;
+    height: auto;
+  }
+  
+  .product-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+
+  /* Best Of Electronics */
+  .dk_best_electronics_mian{
+    padding: 60px 0px;
+  }
+  .best-electronics {
+    padding: 20px;
+    text-align: center;
+}
+
+.best-electronics h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.dk_product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dk_product-item {
+    flex: 1 1 calc(20% - 40px); /* Five items per row at large screens */
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    max-width: 200px; /* Adjust width to fit 5 per row */
+    text-align: center;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+
+}
+
+.dk_product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dk_product-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Women’s Collections */
+.dk_women_collation{
+    background-image: url(../img/new\ arrival.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #000000;
+    padding: 55px 0px;
+    text-align: center;
+    background-position-y: 100%;
+}
+.dk_women_collation h2{
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 53.25px;
+    letter-spacing: 0.03em;
+    color: #FAFAFA;
+}
+.dk_women_collation p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #FAFAFA;    
+}
+
+/********* Women’s Cards **************/
+ .dk_women_card_main{
+    padding: 80px 0px;
+}
+.dk_women_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    /* width: 300px; */
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+
+}
+.card h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: left;
+    color: #000000;
+}
+.card p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    color: #000000;
+}
+
+.icon-container {
+    display: none; 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+}
+
+.card:hover .icon-container {
+    display: flex; 
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+}
+
+.slider-image {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px;
+}
+
+.slider-image.active {
+    display: block; 
+}
+
+.dots-container {
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px; 
+    background-color: #bbb; 
+    border-radius: 50%; 
+    display: inline-block;
+    cursor: pointer; 
+}
+
+.dot.active {
+    background-color: #000000;
+}
+
+.thumbnails {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 20%; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1); 
+}
+.off{
+    margin-top: 10px;
+}
+.off-price{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #0F993E;
+}
+.discount-price {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;   
+    color: #000000;
+    font-size: 1.2rem; 
+}
+
+.original-price {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;      
+    text-decoration: line-through;
+    color: #888; 
+}
+
+.buy-now {
+    display: none; 
+    margin-top: 15px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card:hover .buy-now {
+    display: block; 
+}
+.card:hover .off{
+    display: none !important;
+}
+.card:hover .price{
+    display: none;
+}
+
+/* perfume */
+.dk_perfume {
+    background-image: url(../img/perfume.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    padding: 10vw 0; 
+    text-align: center;
+    position: relative;
+}
+
+
+.dk_perfume h3 {
+    font-size: calc(1.5rem + 1.5vw); 
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #FAFAFA;
+}
+
+.dk_perfume p {
+    font-size: calc(1rem + 0.8vw);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FAFAFA;
+}
+
+.dk_perfume .dk_shop_now {
+    font-size: calc(0.8rem + 0.6vw); 
+    padding: 1vw 2vw;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/***** Best Sellers**** */
+.dk_best_sellers {
+    padding: 50px 0px 80px 0px;
+}
+.dk_best_sellers h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 40px;
+}
+.dk_bedge {
+    width: 110px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 9999;
+}
+.dk_bedge p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    text-align: left;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-align: center;
+    padding: 7px 0px;
+}
+
+.dk_best_seller_card {
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+}
+.dk_best_seller_card h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dk_best_seller_slider {
+    position: relative;
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+}
+
+.dk_best_seller_slider .owl-dots .owl-dot.active span{
+    background-color: black !important;
+}  
+
+
+.dk_best_seller_dots-container {
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.dk_best_seller_dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px; 
+    background-color: #bbb; 
+    border-radius: 50%; 
+    display: inline-block;
+    cursor: pointer; 
+}
+
+.dk_best_seller_dot.active {  /* Corrected this line */
+    background-color: #000000; /* Change the background color when active */
+}
+
+.dk_best_seller_thumbnails {
+    display: flex;
+    margin-top: 10px;
+}
+
+.dk_best_seller_thumbnails img {
+    width: 20%; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dk_best_seller_thumbnails img:hover {
+    transform: scale(1.1); 
+}
+.dk_best_seller_off {
+    margin-top: 10px;
+}
+.dk_best_seller_off-price {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #0F993E;
+    padding-top: 10px;
+}
+.dk_best_seller_discount-price {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;   
+    color: #000000;
+    font-size: 1.2rem; 
+}
+
+.dk_best_seller_original-price {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;      
+    text-decoration: line-through;
+    color: #727272; 
+}
+.dk_best_seller_slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: black !important;
+}
+
+
+.dk_caro_img{
+    height: 200px;
+    width: 200px;
+}
+
+.object_cover{
+    object-fit: contain;
+}
+
+/* SAMSUNG GALAXY S24 ULTRA */
+.dk_samsung{
+    background-image: url(../img/sumsung\ background.png);
+    width: 100%;
+    height: 554px;
+    background-position:center center;
+    background-position-y: 56%;
+    background-size: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.dk_samsung::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.dk_samsung2{
+    background-image: url(../img/sumsung_blackground2.png);
+    width: 100%;
+    height: 554px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.dk_samsung2::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.dk_samsung3{
+    background-image: url(../img/sumsung_blackground3.png);
+    width: 100%;
+    height: 554px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.dk_samsung3::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+/* .dk_samsung_info {
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    top: 33%;
+    right: 38%;
+}
+
+.dk_samsung_info h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60.51px;
+    color: #FFFFFF;
+}
+.dk_samsung_info p{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.dk_samsung2_info{
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    top: 33%;
+    right: 31%;
+}
+.dk_samsung2_info h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60.51px;
+    text-align: center;    
+    color: #FFFFFF;
+}
+.dk_samsung2_info p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;    
+    color: #FFFFFF;
+}
+
+.dk_samsung3_info{
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    top: 33%;
+    left: 5%;
+}
+.dk_samsung3_info h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60.51px;
+    text-align: center;      
+    color: #FFFFFF;
+}
+.dk_samsung3_info p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;        
+    color: #FFFFFF;
+} */
+.dk_samsung,
+.dk_samsung2,
+.dk_samsung3 {
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    /* height: 554px; */
+    height: 100%;
+    position: relative;
+}
+
+.dk_samsung_info{
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px; 
+    top: 30%;
+    right: 1%;
+} 
+.dk_samsung2_info {
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px; 
+    top: 32%;
+    left: 2%;
+}
+.dk_samsung3_info {
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+    top: 32%;
+    right: 27%; 
+}
+
+.dk_samsung_info h2, 
+.dk_samsung2_info h2, 
+.dk_samsung3_info h2 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.dk_samsung_info p, 
+.dk_samsung2_info p, 
+.dk_samsung3_info p {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}

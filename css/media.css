@@ -1,0 +1,1023 @@
+/* perfume */
+@media (min-width: 1440px) {
+    .dk_perfume {
+        padding: 124px 0 90px 0;
+        background-size: 100%;
+    }
+    .dk_perfume h3 {
+        font-size: 40px;
+    }
+    .dk_perfume p {
+        font-size: 28px;
+    }
+}
+@media(max-width:1440px){
+    /* OTP Verification */
+    .dk_otp_main {
+        /* width: 40%; */
+        margin: auto;
+    }
+    /* .dk_second_nav_sub {
+        padding: 0 20px;
+    } */
+
+    .dk_search_bar {
+        max-width: 600px;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 9%;
+        right: 34%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 72px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 35%;
+        z-index: 999;
+    }
+    .product-section {
+        background-position-y: 20%;
+    }
+    .dk_women_collation{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #000000;
+        padding: 60px 0px;
+        text-align: center;
+        background-position-y: 98%;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        top: 35%;
+    }
+
+}
+/* perfume */
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .dk_perfume {
+        padding: 120px 0px 60px 0px;
+    }
+    .dk_perfume h3 {
+        font-size: 32px;
+    }
+    .dk_perfume p {
+        font-size: 22px;
+    }
+}
+/* perfume  */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .dk_perfume {
+        padding: 100px 0px 50px 0px;
+        background-size: contain; /* Adjust background image to contain */
+    }
+    .dk_perfume h3 {
+        font-size: 28px;
+    }
+    .dk_perfume p {
+        font-size: 20px;
+    }
+}
+@media(max-width:1199px){
+    /* Login with Email & Mobile */
+    .dk_login_form {
+        padding-top: 56px;
+    }
+    .dk_register{
+        padding-top: 40px;
+    }
+    .dk_search_bar{
+        margin-right: 25px;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 9%;
+        right: 31%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 62px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 30%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 73%;
+        right: 35%;
+        z-index: 999;
+    }
+    .product-section {
+        background-position-y: 21%;
+    }
+    /* Best Of Electronics */
+    .dk_product-item {
+        flex: 1 1 calc(25% - 40px); /* Four items per row */
+      }
+    /* Women’s cards */
+      .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 120px;
+    }
+    .thumbnails img {
+        width: 14%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung3_info {
+        position: absolute;
+        z-index: 999;
+        text-align: center;
+        width: 100%;
+        padding: 0 15px;
+        top: 32%;
+        right: 19%; 
+    }
+}
+/* OTP Verification */
+@media (max-width: 1024px) {
+    .dk_otp_box {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    .dk_categories_name{
+        margin-left: 40px;
+    }
+    .dk_continue_main{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    /* ******* */
+    .dk_banner,
+    .dk_banner2,
+    .dk_banner3 {
+        height: 600px;
+    }
+
+    .dk_banner_info p,
+    .dk_banner2_info h2,
+    .dk_banner3_info h2 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .dk_shop_now {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+
+    .dk_banner_info {
+        bottom: 15%;
+        right: 30%;
+    }
+
+    .dk_banner2_info {
+        top: 35%;
+        right: 30%;
+    }
+
+    .dk_banner3_info {
+        top: 70%;
+        right: 35%;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 9%;
+        right: 32%;
+        z-index: 999;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 36%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 38%;
+        z-index: 999;
+    }
+    .product-section {
+        background-position-y: 21%;
+    }
+    /* Best Of Electronics */
+    .dk_product-item {
+        flex: 1 1 calc(33.33% - 40px); /* Three items per row */
+    }
+    .dk_women_collation {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #000000;
+        padding: 24px 0px;
+        text-align: center;
+        background-position-y: 98%;
+    }
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 115px;
+    }
+    .thumbnails img {
+        width: 15%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    /* perfume */
+    .dk_perfume {
+        padding: 8vw 0;
+    }
+    .dk_perfume h3 {
+        font-size: 28px;
+    }
+    .dk_perfume p {
+        font-size: 20px;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2, 
+    .dk_samsung2_info h2, 
+    .dk_samsung3_info h2 {
+        font-size: 40px;
+    }
+
+    .dk_samsung_info p, 
+    .dk_samsung2_info p, 
+    .dk_samsung3_info p {
+        font-size: 24px;
+    }
+
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        top: 21%;
+    }
+    /* .dk_samsung,
+    .dk_samsung2,
+    .dk_samsung3 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+   } */
+   .dk_samsung, .dk_samsung2, .dk_samsung3 {
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 344px;
+    position: relative;
+}
+}
+@media(max-width:991px){
+    /* Login with Email & Mobile */
+    .dk_login_form{
+        padding-top: 30px;
+    }
+    .dk_login_sub h6 {
+        padding-top: 26px;
+    }
+    .dk_login_sub {
+        padding: 30px 30px 30px 30px;
+    }
+    .dk_continue {
+        padding: 7px 0px;
+    }
+    .dk_login_sub h5 {
+        padding-top: 19px;
+        padding-bottom: 12px;
+    }
+    /* reset password */
+    .dk_reset_password{
+        padding-top: 30px;
+    }
+    .dk_register{
+        padding-top: 25px;
+      }
+    .dk_login_with_email_info h4 {
+        padding-top: 25px;
+    }
+    .dk_categories_name{
+        margin-left: 30px;
+    }
+    .dk_watch {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .product-section {
+       background-image: none;
+    }
+    .product-grid {
+        justify-content: space-between;
+      }
+      /* Women’s cards */
+      .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 70px;
+    }  
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung3_info {
+        position: absolute;
+        z-index: 999;
+        text-align: center;
+        width: 100%;
+        padding: 0 15px;
+        top: 32%;
+        right: 17%; 
+    }
+}
+
+@media(max-width:767px){
+    .dk_login_form {
+        height: 420px;
+    }
+    .dk_register{
+        padding-top: 25px;
+      }
+    .dk_categories_name{
+        margin-left: 20px;
+    }
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 20px;
+    }
+}
+
+@media(max-width:768px){
+     /* Login with Email & Mobile */
+    .dk_login_sub {
+        padding: 30px 30px 30px 30px;
+    }
+    .dk_login_with_email {
+        padding: 80px 0px;
+    }
+    .dk_continue {
+        font-size: 16px;
+        padding: 5px 0px;
+    }
+    .dk_login_form{
+        padding-top: 30px;
+    }
+    /* OTP Verification */
+    .dk_otp_main {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px 0;
+    }
+
+    .dk_otp_box {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    /* sign_up */
+    .dk_login_with_email {
+        padding: 40px 0px;
+    }
+
+    .dk_login_sub {
+        padding: 30px 20px;
+    }
+    /* .row {
+        flex-direction: column;
+        align-items: center;
+    } */
+    .col-xl-5, .col-lg-6, .col-md-6 {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .dk_login_with_email_image img {
+        max-width: 100%;
+        height: 100%;
+    }
+    .dk_login_form {
+        padding-top: 30px;
+    }
+
+    .dk_login_with_email_info h4 {
+        padding-top: 30px;
+    }
+    .dk_logo {
+        font-size: 20px;
+    }
+
+    .dk_categories_name {
+        margin-left: 20px;
+    }
+
+    .dk_search_bar {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .dk_icons {
+        gap: 10px;
+    }
+
+    .dk_icon {
+        font-size: 16px;
+    }
+    /* ********* */
+    .dk_banner,
+    .dk_banner2,
+    .dk_banner3 {
+        height: 500px;
+    }
+
+    .dk_banner_info p,
+    .dk_banner2_info h2,
+    .dk_banner3_info h2 {
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+    .dk_shop_now {
+        font-size: 16px;
+        padding: 8px 30px;
+    }
+
+    .dk_banner_info {
+        bottom: 10%;
+        right: 25%;
+    }
+
+    .dk_banner2_info {
+        top: 40%;
+        right: 25%;
+    }
+
+    .dk_banner3_info {
+        top: 60%;
+        right: 30%;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 10%;
+        right: 29%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 33%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 37%;
+        z-index: 999;
+    }
+    .dk_login_main_content{
+        position: relative;
+    }
+    .dk_from_abso{
+        position: absolute;
+        top: 2%;
+    }
+    .dk_login_with_email_image img{
+        opacity: 0.2;
+    }
+    .form-control {
+        background-color: transparent !important;
+    }
+    .dk_custom_label {
+        position: absolute;
+        top: -22px;
+        left: -1px;
+        padding: 0 5px;
+        font-size: 16px;
+        background-color: transparent;
+    }
+    .dk_continue_main{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .dk_login_with_email_image2 img{
+        opacity: 0.2;
+    }
+    /* Best Of Electronics */
+    .dk_product-item {
+        flex: 1 1 calc(50% - 40px); /* Two items per row */
+    }
+    /* perfume */
+    .dk_perfume {
+        padding: 6vw 0;
+    }
+    .dk_perfume h3 {
+        font-size: 24px;
+    }
+    .dk_perfume p {
+        font-size: 18px;
+    }
+    /* Best Sellers */
+    .dk_best_sellers {
+        padding: 50px 0px;
+    }
+    /* Women’s cards */
+    .dk_women_card_main {
+        padding: 50px 0px;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2, 
+    .dk_samsung2_info h2, 
+    .dk_samsung3_info h2 {
+        font-size: 35px;
+    }
+
+    .dk_samsung_info p, 
+    .dk_samsung2_info p, 
+    .dk_samsung3_info p {
+        font-size: 20px;
+    }
+
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        top: 25%;
+    }
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        left: 0;
+        right: 0;
+    }
+    .dk_samsung,
+    .dk_samsung2,
+    .dk_samsung3 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+ } 
+/* signup */
+@media (max-width: 576px) {
+    .dk_login_sub {
+        padding: 20px 15px;
+    }
+
+    .dk_custom_input {
+        font-size: 14px;
+    }
+
+    .dk_continue {
+        font-size: 16px;
+    }
+
+    .dk_login_sub h6 {
+        font-size: 12px;
+    }
+    .dk_continue_main{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .dk_register{
+        padding-top: 20px;
+    }
+    .dk_categories_name{
+        margin-left: 20px;
+    }
+    .dk_second_nav_sub{
+        display: block;
+    }
+    .dk_search_bar{
+        margin: 10px 0px;
+    }
+    .dk_logo {
+        justify-content: space-between;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 9%;
+        right: 21%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 38px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 28%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 34%;
+        z-index: 999;
+    }
+    .dk_women_collation{
+        background-image: none;
+         width: 100%;
+         background-repeat: no-repeat;
+         background-size: 100%;
+         background-color: #000000;
+         padding: 55px 0px;
+         text-align: center;
+     }
+     /* Women’s cards */
+     .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 125px;
+    }
+    .thumbnails img {
+        width: 14%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    /* Best Sellers */
+    .dk_best_sellers {
+        padding: 40px 0px;
+    }
+    /* Women’s cards */
+    .dk_women_card_main {
+        padding: 40px 0px;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA  */
+    .dk_samsung,
+    .dk_samsung2,
+    .dk_samsung3 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    }
+    .dk_samsung_info h2, 
+    .dk_samsung2_info h2, 
+    .dk_samsung3_info h2 {
+       font-size: 45px;
+       font-weight: 600;
+       line-height: 1.2;
+       color: #fff;
+}
+
+   .dk_samsung_info p, 
+   .dk_samsung2_info p, 
+   .dk_samsung3_info p {
+      font-size: 27px;
+      font-weight: 400;
+      color: #fff;
+}
+}
+    /* OTP Verification */
+@media (max-width: 480px) {
+    .dk_register{
+        padding-top: 10px;
+      }
+    .dk_otp_main {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dk_otp_box {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    /* verify with mobile */
+    .dk_otp_main {
+        padding: 30px 0;
+    }
+    /* home page */
+    .dk_dropdown{
+        padding-left: 10px;
+    }
+     /* ******************* */
+    
+    .dk_categories_name{
+        margin-left: 10px;
+    }
+    .dk_second_nav_sub {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dk_logo {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .dk_categories_name {
+        margin-left: 0;
+    }
+
+    .dk_search_bar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dk_icons {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dk_icon {
+        font-size: 14px;
+    }
+
+    .dk_categories_name .btn {
+        width: 100%;
+    }
+    .dk_logo {
+        justify-content: space-between;
+    }
+    /* ******* */
+    .dk_banner,
+    .dk_banner2,
+    .dk_banner3 {
+        height: 400px;
+    }
+
+    .dk_banner_info p,
+    .dk_banner2_info h2,
+    .dk_banner3_info h2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .dk_shop_now {
+        font-size: 14px;
+        padding: 6px 20px;
+    }
+
+    .dk_banner_info {
+        bottom: 8%;
+        right: 20%;
+    }
+
+    .dk_banner2_info {
+        top: 45%;
+        right: 20%;
+    }
+
+    .dk_banner3_info {
+        top: 55%;
+        right: 25%;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 12%;
+        right: 25%;
+        z-index: 999;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 28%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 31%;
+        z-index: 999;
+    }
+    .product-grid {
+        justify-content: center;
+      }
+    .dk_login_with_email_image2 img{
+        opacity: 0.2;
+        height: 650px;
+    }  
+    /* Best Of Electronics */
+    .dk_product-item {
+        flex: 1 1 calc(100% - 40px); /* One item per row */
+    }
+    .dk_women_collation h2 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 48.25px;
+        letter-spacing: 0.03em;
+        color: #FAFAFA;
+    }
+    .dk_women_collation p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+        color: #FAFAFA;
+    }
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 88px;
+    }
+    .thumbnails img {
+        width: 14%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    /* perfume */
+    .dk_perfume {
+        padding: 4vw 0;
+    }
+    .dk_perfume h3 {
+        font-size: 20px;
+    }
+    .dk_perfume p {
+        font-size: 16px;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2, 
+    .dk_samsung2_info h2, 
+    .dk_samsung3_info h2 {
+        font-size: 28px;
+    }
+
+    .dk_samsung_info p, 
+    .dk_samsung2_info p, 
+    .dk_samsung3_info p {
+        font-size: 18px;
+    }
+
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        top: 26%;
+    }
+
+    .dk_shop_now {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width:425px){
+    /* Login with Email & Mobile */
+    .dk_login_with_email {
+        padding: 50px 0px;
+    }
+    .dk_login_form{
+        padding-top: 10px;
+    }
+    /* home page */
+    .dk_location{
+        font-size: 10px;
+    }
+    .dk_dropdown{
+        padding-left: 0px;
+    }
+    .dk_country{
+        padding-left: 0px;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 10%;
+        right: 22%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 33px;
+        font-weight: 600;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 31%;
+        z-index: 999;
+    }
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 60px;
+    }
+    .thumbnails img {
+        width: 17%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+}
+@media (max-width: 375px) {
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 10%;
+        right: 18%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 33px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 24%;
+        z-index: 999;
+    }
+    .dk_banner3_info{
+        position: absolute;
+        top: 62%;
+        right: 29%;
+        z-index: 999;
+    }
+    .dk_login_with_email_info h4 {
+        padding-top: 0px;
+    }
+    .dk_login_sub {
+        padding: 13px 15px;
+    }
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 30px;
+    }
+    .thumbnails img {
+        width: 18%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+}
+/* OTP Verification */
+@media (max-width: 320px) {
+    .dk_otp_box {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+    .dk_banner_info{
+        text-align: center;
+        position: absolute;
+        bottom: 8%;
+        right: 12%;
+        z-index: 999;
+    }
+    .dk_watch {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .dk_banner2_info{
+        position: absolute;
+        top: 32%;
+        right: 21%;
+        z-index: 999;
+    }
+    .dk_women_collation p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 21px;
+        color: #FAFAFA;
+    }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2, 
+    .dk_samsung2_info h2, 
+    .dk_samsung3_info h2 {
+        font-size: 22px;
+    }
+
+    .dk_samsung_info p, 
+    .dk_samsung2_info p, 
+    .dk_samsung3_info p {
+        font-size: 14px;
+    }
+
+    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
+        top: 29%;
+    }
+
+    .dk_shop_now {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
