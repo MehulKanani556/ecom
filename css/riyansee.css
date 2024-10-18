@@ -1,0 +1,64 @@
+/* Footer */
+.footer {
+    background-color: #040404 !important; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .footer h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .footer p, .footer a {
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none !important;
+  }
+  
+  .footer a:hover {
+    color: #ddd;
+    text-decoration: underline !important;
+  }
+  
+  .footer ul {
+    padding-left: 0;
+  }
+  
+  .footer .list-inline-item  {
+    display: block !important;
+  }
+  
+  .footer .list-inline-item i {
+    margin-right: 8px;
+  }
+  .image-container img {
+    width: 20px;  
+    height: 20px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
+  .r_ul li{
+    margin-bottom: 10px;
+  }
+  /* Mens Category */
+ .r_position1{
+    position: relative;
+ }
+ .r_position2{
+    position: absolute;
+    top:0;
+    transform: translateY(50%);
+    left:5.9rem;
+ }
+
+ .r_position1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+  
