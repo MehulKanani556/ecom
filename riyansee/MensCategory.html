@@ -8,66 +8,374 @@
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/riyansee.css">
     <link rel="stylesheet" href="../css/media.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.theme.default.css" />
+
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.css">
+
+
 
 </head>
 
 <body>
 
+    <header>
+        <div class="container">
+            <div class=" d-flex justify-content-between">
+                <div class="logo">
+                    <i style="color: black;" class="fa-solid fa-location-dot"></i> &nbsp;
+                    <p class="mb-0 dk_location">Surat, Gujarat</p>&nbsp;
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dk_language_dropdown">
+                    <i class="fa-regular fa-circle-user"></i> &nbsp;&nbsp;
+                    <p class="mb-0">Login</p>
+                    <div class="dk_dropdown">
+                        <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="dk_country_img" src="../img/Frame.png" alt=""> <span
+                                class="dk_country">English</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">
+                                    <img src="../img/image 390.png" alt="">
+                                    <span class="dk_country">Italiano</span></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <img src="../img/image 391.png" alt="">
+                                    <span class="dk_country">Français</span></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <img src="../img/image 392.png" alt="">
+                                    <span class="dk_country">Português</span></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <img src="../img/image 393.png" alt="">
+                                    <span class="dk_country">中国人</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dk_second_nav">
+            <div class="container">
+                <div class="dk_second_nav_sub">
+                    <div class="dk_logo d-flex align-items-center">
+                        LOGO
+                        <div class="dropdown dk_categories_name">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Men’s Fashion</a></li>
+                                <li><a class="dropdown-item" href="#">Women’s Fashion</a></li>
+                                <li><a class="dropdown-item" href="#">Kid’s Fashion</a></li>
+                                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                                <li><a class="dropdown-item" href="#">Beauty</a></li>
+                                <li><a class="dropdown-item" href="#">Sport</a></li>
+                                <li><a class="dropdown-item" href="#">Luggage</a></li>
+                                <li><a class="dropdown-item" href="#">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="#">Smart Home</a></li>
+                                <li><a class="dropdown-item" href="#">Art & Craft</a></li>
+                                <li><a class="dropdown-item" href="#">Home & Kitchen</a></li>
+                                <li><a class="dropdown-item" href="#">Toy & Games</a></li>
+                                <li><a class="dropdown-item" href="#">Automotive</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="dk_search_bar">
+                        <input type="text" placeholder="Search products...">
+                    </div>
+                    <div class="dk_icons">
+                        <a href="#" class="dk_icon dk_cart">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                        </a>
+                        <a href="#" class="dk_icon dk_wishlist">
+                            <i class="fas fa-heart"></i> Wishlist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
         <!-- slider -->
-        <div class="owl-carousel owl-theme">
+        <div id="promo-slider" class="owl-carousel owl-theme">
+            <!-- Slide 1 -->
             <div class="item">
-                <div>
-                    <div class="r_position1">
-                        <img src="../r_img/sliderimg1.jpg" alt="">
-                    </div>
-                    <div  class="r_position2">
-                        <div>
-                            <img src="../r_img/icon.png" alt="">
-                        </div>
-                        <div>
-                            <h1>Get <span>10%</span> Off on<br>Everything!</h1>
-                        </div>
-                        <div>
-                            <h5>Make your own style!</h5>
-                        </div>
-                        <div>
-                            <a href="#"><Button>Shop Now</Button></a>
-                        </div>
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../r_img/sliderimg1.jpg" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="overlay-content position-absolute d-flex flex-column justify-content-center align-items-start text-white r_iconimg">
+                        <img src="../r_img/icon.png" alt="Brand Logo">
+                        <h1>Get <span class="text-danger">10% Off</span> on<br> Everything!</h1>
+                        <p>Make your own style!</p>
+                        <a href="#" class="btn btn-light r_btn">Shop Now</a>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div>
-                    <img src="../r_img/sliderimg1.jpg" alt="">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../r_img/sliderimg2.jpg" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="overlay-content position-absolute d-flex flex-column justify-content-center align-items-start text-white r_iconimg">
+                        <img src="../r_img/raymond.svg" alt="Brand Logo" style="width: 15% !important;">
+                        <h1>Get <span class="text-danger">40% Off</span> on<br>Premium Suits</h1>
+                        <a href="#" class="btn btn-light r_btn">Shop Now</a>
+                    </div>
                 </div>
             </div>
             <div class="item">
-                <div>
-                    <img src="../r_img/sliderimg1.jpg" alt="">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../r_img/sliderimg3.jpg" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="overlay-content position-absolute d-flex flex-column justify-content-center align-items-start text-white r_iconimg">
+                        <img src="../r_img/h&m.svg" alt="Brand Logo">
+                        <h1>Get <span style="color: #CC071E;">Exclusive</span> Offers on<br> Denims!</h1>
+                        <p>Wear clothes with <span style="color: #F39C12;">CONFIDENCE!</span></p>
+                        <a href="#" class="btn btn-light r_btn">Shop Now</a>
+                    </div>
                 </div>
             </div>
-
         </div>
+        <!-- Top Brand -->
+        <section>
+            <div class="dk_best_electronics_mian">
+                <div class="container">
+                    <div class="best-electronics">
+                        <h2>Top Brands</h2>
+                        <div class="dk_product-container">
+                            <div class="dk_product-item">
+                                <img src="../r_img/levis.png" alt="Xiaomi Smart TV">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/r&b.png" alt="Dell Laptop">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/jack.png" alt="Smartphones">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/Tommy.png" alt="Gaming Accessories">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/us.png" alt="Smart Watches">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/raymond.svg" alt="Wireless Speakers">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/HRX.png" alt="Smart Watches">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/puma.png" alt="Noise Earbuds">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/Nike.png" alt="JBL Headphones">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/skechers.png" alt="Tablets">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/peter.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/celio.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/h&m.svg" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/lecooper.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../r_img/adidas.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Explore More -->
+        <section style="background-color: black;">
+            <div class="container explore-more">
+                <div class="row justify-content-center">
+                    <!-- Topwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/man.png" alt="Topwear">
+                        <p>Topwear</p>
+                    </div>
+                    <!-- Bottomwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/bottom.png" alt="Bottomwear">
+                        <p>Bottomwear</p>
+                    </div>
+                    <!-- Indianwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/suit.png" alt="Indianwear">
+                        <p>Indianwear</p>
+                    </div>
+                    <!-- Footwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/shoes.png" alt="Footwear">
+                        <p>Footwear</p>
+                    </div>
+                    <!-- Sports & Activewear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/runner.png" alt="Sports & Activewear">
+                        <p>Sports & Activewear</p>
+                    </div>
+                    <!-- Accessories -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../r_img/cover.png" alt="Accessories">
+                        <p>Accessories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- New On Quickcart -->
+        <section>
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div>
+                            <img src="../r_img/q-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../r_img/q-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../r_img/q-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../r_img/q-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../r_img/q-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer>
-
+        <div class="dk_quickcart_footer">
+            <div class="container">
+                <div class="row dk_quickcart_footer_sub">
+                    <div class="col-xl-4 col-sm-6">
+                        <h2>LOGO</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Amet viverra nec netus donec. Et ut cursus nisl
+                            tincidunt egestas morbi aliquet. </p>
+                    </div>
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="dk_categories_ft">
+                            <h3>Categories</h3>
+                            <h5><a href="">Men’s Fashion</a></h5>
+                            <h5><a href="">Electronics</a></h5>
+                            <h5><a href="">Beauty</a></h5>
+                            <h5><a href="">Luggage</a></h5>
+                            <h5><a href="">Sport Wear</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="dk_quick_links_ft">
+                            <h3>Quick Links</h3>
+                            <h5><a href="">My Account</a></h5>
+                            <h5><a href="">My Order</a></h5>
+                            <h5><a href="">My Wishlist</a></h5>
+                            <h5><a href="">My Cart</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="dk_let_us_help_you_ft">
+                            <h3>Let us help you</h3>
+                            <h5><a href="">About Us</a></h5>
+                            <h5><a href="">Contact Us</a></h5>
+                            <h5><a href="">FAQs</a></h5>
+                            <h5><a href="">Terms of use</a></h5>
+                            <h5><a href="">Privacy & Security</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="dk_connect_with_us_ft">
+                            <h3>Connect with us</h3>
+                            <div class="d-flex align-items-center mb-3">
+                                <span>
+                                    <a href=""><img src="/img/ft_facebook.png" alt=""></a>
+                                </span>
+                                <h5 class="mb-0"><a href="">Facebook</a></h5>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span>
+                                    <a href=""><img src="/img/ft_instagram.png" alt=""></a>
+                                </span>
+                                <h5 class="mb-0"><a href="">Instagram</a></h5>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span>
+                                    <a href=""><img src="/img/ft_twitter.png" alt=""></a>
+                                </span>
+                                <h5 class="mb-0"><a href="">Twitter</a></h5>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span>
+                                    <a href=""><img src="/img/ft_youtube.png" alt=""></a>
+                                </span>
+                                <h5 class="mb-0"><a href="">Youtube</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-
-
-
-
+    <!-- jQuery -->
     <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- Owl Carousel JS -->
     <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -75,10 +383,14 @@
     <script>
         // main slider
         $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
+            $("#promo-slider").owlCarousel({
                 loop: true,
                 margin: 10,
-                nav: true,
+                nav: false,
+                dots: true,
+                // autoplay: true,
+                // autoplayTimeout: 5000, 
+                autoplayHoverPause: true,
                 responsive: {
                     0: {
                         items: 1
@@ -93,7 +405,30 @@
             })
         })
     </script>
-
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false, /* Disable navigation arrows */
+                dots: true, /* Enable dots */
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
