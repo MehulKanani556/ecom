@@ -22,7 +22,7 @@
     } */
 
     .dk_search_bar {
-        max-width: 600px;
+        max-width: 500px;
     }
     .dk_banner_info{
         text-align: center;
@@ -53,9 +53,37 @@
         text-align: center;
         background-position-y: 98%;
     }
-    /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        top: 35%;
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 22%;
+        left: 32%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 23%;
+        left: 28%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 26%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_samsung3_info h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
 
 }
@@ -138,14 +166,63 @@
         transition: transform 0.3s ease;
     }
     /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung3_info {
+    .dk_samsung_info h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung_info p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
         position: absolute;
-        z-index: 999;
-        text-align: center;
-        width: 100%;
-        padding: 0 15px;
         top: 32%;
-        right: 19%; 
+        left: 39%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 30%;
+        left: 34%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+     /* Empty Cart */
+     .dk_empty_cart{
+        text-align: center;
+        padding: 175px 0px 135px 0px;
+    }
+    /* empty_wishlist */
+    .dk_empty_wishlist{
+        text-align: center;
+        padding: 200px 0px 175px 0px;
     }
 }
 /* OTP Verification */
@@ -254,37 +331,54 @@
         font-size: 20px;
     }
     /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung_info h2, 
-    .dk_samsung2_info h2, 
-    .dk_samsung3_info h2 {
-        font-size: 40px;
+    .dk_samsung_info h2{
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 28.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info p, 
-    .dk_samsung2_info p, 
-    .dk_samsung3_info p {
-        font-size: 24px;
+    .dk_samsung_info p{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        top: 21%;
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 35%;
+        left: 38%;
+        text-align: center;
     }
-    /* .dk_samsung,
-    .dk_samsung2,
-    .dk_samsung3 {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-    position: relative;
-   } */
-   .dk_samsung, .dk_samsung2, .dk_samsung3 {
-    background-size: 100%;
-    background-position: center;
-    width: 100%;
-    height: 344px;
-    position: relative;
-}
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 28.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
 }
 @media(max-width:991px){
     /* Login with Email & Mobile */
@@ -326,7 +420,10 @@
     }
     .product-grid {
         justify-content: space-between;
-      }
+    }
+    .dk_search_bar {
+        max-width: 250px;
+    }
       /* Women’s cards */
       .slider-image {
         display: none;
@@ -335,14 +432,87 @@
         padding: 0px 70px;
     }  
     /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung3_info {
+    .dk_samsung_info h2{
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung_info p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
         position: absolute;
-        z-index: 999;
+        top: 35%;
+        left: 40%;
         text-align: center;
-        width: 100%;
-        padding: 0 15px;
-        top: 32%;
-        right: 17%; 
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 2px 15px;
+        font-size: 12px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 35%;
+        left: 38%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 2px 15px;
+        font-size: 12px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 34%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 2px 15px;
+        font-size: 12px;
+    }
+     /* Empty Cart */
+     .dk_empty_cart{
+        text-align: center;
+        padding: 150px 0px 100px 0px;
+    }
+    /* empty_wishlist */
+    .dk_empty_wishlist{
+        text-align: center;
+        padding: 150px 0px 135px 0px;
     }
 }
 
@@ -355,13 +525,6 @@
       }
     .dk_categories_name{
         margin-left: 20px;
-    }
-    /* Women’s cards */
-    .slider-image {
-        display: none;
-        width: 100%;
-        height: 100%;
-        padding: 0px 20px;
     }
 }
 
@@ -431,7 +594,7 @@
 
     .dk_search_bar {
         width: 100%;
-        max-width: 500px;
+        max-width: 150px;
     }
 
     .dk_icons {
@@ -547,35 +710,101 @@
     .dk_women_card_main {
         padding: 50px 0px;
     }
+    /* FOOTER  */
+    .dk_quickcart_footer p {
+        width: 100%
+    }
     /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung_info h2, 
-    .dk_samsung2_info h2, 
-    .dk_samsung3_info h2 {
-        font-size: 35px;
+    .dk_samsung_info h2{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info p, 
-    .dk_samsung2_info p, 
-    .dk_samsung3_info p {
-        font-size: 20px;
+    .dk_samsung_info p{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 13px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        top: 25%;
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 29%;
+        left: 39%;
+        text-align: center;
     }
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        left: 0;
-        right: 0;
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 10px;
     }
-    .dk_samsung,
-    .dk_samsung2,
-    .dk_samsung3 {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 450px;
-    position: relative;
-}
+    .dk_samsung2_info h2{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 13px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 28%;
+        left: 37%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 10px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 19.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 34%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 10px;
+    }
+     /* Empty Cart */
+     .dk_empty_cart{
+        text-align: center;
+        padding: 100px 0px 80px 0px;
+    }
+    
+    /* Women’s cards */
+    .slider-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0px 20px;
+    }
+    /* empty_wishlist */
+    .dk_empty_wishlist{
+        text-align: center;
+        padding: 106px 0px 91px 0px;
+    }
  } 
 /* signup */
 @media (max-width: 576px) {
@@ -609,6 +838,7 @@
     }
     .dk_search_bar{
         margin: 10px 0px;
+        max-width: 100% !important;
     }
     .dk_logo {
         justify-content: space-between;
@@ -665,32 +895,88 @@
     .dk_women_card_main {
         padding: 40px 0px;
     }
-    /* SAMSUNG GALAXY S24 ULTRA  */
-    .dk_samsung,
-    .dk_samsung2,
-    .dk_samsung3 {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 300px;
-    position: relative;
+      /* SAMSUNG GALAXY S24 ULTRA */
+      .dk_samsung_info h2{
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-    .dk_samsung_info h2, 
-    .dk_samsung2_info h2, 
-    .dk_samsung3_info h2 {
-       font-size: 45px;
-       font-weight: 600;
-       line-height: 1.2;
-       color: #fff;
-}
-
-   .dk_samsung_info p, 
-   .dk_samsung2_info p, 
-   .dk_samsung3_info p {
-      font-size: 27px;
-      font-weight: 400;
-      color: #fff;
-}
+    .dk_samsung_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 26%;
+        left: 38%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 32%;
+        left: 34%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 9px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 34%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+     /* Empty Cart */
+     .dk_empty_cart{
+        text-align: center;
+        padding: 80px 0px 80px 0px;
+    }
+    /* empty_wishlist */
+    .dk_empty_wishlist{
+        text-align: center;
+        padding: 80px 0px 80px 0px;
+    }
 }
     /* OTP Verification */
 @media (max-width: 480px) {
@@ -855,26 +1141,77 @@
     .dk_perfume p {
         font-size: 16px;
     }
-    /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung_info h2, 
-    .dk_samsung2_info h2, 
-    .dk_samsung3_info h2 {
-        font-size: 28px;
+     /* SAMSUNG GALAXY S24 ULTRA */
+     .dk_samsung_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 15.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info p, 
-    .dk_samsung2_info p, 
-    .dk_samsung3_info p {
-        font-size: 18px;
+    .dk_samsung_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
     }
-
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        top: 26%;
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 18%;
+        left: 38%;
+        text-align: center;
     }
-
-    .dk_shop_now {
-        padding: 10px 20px;
-        font-size: 16px;
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 15.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 22%;
+        left: 31%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 15.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 9px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 23%;
+        left: 7%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
     }
 }
 
@@ -925,6 +1262,78 @@
         cursor: pointer;
         transition: transform 0.3s ease;
     }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 18%;
+        left: 37%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung2_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 22%;
+        left: 28%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 9px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 22%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
 }
 @media (max-width: 375px) {
     .dk_banner_info{
@@ -968,6 +1377,80 @@
         cursor: pointer;
         transition: transform 0.3s ease;
     }
+    /* SAMSUNG GALAXY S24 ULTRA */
+    .dk_samsung_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 18%;
+        left: 35%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+
+    .dk_samsung2_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 17%;
+        left: 26%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 9px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px 0px 6px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
 }
 /* OTP Verification */
 @media (max-width: 320px) {
@@ -999,25 +1482,79 @@
         line-height: 21px;
         color: #FAFAFA;
     }
+
     /* SAMSUNG GALAXY S24 ULTRA */
-    .dk_samsung_info h2, 
-    .dk_samsung2_info h2, 
-    .dk_samsung3_info h2 {
-        font-size: 22px;
+    .dk_samsung_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung_info p{
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 6px 0px !important;
+    }
+    .dk_sumsung_info_postion1{
+        position: absolute;
+        top: 14%;
+        left: 34%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion1 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
     }
 
-    .dk_samsung_info p, 
-    .dk_samsung2_info p, 
-    .dk_samsung3_info p {
-        font-size: 14px;
+    .dk_samsung2_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung2_info p{
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 0px;
+        color: #FFFFFF;
+        margin: 0px 0px 6px 0px !important;
+    }
+    .dk_sumsung_info_postion2{
+        position: absolute;
+        top: 14%;
+        left: 24%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion2 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
+    }
+    .dk_samsung3_info h2{
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10.51px;
+        color: #FFFFFF;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .dk_samsung3_info p{
+        font-size: 8px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px 0px 6px 0px !important;
+    }
+    .dk_sumsung_info_postion3{
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        text-align: center;
+    }
+    .dk_sumsung_info_postion3 .dk_shop_now {
+        padding: 0px 8px;
+        font-size: 8px;
     }
 
-    .dk_samsung_info, .dk_samsung2_info, .dk_samsung3_info {
-        top: 29%;
-    }
-
-    .dk_shop_now {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
 }
