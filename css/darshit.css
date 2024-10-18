@@ -182,11 +182,24 @@
     align-items: center;
     cursor: pointer;
 }
+.dk_user_dp{
+    height: 28px;
+    width: 28px;
+    background-color: #D5D5D5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    margin-right: 5px;
+}
 .dk_dropdown{
     padding-left: 15px;
 }
 .dk_country{
-    padding-left: 10px;
+    margin-left: 5px;
 }
 .dk_dropdown .btn:focus{
     box-shadow: none !important;
@@ -236,7 +249,30 @@
     display: flex;
     gap: 20px;
 }
-
+.dk_cart_no{
+    position: absolute;
+    top: -14.5%;
+    right: 60.9%;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #FFF;
+    color: #000000;
+    line-height: 7px;
+    padding: 3px;
+    border-radius: 50%;
+}
+.dk_cart_no2{
+    position: absolute;
+    top: -1.5%;
+    right: 74.9%;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #FFF;
+    color: #000000;
+    line-height: 7px;
+    padding: 3px;
+    border-radius: 50%;
+}
 .dk_icon {
     text-decoration: none;
     color: #fff;
@@ -660,8 +696,10 @@
 }
 
 .buy-now {
-    display: none; 
-    margin-top: 15px;
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
     padding: 10px;
     background-color: black;
     color: white;
@@ -669,16 +707,20 @@
     cursor: pointer;
     width: 100%;
     text-align: center;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-
-.card:hover .buy-now {
+.dk_browsing_products{
+    position: relative;
+    height: 100% !important;
+}
+.dk_browsing_products:hover .buy-now {
     display: block; 
 }
-.card:hover .off{
+.dk_browsing_products:hover .off{
     display: none !important;
 }
-.card:hover .price{
+.dk_browsing_products:hover .price{
     display: none;
 }
 
@@ -853,61 +895,41 @@
 }
 
 /* SAMSUNG GALAXY S24 ULTRA */
-/* .dk_samsung{
-    background-image: url(/img/sumsung_blackground.png);
+.dk_samsung img{
     width: 100%;
-    height: 554px;
-    background-position:center center;
-    background-position-y: 56%;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
+    height: 100%;
 }
-.dk_samsung::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-.dk_samsung2{
-    background-image: url(../img/sumsung_blackground2.png);
-    width: 100%;
-    height: 554px;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.dk_samsung2::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2)
-}
-.dk_samsung3{
-    background-image: url(../img/sumsung_blackground3.png);
-    width: 100%;
-    height: 554px;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.dk_samsung3::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2)
-} */
 
-/* .dk_samsung_info {
+.dk_samsung2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.dk_samsung3 img{
+    width: 100%;
+    height: 100%;
+}
+.dk_samsung_info , .dk_samsung_info2 , .dk_samsung_info3{
+    position: relative;
+}
+.dk_sumsung_info_postion1{
     position: absolute;
-    z-index: 999;
+    top: 30%;
+    left: 36%;
     text-align: center;
-    top: 33%;
-    right: 38%;
 }
-
+.dk_sumsung_info_postion2{
+    position: absolute;
+    top: 34%;
+    left: 34%;
+    text-align: center;
+}
+.dk_sumsung_info_postion3{
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    text-align: center;
+}
 .dk_samsung_info h2{
     font-size: 50px;
     font-weight: 600;
@@ -921,13 +943,6 @@
     color: #FFFFFF;
 }
 
-.dk_samsung2_info{
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    top: 33%;
-    right: 31%;
-}
 .dk_samsung2_info h2{
     font-size: 50px;
     font-weight: 600;
@@ -942,13 +957,7 @@
     color: #FFFFFF;
 }
 
-.dk_samsung3_info{
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    top: 33%;
-    left: 5%;
-}
+
 .dk_samsung3_info h2{
     font-size: 50px;
     font-weight: 600;
@@ -962,61 +971,7 @@
     line-height: 40px;
     text-align: center;        
     color: #FFFFFF;
-} */
-/* .dk_samsung,
-.dk_samsung2,
-.dk_samsung3 {
-    background-size: 100%;
-    background-position: center;
-    width: 100%;
-    height: 554px;
-    position: relative;
 }
-
-.dk_samsung_info{
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    width: 100%;
-    padding: 0 15px; 
-    top: 30%;
-    right: 1%;
-} 
-.dk_samsung2_info {
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    width: 100%;
-    padding: 0 15px; 
-    top: 32%;
-    left: 2%;
-}
-.dk_samsung3_info {
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    width: 100%;
-    padding: 0 15px;
-    top: 32%;
-    right: 27%; 
-}
-
-.dk_samsung_info h2, 
-.dk_samsung2_info h2, 
-.dk_samsung3_info h2 {
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.2;
-    color: #fff;
-}
-
-.dk_samsung_info p, 
-.dk_samsung2_info p, 
-.dk_samsung3_info p {
-    font-size: 30px;
-    font-weight: 400;
-    color: #fff;
-} */
 
 /* Top Selling Smartphones */
 .dk_top_selling_smartphonps{
@@ -1056,6 +1011,7 @@
     padding: 70px 0px 101px 0px;
 }
 .dk_quickcart_footer_sub{
+    display: flex;
     row-gap: 20px;
 }
 .dk_quickcart_footer h2{
@@ -1105,4 +1061,70 @@
 .dk_connect_with_us_ft h5{
     padding-bottom: 0rem;
     padding-left: 14px;
+}
+
+
+/********** Empty Wishlist page *********/
+.dk_empty_wishlist{
+    text-align: center;
+    padding: 256px 0px 204px 0px;
+}
+.dk_empty_wishlist h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000000;    
+}
+.dk_empty_wishlist p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #727272;    
+}
+/************* Wishlist page **********/
+.dk_wishlist{
+    padding: 50px 0px 100px 0px;
+}
+.dk_wishlist_hadeing{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000000; 
+    padding-bottom: 40px;   
+    text-align: left;
+}
+.dk_yellow{
+    color: #F8A120;
+}
+.dk_grey{
+    color: #727272;
+}
+
+/******** Empty Cart page ********/
+.dk_empty_cart{
+    text-align: center;
+    padding: 228px 0px 202px 0px;
+}
+.dk_empty_cart h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000000;
+    padding-top: 20px;
+}
+.dk_empty_cart p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #727272;  
+    padding-bottom: 25px; 
+}
+.dk_continue_shopp{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 13px 17.5px;
 }
