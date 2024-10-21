@@ -805,6 +805,23 @@
         text-align: center;
         padding: 106px 0px 91px 0px;
     }
+    /* Cart Without Address  */
+    .dk_order_tracking_line {
+        position: absolute;
+        top: 32%;
+        left: 0;
+        right: 10%;
+        height: 2px;
+        background-color: #d2d2d2;
+        z-index: 0;
+    }
+    .shopping_cart_sub h2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 33.89px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+    }
  } 
 /* signup */
 @media (max-width: 576px) {
@@ -894,6 +911,9 @@
     /* Women’s cards */
     .dk_women_card_main {
         padding: 40px 0px;
+    }
+    .dk_browsing_products:hover .thumbnails{
+        margin-bottom: 40px;
     }
       /* SAMSUNG GALAXY S24 ULTRA */
       .dk_samsung_info h2{
@@ -1333,6 +1353,32 @@
     .dk_sumsung_info_postion3 .dk_shop_now {
         padding: 0px 8px;
         font-size: 8px;
+    }
+    /* Cart Without Address */
+    .shopping_cart_sub h2 {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 33.89px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+    }
+    .dk_add_from {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+        padding: 5px 9.5px;
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 4px;
+    }
+    .dk_order_tracking {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px 20px;
+        position: relative;
     }
 }
 @media (max-width: 375px) {
