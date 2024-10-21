@@ -7,9 +7,7 @@
 img {
   object-fit: cover;
 }
-.padding{
-  padding: 50px 0;
-}
+
 .slide-content {
   position: relative;
 }
@@ -48,18 +46,18 @@ img {
   object-fit: cover;
   box-sizing: border-box;
 }
-#promo-slider.owl-theme .owl-dots{
+.owl-theme .owl-dots{
   position: absolute !important;
   bottom: 0 !important;
   left: 50% !important; 
 }
-#promo-slider.owl-theme .owl-dots .owl-dot span {
-  background-color:white !important;
+.owl-theme .owl-dots .owl-dot span {
+  background-color: white !important;
 }
-#promo-slider.owl-theme .owl-dots .owl-dot span{
+.owl-theme .owl-dots .owl-dot span{
   margin:7px !important;
 }
-#promo-slider.owl-theme .owl-dots .owl-dot.active{
+.owl-theme .owl-dots .owl-dot.active{
   outline-style: solid;
   outline-color:white;
   outline-width: thin;
@@ -117,7 +115,7 @@ img {
 
 .explore-more {
   position: relative;
-  padding: 80px 0; 
+  padding: 80px 0; /* Adjusted for space above and below the categories */
   text-align: center;
   background: url('../r_img/Explore\ More.png') no-repeat center center;
   background-size: 55%;
@@ -146,56 +144,7 @@ img {
   font-size: 16px;
   font-weight: 500;
 }
-/* New On Quickcart */
-.r_new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position:relative;
-}
 
-.r_image img {
-  width: 100%; 
-  display: block; 
-}
-
-.r_set {
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 5px; 
-  text-align: center; 
-  position: absolute;
-  flex-direction: column;
-  bottom: 0;
-  color: white;
-}
-
-.r_set img {
-  width: 50px; 
-  height: auto; 
-}
-
-.r_set div {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-.owl-theme .owl-nav.disabled + .owl-dots{
-  margin-top: 20px !important;
-}
-.owl-theme .owl-dots .owl-dot span {
-  background-color:black !important;
-}
-.owl-theme .owl-dots .owl-dot span{
-  margin:5px !important;
-}
-.owl-theme .owl-dots .owl-dot.active{
-  outline-style: solid;
-  outline-color:black;
-  outline-width: thin;
-  border-radius: 50%;
-}
 @media (max-width: 576px) {
   .brand-card img {
       max-height: 40px;
@@ -248,12 +197,6 @@ img {
 @media screen and (max-width:425px) {
   .r_mainimg {
     height: 300px !important;
-  }
-  .padding{
-    padding: 0;
-  }
-  .r_title{
-    margin-top: 1.5rem;
   }
 }
 
