@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Without Address</title>
+    <title>Cart With Address</title>
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/all.min.css">
@@ -114,8 +114,8 @@
         </div>
     </header>
 
-    <main>  
-        <!-- Cart Without Address -->
+    <main>
+        <!-- Cart With Address -->
         <section>
             <div class="dk_cart_without_address">
                 <div class="container">
@@ -154,11 +154,25 @@
                         <div style="margin: 0px 0px !important;" class="row">
                             <div style="padding: 0px 10px !important;" class="col-lg-8">
                                 <div class="dk_no_saved_addresses">
-                                    <div class="dk_no_saved_addresses_font">
-                                        <h2>No saved Addresses</h2>
+                                    <div class="dk_no_saved_addresses_font d-flex">
+                                        <div>
+                                            <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-content-center">
+                                                <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
+                                                <button class="dk_cart_add_home">Home</button>
+                                            </div>
+                                            <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New
+                                                York,Washington Square, NY
+                                                10012,USA</p>
+                                        </div>
                                     </div>
                                     <div class="dk_add_address">
-                                        <button class="dk_add_address_sub">+Add Address</button>
+                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight">Change</button>
+                                        <!-- <button class="">Change</button> -->
                                     </div>
                                 </div>
                                 <div class="dk_select_all">
@@ -239,7 +253,8 @@
                                                 </div>
                                                 <div class="col-5">
                                                     <h3 class="mb-0">HIGHLANDER</h3>
-                                                    <h6 class="mb-2">Cable Knit Mock Collar Acrylic Pullover Sweater</h6>
+                                                    <h6 class="mb-2">Cable Knit Mock Collar Acrylic Pullover Sweater
+                                                    </h6>
                                                     <div class="dk_rating">
                                                         <i class="fa-solid fa-star dk_yellow"></i>
                                                         <i class="fa-solid fa-star dk_yellow"></i>
@@ -298,7 +313,8 @@
                                                 </div>
                                                 <div class="col-5">
                                                     <h3 class="mb-0">Red Tape</h3>
-                                                    <h6 class="mb-2">Cable Knit Mock Collar Acrylic Pullover Sweater</h6>
+                                                    <h6 class="mb-2">Cable Knit Mock Collar Acrylic Pullover Sweater
+                                                    </h6>
                                                     <div class="dk_rating">
                                                         <i class="fa-solid fa-star dk_yellow"></i>
                                                         <i class="fa-solid fa-star dk_yellow"></i>
@@ -390,8 +406,14 @@
                                     </div>
                                     <div class="dk_coupon_container">
                                         <div class="dk_input_container">
-                                            <input type="text" placeholder="Enter Coupon code">
-                                            <button>Apply</button>
+                                            <div class="dk_coupon-container input-container">
+                                                <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                                                <span class="clear-button" id="clear-button">&times;</span>
+                                            </div>
+
+                                            <div class="dk_apply-button-container">
+                                                <button id="apply-button">Apply</button>
+                                            </div>
                                         </div>
                                         <div class="dk_coupon_header">Applicable Coupons</div>
                                         <ul class="dk_coupons_list">
@@ -511,6 +533,90 @@
             </div>
         </div>
     </footer>
+
+    <!-- change ADDRESS OF CANVAS  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Change Address </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div style="border-bottom: 0.5px solid #d2d2d2"></div>
+            <div class="dk_off_can_add_address">
+                <i class="fa-solid fa-plus"></i>
+                <h2>Add Address</h2>
+            </div>
+            <div class="dk_off_can_add_home">
+                <div class="dk_off_can_add_home_sub">
+                    <h2>Home</h2>
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="dk_off_can_add_home_details">
+                    <h2>Alex Shroff</h2>
+                    <h2>+1 56565 56565</h2>
+                    <p class="mb-0">Ehrenkranz 13 Washington Square S, New York,Washington Square, NY 10012, USA</p>
+                </div>
+            </div>
+            <div class="dk_off_can_add_home">
+                <div class="dk_off_can_add_home_sub">
+                    <h2>Work</h2>
+                </div>
+                <div class="dk_off_can_add_home_details">
+                    <h2>Alex Shroff</h2>
+                    <h2>+1 56565 56565</h2>
+                    <p class="mb-0">Ehrenkranz 13 Washington Square S, New York,Washington Square, NY 10012, USA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const applyButton = document.getElementById('apply-button');
+        const inputField = document.getElementById('coupon-code');
+        const clearButton = document.getElementById('clear-button');
+    
+        applyButton.addEventListener('click', function () {
+            applyButton.classList.add('clicked');
+        });
+    
+        inputField.addEventListener('input', function () {
+            if (inputField.value) {
+                clearButton.style.display = 'block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+        });
+    
+        clearButton.addEventListener('click', function () {
+            inputField.value = '';
+            clearButton.style.display = 'none';
+        });
+    
+        inputField.addEventListener('focus', function () {
+            applyButton.classList.add('input-focused');
+        });
+    
+        inputField.addEventListener('blur', function () {
+            applyButton.classList.remove('input-focused');
+        });
+    
+        // New functionality: Update input field and button color based on selected radio button
+        const radioButtons = document.querySelectorAll('input[name="custom-radio"]');
+    
+        radioButtons.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                // Get the associated label with the `h2` tag
+                const h2Text = this.closest('.dk_coupon_item').querySelector('h2').textContent;
+                // Set the input field value with the coupon code
+                inputField.value = h2Text;
+                clearButton.style.display = 'block'; // Show the clear button
+                
+                // Change the Apply button color to indicate a coupon is selected
+                applyButton.classList.add('active');
+            });
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -524,3 +630,4 @@
 </body>
 
 </html>
+
