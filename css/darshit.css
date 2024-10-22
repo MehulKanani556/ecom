@@ -1245,15 +1245,9 @@
     color: #000000;
 }
 .dk_add_address_sub{
-    width: Fixed (120px)px;
-    height: Fixed (34px)px;
-    top: 453px;
-    left: 1005px;
     padding: 5px 12px;
-    gap: 10px;
     border-radius: 4px;
     border: 1px 0px 0px 0px;
-    opacity: 0px;
     color: #000000;
     background-color: #FFFFFF;
 }
@@ -1295,6 +1289,7 @@
 }
 .dk_highlander_add{
     padding-top: 18px;
+    /* width: 100%; */
 }
 .dk_product_card_without_add h3{
     font-size: 14px;
@@ -1357,7 +1352,7 @@
     text-align: center;
     color: #000000;  
     background-color: #FFFFFF; 
-    padding: 5px 23.5px;
+    padding: 5px 18px;
     border: 1px solid #000000;
     border-radius: 4px;
 }
@@ -1386,4 +1381,380 @@
 }
 .dk_move_to_wishlist_main{
     padding-top: 79px;
+}
+.dk_order_details_cwa{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;  
+    border-radius: 4px; 
+    padding-bottom: 24px;
+}
+.dk_you_will_save{
+    display: flex;
+    color: #0F993E;
+    align-items: center;
+    padding: 24px 0px 16px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+.dk_you_will_save h2{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px; 
+    margin-bottom: 0px; 
+    padding-left: 10px;     
+}
+.dk_order_info{
+    padding: 16px 0px 16px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+.dk_order_info h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000; 
+}
+.dk_order_payment_det{
+    padding: 24px 24px 0px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+.dk_order_payment_det_sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.dk_order_payment_det_sub h2{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;  
+}
+.dk_order_payment_det_sub p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;  
+    margin-bottom: 0px; 
+}
+.dk_total_amount_cwa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 24px 25px 24px;
+}
+.dk_total_amount_cwa h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: #000000;   
+}
+.dk_total_amount_cwa p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+    color: #000000; 
+}
+.dk_proceed_checkout_cwa{
+    text-align: center;
+}
+.dk_proceed{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000; 
+    padding: 13px 101px; 
+    border-radius: 4px;
+}
+.dk_apply_coupon_cwa{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+.dk_apply_coupon_font h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;    
+}
+.dk_apply_coupon_font{
+    padding: 24px 0px 16px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+
+
+.dk_coupon_container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.dk_coupon_header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dk_input_container {
+    display: flex;
+    margin-bottom: 20px;
+}
+.dk_input_container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-image: url(/img/coupons_code.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 2%;
+}
+.dk_input_container button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dk_coupons_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.dk_coupon_item {
+    display: flex;
+    /* align-items: center; */
+    padding: 10px;
+    cursor: pointer;
+}
+.dk_coupon_item input[type="radio"] {
+    margin-right: 10px;
+}
+.dk_coupon_item h2{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #000000;  
+}
+.dk_coupon_item label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #727272;
+}
+.dk_coupon_item p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #000000;
+    padding-top: 5px;
+    margin-bottom: 0px;
+}
+
+/******* Cart With Address ******/
+.dk_no_saved_addresses_font p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #727272;
+}
+.dk_cart_add_home{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: center;
+    color: #000000; 
+    padding: 3.5px 13px; 
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    border: 1px solid #000000
+}
+/****** change ADDRESS OF CANVAS  *****/
+.offcanvas-body {
+    flex-grow: 1;
+    padding: 1rem 0rem;
+    overflow-y: auto;
+}
+.dk_off_can_add_address{
+    border: 1px solid #040404;
+    border-radius: 4px;  
+    text-align: center;
+    padding: 60px 0px 46px 0px;
+    margin-bottom: 40px;
+}
+.dk_off_can_add_address h2{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #727272;  
+}
+.dk_off_can_add_home{
+    border-radius: 4px;  
+    border: 1px solid #040404;
+    margin-bottom: 40px;
+}
+.dk_off_can_add_home_sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #d2d2d2;
+    padding: 10px 12px;
+}
+.dk_off_can_add_home_sub h2{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #000000;   
+}
+.dk_off_can_add_home_details{
+    padding: 10px 17px 16px 12px;
+}
+.dk_off_can_add_home_details h2{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #000000;
+}
+
+   /* Your existing styles */
+   .input-container {
+    position: relative;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dk_input_container input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    padding-left: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-image: url(/img/coupons_code.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 2%;
+}
+
+.clear-button {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button.clicked {
+    background-color: #000000;
+}
+
+button.active {
+    background-color: #727272; /* New color when radio button is selected */
+}
+
+button.input-focused {
+    background-color: #000000;
+}
+
+.dk_apply_coupon_cwa {
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.dk_apply_coupon_font h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;
+}
+
+.dk_apply_coupon_font {
+    padding: 24px 0px 16px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+
+.dk_coupon_container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dk_coupon_header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dk_input_container {
+    display: flex;
+    margin-bottom: 20px;
+}
+    
+/***custum radio button **8****/
+.custom-radio {
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.custom-radio:hover input ~ .checkmark {
+    background-color: #FFFFFF;
+}
+
+.custom-radio input:checked ~ .checkmark {
+    background-color: #000000;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+.custom-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }

@@ -85,6 +85,17 @@
         color: #FFFFFF;
         margin: 0px 0px 10px 0px !important;
     }
+    /* Cart Without Address */
+    .dk_proceed {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #000000;
+        padding: 13px 60px;
+        border-radius: 4px;
+    }
 
 }
 /* perfume */
@@ -111,6 +122,33 @@
     .dk_perfume p {
         font-size: 20px;
     }
+}
+@media(max-width:1200px){
+    /* Cart Without Address */
+    .overflow-auto {
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        white-space: nowrap;
+        padding: 10px;
+    }
+    
+    .overflow-auto::-webkit-scrollbar {
+        display: none;
+    }
+    .overflow-auto {
+        scrollbar-width: none; 
+    } 
+    /* Cart Without Address */
+    .dk_proceed {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #000000;
+        padding: 13px 40px;
+        border-radius: 4px;
+    } 
 }
 @media(max-width:1199px){
     /* Login with Email & Mobile */
@@ -379,6 +417,17 @@
         padding: 7px 18px;
         font-size: 14px;
     }
+     /* Cart Without Address */
+     .dk_proceed {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #000000;
+        padding: 13px 30px;
+        border-radius: 4px;
+    } 
 }
 @media(max-width:991px){
     /* Login with Email & Mobile */
@@ -514,6 +563,17 @@
         text-align: center;
         padding: 150px 0px 135px 0px;
     }
+    /* Cart Without Address */
+    .dk_proceed {
+        width: 90%;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #000000;
+        border-radius: 4px;
+    } 
 }
 
 @media(max-width:767px){
@@ -1380,6 +1440,21 @@
         margin: 50px 20px;
         position: relative;
     }
+    /* Cart Without Address */
+    .dk_no_saved_addresses {
+        padding: 20px 0px 20px 35px;
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dk_no_saved_addresses_font h2 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19.36px;
+        text-align: left;
+        color: #000000;
+    }
 }
 @media (max-width: 375px) {
     .dk_banner_info{
@@ -1497,6 +1572,17 @@
         padding: 0px 8px;
         font-size: 8px;
     }
+    /* Cart Without Address */
+    .dk_proceed {
+        width: 90%;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24.2px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #000000;
+        border-radius: 4px;
+    } 
 }
 /* OTP Verification */
 @media (max-width: 320px) {
