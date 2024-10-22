@@ -27,9 +27,9 @@
             justify-content: center;
             align-items: center;
             color: #f5f5f5;
-            margin-top: 50px;
-            background-size:50%;
-            background-position-y: 100%;
+            margin-top: 35px;
+            background-size:55%;
+            background-position-y: 110%;
         }
 
         .person-image {
@@ -43,9 +43,10 @@
         }
 
         .card {
-            width: 18rem;
+            width: 20rem;
             gap: 10px;
             margin: 0 20px;
+            padding: 20px;
         }
 
         .card-title {
@@ -76,7 +77,7 @@
         #carousel1 .owl-carousel,
         #carousel2 .owl-carousel,
         #carousel3 .owl-carousel {
-            display: flex;
+            /* display: flex; */
             /* padding: 10px 0; */
         }
 
@@ -122,16 +123,6 @@
             box-sizing: border-box;
             object-fit: contain;
         }
-
-        /* #carousel2 .owl-item img {
-        
-        }
-
-        #carousel3 .owl-item img {
-           
-        } */
-
-        /* Responsive */
         @media (max-width: 768px) {
             .person-image {
                 margin-bottom: 30px;
@@ -141,14 +132,25 @@
                 font-size: 2rem;
             }
 
-            .card-container {
+            /* .card-container {
                 flex-direction: column;
                 align-items: center;
             }
 
             .card {
                 width: 100%;
-                max-width: 350px;
+                max-width: 350px; */
+            /* } */
+        }
+
+        @media (max-width: 576px) {
+            /* .card {
+                width: 100%;
+                margin: 5px;
+            } */
+
+            .owl-item img {
+                height: 150px;
             }
         }
     </style>
@@ -159,91 +161,95 @@
     <div class="container-fluid p-0">
         <div class="row g-0">
             <!-- Left Image Section -->
-            <div class="col-md-3 col-12">
+            <div class="col-md-3 col-12 d-lg-block d-md-none">
                 <img src="../r_img/trendingman.png" alt="Person Image" class="person-image">
             </div>
             <!-- Right Multiple Carousels Section -->
-            <div class="col-md-9 col-12" style="background-color: black;">
+            <div class="col-lg-9 col-md-12 col-12" style="background-color: black;">
                 <h1 class="trending-title"></h1>
 
                 <!-- Card Container with Flexbox -->
-                <div class="card-container d-flex">
+                <div class="card-container row">
                     <!-- First Product Card with its own Carousel -->
-                    <div class="card">
-
-                        <div id="carousel1" class="owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 1">
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card">
+                            <div id="carousel1" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 1">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Allen Solly</h5>
+                                <p class="card-text">Men Khaki Slim Fit Solid Full Sle...</p>
+                                <div class="d-flex r_smallimg">
+                                    <img src="../r_img/allensollyman.png" alt="">
+                                    <img src="../r_img/allensollyman.png" alt="">
+                                    <img src="../r_img/allensollyman.png" alt="">
+                                </div>
+                                <p class="mb-0">
+                                    <span class="r_badge">40% OFF</span>
+                                <div>
+                                    <span class="discount-price">$459</span>
+                                    <span class="original-price">$790</span>
+                                </div>
+                                </p>
                             </div>
-                            <div class="item">
-                                <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                            <div class="item">
-                                <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                            <div class="item">
-                                <img src="../r_img/allensollyman.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Allen Solly</h5>
-                            <p class="card-text">Men Khaki Slim Fit Solid Full Sle...</p>
-                            <div class="d-flex r_smallimg">
-                                <img src="../r_img/allensollyman.png" alt="">
-                                <img src="../r_img/allensollyman.png" alt="">
-                                <img src="../r_img/allensollyman.png" alt="">
-                            </div>
-                            <p class="mb-0">
-                                <span class="r_badge">40% OFF</span>
-                            <div>
-                                <span class="discount-price">$459</span>
-                                <span class="original-price">$790</span>
-                            </div>
-                            </p>
                         </div>
                     </div>
 
                     <!-- Second Product Card with its own Carousel -->
-                    <div class="card">
-                        <div id="carousel2" class="owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 1">
+                    <div class=" col-md-4 col-sm-6 col-12">
+                        <div class="card">
+                            <div id="carousel2" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 1">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
+                                <div class="item">
+                                    <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Allen Solly</h5>
+                                <p class="card-text">Men Grey Solid Casual Belt and..</p>
+                                <div class="d-flex r_smallimg">
+                                    <img src="../r_img/allensollybelt.png" alt="">
+                                    <img src="../r_img/allensollybelt.png" alt="">
+                                    <img src="../r_img/allensollybelt.png" alt="">
+                                </div>
+                                <p class="mb-0">
+                                    <span class="r_badge">50% OFF</span>
+                                <div>
+                                    <span class="discount-price">$149</span>
+                                    <span class="original-price">$399</span>
+                                </div>
+                                </p>
                             </div>
-                            <div class="item">
-                                <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                            <div class="item">
-                                <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                            <div class="item">
-                                <img src="../r_img/allensollybelt.png" class="card-img-top" alt="Product 1 - Slide 2">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Allen Solly</h5>
-                            <p class="card-text">Men Grey Solid Casual Belt and..</p>
-                            <div class="d-flex r_smallimg">
-                                <img src="../r_img/allensollybelt.png" alt="">
-                                <img src="../r_img/allensollybelt.png" alt="">
-                                <img src="../r_img/allensollybelt.png" alt="">
-                            </div>
-                            <p class="mb-0">
-                                <span class="r_badge">50% OFF</span>
-                            <div>
-                                <span class="discount-price">$149</span>
-                                <span class="original-price">$399</span>
-                            </div>
-                            </p>
                         </div>
                     </div>
 
                     <!-- Third Product Card with its own Carousel -->
+                  <div class=" col-md-4 col-sm-6 col-12">
                     <div class="card">
                         <div id="carousel3" class="owl-carousel owl-theme">
                             <div class="item">
@@ -279,8 +285,11 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                  </div>
 
+
+                </div>
+              
             </div>
         </div>
     </div>
