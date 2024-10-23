@@ -390,8 +390,14 @@
                                     </div>
                                     <div class="dk_coupon_container">
                                         <div class="dk_input_container">
-                                            <input type="text" placeholder="Enter Coupon code">
-                                            <button>Apply</button>
+                                            <div class="dk_coupon-container input-container">
+                                                <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                                                <span class="clear-button" id="clear-button">&times;</span>
+                                            </div>
+
+                                            <div class="dk_apply-button-container">
+                                                <button id="apply-button">Apply</button>
+                                            </div>
                                         </div>
                                         <div class="dk_coupon_header">Applicable Coupons</div>
                                         <ul class="dk_coupons_list">
@@ -511,6 +517,96 @@
             </div>
         </div>
     </footer>
+    <!-- Apply Coupon -->
+    <script>
+        const applyButton = document.getElementById('apply-button');
+        const inputField = document.getElementById('coupon-code');
+        const clearButton = document.getElementById('clear-button');
+
+        applyButton.addEventListener('click', function () {
+            applyButton.classList.add('clicked');
+        });
+
+        inputField.addEventListener('input', function () {
+            if (inputField.value) {
+                clearButton.style.display = 'block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+        });
+
+        clearButton.addEventListener('click', function () {
+            inputField.value = '';
+            clearButton.style.display = 'none';
+        });
+
+        inputField.addEventListener('focus', function () {
+            applyButton.classList.add('input-focused');
+        });
+
+        inputField.addEventListener('blur', function () {
+            applyButton.classList.remove('input-focused');
+        });
+
+        const radioButtons = document.querySelectorAll('input[name="custom-radio"]');
+
+        radioButtons.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const h2Text = this.closest('.dk_coupon_item').querySelector('h2').textContent;
+                inputField.value = h2Text;
+                clearButton.style.display = 'block';
+
+                applyButton.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        // Select the "Select All" checkbox 
+        const selectAllCheckbox = document.getElementById('selectAll');
+        const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+        selectAllCheckbox.addEventListener('change', function () {
+            itemCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
+
+        itemCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (!this.checked) {
+                    selectAllCheckbox.checked = false;
+                }
+                if (document.querySelectorAll('.item-checkbox:checked').length === itemCheckboxes.length) {
+                    selectAllCheckbox.checked = true;
+                }
+            });
+        });
+    </script>
+    <script>
+        // Select all the product cards that have increase/decrease buttons
+        const quantityElements = document.querySelectorAll('.quantity');
+        const increaseButtons = document.querySelectorAll('.increase');
+        const decreaseButtons = document.querySelectorAll('.decrease');
+
+        increaseButtons.forEach((increaseButton, index) => {
+            increaseButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                let currentQuantity = parseInt(quantityElements[index].textContent);
+                currentQuantity++;
+                quantityElements[index].textContent = currentQuantity;
+            });
+        });
+
+        decreaseButtons.forEach((decreaseButton, index) => {
+            decreaseButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                let currentQuantity = parseInt(quantityElements[index].textContent);
+                if (currentQuantity > 1) {
+                    currentQuantity--;
+                    quantityElements[index].textContent = currentQuantity;
+                }
+            });
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

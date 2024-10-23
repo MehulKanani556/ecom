@@ -114,7 +114,7 @@
     </header>
 
     <main>
-        <!-- Cart With Address -->
+        <!-- Delivery Details -->
         <section>
             <div class="dk_cart_without_address">
                 <div class="container">
@@ -435,7 +435,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Select the "Select All" checkbox 
+        const selectAllCheckbox = document.getElementById('selectAll');
+        const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+        selectAllCheckbox.addEventListener('change', function () {
+            itemCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
 
+        itemCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (!this.checked) {
+                    selectAllCheckbox.checked = false;
+                }
+                if (document.querySelectorAll('.item-checkbox:checked').length === itemCheckboxes.length) {
+                    selectAllCheckbox.checked = true;
+                }
+            });
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
