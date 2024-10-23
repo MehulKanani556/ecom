@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <style>
+        .product-gallery {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .thumbnail-gallery {
+            margin-top: 20px;
+        }
+
+        .color-select button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            margin: 0 5px;
+            padding: 0;
+        }
+
+        .color-select button.active {
+            border-color: #000;
+        }
+
+        .size-select button {
+            min-width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+        }
+
+        .similar-products .card {
+            transition: transform 0.3s;
+        }
+
+        .similar-products .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide {
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thumbnail-swiper {
+            height: 100px;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .thumbnail-swiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        .thumbnail-swiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Product Gallery -->
+            <div class="col-md-6">
+                <div class="product-gallery">
+                    <div class="swiper main-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/600/600" alt="Product view 1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/600/600" alt="Product view 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/600/600" alt="Product view 3" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    
+                    <div class="swiper thumbnail-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/150/150" alt="Thumbnail 1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/150/150" alt="Thumbnail 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/api/placeholder/150/150" alt="Thumbnail 3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <h1 class="h2 mb-3">Classic Polo Shirt</h1>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="text-warning me-2">
+                        ★★★★☆
+                    </div>
+                    <span class="text-muted">(4.5/5)</span>
+                </div>
+                <p class="h3 mb-4">$49.99</p>
+                
+                <div class="mb-4">
+                    <h5>Select Color</h5>
+                    <div class="color-select">
+                        <button style="background-color: navy;" class="active"></button>
+                        <button style="background-color: black;"></button>
+                        <button style="background-color: red;"></button>
+                        <button style="background-color: green;"></button>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h5>Select Size</h5>
+                    <div class="size-select">
+                        <button class="btn">S</button>
+                        <button class="btn">M</button>
+                        <button class="btn">L</button>
+                        <button class="btn">XL</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg w-100 mb-3">Add to Cart</button>
+                
+                <div class="accordion" id="productDetails">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDetails">
+                                Product Details
+                            </button>
+                        </h2>
+                        <div id="collapseDetails" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p>Classic fit polo shirt made from premium cotton. Features include:</p>
+                                <ul>
+                                    <li>100% Cotton</li>
+                                    <li>Machine washable</li>
+                                    <li>Breathable fabric</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar Products -->
+        <div class="similar-products mt-5">
+            <h3 class="mb-4">Similar Products</h3>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Similar product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Similar Polo</h5>
+                            <p class="card-text">$45.99</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other similar products -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const thumbsSwiper = new Swiper('.thumbnail-swiper', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        const mainSwiper = new Swiper('.main-swiper', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: thumbsSwiper,
+            },
+        });
+
+        // Color selection
+        document.querySelectorAll('.color-select button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.color-select button.active').classList.remove('active');
+                button.classList.add('active');
+            });
+        });
+
+        // Size selection
+        document.querySelectorAll('.size-select button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.size-select button.active')?.classList.remove('active');
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

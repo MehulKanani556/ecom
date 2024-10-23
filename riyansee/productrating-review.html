@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        .color-swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .color-swatch.active {
+            border-color: #000;
+        }
+        
+        .size-btn {
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .size-btn.active {
+            background-color: #000;
+            color: white;
+        }
+        
+        .product-rating {
+            color: #ffd700;
+        }
+        
+        .thumbnail-slider {
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .thumbnail-slide {
+            width: 80px;
+            height: 80px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        
+        .thumbnail-slide.active {
+            opacity: 1;
+            border: 2px solid #000;
+        }
+        
+        .review-container {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="swiper main-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/api/placeholder/600/800" class="img-fluid" alt="Product image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/api/placeholder/600/800" class="img-fluid" alt="Product image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/api/placeholder/600/800" class="img-fluid" alt="Product image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper thumbnail-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide thumbnail-slide">
+                            <img src="/api/placeholder/80/80" class="img-fluid" alt="Thumbnail">
+                        </div>
+                        <div class="swiper-slide thumbnail-slide">
+                            <img src="/api/placeholder/80/80" class="img-fluid" alt="Thumbnail">
+                        </div>
+                        <div class="swiper-slide thumbnail-slide">
+                            <img src="/api/placeholder/80/80" class="img-fluid" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h1 class="h3 mb-3">Classic Polo Shirt</h1>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="product-rating me-2">
+                        ★★★★☆
+                    </div>
+                    <span>(4.5/5)</span>
+                </div>
+                <p class="h4 mb-4">$59.99</p>
+                
+                <div class="mb-4">
+                    <h5>Color</h5>
+                    <div class="color-options">
+                        <span class="color-swatch active" style="background-color: #000000;"></span>
+                        <span class="color-swatch" style="background-color: #0000FF;"></span>
+                        <span class="color-swatch" style="background-color: #FF0000;"></span>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Size</h5>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn active">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button class="btn btn-dark btn-lg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Customer Reviews</h3>
+                <div class="review-container">
+                    <div class="d-flex justify-content-between">
+                        <div class="product-rating">★★★★★</div>
+                        <small class="text-muted">2 days ago</small>
+                    </div>
+                    <p class="mb-0">Great product! The quality is excellent and fits perfectly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar Products -->
+        <div class="row mt-5">
+            <h3>Similar Products</h3>
+            <div class="swiper similar-products mt-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="/api/placeholder/300/400" class="card-img-top" alt="Similar product">
+                            <div class="card-body">
+                                <h5 class="card-title">Similar Polo</h5>
+                                <p class="card-text">$49.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More similar products... -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper sliders
+        const mainSwiper = new Swiper('.main-slider', {
+            loop: true,
+            spaceBetween: 10
+        });
+
+        const thumbnailSwiper = new Swiper('.thumbnail-slider', {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        mainSwiper.controller.control = thumbnailSwiper;
+        thumbnailSwiper.controller.control = mainSwiper;
+
+        const similarProductsSwiper = new Swiper('.similar-products', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+
+        // Color and size selection functionality
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                document.querySelector('.color-swatch.active').classList.remove('active');
+                swatch.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.size-btn.active').classList.remove('active');
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

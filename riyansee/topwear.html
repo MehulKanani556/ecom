@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Grid</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <style>
+        .filter-sidebar {
+            border-right: 1px solid #eee;
+            padding: 20px;
+        }
+        
+        .product-card {
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            position: relative;
+            padding-top: 100%;
+        }
+        
+        .product-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .color-swatch {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            border: 1px solid #ddd;
+        }
+        
+        .price {
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group h5 {
+            margin-bottom: 10px;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .filter-sidebar {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Filter Sidebar -->
+            <div class="col-md-3 col-lg-2 filter-sidebar">
+                <h4>Filters</h4>
+                
+                <div class="filter-group">
+                    <h5>Discount</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">10% or more</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">20% or more</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">30% or more</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">40% or more</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">50% or more</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h5>Price Range</h5>
+                    <input type="range" class="form-range" min="0" max="100">
+                    <div class="d-flex justify-content-between">
+                        <span>$0</span>
+                        <span>$100</span>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h5>Colors</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS"><span class="color-swatch" style="background-color: #000;"></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">  <span class="color-swatch" style="background-color: gray;"></span></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">    <span class="color-swatch" style="background-color: navy;"></span></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL"><span class="color-swatch" style="background-color: green;"></span></label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h5>Brand</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">Allen Solly(10)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">H&M(20)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">JACK & JONES(30)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">U>.S. POLO ASSN.(20)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">Raymond(42)</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Size</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">XL</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Sleeve Type</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">Full Sleeve(10)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">Full Sleeve(20)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">Short Sleeve(30)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">Sleeveless(29)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">Roll-up-Sleeve(42)</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Fit Type</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">Regular(10)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">Slim(20)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">Oversized(30)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">Loose(29)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">Boxy(42)</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Size</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">XL</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Size</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">XL</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Size</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">XL</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Size</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeS">
+                        <label class="form-check-label" for="sizeS">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeM">
+                        <label class="form-check-label" for="sizeM">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeL">
+                        <label class="form-check-label" for="sizeL">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sizeXL">
+                        <label class="form-check-label" for="sizeXL">XL</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row">
+                    <!-- Product Card Template -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-image">
+                                            <img src="../r_img/allensollyman.png" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-info mt-2">
+                                <h5>Product Title</h5>
+                                <p class="price">$49.99</p>
+                                <div class="color-options">
+                                    <span class="color-swatch" style="background-color: black;"></span>
+                                    <span class="color-swatch" style="background-color: gray;"></span>
+                                    <span class="color-swatch" style="background-color: navy;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.product-swiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            }
+        });
+    </script>
+</body>
+</html>
