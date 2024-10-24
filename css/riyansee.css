@@ -6,6 +6,7 @@
 
 img {
   object-fit: cover;
+  box-sizing: border-box;
 }
 
 .slide-content {
@@ -109,13 +110,9 @@ img {
     background-size: 45%;
     background-position-y: 40%;
 }
-
-
-
-
 .explore-more {
   position: relative;
-  padding: 80px 0; /* Adjusted for space above and below the categories */
+  padding: 80px 0;
   text-align: center;
   background: url('../r_img/Explore\ More.png') no-repeat center center;
   background-size: 55%;
@@ -145,6 +142,105 @@ img {
   font-weight: 500;
 }
 
+/* Top Wear */
+.filter-accordion {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.accordion-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.show-more-btn {
+  color: #0d6efd;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.hidden-item {
+  display: none;
+}
+
+.rating-stars {
+  color: #F8A120;
+}
+
+.rating-stars-gray {
+  color: #B8B8B8;
+}
+
+/* Price Range Slider Custom Styling */
+.price-range-container {
+  padding: 1rem 0;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: #0d6efd;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: #dee2e6;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .filter-accordion {
+      max-width: 100%;
+  }
+
+  .accordion-button {
+      padding: 0.5rem 1rem;
+  }
+
+  .accordion-body {
+      padding: 0.5rem;
+  }
+}
+.r_clear{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px 10px;
+  font-size: 12px;
+}
+.r_border{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 1px 10px;
+  font-size: 12px;
+  margin: 10px;
+  color:#727272;
+}
 @media (max-width: 576px) {
   .brand-card img {
       max-height: 40px;
@@ -160,7 +256,7 @@ img {
 }
 
 .explore-more {
-    background-size: 80%; /* Resize background image for smaller screens */
+    background-size: 80%; 
 }
 }
 @media (min-width:2560px) {}
