@@ -1232,6 +1232,16 @@
     z-index: 0; 
     width: 50%;
 }
+.dk_order_tracking_line_paymet{
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    right: 2%;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0; 
+    width: 50%;
+}
 .dk_order_tracking_step:not(:last-child) .dk_order_tracking_line {
     width: 100%;
 }
@@ -1813,10 +1823,10 @@ button.input-focused {
     display: block;
 }
 .custom-radio .checkmark:after {
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: white;
 }
@@ -1870,3 +1880,215 @@ input[type="checkbox"] {
     width: 85%;
     border-radius: 4px;
 } 
+
+/****** Payment page *******/
+.dk_order_payment_det_sub_py{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.dk_order_payment_det_py{
+    padding: 24px 24px 0px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+.dk_order_payment_det_py h2{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;  
+}
+.dk_order_payment_det_py p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;  
+    margin-bottom: 0px; 
+}
+.dk_coupon_offers_py{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.dk_coupon_offers_py h2{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;  
+}
+.dk_coupon_offers_py p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    margin-bottom: 0px;   
+}
+.dk_order_info_py{
+    padding: 10px 0px 10px 24px;
+    border-bottom: 0.5px solid #d2d2d2;
+}
+.dk_order_info_py h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000; 
+}
+.dk_total_amount_cwa_py{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px 15px 24px;
+}
+.dk_total_amount_cwa_py h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: #000000;   
+}
+.dk_total_amount_cwa_py p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+    color: #000000; 
+}
+.dk_order_details_cwa_dk{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;  
+    border-radius: 4px; 
+    padding-bottom: 0px;
+}
+.dk_payment_category{
+    padding: 30px 40px 48px;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+}
+.dk_pay_on_delivery_main{
+    border: 1px solid #e0e0e0;
+    padding: 13px 20px 20px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.dk_pay_on_delivery_sub{
+    display: flex;
+    justify-content: space-between;
+}
+.dk_pay_on_delivery_sub h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #000000;      
+}
+.dk_pay_on_delivery_main p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #727272; 
+    padding-top: 20px;    
+}
+.dk_captcha_main{
+    display: flex;
+    padding: 0px 30px;
+}
+.dk_custom_label_payment {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+}
+.dk_caotcha_enter{
+    width: 45%;
+} 
+.dk_pay_payment_button{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 10px 88px;
+    border-radius: 4px;
+    margin-top: 27px;
+}
+
+/* Style the buttons for the accordion */
+.accordion {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+}
+
+.accordion.active {
+    background-color: #ccc;
+}
+
+/* Style the panel that is hidden or shown */
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+.dk_credit_card{
+    padding-top: 20px;
+}
+.dk_upi{
+    padding-top: 20px;
+}
+.input-group :focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d2 !important;
+}
+.dk_net_banking{
+    padding-top: 20px;
+}
+.dk_net_banking_sub{
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+.dk_net_banking_sub p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: center;
+    color: #000000;  
+}
+.dk_search_in {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/img/search_icon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 8px 20px 8px 40px;
+  }
+  /* <!-- Order Confirmation page --> */
+  .dk_order_confirmation{
+    padding: 50px 0px 100px 0px;
+  }
+  .dk_order_confirmation h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000000;  
+    padding-bottom: 20px;
+  }
