@@ -2090,5 +2090,207 @@ input[type="checkbox"] {
     font-weight: 600;
     line-height: 33.89px;
     color: #000000;  
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
+  .dk_order_details_confirm{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+    padding-bottom: 5px;
+  }
+  .dk_thank_you_alex{
+    border-bottom: 1px solid #d2d2d2;
+    display: flex;
+  }
+  .dk_thank_you_image{
+    padding: 20px 16px 16px 40px;
+  }
+  .dk_thank_you_oid{
+    padding: 20px 0px 16px 16px;
+  }
+  .dk_thank_you_oid p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #727272;
+  }
+  .dk_thank_you_oid h3{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26.63px;
+    text-align: left;
+    color: #000000; 
+  }
+  .dk_order_is_confirmed{
+    padding: 16px 40px 0px 40px;
+  }
+  .dk_order_is_confirmed h3{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000000;    
+  }
+  .dk_order_is_confirmed p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #727272;       
+  }
+  .dk_order_bill{
+    border: 1px solid #727272;
+    border-radius: 4px;
+    margin: 20px 40px 20px 40px;
+  }
+  .dk_order_details_ob{
+    border-bottom: 0.5px solid #d3d3d3;
+    padding: 18px 24px 16px 24px;
+  }
+  .dk_order_date_mathode{
+    border-bottom: 0.5px solid #d3d3d3;
+    display: flex;
+    justify-content:space-between;
+    padding: 16px 30px;
+  }
+  .dk_order_date_mathode p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color:#727272;
+  }
+  .dk_order_date_mathode p b{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #000000;
+  }
+  .dk_billing_address{
+    display: flex;
+    padding: 20px 30px 16px 30px;
+    border-bottom: 0.5px solid #d2d2d2;
+  }
+  .dk_billing_address1{
+    width: 191px;
+    margin-right: 40px;
+  }
+  .dk_billing_address2{
+    width: 191px;
+  }
+  .dk_billing_address h4{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: 0.08em;
+    color: #727272; 
+  }
+  .dk_billing_address h3{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+  }
+  .dk_billing_address p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+  }
+  .dk_billing_address h5{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+  }
+  .dk_billing_pro_item{
+    padding: 20px 30px 0px 30px;
+  }
+  .dk_billing_pro_item_sub{
+    margin-bottom: 20px;
+  }
+  .dk_billing_pro_item_sub h5{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    color: #000000; 
+  }
+  .dk_billing_pro_item_sub h6{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;    
+    color: #000000; 
+  }
+  .dk_billing_pro_item_sub p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color:#727272BF;
+  }
+  .dk_billing_pro_item_sub p b{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color:#000000;
+  }
+  .dk_billing_pro_item_sub h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color:#000000;
+    text-align: right;
+  }
+  .dk_downlode_invoice_sub{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF; 
+    padding: 13px 32px; 
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  .dk_downlode_invoice{
+   text-align: right;
+   padding: 0px 30px 22px 30px;
+  }
+  .dk_caro2_img{
+    height: 160px !important;
+    width: 120px !important;
+}
+.order_confirm_card{
+    height: 200px;
+}
+.dk_custum_size{
+    font-size: 14px;
+}
+.dk_best_seller_thumbnails2{
+    padding-top: 10px;
+}
+.dk_best_seller_thumbnails2 img:hover {
+    transform: scale(1.1); 
+}
+.dk_you_may_also_like{
+    row-gap: 30px;
+}
+.dk_order_shadow{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+}
+/* <!-- Search page  --> */
+.dk_search_page{ 
+   text-align: center;
+   padding: 259px 0px 200px 0px;
+}
+.dk_search_page h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color:#000000;
+}
+.dk_search_page p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #727272; 
+}
+.dk_search_page img{
+    padding-bottom: 20px;
+}

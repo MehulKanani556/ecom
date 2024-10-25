@@ -166,7 +166,7 @@
 }
 @media(max-width:1200px){
     /* Cart Without Address */
-    .overflow-auto {
+    /* .overflow-auto {
         overflow-x: auto; 
         overflow-y: hidden; 
         white-space: nowrap;
@@ -178,7 +178,7 @@
     }
     .overflow-auto {
         scrollbar-width: none; 
-    } 
+    }  */
     /* Cart Without Address */
     .dk_proceed {
         font-size: 20px;
@@ -204,6 +204,11 @@
     .dk_captcha_main {
         display: flex;
         padding: 0px 10px;
+    }
+    /* <!-- Search page  --> */
+    .dk_search_page{ 
+        text-align: center;
+        padding: 200px 0px 150px 0px;
     }
 }
 @media(max-width:1199px){
@@ -506,6 +511,11 @@
         border-radius: 4px;
         margin-top: 27px;
     }
+    /* <!-- Search page  --> */
+    .dk_search_page{ 
+        text-align: center;
+        padding: 150px 0px 100px 0px;
+    }
 }
 @media(max-width:991px){
     /* Login with Email & Mobile */
@@ -662,6 +672,11 @@
         padding: 10px 60px;
         border-radius: 4px;
         margin-top: 27px;
+    }
+    /* <!-- Search page  --> */
+    .dk_search_page{ 
+        text-align: center;
+        padding: 100px 0px 80px 0px;
     }
 }
 
@@ -1012,6 +1027,11 @@
         z-index: 0; 
         width: 50%;
     }
+    /* <!-- Search page  --> */
+    .dk_search_page{ 
+        text-align: center;
+        padding: 80px 0px 60px 0px;
+    }
  } 
 /* signup */
 @media (max-width: 576px) {
@@ -1186,6 +1206,26 @@
     .dk_empty_wishlist{
         text-align: center;
         padding: 80px 0px 80px 0px;
+    }
+}
+
+@media (max-width:575px) {
+    /* Order Confirmation page  */
+    .dk_billing_pro_item_sub h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.78px;
+        color: #000000;
+        text-align: center;
+    }
+    .dk_billing_pro_item_sub{
+        text-align: center;
+    }
+    .dk_downlode_invoice_sub{
+        width: 100%;
+    }
+    .dk_order_confirmation h2 {
+        padding-bottom: 0px;
     }
 }
     /* OTP Verification */
@@ -1428,6 +1468,29 @@
         padding: 30px 0px 48px;
         box-shadow: 1px 6px 19px 0px #A4A4A433;
         border-radius: 4px;
+    }
+    /* .Order Confirmation page */
+    .dk_order_date_mathode {
+        border-bottom: 0.5px solid #d3d3d3;
+        display: block;
+        justify-content: space-between;
+        padding: 16px 30px;
+        text-align:center;
+    }
+    .dk_billing_address1 {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .dk_billing_address2 {
+        width: 100%;
+    }
+    
+    .dk_billing_address {
+        display: block;
+        padding: 20px 30px 16px 30px;
+        border-bottom: 0.5px solid #d2d2d2;
+        text-align: center;
     }
 }
 
@@ -1739,6 +1802,17 @@
         padding: 10px 36px;
         border-radius: 4px;
         margin-top: 27px;
+    }
+    /* Order Confirmation page */
+    .dk_downlode_invoice_sub {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 13px 10px;
+        background-color: #000000;
+        border-radius: 4px;
     }
 }
 /* OTP Verification */
