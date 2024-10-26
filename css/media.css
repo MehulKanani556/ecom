@@ -138,6 +138,26 @@
         border-radius: 4px;
         margin-top: 27px;
     }
+    /* Delivery Details */
+    .dk_pro_remove_main{
+        justify-content: start;
+    }
+    .dk_pro_remove{
+        text-align: left;
+    }
+    /* Cart With Address  */
+    .dk_move_to_wishlist_main {
+        padding-top: 0px;
+    }
+    .dk_move_to_remove{
+        display: block;
+    }
+    /* Cart With Address */
+    .dk_best_seller_cart_add {
+        position: absolute;
+        bottom: 92%;
+        left: 0%;
+    }
 }   
 /* perfume */
 @media (max-width: 1440px) and (min-width: 1024px) {
@@ -1032,6 +1052,13 @@
         text-align: center;
         padding: 80px 0px 60px 0px;
     }
+    /* Cart With Address */
+    .dk_move_to_wishlist_main {
+        padding-top: 0px;
+    }
+    .dk_move_to_remove{
+        display: block;
+    }
  } 
 /* signup */
 @media (max-width: 576px) {
@@ -1226,6 +1253,26 @@
     }
     .dk_order_confirmation h2 {
         padding-bottom: 0px;
+    }
+    /* Delivery Details */
+    .dk_product_card_without_add {
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        padding: 18px 20px 33px 20px !important;
+        position: relative;
+    }
+    /* Cart With Address */
+    .dk_move_to_wishlist_main {
+        padding-top: 0px;
+    }
+    .dk_move_to_remove {
+        justify-content: end;
+        display: block;
+    }
+    /* Cart With Address */
+    .dk_best_seller_cart_add {
+        position: absolute;
+        bottom: 95%;
+        left: 0%;
     }
 }
     /* OTP Verification */
@@ -1653,6 +1700,18 @@
         line-height: 19.36px;
         text-align: left;
         color: #000000;
+    }
+    .dk_pro_caounting {
+        padding: 6px 10px 6px 10px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .dk_move_to_wishlist {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .dk_move_to_wishlist_main{
+        display: block;
     }
 }
 @media (max-width: 375px) {

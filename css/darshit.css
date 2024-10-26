@@ -1357,6 +1357,13 @@
     text-align: left;
     color: #000000;   
 }
+.dk_pro_remove_main{
+    justify-content: end;
+}
+.dk_move_to_remove{
+    justify-content: end;
+    display: flex;
+}
 .dk_pro_remove{
     text-align: right;
 }
@@ -1394,8 +1401,6 @@
 .dk_pro_caounting{
     background-color: #000000;
     color: #FFFFFF;
-    width: Fixed (120px)px;
-    height: Fixed (34px)px;
     top: 741px;
     left: 1005px;
     padding: 6px 20px 6px 20px;
@@ -1413,6 +1418,7 @@
 }
 .dk_move_to_wishlist_main{
     padding-top: 79px;
+    display: flex;
 }
 .dk_order_details_cwa{
     box-shadow: 1px 6px 19px 0px #A4A4A433;  
@@ -2293,4 +2299,112 @@ input[type="checkbox"] {
 }
 .dk_search_page img{
     padding-bottom: 20px;
+}
+
+/********* My Profile page ********/
+/* Reset some basic styles */
+
+.dk_my_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.dk_container222 {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 100%;
+}
+
+.dk_sidebar {
+    background-color: #292b2c;
+    color: white;
+    width: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dk_logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.dk_menu {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0rem;
+}
+
+.dk_menu-item {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #d1d1d1;
+    font-size: 1em;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dk_icon {
+    font-size: 1.2em;
+}
+
+.dk_menu-item:hover,
+.dk_menu-item.active {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.dk_profile-content {
+    padding: 40px;
+    width: 100%;
+}
+
+.dk_profile-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.dk_profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dk_profile-form label {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.dk_profile-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dk_profile-form button {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: #292b2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.dk_profile-form button:hover {
+    background-color: #1f1f1f;
 }
