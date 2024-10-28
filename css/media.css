@@ -230,6 +230,13 @@
         text-align: center;
         padding: 200px 0px 150px 0px;
     }
+    /****8 My Profile page *** */
+    .dk_my_profile_sub {
+        display: flex;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+    }
 }
 @media(max-width:1199px){
     /* Login with Email & Mobile */

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Edit Profile</title>
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/all.min.css">
@@ -113,7 +113,7 @@
     </header>
 
     <main>
-        <!-- My Profile -->
+        <!-- edit Profile -->
         <section>
             <div class="container">
                 <div class="dk_my_profile">
@@ -137,22 +137,24 @@
                                     </span>
                                     My Orders
                                 </li>
-                                <li >
+                                <li>
                                     <div class="accordion p-0" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOne">
-                                                <button style="gap: 10px;" class="accordion-button dk_payment_method" type="button" data-bs-toggle="collapse"
+                                                <button style="gap: 10px;" class="accordion-button dk_payment_method"
+                                                    type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseOne" aria-expanded="true"
                                                     aria-controls="collapseOne">
                                                     <span class="dk_icon">
                                                         <img class="dk_icon_image default" src="/img/payment_method.png"
                                                             alt="My Profile">
-                                                        <img class="dk_icon_image hover" src="/img/white_payment_methde.png"alt="My Profile Hover">
+                                                        <img class="dk_icon_image hover"
+                                                            src="/img/white_payment_methde.png" alt="My Profile Hover">
                                                     </span>
                                                     Payment Methods
                                                 </button>
                                             </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse "
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <ul>
@@ -208,7 +210,7 @@
                             </ul>
                         </aside>
                         <main class="dk_profile-content">
-                            <h2>My Profile</h2>
+                            <h2>Edit Profile</h2>
                             <div class="dk_profile_content_sub">
                                 <form class="dk_profile-form">
                                     <div class="row">
@@ -222,13 +224,28 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label>Gender</label>
-                                            <input type="text" value="Male">
-                                            <label>Password</label>
-                                            <input type="text" value="Alex@1234">
-                                            <label>Birthdate</label>
-                                            <input type="text" value="21/12/1994">
+                                            <select class="dk_edit_pro_sel" name="Gender" id="">
+                                                <option value="#">Male</option>
+                                                <option value="#">Female</option>
+                                                <option value="#">Other</option>
+                                            </select>
+                                            <!-- <input type="text" value="Male"> -->
+                                            Password
+                                            <input type="password" name="password" autocomplete="current-password"
+                                                required="" id="id_password">
+
+                                            <img src="../img/eye.png" width="20px" height="20px" style="display: inline; 
+                                                     margin-left: -11.5%; 
+                                                     vertical-align: middle" id="togglePassword">
+                                               <label for="birthdate">Birthdate</label>
+                                               <div class="date-wrapper">
+                                                   <input type="date" id="birthdate" value="1994-12-21">
+                                                   <div class="calendar-icon" onclick="document.getElementById('birthdate').click();"></div>
+                                               </div>
+                                         
+                                         
                                         </div>
-                                        <a href=""><button type="submit">Edit Profile</button> </a>
+                                        <a href=""><button type="submit">Save Changes</button> </a>
                                     </div>
                                 </form>
                             </div>
@@ -320,6 +337,45 @@
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const togglePassword =
+            document.querySelector('#togglePassword');
+
+        const password =
+            document.querySelector('#id_password');
+
+        togglePassword.
+            addEventListener('click', function (e) {
+
+                // Toggle the type attribute 
+                const type = password.getAttribute(
+                    'type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+
+                // Toggle the eye slash icon 
+                if (togglePassword.src.match(
+                    "../")) {
+                    togglePassword.src =
+                        "https://media.geeksforgeeks.org/wp-content/uploads/20210917145551/eye.png";
+                } else {
+                    togglePassword.src =
+                        "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash.png";
+                }
+            }); 
+    </script>
+
+    <script>
+        // Optional: Close calendar when clicking outside
+        window.onclick = function(event) {
+            const input = document.getElementById('birthdate');
+            const icon = document.querySelector('.calendar-icon');
+            if (!input.contains(event.target) && !icon.contains(event.target)) {
+                input.blur(); // This will close the calendar
+            }
+        }
+    </script>
 </body>
 
 </html>
+
+
