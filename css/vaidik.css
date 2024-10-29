@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none !important;
+}
+.container{
+    width: 90%;
+}
+.mv_order_main_class{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    margin-bottom: 50px;
+}
+.mv_order_heading{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.mv_order_nav_tabs .mv_order_navs_button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #727272;
+}
+.mv_order_nav_tabs .mv_order_navs_button.active{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000 !important;
+    border: none;
+    border-bottom: 1px solid #5c5c5c !important;
+}
+.mv_order_nav_tabs .mv_order_navs_button:hover {
+    border: none;
+    color: #000000;
+}
+.mv_order_table_content{
+    padding: 20px;
+}
+.mv_order_expacted{
+    border-radius: 4px;
+    border: 1px solid #040404;
+    margin-bottom: 20px;
+}
+.mv_order_date_main{
+    border-bottom: 0.5px solid #B8B8B8;
+    padding: 10px;
+}
+.mv_order_date_heading{
+    font-size: 12px;
+    font-weight: 500;
+    color: #727272;
+    margin-right: 5px;
+}
+.mv_order_date{
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+}
+.mv_order_product_details{
+    padding: 10px;
+}
+.mv_order_product_image{
+    text-align: center;
+}
+.mv_order_product_text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.mv_order_review .mv_order_review_yellow{
+    color: #F8A120;
+}
+.mv_order_review .mv_order_review_gray{
+    color: #727272;
+}
+.mv_order_price_track{
+    text-align: end;
+}
+.mv_order_price{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.mv_order_track{
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+.mv_order_track:hover{
+    color: #000000;
+}
+
+
+
+
+@media(max-width:767px){
+    .mv_order_product_image{
+        text-align: start !important;
+        margin-bottom: 10px;
+    }
+    .mv_order_price_track{
+        text-align: start;
+    }
+    .mv_order_price{
+        margin-bottom: 5px;
+    }
+    .mv_order_nav_tabs .mv_order_navs_button{
+        padding: 5px;
+    }
+}
+
+@media(max-width:425px){
+    .mv_order_nav_tabs{
+        display: block !important;
+    }
+    .mv_order_nav_tabs li{
+        margin-bottom: 10px;
+    }
+    .mv_order_date_main{
+        display: block !important;
+    }
+}
