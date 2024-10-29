@@ -7,6 +7,7 @@
     <title>home</title>
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,7 +23,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <div class=" d-flex justify-content-between">
                 <div class="logo">
@@ -110,7 +111,9 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
+
+    <div id="header"></div>
 
     <main>
         <!-- deals_discounts -->
@@ -1322,7 +1325,7 @@
 
     </main>
 
-    <footer>
+    <!-- <footer>
         <div class="dk_quickcart_footer">
             <div class="container">
                 <div class="row dk_quickcart_footer_sub">
@@ -1392,7 +1395,10 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
+    
+    <!-- Footer -->
+    <div id="footer"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
@@ -1404,6 +1410,21 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <script>
+        // navbar include
+        fetch("/darshit/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+            document.getElementById("header").innerHTML = data;
+            });
+        // footer include
+        fetch("/darshit/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 
     <!-- SAMSUNG GALAXY S24 ULTRA  -->
     <!-- deals_discounts -->
