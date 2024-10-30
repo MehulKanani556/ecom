@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+
+    <!-- slider -->
+    <!-- <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css" /> -->
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../css/vaidik.css" />
+
+    <!-- header footer -->
+    <link rel="stylesheet" href="../css/header_footer.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-EVSTQN3 azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+
+    <div>
+        <div class="container">
+          <p class="mv_order_heading">My Order</p>
+          <div class="mv_order_main_class">
+            <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
+                </li>
+            </ul>
+            <div class="tab-content mv_order_table_content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">21/09/2024</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">26/09/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="../mv_image/image 386.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                    <div class="mv_order_review">
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">$12,999</p>
+                                        <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">21/09/2024</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">26/09/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="../mv_image/image 386.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                    <div class="mv_order_review">
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">$12,999</p>
+                                        <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">21/09/2024</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                <p class="mv_order_date mb-0">26/09/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="../mv_image/image 386.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                    <div class="mv_order_review">
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                        <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">$12,999</p>
+                                        <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">bbb</div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">ccc</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- script header and footer -->
+    <script>
+      // navbar include
+      fetch("../darshit/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+      // footer include
+      fetch("../darshit/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <!-- <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/mv_slider.js"></script> -->
+
+  </body>
+</html>
