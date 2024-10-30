@@ -41,7 +41,7 @@
                             <div class="dk_order_details_confirm">
                                 <div class="dk_thank_you_alex">
                                     <div class="dk_thank_you_image">
-                                        <img src="/img/checkmark-circle.png" alt="">
+                                        <img src="../img/checkmark-circle.png" alt="">
                                     </div>
                                     <div class="dk_thank_you_oid">
                                         <p class="mb-0">Order ID #123ABC456D</p>
@@ -398,13 +398,13 @@
     <!-- script Header and Footer -->
     <script>
         // navbar include
-        fetch("/darshit/header.html")
+        fetch("../darshit/header.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("header").innerHTML = data;
             });
         // footer include
-        fetch("/darshit/footer.html")
+        fetch("../darshit/footer.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("footer").innerHTML = data;

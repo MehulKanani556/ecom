@@ -2319,7 +2319,6 @@ input[type="checkbox"] {
     background-color: #ffffff;
     color: #000000;
     width: 250px !important;
-    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     box-shadow: 1px 6px 19px 0px #A4A4A433;
@@ -2339,6 +2338,7 @@ input[type="checkbox"] {
     list-style-type: none;
     width: 250px !important;
     padding-left: 0rem;
+    margin-bottom: 0rem;
 }
 
 .dk_menu-item {
@@ -2388,7 +2388,7 @@ input[type="checkbox"] {
     color: #ffffff;
 }
 .dk_profile-content {
-    padding: 40px;
+    padding: 20px 40px;
     width: 100%;
 }
 .dk_profile_content_sub{
@@ -2402,7 +2402,6 @@ input[type="checkbox"] {
     font-weight: 600;
     line-height: 33.89px;    
     color: #333;
-    margin-bottom: 20px;
 }
 
 .dk_profile-form {
@@ -2436,7 +2435,7 @@ input[type="checkbox"] {
 }
 .dk_menu-item {
     position: relative; 
-    padding: 15px 10px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -2447,7 +2446,9 @@ input[type="checkbox"] {
     transition: background 0.3s, color 0.3s;
     border-bottom: 1px solid #D2D2D2;
 }
-
+.dk_menu-item:last-child{
+    border-bottom: none;
+}
 .dk_submenu {
     display: none; 
     position: absolute; 
@@ -2498,7 +2499,7 @@ input[type="checkbox"] {
     padding: 1rem 1rem;
 }
 .dk_my_profile .accordion-button{
-    padding: 15px 10px !important;
+    padding: 15px 20px !important;
 }
 .dk_payment_method .dk_icon .dk_icon_image .hover {
     display: none !important;
@@ -2543,6 +2544,7 @@ input[type="date"] {
 
 .dk_account_menu_bar{
     padding: 0px !important;
+    display: none;
 }
 .dk_account_menu_bar i{
     color: black;
@@ -2559,18 +2561,23 @@ input[type="date"] {
     display: inline;
     vertical-align: middle
 }
+.dk_my_profile .accordion-body {
+    padding: 1rem 2rem;
+}
 
 /******* Empty Address page  ******/
 .dk_empty_address{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     padding: 30px;
+    width: 100% !important;
     height: 500px;
 }
 .dk_empty_add_add_address{
-    border: 1px solid #040404;
     border-radius: 4px;
     text-align: center;
-    padding: 60px 60px;
+    /* width: 260px; */
+    height: 171px;
+    gap: 0px;
 }
 .dk_empty_add_add_address h4{
     font-size: 16px;
@@ -2578,4 +2585,115 @@ input[type="date"] {
     line-height: 19.36px;
     color: #727272;
     text-align: center;    
+    padding-top: 10px;
+}
+.dk_empty_add_add_address_sub{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #040404;
+    border-radius: 4px;
+}
+.dk_add_address_off{
+    padding: 1rem 0rem !important; 
+}
+.dk_add_address_main_font{
+    padding: 30px 30px 10px 30px !important;
+}
+.dk_add_address_details{
+    padding: 40px;
+}
+.dk_addres_tyap h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;   
+}
+.dk_addres_tyap p{
+    padding-right: 15px;
+}
+.dk_save_add_address{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    text-align: center;  
+    color: #FFFFFF;  
+    background-color: #000000;
+    width: 80%;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 30px;
+}
+.dk_adress_type{
+    margin-top: 2px;
+}
+.dk_home_address_main{
+    border: 1px solid #040404;
+    border-radius: 4px;
+}
+
+.dk_edit_add_card {
+    border: 1px solid #040404;
+    border-radius: 8px;
+    /* padding: 16px; */
+    /* max-width: 250px; */
+}
+.dk_edit_add_card h3 {
+    font-size: 14px !important;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 0px;
+}
+.dk_edit_add_card  p {
+    margin: 5px 0;
+    color: #000000;
+    font-size: 12px;
+    line-height: 18px;
+}
+.dk_edit_add_card h6{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #000000;
+}
+.dk_edit_add_card h4{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #000000;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+/* Additional styles if needed */
+.dropdown-item {
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.ed_dropdown{
+    padding: 0px !important;
+    background-color: white !important;
+}
+.dk_add_dropdown{
+    right: 5px;
 }

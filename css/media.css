@@ -795,7 +795,6 @@
     .dk_logo {
         font-size: 20px;
     }
-
     /* .dk_categories_name {
         margin-left: 20px;
     } */
@@ -1093,7 +1092,10 @@
         margin-top: 40px;
         width: 94%;
     }
-    
+    /* nav */
+    .dk_account_menu_bar{
+        display: block;
+    }
  } 
  @media(max-width:767px){
     .dk_login_form {

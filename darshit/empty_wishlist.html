@@ -33,7 +33,7 @@
         <section>
             <div class="container">
                     <div class="dk_empty_wishlist">
-                        <img src="/img/emty_wishlest.png" alt="">
+                        <img src="../img/emty_wishlest.png" alt="">
                         <h4>Empty Wishlist</h4>
                         <p>Your wishlist is empty please add your favourite items to wishlist </p>
                     </div>
@@ -47,13 +47,13 @@
       <!-- script Header and Footer -->
     <script>
         // navbar include
-        fetch("/darshit/header.html")
+        fetch("../darshit/header.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("header").innerHTML = data;
             });
         // footer include
-        fetch("/darshit/footer.html")
+        fetch("../darshit/footer.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("footer").innerHTML = data;

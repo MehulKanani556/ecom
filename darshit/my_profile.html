@@ -49,18 +49,18 @@
                                         <ul class="dk_menu ">
                                             <li class="dk_menu-item active">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/my_profile.png"
+                                                    <img class="dk_icon_image default" src="../img/my_profile.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/my_profile_hover.png"
+                                                    <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 My Profile
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/my_order.png"
+                                                    <img class="dk_icon_image default" src="../img/my_order.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_myorder.png"
+                                                    <img class="dk_icon_image hover" src="../img/white_myorder.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 My Orders
@@ -75,9 +75,9 @@
                                                                 aria-expanded="true" aria-controls="collapseOne">
                                                                 <span class="dk_icon">
                                                                     <img class="dk_icon_image default"
-                                                                        src="/img/payment_method.png" alt="My Profile">
+                                                                        src="../img/payment_method.png" alt="My Profile">
                                                                     <img class="dk_icon_image hover"
-                                                                        src="/img/white_payment_methde.png"
+                                                                        src="../img/white_payment_methde.png"
                                                                         alt="My Profile Hover">
                                                                 </span>
                                                                 Payment Methods
@@ -98,45 +98,45 @@
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/my_address.png"
+                                                    <img class="dk_icon_image default" src="../img/my_address.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_myaddress.png"
+                                                    <img class="dk_icon_image hover" src="../img/white_myaddress.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 My Address
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/faqs.png"
+                                                    <img class="dk_icon_image default" src="../img/faqs.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_fasq.png"
+                                                    <img class="dk_icon_image hover" src="../img/white_fasq.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 FAQs
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/terns_of_service.png"
+                                                    <img class="dk_icon_image default" src="../img/terns_of_service.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_terms.png"
+                                                    <img class="dk_icon_image hover" src="../img/white_terms.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 Terms of Service
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/disactive.png"
+                                                    <img class="dk_icon_image default" src="../img/disactive.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_deactive.png"
+                                                    <img class="dk_icon_image hover" src="../img/white_deactive.png"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 Deactivate Account
                                             </li>
                                             <li class="dk_menu-item">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="/img/logout.png"
+                                                    <img class="dk_icon_image default" src="../img/logout.png"
                                                         alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="/img/white_logout.svg"
+                                                    <img class="dk_icon_image hover" src="../img/white_logout.svg"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 Logout
@@ -202,13 +202,13 @@
     <!-- script Header and Footer -->
     <script>
         // navbar include
-        fetch("/darshit/header.html")
+        fetch("../darshit/header.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("header").innerHTML = data;
             });
         // footer include
-        fetch("/darshit/footer.html")
+        fetch("../darshit/footer.html")
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("footer").innerHTML = data;
