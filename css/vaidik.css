@@ -9,7 +9,8 @@ a{
 .container{
     width: 90%;
 }
-/*********** MyOrder ***********/
+
+/*********** My Order ***********/
 .mv_order_main_class{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     margin-bottom: 50px;
@@ -101,9 +102,156 @@ a{
 /********************************/
 
 
+/*********** Track Order ***********/
+.dk_order_tracking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 60px;
+    position: relative;
+}
+.dk_order_tracking_step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.dk_order_tracking_circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    z-index: 1; 
+}
+.dk_order_tracking_active {
+    background-color: black;
+}
+.dk_order_tracking_without_line {
+    position: absolute;
+    top: 32%;
+    left: 8px;
+    right: 2%;
+    height: 2px;
+    background-color: #D2D2D2;
+    z-index: 0; 
+    width: 95%;
+}
+.dk_order_tracking_line {
+    position: absolute;
+    top: 32%;
+    left: 0;
+    right: 2%;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0; 
+    width: 50%;
+}
+.dk_order_tracking_line_one{
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    right: 2%;
+    height: 2px;
+    background-color: #B8B8B8;
+    z-index: 0; 
+    width: 50%;
+}
+.dk_order_tracking_line_paymet{
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    right: 2%;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0; 
+    width: 50%;
+}
+.mv_product_details_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;
+}
+.mv_track_order_sub_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    margin-top: 10px;
+}
+.mv_order_product_details_main{
+    margin: 0px 0px 80px 0px !important;
+    border: 1px solid #040404;
+    border-radius: 4px;
+}
+.mv_order_product_details_item{
+    padding-right: calc(var(--bs-gutter-x)* 0px) !important;
+    padding-left: calc(var(--bs-gutter-x)* 0px) !important;
+}
+.mv_order_details{
+    padding: 20px 10px;
+}
+.mv_product_details_sub_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 0.5px solid #B8B8B8;
+}
+.mv_order_id_content{
+    padding: 10px;
+}
+.mv_order_id_heading{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #727272;    
+}
+.mv_order_id{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #000000;
+}
+.mv_delivery_address_name{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+}
+.mv_delivery_address{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #000000;
+}
+.mv_download_invoice{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    text-decoration: underline !important;
+}
+.mv_order_details button{
+    border-radius: 4px;
+    background-color: #fff;
+}
+.mv_cancel_order{
+    padding: 6px 20px;
+}
+/********************************/
+
+
 
 
 @media(max-width:767px){
+    /* My Order */
     .mv_order_product_image{
         text-align: start !important;
         margin-bottom: 10px;
@@ -120,6 +268,7 @@ a{
 }
 
 @media(max-width:575px){
+    /* My Order */
     .mv_item_successfully{
         display: block;
         flex-direction: column;
@@ -127,6 +276,7 @@ a{
 }
 
 @media(max-width:425px){
+    /* My Order */
     .mv_order_nav_tabs{
         display: block !important;
     }
