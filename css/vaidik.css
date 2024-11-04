@@ -9,6 +9,7 @@ a{
 .container{
     width: 90%;
 }
+/*********** MyOrder ***********/
 .mv_order_main_class{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     margin-bottom: 50px;
@@ -24,6 +25,8 @@ a{
     font-size: 16px;
     font-weight: 500;
     color: #727272;
+    padding: 20px 10px;
+    /* width: 100%; */
 }
 .mv_order_nav_tabs .mv_order_navs_button.active{
     font-size: 16px;
@@ -95,6 +98,7 @@ a{
 .mv_order_track:hover{
     color: #000000;
 }
+/********************************/
 
 
 
@@ -115,6 +119,13 @@ a{
     }
 }
 
+@media(max-width:575px){
+    .mv_item_successfully{
+        display: block;
+        flex-direction: column;
+    }
+}
+
 @media(max-width:425px){
     .mv_order_nav_tabs{
         display: block !important;
@@ -124,5 +135,11 @@ a{
     }
     .mv_order_date_main{
         display: block !important;
+    }
+    .mv_order_date_main{
+        flex-direction: column;
+    }
+    .mv_order_date_heading_main{
+        margin-bottom: 5px;
     }
 }
