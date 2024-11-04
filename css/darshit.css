@@ -1210,12 +1210,12 @@
     height: 2px;
     background-color: #D2D2D2;
     z-index: 0; 
-    width: 95%;
+    width: 96%;
 }
 .dk_order_tracking_line {
     position: absolute;
     top: 32%;
-    left: 0;
+    left: 0%;
     right: 2%;
     height: 2px;
     background-color: #000000;
@@ -2312,9 +2312,11 @@ input[type="checkbox"] {
     display: flex;
     background-color: white;
     overflow: hidden;
-    width: 85%;
+    /* width: 85%; */
 }
-
+/* .collapse:not(.show) {
+    display: block !important;
+} */
 .dk_sidebar {
     background-color: #ffffff;
     color: #000000;
@@ -2697,3 +2699,35 @@ input[type="date"] {
 .dk_add_dropdown{
     right: 5px;
 }
+
+
+/*********I delete address ********/
+.dk_delete_address h3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;    
+    color: #000000;
+    padding: 20px 0px 15px 0px;
+    text-align: center;
+}
+.dk_delete_address_sub {
+    border-top: none !important;
+    justify-content: center !important;
+}
+.dk_delete_add_conform{
+    width: 35%;
+    text-align: center;
+    margin-right: 20px !important;
+    border: 1px solid #000000 !important;
+}
+.dk_delete_add_conform:hover{
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+.dk_delete_add_conform2{
+    width: 35%;
+    text-align: center;
+    border: 1px solid #000000 !important;
+}
+
+

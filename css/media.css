@@ -738,18 +738,21 @@
 }
 @media(max-width:768px){
      /* Login with Email & Mobile */
-    .dk_login_sub {
-        padding: 30px 30px 30px 30px;
+      .dk_login_main_content {
+        flex-direction: column;
+        text-align: center;
     }
-    .dk_login_with_email {
-        padding: 80px 0px;
+
+    .dk_login_sub h4 {
+        font-size: 1.25rem;
     }
-    .dk_continue {
-        font-size: 16px;
-        padding: 5px 0px;
+
+    .dk_login_with_email_info h4 {
+        font-size: 1.5rem;
     }
-    .dk_login_form{
-        padding-top: 30px;
+
+    .dk_login_with_email_image {
+        margin-bottom: 1.5rem;
     }
     /* OTP Verification */
     .dk_otp_main {
@@ -1352,6 +1355,9 @@
         margin-left: -10.5%;  
         display: inline;
         vertical-align: middle
+    }
+    .dk_my_profile {
+        display: inline-block;
     }
 }
     /* OTP Verification */
@@ -1995,6 +2001,9 @@
         text-decoration: none;
         margin-top: 40px;
         width: 94%;
+    }
+    .dk_order_tracking_without_line {
+        width: 95%;
     }
 }
 /* OTP Verification */
