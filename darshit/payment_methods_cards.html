@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>Payment Methods Cards</title>
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/all.min.css">
@@ -20,19 +19,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 </head>
-
 <body>
     <!-- Header -->
     <div id="header"></div>
 
     <main>
-        <!-- edit Profile -->
+        <!-- Payment Methods Cards page -->
         <section>
             <div class="container">
                 <button style="display: none;" class="btn btn-dark  dk_vertical_header dk_offcanva_menu" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+
                 <div class="dk_my_profile">
                     <div class="dk_my_profile_sub">
                         <div> 
@@ -133,7 +132,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
+                    </div>
+                    <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
                         aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
@@ -242,57 +242,90 @@
                             </div>
                         </div>
                     </div>
-                        <main class="dk_profile-content">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2>Edit Profile</h2>
-                            </div>
-                            <div class="dk_profile_content_sub">
-                                <form class="dk_profile-form">
-                                    <div class="row">
-                                        <div class="col-md-6 mb-0">
-                                            <label>Name</label>
-                                            <input type="text" value="Alex Shroff">
-                                        </div>
-                                        <div class="col-md-6 mb-0">
-                                            <label>Email</label>
-                                            <input type="email" value="example@gmail.com">
-                                        </div>
-                                        <div class="col-md-6 mb-0">
-                                            <label>Mobile No.</label>
-                                            <input type="text" value="+1 56856 65656">
-                                        </div>
-                                        <div class="col-md-6 mb-0">
-                                            <label>Gender</label>
-                                            <select class="dk_edit_pro_sel" name="Gender" id="">
-                                                <option value="#">Male</option>
-                                                <option value="#">Female</option>
-                                                <option value="#">Other</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6 mb-0">
-                                            Password
-                                            <input type="password" name="password" value="Alex@1234"
-                                                autocomplete="current-password" required="" id="id_password">
 
-                                            <img src="../img/eye.png" width="20px" height="20px" class="dk_pass_edit"
-                                                id="togglePassword">
+                    <main class="dk_profile-content">
+                        <h2>Payment Methods</h2>
+                        <div class="dk_empty_address">
+                            <div class="row">
+                                <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                    <div class="dk_empty_add_add_address mb-3" class="btn btn-primary" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight">
+                                        <div class="dk_empty_add_add_address_sub">
+                                            <img src="../img/add_address.png" alt="">
+                                            <h4>Add Address</h4>
                                         </div>
-                                        <div class="col-md-6 mb-0">
-                                            <label for="birthdate">Birthdate</label>
-                                            <div class="date-wrapper">
-                                                <input type="date" id="birthdate" value="1994-12-21">
-                                                <div class="calendar-icon"
-                                                    onclick="document.getElementById('birthdate').click();"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                    <div class="dk_edit_add_card mb-3">
+                                        <div class="d-flex justify-content-between"
+                                            style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
+                                            <div class="">
+                                                <h3>Home</h3>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="ed_dropdown" onclick="toggleDropdown('myDropdown1')">
+                                                    <img src="../img/edit_delet_menu.png" alt="">
+                                                </button>
+                                                <ul class="dropdown-menu dk_add_dropdown" id="myDropdown1"
+                                                    aria-labelledby="dropdownMenuButton1">
+                                                    <li type="button" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#offcanvasRight1"
+                                                        aria-controls="offcanvasRight"><a class="dropdown-item"
+                                                            href="#">Edit</a></li>
+                                                    <li>
+                                                        <a class="dropdown-item" type="button" class="btn btn-primary"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                            href="#">Delete</a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-
-
-                                        <a href=""><button type="submit">Save Changes</button> </a>
+                                        <div style="padding: 12px;">
+                                            <h6>Alex Shroff</h6>
+                                            <h4>+1 56565 56565</h4>
+                                            <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                USA</p>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                    <div class="dk_edit_add_card mb-3">
+                                        <div class="d-flex justify-content-between"
+                                            style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
+                                            <div class="">
+                                                <h3>Home</h3>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="ed_dropdown" onclick="toggleDropdown('myDropdown2')">
+                                                    <img src="../img/edit_delet_menu.png" alt="">
+                                                </button>
+                                                <ul class="dropdown-menu dk_add_dropdown" id="myDropdown2"
+                                                    aria-labelledby="dropdownMenuButton2">
+                                                    <li type="button" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#offcanvasRight1"
+                                                        aria-controls="offcanvasRight"><a class="dropdown-item"
+                                                            href="#">Edit</a></li>
+                                                    <li>
+                                                        <a class="dropdown-item" type="button" class="btn btn-primary"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                            href="#">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 12px;">
+                                            <h6>Alex Shroff</h6>
+                                            <h4>+1 56565 56565</h4>
+                                            <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                USA</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </main>
-                    </div>
+                        </div>
+                    </main>
                 </div>
             </div>
         </section>
@@ -300,53 +333,6 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const togglePassword =
-            document.querySelector('#togglePassword');
-
-        const password =
-            document.querySelector('#id_password');
-
-        togglePassword.
-            addEventListener('click', function (e) {
-
-                // Toggle the type attribute 
-                const type = password.getAttribute(
-                    'type') === 'password' ? 'text' : 'password';
-                password.setAttribute('type', type);
-
-                // Toggle the eye slash icon 
-                if (togglePassword.src.match(
-                    "../")) {
-                    togglePassword.src =
-                        "../img/hide.png";
-                } else {
-                    togglePassword.src =
-                        "../img/hi.png";
-                }
-            }); 
-    </script>
-
-    <script>
-        // Optional: Close calendar when clicking outside
-        window.onclick = function (event) {
-            const input = document.getElementById('birthdate');
-            const icon = document.querySelector('.calendar-icon');
-            if (!input.contains(event.target) && !icon.contains(event.target)) {
-                input.blur(); // This will close the calendar
-            }
-        }
-    </script>
 
     <!-- script Header and Footer -->
     <script>
@@ -363,6 +349,15 @@
                 document.getElementById("footer").innerHTML = data;
             });
     </script>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
 </html>

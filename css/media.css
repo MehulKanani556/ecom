@@ -1,3 +1,63 @@
+@media(max-width:768px){
+    .mv_main_my_order{
+        margin-left: 0px !important;
+    }
+    .mv_main_my_order{
+        width: 100% !important;
+    }
+}
+
+@media(max-width:767px){
+    /* My Order */
+    .mv_order_product_image{
+        text-align: start !important;
+        margin-bottom: 10px;
+    }
+    .mv_order_price_track{
+        text-align: start;
+    }
+    .mv_order_price{
+        margin-bottom: 5px;
+    }
+    .mv_order_nav_tabs .mv_order_navs_button{
+        padding: 5px;
+    }
+    .mv_mobile_img{
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
+}
+
+@media(max-width:575px){
+    /* My Order */
+    .mv_item_successfully{
+        display: block;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:425px){
+    /* My Order */
+    .mv_order_nav_tabs{
+        display: block !important;
+    }
+    .mv_order_nav_tabs li{
+        margin-bottom: 10px;
+    }
+    .mv_order_date_main{
+        display: block !important;
+    }
+    .mv_order_date_main{
+        flex-direction: column;
+    }
+    .mv_order_date_heading_main{
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
 /* perfume */
 @media (min-width: 1440px) {
     .dk_perfume {
@@ -23,7 +83,7 @@
     }
      /* <!-- edit Profile --> */
      .dk_pass_edit{
-        margin-left: -11.5%;  
+        margin-left: -8.5%;  
         display: inline;
         vertical-align: middle
     }
@@ -166,6 +226,11 @@
         bottom: 92%;
         left: 0%;
     }
+    /* empty address  */
+    .dk_empty_add_add_address_sub{
+        width: 100%;
+        height: 190px;
+    }
 }   
 /* perfume */
 @media (max-width: 1440px) and (min-width: 1024px) {
@@ -243,7 +308,6 @@
         display: flex;
         background-color: white;
         overflow: hidden;
-        width: 100%;
     }
 }
 @media(max-width:1199px){
@@ -374,6 +438,11 @@
         margin-left: -14.5%;  
         display: inline;
         vertical-align: middle
+    }
+    /* empty address  */
+    .dk_empty_add_add_address_sub{
+        width: 100%;
+        height: 100%;
     }
 }
 /* OTP Verification */
@@ -731,9 +800,12 @@
         top: 50px;
     }
     .dk_pass_edit{
-        margin-left: -16.5%;  
+        margin-left: -21.5%;  
         display: inline;
         vertical-align: middle
+    }
+    .dk_profile_content_sub {
+       padding: 10px;
     }
 }
 @media(max-width:768px){
@@ -779,11 +851,11 @@
         flex-direction: column;
         align-items: center;
     } */
-    .col-xl-5, .col-lg-6, .col-md-6 {
+    /* .col-xl-5, .col-lg-6, .col-md-6 {
         width: 100%;
         max-width: 100%;
         margin-bottom: 20px;
-    }
+    } */
     .dk_login_with_email_image img {
         max-width: 100%;
         height: 100%;
@@ -1099,6 +1171,19 @@
     .dk_account_menu_bar{
         display: block;
     }
+    .dk_my_profile {
+        display: block !important;
+    }
+    .dk_empty_address {
+        width: 100% !important;
+        height: 610px;
+    }
+    .dk_vertical_header{
+        display: block !important;
+    }
+    .dk_vertical_header_sidebar{
+        display: none !important;
+    }
  } 
  @media(max-width:767px){
     .dk_login_form {
@@ -1356,9 +1441,7 @@
         display: inline;
         vertical-align: middle
     }
-    .dk_my_profile {
-        display: inline-block;
-    }
+    
 }
     /* OTP Verification */
 @media (max-width: 480px) {
@@ -1806,7 +1889,7 @@
     }
     /* edit Profile */
     .dk_pass_edit{
-        margin-left: -13.5%;  
+        margin-left: -10.5%;  
         display: inline;
         vertical-align: middle
     }
@@ -1985,7 +2068,7 @@
     }
     /* edit Profile */
     .dk_pass_edit{
-        margin-left: -16.5%;  
+        margin-left: -12.5%;  
         display: inline;
         vertical-align: middle
     }
@@ -2123,7 +2206,7 @@
     }
     /* edit Profile */
     .dk_pass_edit{
-        margin-left: -19.5%;  
+        margin-left: -15.5%;  
         display: inline;
         vertical-align: middle
     }

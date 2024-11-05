@@ -31,118 +31,219 @@
         <!-- My Profile -->
         <section>
             <div class="container">
+                <button style="display: none;" class="btn btn-dark  dk_vertical_header dk_offcanva_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <div class="dk_my_profile">
                     <div class="dk_my_profile_sub">
-                        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                            <div class="container-fluid dk_accont_main_fluid">
-                                <button class="navbar-toggler dk_account_menu_bar" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <i class="fa-solid fa-bars"></i>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                                    <aside class="dk_sidebar">
-                                        <h2 class="dk_account">Account</h2>
-                                        <ul class="dk_menu ">
-                                            <li class="dk_menu-item active">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/my_profile.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                My Profile
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/my_order.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_myorder.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                My Orders
-                                            </li>
-                                            <li class="dk_payment_method_main">
-                                                <div class="accordion p-0" id="accordionExample">
-                                                    <div class="accordion-item dk_payment_method_item">
-                                                        <h2 class="accordion-header" id="headingOne">
-                                                            <button style="gap: 10px;"
-                                                                class="accordion-button dk_payment_method" type="button"
-                                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                                aria-expanded="true" aria-controls="collapseOne">
-                                                                <span class="dk_icon">
-                                                                    <img class="dk_icon_image default"
-                                                                        src="../img/payment_method.png" alt="My Profile">
-                                                                    <img class="dk_icon_image hover"
-                                                                        src="../img/white_payment_methde.png"
-                                                                        alt="My Profile Hover">
-                                                                </span>
-                                                                Payment Methods
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingOne"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <ul>
-                                                                    <li>Credit / Debit Cards</li>
-                                                                    <li>UPI ID</li>
-                                                                </ul>
-                                                            </div>
+                        <div> 
+                            <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
+                                <h2 class="dk_account">Account</h2>
+                                <ul class="dk_menu ">
+                                    <li class="dk_menu-item active">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Profile
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_order.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_myorder.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Orders
+                                    </li>
+                                    <li class="dk_payment_method_main">
+                                        <div class="accordion p-0" id="accordionExample">
+                                            <div class="accordion-item dk_payment_method_item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button style="gap: 10px;"
+                                                        class="accordion-button dk_payment_method" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <span class="dk_icon">
+                                                            <img class="dk_icon_image default"
+                                                                src="../img/payment_method.png" alt="My Profile">
+                                                            <img class="dk_icon_image hover"
+                                                                src="../img/white_payment_methde.png"
+                                                                alt="My Profile Hover">
+                                                        </span>
+                                                        Payment Methods
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li>Credit / Debit Cards</li>
+                                                            <li>UPI ID</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_address.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Address
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_fasq.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        FAQs
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/terns_of_service.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_terms.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Terms of Service
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/disactive.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_deactive.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Deactivate Account
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Logout
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div>
+                                <aside class="dk_sidebar">
+                                    <ul class="dk_menu ">
+                                        <li class="dk_menu-item active">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Profile
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_order.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myorder.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Orders
+                                        </li>
+                                        <li class="dk_payment_method_main">
+                                            <div class="accordion p-0" id="accordionExample">
+                                                <div class="accordion-item dk_payment_method_item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button style="gap: 10px;"
+                                                            class="accordion-button dk_payment_method" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            <span class="dk_icon">
+                                                                <img class="dk_icon_image default"
+                                                                    src="../img/payment_method.png" alt="My Profile">
+                                                                <img class="dk_icon_image hover"
+                                                                    src="../img/white_payment_methde.png"
+                                                                    alt="My Profile Hover">
+                                                            </span>
+                                                            Payment Methods
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>Credit / Debit Cards</li>
+                                                                <li>UPI ID</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/my_address.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_myaddress.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                My Address
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/faqs.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_fasq.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                FAQs
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/terns_of_service.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_terms.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                Terms of Service
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/disactive.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_deactive.png"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                Deactivate Account
-                                            </li>
-                                            <li class="dk_menu-item">
-                                                <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/logout.png"
-                                                        alt="My Profile">
-                                                    <img class="dk_icon_image hover" src="../img/white_logout.svg"
-                                                        alt="My Profile Hover">
-                                                </span>
-                                                Logout
-                                            </li>
-                                        </ul>
-                                    </aside>
-                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_address.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Address
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/faqs.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_fasq.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            FAQs
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/terns_of_service.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_terms.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Terms of Service
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/disactive.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_deactive.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Deactivate Account
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/logout.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Logout
+                                        </li>
+                                    </ul>
+                                </aside>
                             </div>
-                        </nav>
+                        </div>
+                    </div>
                         <main class="dk_profile-content">
                             <h2>My Profile</h2>
                             <div class="dk_profile_content_sub">
