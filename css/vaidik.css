@@ -195,6 +195,7 @@ a{
 }
 .mv_order_details{
     padding: 20px 10px;
+    margin-top: 50px;
 }
 .mv_product_details_sub_heading{
     font-size: 16px;
@@ -212,6 +213,12 @@ a{
     font-weight: 500;
     line-height: 14.52px;
     color: #727272;    
+}
+.mv_oredr_status{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #0F993E;
 }
 .mv_order_id{
     font-size: 12px;
@@ -238,12 +245,90 @@ a{
     color: #000000;
     text-decoration: underline !important;
 }
-.mv_order_details button{
-    border-radius: 4px;
-    background-color: #fff;
+.mv_download_invoice:hover{
+    color: #000000;
 }
-.mv_cancel_order{
+.mv_cancel_order button{
+    border-radius: 4px;
+    background-color: #fff !important;
+    border: 1px solid #000000 !important;
+}
+.mv_cancel_order_button{
     padding: 6px 20px;
+    border: none !important;
+}
+/* Offcanvas */
+.mv_cancel_order_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;
+}
+.mv_cancel_order_border{
+    border-bottom: 1px solid #F2F2F2 !important;
+}
+.dk_custom_label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: gray;
+}  
+.dk_custom_input_group {
+    position: relative;
+    margin-top: 20px;
+}
+.dk_custom_input{
+    border: 1px solid #727272 !important;
+}
+.dk_custom_input:focus{
+    box-shadow: none !important;
+}
+.mv_offcanvas_form_select{
+    border: 1px solid #727272 !important;
+    padding: .750rem 2.25rem .750rem .75rem !important;
+}
+.mv_offcanvas_form_select:focus{
+    box-shadow: none !important;
+}
+.mv_off_continue{
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    width: 350px;
+    background-color: #040404;
+    position: absolute;
+    top: 640px;
+    border: none !important;
+}
+/* Cancel Order Model */
+.mv_successfully_text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;
+}
+.mv_back_to_home{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+    background-color: #fff;
+    padding: 6px 30px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+.mv_track_refund{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    background-color: #000000;
+    padding: 6px 30px;
+    border-radius: 4px;
+    border: 1px solid #000000;
 }
 /********************************/
 
@@ -291,5 +376,34 @@ a{
     }
     .mv_order_date_heading_main{
         margin-bottom: 5px;
+    }
+    /* Track Order */
+    .mv_order_date_delivery{
+        display: block !important;
+    }
+    .mv_track_order_sub_heading {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    /* Track Order(Model) */
+    .mv_offcanvas_cancle_order{
+        width: 350px !important;
+    }
+}
+
+@media(max-width:375px){
+    /* Track Order */
+    .mv_track_order_sub_heading {
+        font-size: 10px;
+    }
+    /* Track Order(Model) */
+    .mv_back_to_home{
+        padding: 6px 10px;
+    }
+    .mv_track_refund {
+        padding: 6px 10px;
+    }
+    .mv_offcanvas_cancle_order{
+        width: 280px !important;
     }
 }

@@ -1,0 +1,182 @@
+.dk_offcanva_menu{
+    margin: 20px 0px 0px 10px;
+}
+.dk_my_profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px 100px 0px;
+}
+.dk_my_profile_sub {
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+}
+.dk_sidebar {
+    background-color: #ffffff;
+    color: #000000;
+    width: 250px !important;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+}
+.dk_account {
+    font-weight: bold;
+    padding: 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+}
+.dk_menu {
+    list-style-type: none;
+    width: 250px !important;
+    padding-left: 0rem;
+    margin-bottom: 0rem;
+}
+.dk_menu-item {
+    position: relative;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid #D2D2D2;
+}
+.dk_menu-item:hover .dk_icon_image.default {
+    display: none;
+}
+.dk_menu-item:hover .dk_icon_image.hover {
+    display: inline;
+}
+.dk_menu-item:hover{
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+.dk_menu-item {
+    position: relative; 
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid #D2D2D2;
+}
+.dk_menu-item:last-child{
+    border-bottom: none;
+}
+.dk_menu-item:hover .dk_submenu {
+    display: block; 
+}
+.dk_icon {
+    font-size: 1.2em;
+}
+.dk_icon_image.hover {
+    display: none;
+}
+.dk_payment_method_main{
+    border-bottom: 1px solid #D2D2D2;
+}
+.dk_payment_method_item{
+    border: none !important;
+}
+.dk_payment_method:hover .dk_icon_image.default {
+    display: none;
+}
+.dk_payment_method:hover .dk_icon_image.hover {
+    display: inline;
+}
+.dk_payment_method:hover{
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+.dk_my_profile .dk_payment_method.dk_icon_image.hover {
+    display: block;
+}
+.dk_payment_method .dk_icon .dk_icon_image .hover {
+    display: none !important;
+}
+.dk_sidebar_off_can{
+    width: 285px !important;
+}
+.dk_my_profile .accordion-button:not(.collapsed){
+    background-color: #fff;
+    color: #000000;
+}
+.dk_my_profile .accordion-button:not(.collapsed):hover{
+    background-color: #000000;
+    color: #fff;
+}
+.dk_my_profile .accordion-button:not(.collapsed)::after{
+    background-image: url('./../img/dowm.png') !important;
+}
+.dk_my_profile .accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+.dk_my_profile .accordion-button:focus{
+    box-shadow: none;
+}
+.dk_my_profile .dk_payment_method.dk_icon_image.hover {
+    display: block;
+}
+.dk_my_profile ul{
+    padding-left: 0rem;
+}
+.dk_my_profile .accordion-body {
+    padding: 1rem 1rem;
+}
+.dk_my_profile .accordion-button{
+    padding: 15px 20px !important;
+}
+.dk_payment_method .dk_icon .dk_icon_image .hover {
+    display: none !important;
+}
+.dk_my_profile .accordion-body {
+    padding: 1rem 2rem;
+}
+
+
+
+@media(max-width:1400px){
+    .dk_sidebar {
+        display: block !important;
+    }
+}
+
+@media(max-width:1200px){
+    .dk_my_profile_sub {
+        display: flex;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:768px){
+    .dk_my_profile {
+        display: block !important;
+    }
+    .dk_sidebar {
+        display: none;
+    }
+    .dk_vertical_header_sidebar{
+        display: none !important;
+    }
+    .dk_icon {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:480px){
+    .dk_icon {
+        font-size: 14px;
+    }
+}
