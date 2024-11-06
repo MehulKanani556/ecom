@@ -31,9 +31,8 @@
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-
                 <div class="dk_my_profile">
-                    <div class="dk_my_profile_sub">
+                    <div class="dk_my_profile_sub dk_profile_width">
                         <div> 
                             <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
                                 <h2 class="dk_account">Account</h2>
@@ -132,8 +131,7 @@
                                 </ul>
                             </aside>
                         </div>
-                    </div>
-                    <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
+                        <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
                         aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
@@ -242,90 +240,105 @@
                             </div>
                         </div>
                     </div>
-
-                    <main class="dk_profile-content">
-                        <h2>Payment Methods</h2>
-                        <div class="dk_empty_address">
-                            <div class="row">
-                                <div class="col-xxl-4 col-xl-4 col-lg-6">
-                                    <div class="dk_empty_add_add_address mb-3" class="btn btn-primary" type="button"
-                                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                        aria-controls="offcanvasRight">
-                                        <div class="dk_empty_add_add_address_sub">
-                                            <img src="../img/add_address.png" alt="">
-                                            <h4>Add Address</h4>
+                        <main class="dk_profile-content">
+                            <h2 class="mb-3">Payment Methods</h2>
+                            <div class="dk_profile_payment_methods">
+                               <div class="dk_crditcard">
+                                <div class="dk_crdit_debit_card">
+                                    <h3>Credit / Debit Cards</h3>
+                                </div>
+                                <div>
+                                    <button class="dk_crdit_debit_card_sub">Add Credit / Debit Card</button>
+                                </div>
+                               </div>
+                               <div class="dk_visa_cards">
+                                    <div class="row">
+                                    <div class="col-4">
+                                        <div class="dk_visa_card2" id="card1">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="">
+                                                    <img src="../img/visa_crad.png" alt="Visa Card 1" style="width:48px; border-radius: 8px;">
+                                                </div>
+                                                <div class="">
+                                                    <span class="dk_delete_btn" onclick="deleteCard('card1')">
+                                                        <img src="../img/delete_visa_card.png" alt="">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="dk_account_num">
+                                                4364 1345 8932 8378
+                                            </div>
+                                            <div class="dk_visa_detailes">
+                                                <div class="dk_card_holder">
+                                                    <p>CARDHOLDER NAME</p>
+                                                    <p>Alex Shroff</p>
+                                                </div>
+                                                <div class="dk_card_valid_date">
+                                                    <p>VALID THRU</p>
+                                                    <p>11/24</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-6">
-                                    <div class="dk_edit_add_card mb-3">
-                                        <div class="d-flex justify-content-between"
-                                            style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
-                                            <div class="">
-                                                <h3>Home</h3>
+                                    <div class="col-4">
+                                        <div class="dk_visa_card2" id="card1">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="">
+                                                    <img src="../img/visa_crad.png" alt="Visa Card 1" style="width:48px; border-radius: 8px;">
+                                                </div>
+                                                <div class="">
+                                                    <span class="dk_delete_btn" onclick="deleteCard('card1')">
+                                                        <img src="../img/delete_visa_card.png" alt="">
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div class="dropdown">
-                                                <button class="ed_dropdown" onclick="toggleDropdown('myDropdown1')">
-                                                    <img src="../img/edit_delet_menu.png" alt="">
-                                                </button>
-                                                <ul class="dropdown-menu dk_add_dropdown" id="myDropdown1"
-                                                    aria-labelledby="dropdownMenuButton1">
-                                                    <li type="button" data-bs-toggle="offcanvas"
-                                                        data-bs-target="#offcanvasRight1"
-                                                        aria-controls="offcanvasRight"><a class="dropdown-item"
-                                                            href="#">Edit</a></li>
-                                                    <li>
-                                                        <a class="dropdown-item" type="button" class="btn btn-primary"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                            href="#">Delete</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="dk_account_num">
+                                                4364 1345 8932 8378
                                             </div>
-                                        </div>
-                                        <div style="padding: 12px;">
-                                            <h6>Alex Shroff</h6>
-                                            <h4>+1 56565 56565</h4>
-                                            <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
-                                                USA</p>
+                                            <div class="dk_visa_detailes">
+                                                <div class="dk_card_holder">
+                                                    <p>CARDHOLDER NAME</p>
+                                                    <p>Alex Shroff</p>
+                                                </div>
+                                                <div class="dk_card_valid_date">
+                                                    <p>VALID THRU</p>
+                                                    <p>11/24</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-6">
-                                    <div class="dk_edit_add_card mb-3">
-                                        <div class="d-flex justify-content-between"
-                                            style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
-                                            <div class="">
-                                                <h3>Home</h3>
+                                    <div class="col-4">
+                                        <div class="dk_visa_card2" id="card1">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="">
+                                                    <img src="../img/visa_crad.png" alt="Visa Card 1" style="width:48px; border-radius: 8px;">
+                                                </div>
+                                                <div class="">
+                                                    <span class="dk_delete_btn" onclick="deleteCard('card1')">
+                                                        <img src="../img/delete_visa_card.png" alt="">
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div class="dropdown">
-                                                <button class="ed_dropdown" onclick="toggleDropdown('myDropdown2')">
-                                                    <img src="../img/edit_delet_menu.png" alt="">
-                                                </button>
-                                                <ul class="dropdown-menu dk_add_dropdown" id="myDropdown2"
-                                                    aria-labelledby="dropdownMenuButton2">
-                                                    <li type="button" data-bs-toggle="offcanvas"
-                                                        data-bs-target="#offcanvasRight1"
-                                                        aria-controls="offcanvasRight"><a class="dropdown-item"
-                                                            href="#">Edit</a></li>
-                                                    <li>
-                                                        <a class="dropdown-item" type="button" class="btn btn-primary"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                            href="#">Delete</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="dk_account_num">
+                                                4364 1345 8932 8378
                                             </div>
-                                        </div>
-                                        <div style="padding: 12px;">
-                                            <h6>Alex Shroff</h6>
-                                            <h4>+1 56565 56565</h4>
-                                            <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
-                                                USA</p>
+                                            <div class="dk_visa_detailes">
+                                                <div class="dk_card_holder">
+                                                    <p>CARDHOLDER NAME</p>
+                                                    <p>Alex Shroff</p>
+                                                </div>
+                                                <div class="dk_card_valid_date">
+                                                    <p>VALID THRU</p>
+                                                    <p>11/24</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </main>
+                            </div>
+                        </main>
+                    </div>
                 </div>
             </div>
         </section>
@@ -349,6 +362,15 @@
                 document.getElementById("footer").innerHTML = data;
             });
     </script>
+    <!-- delete card  -->
+    <script>
+         function deleteCard(cardId) {
+        const dk_visa_card2 = document.getElementById(cardId);
+        if (dk_visa_card2) {
+            dk_visa_card2.remove();
+        }
+    }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
@@ -361,3 +383,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
+
+

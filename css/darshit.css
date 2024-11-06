@@ -2417,9 +2417,11 @@ input[type="checkbox"] {
     display: flex;
     background-color: white;
     overflow: hidden;
-    /* width: 85%; */
-    box-shadow: 1px 6px 19px 0px #A4A4A433;
-
+    /* width: 80%; */
+    /* box-shadow: 1px 6px 19px 0px #A4A4A433; */
+}
+.dk_profile_width{
+    width: 80%;
 }
 /* .collapse:not(.show) {
     display: block !important;
@@ -2527,8 +2529,8 @@ input[type="checkbox"] {
     padding: 10px;
     border: 1px solid #727272;
     border-radius: 5px;
-    width: 94%;
-    margin-bottom: 27px;
+    /* width: 100%; */
+    margin-bottom: 20px;
 }
 
 .dk_profile-form a button{
@@ -2671,10 +2673,24 @@ input[type="date"] {
 .navbar{
     align-items: start !important;
 }
-.dk_pass_edit{
-    margin-left: -11.5%;  
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#id_password {
+    width: 100%;
+    padding-right: 40px; /* Make space for the icon */
+}
+
+.dk_pass_edit {
+    position: absolute;
+    right: 10px;
+    top: 23%;
+    cursor: pointer;
     display: inline;
-    vertical-align: middle
+    vertical-align: middle;
 }
 .dk_my_profile .accordion-body {
     padding: 1rem 2rem;
@@ -2843,6 +2859,91 @@ input[type="date"] {
 .dk_offcanva_menu{
     margin: 20px 0px 0px 10px;
 }
+.dk_offcanva_menu:focus{
+    box-shadow: none !important;
+}
 .dk_sidebar_off_can{
     width: 285px !important;
+}
+
+/* Payment Methods Cards page */
+.dk_profile_payment_methods{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    border-radius: 4px;
+    padding: 20px 0px;
+    height: 500px;
+}
+.dk_crditcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #727272;
+    padding: 30px 30px 20px 30px;
+}
+.dk_crdit_debit_card h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;  
+    margin-bottom: 0px;    
+}
+.dk_crdit_debit_card_sub{
+    background-color: #000000;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;      
+}
+.dk_visa_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+.dk_visa_card2 {
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    background-image: url(../img/Mask\ Group.png);
+}
+.dk_delete_btn {
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+.dk_account_num{
+    font-size: 11.9px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-top: 10px;
+}
+.dk_visa_detailes{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.dk_card_holder p{
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 10.89px;
+    letter-spacing: 0.12em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.dk_card_valid_date p{
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 10.89px;
+    letter-spacing: 0.12em;
+    margin-bottom: 5px;
+    text-align: right;
 }

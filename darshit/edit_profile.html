@@ -34,7 +34,7 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="dk_my_profile">
-                    <div class="dk_my_profile_sub">
+                    <div class="dk_my_profile_sub dk_profile_width">
                         <div> 
                             <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
                                 <h2 class="dk_account">Account</h2>
@@ -243,51 +243,49 @@
                         </div>
                     </div>
                         <main class="dk_profile-content">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="d-flex align-items-center justify-content-between">
                                 <h2>Edit Profile</h2>
                             </div>
                             <div class="dk_profile_content_sub">
                                 <form class="dk_profile-form">
                                     <div class="row">
-                                        <div class="col-md-6 mb-0">
+                                        <div class="col-lg-6 mb-0">
                                             <label>Name</label>
                                             <input type="text" value="Alex Shroff">
                                         </div>
-                                        <div class="col-md-6 mb-0">
+                                        <div class="col-lg-6 mb-0">
                                             <label>Email</label>
                                             <input type="email" value="example@gmail.com">
                                         </div>
-                                        <div class="col-md-6 mb-0">
+                                        <div class="col-lg-6 mb-0">
                                             <label>Mobile No.</label>
                                             <input type="text" value="+1 56856 65656">
                                         </div>
-                                        <div class="col-md-6 mb-0">
+                                        <div class="col-lg-6 mb-0">
                                             <label>Gender</label>
-                                            <select class="dk_edit_pro_sel" name="Gender" id="">
+                                            <select class="dk_edit_pro_sel w-100" name="Gender" id="">
                                                 <option value="#">Male</option>
                                                 <option value="#">Female</option>
                                                 <option value="#">Other</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-6 mb-0">
+                                        <div class="col-lg-6 mb-0">
                                             Password
-                                            <input type="password" name="password" value="Alex@1234"
-                                                autocomplete="current-password" required="" id="id_password">
-
-                                            <img src="../img/eye.png" width="20px" height="20px" class="dk_pass_edit"
-                                                id="togglePassword">
+                                            <div class="password-wrapper">
+                                                <input type="password" name="password" value="Alex@1234" autocomplete="current-password" required="" id="id_password">
+                                                <img src="../img/eye.png" width="20px" height="20px" class="dk_pass_edit" id="togglePassword">
+                                            </div>
                                         </div>
-                                        <div class="col-md-6 mb-0">
+                                        
+                                        <div class="col-lg-6 mb-0">
                                             <label for="birthdate">Birthdate</label>
-                                            <div class="date-wrapper">
+                                            <div class="date-wrapper w-100">
                                                 <input type="date" id="birthdate" value="1994-12-21">
                                                 <div class="calendar-icon"
                                                     onclick="document.getElementById('birthdate').click();"></div>
                                             </div>
                                         </div>
-
-
-                                        <a href=""><button type="submit">Save Changes</button> </a>
+                                        <a href=""><button class="dk_save_change" type="submit">Save Changes</button></a>
                                     </div>
                                 </form>
                             </div>
