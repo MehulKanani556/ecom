@@ -230,7 +230,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
+                                                    <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="mv_order_track" href="">Request for Return</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
+                                                    <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="mv_order_track" href="">Request for Return</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -439,6 +439,74 @@
     <!-- footer -->
     <div id="footer"></div>
 
+    <!-- Offcanvas Return Order -->
+    <div class="offcanvas offcanvas-end mv_offcanvas_cancle_order" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header mv_cancel_order_border">
+          <h5 class="offcanvas-title mv_cancel_order_heading" id="offcanvasRightLabel">Cancel Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="form-group dk_custom_input_group">
+                <label for="emailOrMobile" class="dk_custom_label"
+                    style="font-weight: 500; color: #000000;">Order ID <span style="color: red;">*</span></label>
+                <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+            </div>
+            <div class="form-group dk_custom_input_group">
+                <label for="emailOrMobile" class="dk_custom_label"
+                    style="font-weight: 500; color: #000000;">Reason for Return <span style="color: red;">*</span></label>
+                <select class="form-select mv_offcanvas_form_select" aria-label="Default select example">
+                    <option selected>Reason for Return</option>
+                    <option value="1">I was hopping for a shorter delivery time</option>
+                    <option value="2">Product quality does not match the level of its worth</option>
+                    <option value="3">The product doesn't look like the online picture</option>
+                    <option value="4">The product was damaged in transit or was poorly made </option>
+                    <option value="5">The product information was misleading</option>
+                    <option value="6">My reason are not listed here</option>
+                </select>
+            </div>
+            <div class="form-group dk_custom_input_group mb-4">
+                <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">
+                    Mobile No. <span style="color: red;">*</span>
+                </label>
+                <input type="text" class="form-control dk_custom_input" id="emailOrMobile" placeholder=""
+                       maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+            <div class="mv_otp_box">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
+            </div>
+            <div class="d-flex justify-content-center position-relative">
+                <button class="mv_off_request_for_OTP" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Request for OTP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Order Model -->
+    <div class="modal fade" id="staticBackdrop" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <img src="../mv_image/oredr_return_refund_logo.png" alt="">
+              </div>
+              <p class="mb-5 text-center mv_successfully_text">Your request for return product has been successfully received</p>
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="me-4">
+                  <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
+                </div>
+                <div>
+                  <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!-- script header and footer -->
     <script>
       // navbar include
@@ -453,6 +521,27 @@
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
         });
+    </script>
+
+    <!-- script Return Order OTP -->
+    <script>
+        function validateAndMove(current, nextId) {
+
+            if (!/^\d$/.test(current.value)) {
+                current.value = '';
+                return;
+            }
+
+            if (current.value.length === 1 && nextId) {
+                document.getElementById(nextId).focus();
+            }
+        }
+
+        function moveToPrevious(event, previousId) {
+            if (event.key === "Backspace" && event.target.value === "" && previousId) {
+                document.getElementById(previousId).focus();
+            }
+        }
     </script>
 
     <!-- <script src="/js/jquery-3.7.1.js"></script>

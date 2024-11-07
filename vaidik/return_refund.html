@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Track Order</title>
+    <title>Return & Refund</title>
 
     <!-- Style Css -->
     <link rel="stylesheet" href="../css/vaidik.css" />
@@ -22,33 +22,39 @@
     <div id="header"></div>
 
     <div class="container">
-        <p class="mv_order_heading">Track Order</p>
-        <div class="dk_order_tracking">
-            <div class="dk_order_tracking_step">
+        <p class="mv_order_heading">Track Return & Refund</p>
+        <div class="dk_order_tracking mv_track_return_refund_scroll overflow-auto">
+            <div class="dk_order_tracking_step mv_oredr_tracking">
                 <div class="dk_order_tracking_circle dk_order_tracking_active">
                     <img src="../mv_image/order_confirmed.png" alt="">
                 </div>
-                <h3 class="mv_track_order_sub_heading">Cart</h3>
+                <h3 class="mv_track_order_sub_heading mv_track_order_heading">Initiated</h3>
             </div>
-            <div class="dk_order_tracking_without_line"></div>
-            <div class="dk_order_tracking_step">
+            <div class="dk_order_tracking_without_line mv_order_tracking_line"></div>
+            <div class="dk_order_tracking_step mv_oredr_tracking">
                 <div class="dk_order_tracking_circle dk_order_tracking_active">
                   <img src="../mv_image/shipped.png" alt="">
                 </div>
-                <h4 class="mv_track_order_sub_heading">Shipped</h4>
+                <h4 class="mv_track_order_sub_heading mv_track_order_heading">Picked up</h4>
             </div>
-            <div class="dk_order_tracking_without_line"></div>
-            <div class="dk_order_tracking_step">
+            <div class="dk_order_tracking_without_line mv_order_tracking_line"></div>
+            <div class="dk_order_tracking_step mv_oredr_tracking">
                 <div class="dk_order_tracking_circle">
                   <img src="../mv_image/out_for_delivery.png" alt="">
                 </div>
-                <h4 class="mv_track_order_sub_heading">Out for delivery</h4>
+                <h4 class="mv_track_order_sub_heading mv_track_order_heading">Received</h4>
             </div>
-            <div class="dk_order_tracking_step">
+            <div class="dk_order_tracking_step mv_oredr_tracking">
                 <div class="dk_order_tracking_circle">
                   <img src="../mv_image/delivered.png" alt="">
                 </div>
-                <h4 class="mv_track_order_sub_heading">Delivered</h4>
+                <h4 class="mv_track_order_sub_heading mv_track_order_heading">Refund Initiated</h4>
+            </div>
+            <div class="dk_order_tracking_step mv_oredr_tracking">
+                <div class="dk_order_tracking_circle">
+                  <img src="../mv_image/delivered.png" alt="">
+                </div>
+                <h4 class="mv_track_order_sub_heading mv_track_order_heading">Refund Credited</h4>
             </div>
         </div>
         <div>
@@ -95,7 +101,7 @@
                   </div>
               </div>
               <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
-                <p class="mb-0 mv_product_details_sub_heading">Delivery Address</p>
+                <p class="mb-0 mv_product_details_sub_heading">Picked up Address</p>
                 <div class="mv_order_details">
                   <p class="mb-3 mv_delivery_address_name">Alex Shroff</p>
                   <p class="mb-2 mv_delivery_address">Ehrenkranz 13 Washington Square S, New York, NY 10012, USA</p>
@@ -103,21 +109,11 @@
                 </div>
               </div>
               <div  class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
-                <p class="mb-0 mv_product_details_sub_heading">Payment Details</p>
+                <p class="mb-0 mv_product_details_sub_heading">Picked up Instructions</p>
                 <div class="mv_order_details">
-                  <p class="mb-3 mv_delivery_address_name">Debit Card</p>
-                  <div class="d-flex align-items-center mb-1">
-                    <p class="mb-0 me-1 mv_order_id_heading">Card Name</p>
-                    <p class="mb-0 mv_order_id">American Express</p>
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <p class="mb-0 me-1 mv_order_id_heading">Transaction ID</p>
-                    <p class="mb-0 mv_order_id">#123456789</p>
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <p class="mb-0 me-1 mv_order_id_heading">Payment Status</p>
-                    <p class="mb-0 mv_oredr_status">Success</p>
-                  </div>
+                  <p class="mb-3 mv_delivery_address_name">Scheduled Pickup</p>
+                  <p class="mb-2 mv_delivery_address">Wednesday, Sep 25, 2024, 07:00 am - 10:00 pm</p>
+                  <p class="mb-1 mv_delivery_address">Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
               <div class="col-xxl-2 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
@@ -125,68 +121,9 @@
                   <div class="mv_order_details">
                     <p class="mb-0"><a class="mv_download_invoice" href="">Download Invoice</a></p>
                   </div>
-                  <div class="d-flex mv_order_details mv_cancel_order">
-                    <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                      <p class="mb-0 mv_cancel_order_button">Cancel Order</p>
-                    </button>
-                  </div>
               </div>
             </div>
         </div>
-    </div>
-
-    <!-- Offcanvas Cancel Order -->
-    <div class="offcanvas offcanvas-end mv_offcanvas_cancle_order" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header mv_cancel_order_border">
-        <h5 class="offcanvas-title mv_cancel_order_heading" id="offcanvasRightLabel">Cancel Order</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="form-group dk_custom_input_group">
-          <label for="emailOrMobile" class="dk_custom_label"
-              style="font-weight: 500; color: #000000;">Reason for cancellation <span style="color: red;">*</span></label>
-              <select class="form-select mv_offcanvas_form_select" aria-label="Default select example">
-                <option selected>Reason for cancellation</option>
-                <option value="1">I was hopping for a shorter delivery time</option>
-                <option value="2">Price of the product has now decreased</option>
-                <option value="3">I want to change the delivery address</option>
-                <option value="4">I’m worried about the ratings/reviews</option>
-                <option value="5">I want to change the payment option</option>
-                <option value="6">I want to change the contact details</option>
-                <option value="7">My reason are not listed here</option>
-              </select>
-        </div>
-        <div class="form-group dk_custom_input_group">
-          <label for="emailOrMobile" class="dk_custom_label"
-              style="font-weight: 500; color: #000000;">Comments <span style="color: red;">*</span></label>
-          <textarea class="form-control dk_custom_input" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="d-flex justify-content-center position-relative">
-          <button class="mv_off_continue" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Continue</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cancel Order Model -->
-    <div class="modal fade" id="staticBackdrop" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="d-flex justify-content-center">
-              <img src="../mv_image/order_cancel_logo.png" alt="">
-            </div>
-            <p class="mb-5 text-center mv_successfully_text">Your order has been cancelled successfully.</p>
-            <div class="d-flex align-items-center justify-content-center">
-              <div class="me-4">
-                <button class="mv_back_to_home">Back to Home</button>
-              </div>
-              <div>
-                <button class="mv_track_refund">Track Refund</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- footer -->
