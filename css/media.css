@@ -1,65 +1,5 @@
-@media(max-width:768px){
-    .mv_main_my_order{
-        margin-left: 0px !important;
-    }
-    .mv_main_my_order{
-        width: 100% !important;
-    }
-}
-
-@media(max-width:767px){
-    /* My Order */
-    .mv_order_product_image{
-        text-align: start !important;
-        margin-bottom: 10px;
-    }
-    .mv_order_price_track{
-        text-align: start;
-    }
-    .mv_order_price{
-        margin-bottom: 5px;
-    }
-    .mv_order_nav_tabs .mv_order_navs_button{
-        padding: 5px;
-    }
-    .mv_mobile_img{
-        padding-right: 12px !important;
-        padding-left: 12px !important;
-    }
-}
-
-@media(max-width:575px){
-    /* My Order */
-    .mv_item_successfully{
-        display: block;
-        flex-direction: column;
-    }
-}
-
-@media(max-width:425px){
-    /* My Order */
-    .mv_order_nav_tabs{
-        display: block !important;
-    }
-    .mv_order_nav_tabs li{
-        margin-bottom: 10px;
-    }
-    .mv_order_date_main{
-        display: block !important;
-    }
-    .mv_order_date_main{
-        flex-direction: column;
-    }
-    .mv_order_date_heading_main{
-        margin-bottom: 5px;
-    }
-}
-
-
-
-
-/* perfume */
 @media (min-width: 1440px) {
+    /* perfume */
     .dk_perfume {
         padding: 124px 0 90px 0;
         background-size: 100%;
@@ -83,7 +23,7 @@
     }
      /* <!-- edit Profile --> */
      .dk_pass_edit{
-        margin-left: -8.5%;  
+        margin-left: -10.5%;  
         display: inline;
         vertical-align: middle
     }
@@ -305,9 +245,13 @@
     }
     /****8 My Profile page *** */
     .dk_my_profile_sub {
+        /* width: 100%; */
         display: flex;
         background-color: white;
         overflow: hidden;
+    }
+    .dk_profile_width{
+        width: 100% !important;
     }
 }
 @media(max-width:1199px){
@@ -805,7 +749,15 @@
         vertical-align: middle
     }
     .dk_profile_content_sub {
-       padding: 10px;
+       padding: 20px;
+    }
+    /* empty address */
+    .dk_empty_address {
+        width: 100% !important;
+        height: 580px;
+    }
+    .dk_save_change{
+        margin-top: 20px;
     }
 }
 @media(max-width:768px){
@@ -1165,7 +1117,7 @@
         padding: 12px 58px;
         text-decoration: none;
         margin-top: 40px;
-        width: 94%;
+        width: 100%;
     }
     /* nav */
     .dk_account_menu_bar{
@@ -1183,6 +1135,13 @@
     }
     .dk_vertical_header_sidebar{
         display: none !important;
+    }
+     /* My Order */
+     .mv_main_my_order{
+        margin-left: 0px !important;
+    }
+    .mv_main_my_order{
+        width: 100% !important;
     }
  } 
  @media(max-width:767px){
@@ -1216,10 +1175,28 @@
     }
     /* edit Profile */
     .dk_pass_edit{
-        margin-left: -9.5%;  
+        margin-left: -8.5%;  
         display: inline;
         vertical-align: middle
     } 
+    /* My Order */
+    .mv_order_product_image{
+        text-align: start !important;
+        margin-bottom: 10px;
+    }
+    .mv_order_price_track{
+        text-align: start;
+    }
+    .mv_order_price{
+        margin-bottom: 5px;
+    }
+    .mv_order_nav_tabs .mv_order_navs_button{
+        padding: 5px;
+    }
+    .mv_mobile_img{
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
 }
 /* signup */
 @media (max-width: 576px) {
@@ -1437,9 +1414,14 @@
     }
     /* edit Profile */
     .dk_pass_edit{
-        margin-left: -10.5%;  
+        margin-left: -8.5%;  
         display: inline;
         vertical-align: middle
+    }
+     /* My Order */
+     .mv_item_successfully{
+        display: block;
+        flex-direction: column;
     }
     
 }
@@ -1903,8 +1885,27 @@
         font-size: 16px;
         padding: 12px 40px;
         text-decoration: none;
-        margin-top: 40px;
-        width: 94%;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .dk_profile_content_sub {
+        padding: 10px;
+    }
+     /* My Order */
+     .mv_order_nav_tabs{
+        display: block !important;
+    }
+    .mv_order_nav_tabs li{
+        margin-bottom: 10px;
+    }
+    .mv_order_date_main{
+        display: block !important;
+    }
+    .mv_order_date_main{
+        flex-direction: column;
+    }
+    .mv_order_date_heading_main{
+        margin-bottom: 5px;
     }
 }
 @media (max-width: 375px) {
@@ -2082,8 +2083,8 @@
         font-size: 16px;
         padding: 12px 28px;
         text-decoration: none;
-        margin-top: 40px;
-        width: 94%;
+        margin-top: 20px !important;
+        width: 100%;
     }
     .dk_order_tracking_without_line {
         width: 95%;
