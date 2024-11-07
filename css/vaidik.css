@@ -107,7 +107,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 60px;
+    margin: 50px 0px;
     position: relative;
 }
 .dk_order_tracking_step {
@@ -133,7 +133,7 @@ a{
 }
 .dk_order_tracking_without_line {
     position: absolute;
-    top: 32%;
+    top: 27%;
     left: 8px;
     right: 2%;
     height: 2px;
@@ -195,7 +195,6 @@ a{
 }
 .mv_order_details{
     padding: 20px 10px;
-    margin-top: 50px;
 }
 .mv_product_details_sub_heading{
     font-size: 16px;
@@ -252,6 +251,9 @@ a{
     border-radius: 4px;
     background-color: #fff !important;
     border: 1px solid #000000 !important;
+}
+.mv_cancel_order{
+    margin-top: 50px;
 }
 .mv_cancel_order_button{
     padding: 6px 20px;
@@ -332,8 +334,126 @@ a{
 }
 /********************************/
 
+/******** Track Refund *********/
+.dk_track_refund_without_line {
+    position: absolute;
+    top: 27%;
+    left: 50px;
+    right: 2%;
+    height: 2px;
+    background-color: #D2D2D2;
+    z-index: 0; 
+    width: 90%;
+}
+/********************************/
+
+/******* Review & Feedback *******/
+.mv_main_review_heading{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000000;
+}
+.mv_review_feedback_width{
+    width: 60% !important;
+}
+.mv_main_review_and_feedback{
+    padding: 20px;
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+}
+.mv_review_and_feedback{
+    padding: 5px;
+    border-bottom: 0.5px solid #B8B8B8;
+}
+.mv_overall_reting_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+}
+.mv_overall_rating_star i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.mv_add_photo{
+    position: relative;
+}
+.mv_add_photo img{
+    width: 79px;
+    width: 79px;
+    margin-right: 10px;
+}
+.mv_close_photo{
+    position: absolute;
+    background-color: #fff;
+    padding: 1.5px 7px;
+    border-radius: 50%;
+    top: -10px;
+    right: 3px;
+    cursor: pointer;
+}
+.upload-button{
+    display: inline-block;
+    padding: 5.5px 24px;
+    color: #727272;
+    background-color: #D5D5D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    font-size: 45px;
+}
+input[type="file"] {
+    display: none;
+}
+/* .upload-button:hover {
+    background-color: #b3b3b3;
+}
+.preview-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+.preview-container img,
+.preview-container video {
+    width: 79px;
+    height: 79px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.close-button {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+} */
+/********************************/
 
 
+@media(max-width:1200px){
+    /* Track Refund */
+    .dk_track_refund_without_line {
+        width: 89%;
+    }
+}
+
+@media(max-width:991px){
+    /* Track Refund */
+    .dk_track_refund_without_line {
+        width: 84%;
+    }
+}
 
 @media(max-width:767px){
     /* My Order */
@@ -349,6 +469,10 @@ a{
     }
     .mv_order_nav_tabs .mv_order_navs_button{
         padding: 5px;
+    }
+    /* Track Refund */
+    .dk_track_refund_without_line {
+        width: 82%;
     }
 }
 
@@ -389,6 +513,10 @@ a{
     .mv_offcanvas_cancle_order{
         width: 350px !important;
     }
+    /* Track Refund */
+    .dk_track_refund_without_line {
+        width: 79%;
+    }
 }
 
 @media(max-width:375px){
@@ -405,5 +533,8 @@ a{
     }
     .mv_offcanvas_cancle_order{
         width: 280px !important;
+    }
+    .dk_track_refund_without_line {
+        width: 70%;
     }
 }
