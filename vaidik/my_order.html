@@ -36,397 +36,42 @@
                     <p class="mv_order_heading">My Order</p>
                     <div class="mv_order_main_class">
                         <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
                             <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
                             <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
                             <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
                             </li>
                         </ul>
                         <div class="tab-content mv_order_table_content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
+                                <div id="mv_order_on_the_way"></div>
+                                <div id="no-data-message-on-the-way" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
                                     </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                <div class="mv_order_review">
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                <div class="mv_order_review">
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                <div class="mv_order_review">
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                    <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="text-center">You have no order in process</p>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
+                                <div id="mv_order_delivered"></div>
+                                <div id="no-data-message-delivered" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
                                     </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                <p class="mv_order_price mb-0">$12,999</p>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2">
-                                                        <img src="../mv_image/tickmark.png" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 mt-1">Your item has been delivered successfully</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="mv_order_track" href="">Request for Return</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                <p class="mv_order_price mb-0">$12,999</p>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2">
-                                                        <img src="../mv_image/tickmark.png" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 mt-1">Your item has been delivered successfully</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="mv_order_track" href="">Request for Return</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="text-center">You have no order in process</p>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
+                                <div id="mv_order_cancelled"></div>
+                                <div id="no-data-message-cancelled" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
                                     </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2">
-                                                        <img src="../mv_image/closemark.png" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 mt-1">You requested a cancellation due to you change your mind about this product</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2">
-                                                        <img src="../mv_image/tickmark.png" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 mt-1">Your request for return the product has been received successfully.</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mv_order_expacted">
-                                    <div class="mv_order_date_main d-flex justify-content-between">
-                                        <div class="d-flex mv_order_date_heading_main">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">21/09/2024</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div>
-                                            <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                            </div>
-                                            <div>
-                                            <p class="mv_order_date mb-0">26/09/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv_order_product_details">
-                                        <div class="row">
-                                            <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <div class="mv_order_product_image">
-                                                    <img src="../mv_image/image 386.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                                <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                            </div>
-                                            <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
-                                                <div class="mv_order_price_track">
-                                                    <p class="mv_order_price">$12,999</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2">
-                                                        <img src="../mv_image/tickmark.png" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 mt-1">Your product has been returned successfully. your refund will be credited to your original payment method.</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="text-center">You have no order in process</p>
                                 </div>
                             </div>
                         </div>
@@ -544,9 +189,312 @@
         }
     </script>
 
+    <!-- Script Dynamic On The Way -->
+    <script>
+        window.onload = function() {
+            const orderContainerOnTheWay = document.getElementById('mv_order_on_the_way');
+            const orderContainerDelivered = document.getElementById('mv_order_delivered');
+            const orderContainerCancelled = document.getElementById('mv_order_cancelled');
+            const noDataMessageOnTheWay = document.querySelector("#home-tab-pane #no-data-message-on-the-way");
+            const noDataMessageDelivered = document.querySelector("#profile-tab-pane #no-data-message-delivered");
+            const noDataMessageCancelled = document.querySelector("#contact-tab-pane #no-data-message-cancelled");
+    
+            // On The Way
+            const productDataOnTheWay = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    rating: 4,
+                },
+                {
+                    name: "Apple iPhone 15 Pro Max",
+                    description: "Space Black, 6GB RAM, 128GB Storage",
+                    price: "$14,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "22/09/2024",
+                    expectedDelivery: "27/09/2024",
+                    rating: 5,
+                },
+                {
+                    name: "OnePlus 11 5G",
+                    description: "Titanium Black, 8GB RAM, 256GB Storage",
+                    price: "$9,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "23/09/2024",
+                    expectedDelivery: "28/09/2024",
+                    rating: 3,
+                }
+            ];
+    
+            // Delivered Data
+            const productDataDelivered = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "Your item has been delivered successfully"
+                },
+                {
+                    name: "Apple iPhone 15 Pro Max",
+                    description: "Space Black, 6GB RAM, 128GB Storage",
+                    price: "$14,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "22/09/2024",
+                    expectedDelivery: "27/09/2024",
+                    statusMessage: "Your item has been delivered successfully"
+                },
+                {
+                    name: "OnePlus 11 5G",
+                    description: "Titanium Black, 8GB RAM, 256GB Storage",
+                    price: "$9,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "23/09/2024",
+                    expectedDelivery: "28/09/2024",
+                    statusMessage: "Your item has been delivered successfully"
+                }
+            ];
+            
+            // Cancelled & Returned
+            const productDataCancelled = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/closemark.png",
+                },
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/tickmark.png",
+                    viewstatus: "View return & refund status"
+                },
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/tickmark.png",
+                    viewstatus: "View return & refund status"
+                },
+            ];
+    
+            // Display "On the Way" Products
+            if (productDataOnTheWay.length > 0) {
+                let productHTMLOnTheWay = "";
+                productDataOnTheWay.forEach((product) => {
+                    productHTMLOnTheWay += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="${product.name}">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                    <div class="mv_order_review">
+                                        ${generateRatingStars(product.rating)}
+                                    </div>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">${product.price}</p>
+                                        <p class="mb-0"><a class="mv_order_track" href="#">Track Order</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                });
+                orderContainerOnTheWay.innerHTML = productHTMLOnTheWay;
+                noDataMessageOnTheWay.style.display = 'none';
+            } else {
+                noDataMessageOnTheWay.style.display = 'block';
+            }
+    
+            // Display "Delivered" Products
+            if (productDataDelivered.length > 0) {
+                let productHTMLDelivered = "";
+                productDataDelivered.forEach((product) => {
+                    productHTMLDelivered += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex mv_order_date_heading_main">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="${product.name}">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                    <p class="mv_order_price mb-0">${product.price}</p>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price"><a class="mv_order_track" href="#">Submit Review</a></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <img src="../mv_image/tickmark.png" alt="Tickmark">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 mt-1">${product.statusMessage}</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="mv_order_track" href="#">Request for Return</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                });
+                noDataMessageDelivered.style.display = 'none';
+                orderContainerDelivered.innerHTML = productHTMLDelivered;
+            } else {
+                noDataMessageDelivered.style.display = 'block';
+            }
+
+            // Display "Cancelled & Returned" Products
+            if (productDataCancelled.length > 0) {
+                let productHTMLDelivered = "";
+                productDataCancelled.forEach((product) => {
+                    productHTMLDelivered += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex mv_order_date_heading_main">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                            ${product.expectedDelivery ? `<div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>` : ''}
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                </div>
+                                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">${product.price}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <img src="${product.imageclose}" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 mt-1">${product.statusMessage}</p>
+                                        </div>
+                                        </div>
+                                            <div>
+                                            ${product.viewstatus ? `<p class="mb-0"><a class="mv_order_track" href="">${product.viewstatus}</a></p>` : ""}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                orderContainerCancelled.innerHTML = productHTMLDelivered;
+                noDataMessageCancelled.style.display = 'none';
+            } else {
+                noDataMessageCancelled.style.display = 'block';
+            }
+        };
+    
+        function generateRatingStars(rating) {
+            let starsHTML = "";
+            for (let i = 0; i < 5; i++) {
+                if (i < rating) {
+                    starsHTML += `<i class="fa-solid fa-star mv_order_review_yellow"></i>`;
+                } else {
+                    starsHTML += `<i class="fa-solid fa-star mv_order_review_gray"></i>`;
+                }
+            }
+            return starsHTML;
+        }
+    </script>
+
     <!-- <script src="/js/jquery-3.7.1.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/mv_slider.js"></script> -->
 
-  </body>
+</body>
 </html>

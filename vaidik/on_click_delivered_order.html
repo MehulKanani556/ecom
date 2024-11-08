@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Click Delivered Order</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../css/vaidik.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-EVSTQN3 azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet" />
+      
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+
+    <div class="container">
+        <div>
+            <p class="mv_order_heading">Track Order</p>
+            <div class="dk_order_tracking">
+                <div class="dk_order_tracking_step">
+                    <div class="dk_order_tracking_circle dk_order_tracking_active">
+                        <img src="../mv_image/order_confirmed.png" alt="">
+                    </div>
+                    <h3 class="mv_track_order_sub_heading">Cart</h3>
+                </div>
+                <div class="dk_order_tracking_without_line mv_in_click_delivered_tracking"></div>
+                <div class="dk_order_tracking_step">
+                    <div class="dk_order_tracking_circle dk_order_tracking_active">
+                    <img src="../mv_image/shipped.png" alt="">
+                    </div>
+                    <h4 class="mv_track_order_sub_heading">Shipped</h4>
+                </div>
+                <div class="dk_order_tracking_without_line mv_in_click_delivered_tracking"></div>
+                <div class="dk_order_tracking_step">
+                    <div class="dk_order_tracking_circle dk_order_tracking_active">
+                    <img src="../mv_image/out_for_delivery.png" alt="">
+                    </div>
+                    <h4 class="mv_track_order_sub_heading">Out for delivery</h4>
+                </div>
+                <div class="dk_order_tracking_step">
+                    <div class="dk_order_tracking_circle dk_order_tracking_active">
+                    <img src="../mv_image/delivered.png" alt="">
+                    </div>
+                    <h4 class="mv_track_order_sub_heading">Delivered</h4>
+                </div>
+            </div>
+            <div>
+                <p class="mb-3 mv_product_details_heading">Product Details</p>
+                <div class="row mv_order_product_details_main mb-5">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
+                    <p class="mb-0 mv_product_details_sub_heading">Order Details</p>
+                    <div class="mv_order_details">
+                        <div class="d-flex align-items-center mb-3">
+                        <div class="mv_order_product_image">
+                            <img class="me-2" src="../mv_image/image 386.png" alt="">
+                        </div>
+                        <div>
+                            <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                            <p class="mv_order_price mb-0">$12,999</p>
+                        </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                        <div class="me-2">
+                            <p class="mb-0 mv_order_id_heading">Order ID:</p>
+                        </div>
+                        <div>
+                            <p class="mb-0 mv_order_id">#5656565656</p>
+                        </div>
+                        </div>
+                        <div class="align-items-center mv_order_date_delivery">
+                        <div class="d-flex align-items-center mb-2 me-2">
+                            <div class="me-2">
+                            <p class="mb-0 mv_order_id_heading">Order Date:</p>
+                            </div>
+                            <div>
+                            <p class="mb-0 mv_order_id">21/09/2024</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="me-2">
+                            <p class="mb-0 mv_order_id_heading">Expected Delivery:</p>
+                            </div>
+                            <div>
+                            <p class="mb-0 mv_order_id">26/09/2024</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
+                    <p class="mb-0 mv_product_details_sub_heading">Delivery Address</p>
+                    <div class="mv_order_details">
+                    <p class="mb-3 mv_delivery_address_name">Alex Shroff</p>
+                    <p class="mb-2 mv_delivery_address">Ehrenkranz 13 Washington Square S, New York, NY 10012, USA</p>
+                    <p class="mb-1 mv_delivery_address">+1 56565 56565</p>
+                    </div>
+                </div>
+                <div  class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
+                    <p class="mb-0 mv_product_details_sub_heading">Payment Details</p>
+                    <div class="mv_order_details">
+                    <p class="mb-3 mv_delivery_address_name">Debit Card</p>
+                    <div class="d-flex align-items-center mb-1">
+                        <p class="mb-0 me-1 mv_order_id_heading">Card Name</p>
+                        <p class="mb-0 mv_order_id">American Express</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-1">
+                        <p class="mb-0 me-1 mv_order_id_heading">Transaction ID</p>
+                        <p class="mb-0 mv_order_id">#123456789</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-1">
+                        <p class="mb-0 me-1 mv_order_id_heading">Payment Status</p>
+                        <p class="mb-0 mv_oredr_status">Success</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-xxl-2 col-xl-6 col-lg-6 col-md-6 col-12 mv_order_product_details_item">
+                    <p class="mb-0 mv_product_details_sub_heading">Invoice</p>
+                    <div class="mv_order_details">
+                        <p class="mb-0"><a class="mv_download_invoice" href="">Download Invoice</a></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mv_review_feedback_width">
+            <p class="mv_main_review_heading mv_on_click_main_review_heading">Review & Feedback</p>
+            <div class="mv_main_review_and_feedback">
+                <div class="mv_review_and_feedback">
+                    <p class="mv_overall_reting_heading">Overall Rating</p>
+                    <div class="d-flex mv_overall_rating_star mb-3">
+                        <i style="color: #F8A120;" class="fa-solid fa-star"></i>
+                        <i style="color: #727272;" class="fa-solid fa-star"></i>
+                        <i style="color: #727272;" class="fa-solid fa-star"></i>
+                        <i style="color: #727272;" class="fa-solid fa-star"></i>
+                        <i style="color: #727272;" class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="mv_review_and_feedback mt-3">
+                    <p class="mv_overall_reting_heading">Add Photo or Video</p>
+                    <div class="d-flex mb-3">
+                        <div class="mv_add_photo">
+                            <img src="../mv_image/add_photo.png" alt="">
+                            <div class="mv_close_photo">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="media-upload" class="mv_upload_button">+</label>
+                            <input class="mv_add_img" type="file" id="media-upload" accept="image/*, video/*">
+                        </div>
+                    </div>
+                </div>
+                <div class="mv_review_and_feedback mt-3">
+                    <p class="mv_overall_reting_heading">Feedback</p>
+                    <div class="mb-3">
+                        <textarea class="form-control mv_feedback_box" placeholder="Write your feedback" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="mt-3 mv_review_submit_button">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- script header and footer -->
+    <script>
+      // navbar include
+      fetch("../darshit/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+      // footer include
+      fetch("../darshit/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>

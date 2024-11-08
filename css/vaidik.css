@@ -27,7 +27,7 @@ a{
     font-weight: 500;
     color: #727272;
     padding: 20px 10px;
-    /* width: 100%; */
+    width: 100%;
 }
 .mv_order_nav_tabs .mv_order_navs_button.active{
     font-size: 16px;
@@ -35,11 +35,19 @@ a{
     color: #000000 !important;
     border: none;
     border-bottom: 1px solid #5c5c5c !important;
-    }
+}
+.mv_order_navs_button:focus-visible {
+    outline: none !important;
+}
+.mv_oredr_nav_item{
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+}
 .mv_order_nav_tabs .mv_order_navs_button:hover{
     border: none;
     color: #000000;
-    border-color: transparent !important;
+    /* border-color: #fff !important; */
 }
 .mv_order_table_content{
     padding: 20px;
@@ -99,6 +107,14 @@ a{
 }
 .mv_order_track:hover{
     color: #000000;
+}
+.mv_no_order_item{
+    height: 300px;
+    margin-top: 100px;
+}
+.mv_main_no_order{
+    display: flex !important;
+    justify-content: center;
 }
 /* Offcanvas Return Order */
 .mv_otp_box{
@@ -162,7 +178,7 @@ a{
 .dk_order_tracking_active{
     background-color: black;
 }
-.dk_order_tracking_without_lin{
+.dk_order_tracking_without_line{
     position: absolute;
     top: 27%;
     left: 8px;
@@ -514,6 +530,17 @@ a{
   white-space: nowrap;
 }
 /********************************/
+
+/***** On Click Delivered Order *****/
+.mv_in_click_delivered_tracking{
+    background-color: #000000 !important;
+}
+.mv_on_click_main_review_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+}
+/*************************************/
 
 
 
