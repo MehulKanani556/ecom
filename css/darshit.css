@@ -2693,7 +2693,7 @@ input[type="date"] {
     vertical-align: middle;
 }
 .dk_my_profile .accordion-body {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
 }
 
 /******* Empty Address page  ******/
@@ -2895,8 +2895,8 @@ input[type="date"] {
     text-align: center;      
 }
 .dk_visa_cards {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     align-items: center;
     padding: 20px 20px;
 }
@@ -2932,7 +2932,7 @@ input[type="date"] {
     padding-top: 20px;
 }
 .dk_card_holder p{
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
     line-height: 10.89px;
     letter-spacing: 0.12em;
@@ -2940,10 +2940,25 @@ input[type="date"] {
     text-align: left;
 }
 .dk_card_valid_date p{
-    font-size: 9px;
+    font-size: 7px;
     font-weight: 600;
     line-height: 10.89px;
     letter-spacing: 0.12em;
     margin-bottom: 5px;
     text-align: right;
+}
+.dk_add_address_margine{
+    margin-bottom: 40px;
+}
+.dk_no_saved_card{
+    display: none; 
+    text-align: center; 
+    font-weight: 500; 
+    padding: 20px; 
+    height: 100%; 
+    margin-top: 120px; 
+}
+.dk_my_profile .accordion-button:not(.collapsed){
+    background-color: #040404;
+    color: #fff;
 }
