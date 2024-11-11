@@ -767,6 +767,16 @@
         border-bottom: 0.5px solid #727272;
         padding: 30px 20px 20px 20px;
     }
+    /* faqs pag  */
+    .dk_faqs_accordion .label::before {
+        content: '+';
+        color: black;
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        font-size: 30px;
+        transform: translateY(-50%);
+    }
 }
 @media(max-width:768px){
      /* Login with Email & Mobile */
@@ -1389,6 +1399,16 @@
         text-align: center;
         padding: 80px 0px 80px 0px;
     }
+    /* faqs page  */
+    .dk_faqs_accordion .label {
+        position: relative;
+        padding: 10px 0;
+        color: black;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19.36px;
+    }
 }
 
 @media (max-width:575px) {
@@ -1453,7 +1473,14 @@
         height: 100%; 
         margin-top: 80px; 
     }
-    
+    /* privacy security page  */
+    .dk_privacy_security h3 {
+        padding-bottom: 10px;
+        font-size: 28px;
+    }
+    .dk_privacy_security_sub h4 {
+        padding-bottom: 15px;
+    }
 }
     /* OTP Verification */
 @media (max-width: 480px) {
@@ -1733,6 +1760,13 @@
         padding: 20px; 
         height: 100%; 
         margin-top: 60px; 
+    }
+    /* deactive page model  */
+    .dk_deactive_model {
+        padding: 20px 10px 0px 10px !important;
+    }
+    .dk_size_box .btn {
+        font-size: 13px;
     }
 }
 

@@ -75,13 +75,13 @@
                                                         Payment Methods
                                                     </button>
                                                 </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse "
+                                                <div id="collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <ul>
-                                                            <li onclick="showSection('credit')">Credit / Debit Cards
+                                                            <li onclick="showSection('credit')" class="active">Credit / Debit Cards
                                                             </li>
-                                                            <li onclick="showSection('upi')">UPI ID</li>
+                                                            <li onclick="showSection('upi')" class="active">UPI ID</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -182,13 +182,14 @@
                                                                 Payment Methods
                                                             </button>
                                                         </h2>
-                                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                                        <div id="collapseOne" class="accordion-collapse collapse show"
                                                             aria-labelledby="headingOne"
                                                             data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
                                                                 <ul>
-                                                                    <li>Credit / Debit Cards</li>
-                                                                    <li>UPI ID</li>
+                                                                    <li onclick="showSection('credit')" class="active">Credit / Debit Cards
+                                                                    </li>
+                                                                    <li onclick="showSection('upi')" class="active">UPI ID</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -516,18 +517,18 @@
                     <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">UPI ID</label>
                     
                     <!-- Input field for UPI ID -->
-                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="" style="flex: 1;">
+                    <input type="text" class="form-control dk_custom_input" id="upiInput" placeholder="Enter UPI ID" style="flex: 1;">
                     
                     <!-- Dropdown for selection -->
-                    <select id="upiSelect" class="form-control" style="width: 150px; margin-left: 10px;">
-                        <option value="" disabled selected>Select UPI ID</option>
-                        <option value="user1@upi">oksbi</option>
-                        <option value="user2@upi">okicici</option>
-                        <option value="user3@upi">okaxis</option>
-                        <option value="user3@upi">okhdfcbank</option>
+                    <select id="upiSelect" class="form-control dk_focus_select" style="width: 100px; margin-left: 10px; border-left: 0.5px solid #727272 !important; border-radius: 0px;">
+                        <option value="" disabled selected>@okicici</option>
+                        <option value="@oksbi">@oksbi</option>
+                        <option value="@okicici">@okicici</option>
+                        <option value="@okaxis">@okaxis</option>
+                        <option value="@okhdfcbank">@okhdfcbank</option>
                         <!-- Add more options as needed -->
                     </select>
-                </div>               
+                </div>           
                 <div class="dk_save_add_address_main">
                     <button class="dk_save_add_address">Save</button>
                 </div>
@@ -535,6 +536,8 @@
         </div>
     </div>
 
+
+    <!-- upi id Select & input  -->
     <script>
         // Show the dropdown when the input is focused
         document.getElementById('upiInput').addEventListener('focus', function() {
@@ -557,7 +560,22 @@
         }
     </script>
 
-    <style>
+    <script>
+        const upiInput = document.getElementById('upiInput');
+        const upiSelect = document.getElementById('upiSelect');
+
+        // Listen for changes in the dropdown selection
+        upiSelect.addEventListener('change', function() {
+            // Get the user's entered ID without any domain and the selected domain
+            const userInput = upiInput.value.split('@')[0];
+            const selectedDomain = upiSelect.value;
+
+            // Update the input field with the entered ID followed by the selected domain
+            upiInput.value = userInput + selectedDomain;
+        });
+    </script>
+
+    <!-- <style>
         /* Styling for dropdown items */
         .dropdown-options .dropdown-item {
             padding: 8px;
@@ -566,7 +584,7 @@
         .dropdown-options .dropdown-item:hover {
             background-color: #f0f0f0;
         }
-    </style>
+    </style> -->
 
     <!-- script Header and Footer -->
     <script>
