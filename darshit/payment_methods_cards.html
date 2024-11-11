@@ -347,17 +347,53 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div id="noCardsMessage" class="dk_no_saved_card">
                                             You have no saved cards
                                         </div>
                                     </div>
                                 </div>
                                 <div id="upiSection" class="dk_upi" style="display: none;">
-                                    <h3>UPI Payment</h3>
-                                    <p>Enter your UPI ID below:</p>
-                                    <input type="text" class="form-control" placeholder="example@upi">
-                                    <button class="btn btn-primary mt-2" type="button">Add UPI ID</button>
+                                    <div class="dk_crditcard">
+                                        <div class="dk_crdit_debit_card">
+                                            <h3>UPI ID</h3>
+                                        </div>
+                                        <div>
+                                            <button class="dk_crdit_debit_card_sub" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Add UPI ID</button>
+                                        </div>
+                                    </div>
+                                    <div class="dk_upi_id_main">
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-3" id="card4">
+                                                <div class="dk_upi_id_sub">
+                                                    <div class="">
+                                                        <img src="../img/gpay_upi.png" alt="">
+                                                        <span>example56@oksbi</span>
+                                                    </div>
+                                                    <div class="p-0" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal"
+                                                    onclick="setCardToDelete('card4')">
+                                                        <img src="../img/upi_delete.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mb-3" id="card4">
+                                                <div class="dk_upi_id_sub">
+                                                    <div class="">
+                                                        <img src="../img/gpay_upi.png" alt="">
+                                                        <span>example56@oksbi</span>
+                                                    </div>
+                                                    <div  class="p-0" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal"
+                                                    onclick="setCardToDelete('card4')">
+                                                        <img src="../img/upi_delete.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="noUPIMessage" class="dk_no_saved_card" style="display: none;">
+                                            You have no saved UPI ID
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </main>
@@ -391,13 +427,15 @@
             </div>
         </div>
     </div>
+        
+    <!-- print no card / upi msg   -->
     <script>
         let cardToDelete = null;
-
+    
         function setCardToDelete(cardId) {
             cardToDelete = cardId;
         }
-
+    
         function confirmDelete() {
             if (cardToDelete) {
                 const cardElement = document.getElementById(cardToDelete);
@@ -406,26 +444,34 @@
                 }
                 cardToDelete = null;
             }
-
+    
             // Check if any cards remain
             const remainingCards = document.querySelectorAll('.dk_visa_card2');
+            const remainingUPI = document.querySelectorAll('.dk_upi_id_sub');
             const noCardsMessage = document.getElementById("noCardsMessage");
-
-            // If there are no remaining cards, show the message
+            const noUPIMessage = document.getElementById("noUPIMessage");
+    
+            // Display message if no cards are left
             if (remainingCards.length === 0) {
                 noCardsMessage.style.display = "block";
             } else {
                 noCardsMessage.style.display = "none";
             }
+    
+            // Display message if no UPI IDs are left
+            if (remainingUPI.length === 0) {
+                noUPIMessage.style.display = "block";
+            } else {
+                noUPIMessage.style.display = "none";
+            }
         }
-
     </script>
 
     <!-- add Credit / Debit Cards  -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header dk_add_address_main_font">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Credit / Debit Card </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body dk_add_address_off">
             <div style="border-bottom: 0.5px solid #727272"></div>
@@ -456,6 +502,71 @@
             </div>
         </div>
     </div>
+
+    <!-- add upi id  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add UPI ID </h5>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group dk_add_address_margine" style="display: flex; align-items: center;">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">UPI ID</label>
+                    
+                    <!-- Input field for UPI ID -->
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="" style="flex: 1;">
+                    
+                    <!-- Dropdown for selection -->
+                    <select id="upiSelect" class="form-control" style="width: 150px; margin-left: 10px;">
+                        <option value="" disabled selected>Select UPI ID</option>
+                        <option value="user1@upi">oksbi</option>
+                        <option value="user2@upi">okicici</option>
+                        <option value="user3@upi">okaxis</option>
+                        <option value="user3@upi">okhdfcbank</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>               
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the dropdown when the input is focused
+        document.getElementById('upiInput').addEventListener('focus', function() {
+            document.getElementById('upiDropdown').style.display = 'block';
+        });
+    
+        // Hide the dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const upiInput = document.getElementById('upiInput');
+            const upiDropdown = document.getElementById('upiDropdown');
+            if (!upiInput.contains(event.target) && !upiDropdown.contains(event.target)) {
+                upiDropdown.style.display = 'none';
+            }
+        });
+    
+        // Function to update input field with selected dropdown value
+        function selectUPI(value) {
+            document.getElementById('upiInput').value = value;
+            document.getElementById('upiDropdown').style.display = 'none';
+        }
+    </script>
+
+    <style>
+        /* Styling for dropdown items */
+        .dropdown-options .dropdown-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .dropdown-options .dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 
     <!-- script Header and Footer -->
     <script>
@@ -513,7 +624,6 @@
         });
     </script>
 
-
 </body>
-
 </html>
+

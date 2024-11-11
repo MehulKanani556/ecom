@@ -2161,6 +2161,7 @@
         display: none; 
         text-align: center; 
         font-weight: 500; 
+        font-size: 15px;
         padding: 20px; 
         height: 100%; 
         margin-top: 40px; 
@@ -2286,6 +2287,10 @@
         margin-left: -15.5%;  
         display: inline;
         vertical-align: middle
+    }
+    /* paymnt mathode  */
+    .dk_upi_id_sub span {
+        font-size: 12px;
     }
 
 }

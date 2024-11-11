@@ -162,7 +162,15 @@ a{
 .dk_custom_input_group {
     position: relative;
     margin-top: 20px;
+    border: 1px solid #727272;
   }
+  .dk_custom_input_group input{
+    border: none !important;
+  }
+  .dk_custom_input_group select{
+    border: none !important; 
+  }
+
 .dk_register{
     padding-top: 80px;
   }
@@ -2418,7 +2426,7 @@ input[type="checkbox"] {
     background-color: white;
     overflow: hidden;
     /* width: 80%; */
-    /* box-shadow: 1px 6px 19px 0px #A4A4A433; */
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
 }
 .dk_profile_width{
     width: 80%;
@@ -2870,7 +2878,7 @@ input[type="date"] {
 .dk_profile_payment_methods{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     border-radius: 4px;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
     height: 500px;
 }
 .dk_crditcard{
@@ -2878,7 +2886,7 @@ input[type="date"] {
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid #727272;
-    padding: 30px 30px 20px 30px;
+    padding: 10px 30px 20px 30px;
 }
 .dk_crdit_debit_card h3{
     font-size: 16px;
@@ -2962,3 +2970,50 @@ input[type="date"] {
     background-color: #040404;
     color: #fff;
 }
+.dk_upi_id_main{
+    padding: 30px;
+}
+.dk_upi_id_sub{
+    border: 1px solid #040404;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.dk_upi_id_sub span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;  
+    padding-left: 8px;
+}
+.dk_close_boxsadow:focus {
+    box-shadow: none !important;
+}
+
+.upi-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 5px;
+    max-width: 300px;
+}
+.upi-input input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 8px 10px;
+}
+.upi-input .dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+}
+
+
+
