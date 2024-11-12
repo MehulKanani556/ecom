@@ -253,6 +253,11 @@
     .dk_profile_width{
         width: 100% !important;
     }
+    /* contact us page  */
+    .dk_contact_us_sub {
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        padding: 40px 100px;
+    }
 }
 @media(max-width:1199px){
     /* Login with Email & Mobile */
@@ -576,6 +581,24 @@
         display: inline;
         vertical-align: middle
     }
+    /* about us page  */
+    .dk_about_sub{
+        padding: 0px 80px 60px;
+    }
+    .dk_about_company{
+        padding: 60px 80px 0px;
+    }
+    /* about us page slider  */
+    .dk_meet_our_team h2 {
+        padding-bottom: 40px;
+        color: #D9D9D9;
+        font-size: 50px;
+    }
+     /* contact us page  */
+     .dk_contact_us_sub {
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        padding: 40px 50px;
+    }
 }
 @media(max-width:991px){
     /* Login with Email & Mobile */
@@ -776,6 +799,21 @@
         right: -16px;
         font-size: 30px;
         transform: translateY(-50%);
+    }
+    /* about us page  */
+    .dk_about_sub{
+        padding: 0px 40px 60px;
+    }
+    .dk_about_company{
+        padding: 60px 40px 0px;
+    }
+    /* contact us page  */
+    .dk_contact_us_sub {
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        padding: 40px 30px;
+    }
+    .dk_contact_us {
+        padding: 40px 20px 100px;
     }
 }
 @media(max-width:768px){
@@ -1170,6 +1208,11 @@
         height: 100%; 
         margin-top: 100px; 
     }
+    /* contact us page  */
+    .dk_contact_us_sub {
+        box-shadow: 1px 6px 19px 0px #A4A4A433;
+        padding: 40px 20px;
+    }
  } 
  @media(max-width:767px){
     .dk_login_form {
@@ -1223,6 +1266,31 @@
     .mv_mobile_img{
         padding-right: 12px !important;
         padding-left: 12px !important;
+    }
+    /* about us page  */
+    .dk_about_sub{
+        padding: 0px 20px 60px;
+    }
+    .dk_about_company{
+        padding: 60px 20px 0px;
+    }
+    .dk_about_sub img{
+        margin-bottom: 20px;
+    }
+    .dk_about_company img{
+        margin-bottom: 20px;
+    }
+    .dk_about_revers{
+        flex-wrap: wrap-reverse !important;
+    }
+    /* about us page slider  */
+    .dk_meet_our_team h2 {
+        padding-bottom: 30px;
+        color: #D9D9D9;
+        font-size: 50px;
+    }
+    .dk_contact_us {
+        padding: 40px 0px 50px;
     }
 }
 /* signup */
@@ -1409,6 +1477,18 @@
         font-weight: 500;
         line-height: 19.36px;
     }
+    /* about us page  */
+    .dk_about_sub{
+        padding: 0px 10px 60px;
+    }
+    .dk_about_company{
+        padding: 60px 10px 0px;
+    }
+    /* about us page slider  */
+    .dk_meet_our_team_slide p {
+        margin-top: 32px;
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width:575px) {
@@ -1480,6 +1560,13 @@
     }
     .dk_privacy_security_sub h4 {
         padding-bottom: 15px;
+    }
+    /* contact us page  */
+    .dk_contact_submit {
+        background-color: #000000;
+        padding: 10px 70px;
+        border-radius: 4px;
+        width: 100%;
     }
 }
     /* OTP Verification */
@@ -2200,6 +2287,12 @@
         height: 100%; 
         margin-top: 40px; 
     }
+    /* about us page slider  */
+    .dk_meet_our_team h2 {
+        padding-bottom: 20px;
+        color: #D9D9D9;
+        font-size: 33px;
+    }
 }
 /* OTP Verification */
 @media (max-width: 320px) {
@@ -2326,5 +2419,10 @@
     .dk_upi_id_sub span {
         font-size: 12px;
     }
-
+    /* about us page slider  */
+    .dk_meet_our_team h2 {
+        padding-bottom: 20px;
+        color: #D9D9D9;
+        font-size: 33px;
+    }
 }

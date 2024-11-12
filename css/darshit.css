@@ -162,7 +162,7 @@ a{
 .dk_custom_input_group {
     position: relative;
     margin-top: 20px;
-    border: 1px solid #727272;
+    border: 1px solid #727272 !important;
   }
   .dk_custom_input_group input{
     border: none !important;
@@ -3231,12 +3231,165 @@ input[type="date"] {
 }
 /***** About Us page  ******/
 .dk_about_us{
-    padding: 60px 0px 100px 0px;
+    padding: 60px 0px 0px 0px;
 }
 .dk_about_us h2{
     font-size: 28px;
     font-weight: 600;
     line-height: 33.89px;    
     color: #000000;
-    padding-bottom: 60px;
 }
+.dk_who_we_are h4{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.63px;
+    color: #000000;      
+}
+.dk_who_we_are p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #000000;
+}
+.dk_about_sub{
+    padding: 0px 120px 60px;
+}
+.dk_about_company{
+    padding: 60px 120px 60px;
+}
+
+/* meet our team slider  */
+.dk_meet_our_team{
+    padding: 50px 0px;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center; 
+}
+.dk_meet_our_team_container {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .dk_meet_our_team_slider {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+  }
+  .dk_meet_our_team_slide img{
+    width: 100%;
+  }
+  
+  .dk_meet_our_team_slide {
+    transition: transform 0.3s, width 0.3s;
+    text-align: center;
+    transform: scale(0.8);
+  }
+
+  .dk_meet_our_team_slide img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .dk_meet_our_team_slide p {
+    margin-top: 10px;
+    font-size: 0.9em; 
+    margin-bottom: 0px;
+  }
+  .owl-carousel.owl-drag .owl-item.center {
+    transform: scale(1.2); 
+  }
+  .dk_meet_our_team h2{
+    padding-bottom: 60px;
+    color: #D9D9D9;
+    font-size: 60px;
+  }
+
+  /***** Contact Us page  ******/
+  .dk_contact_us{
+    padding: 40px 100px 100px;
+  }
+  .dk_contact_us h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000000;
+    padding-bottom: 20px;
+  }
+  .dk_contact_us_sub{
+    box-shadow: 1px 6px 19px 0px #A4A4A433;
+    padding: 40px 185px;
+  }
+  .dk_contact_us_sub h4{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: center;
+    color: #000000;
+  }
+  .dk_contact_us_sub p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+  }
+  .dk_contact_us_form{
+    padding: 20px 0px 40px;
+  }
+  .dk_contact_submit{
+    background-color: #000000;
+    padding: 10px 70px;
+    border-radius: 4px;
+  }
+
+/* contact us page custum select  */
+.dk_custom_input_group_cu {
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #727272;
+}
+
+.dk_custom_label_cu {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: gray;
+}
+
+.dk_custom_input_cu {
+    border-radius: 8px;
+    border: 1px solid #727272 !important;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;
+    background-color: white;
+    background-image: url('../img/chevron_down.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px; 
+}
+
+.dk_custom_input_cu:focus {
+    border-color: #727272 !important;
+    box-shadow: none !important;
+}
+
+.dk_custom_input_group_cu select {
+    border: none !important;
+    background-color: transparent;
+}
+.dk_text_are{
+    border: none !important;
+    border-color: #727272;
+}
+
+

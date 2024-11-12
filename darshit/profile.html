@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/darshit.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+        <section>
+            <div class="container">
+                <button style="display: none;" class="btn btn-dark  dk_vertical_header dk_offcanva_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="dk_my_profile">
+                    <div class="dk_my_profile_sub dk_profile_width">
+                        <div> 
+                            <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
+                                <h2 class="dk_account">Account</h2>
+                                <ul class="dk_menu ">
+                                    <li class="dk_menu-item active">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Profile
+                                    </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_order.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_myorder.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Orders
+                                    </li>
+                                    <li class="dk_payment_method_main">
+                                        <div class="accordion p-0" id="accordionExample">
+                                            <div class="accordion-item dk_payment_method_item ">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button style="gap: 10px;"
+                                                        class="accordion-button dk_payment_method" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <span class="dk_icon">
+                                                            <img class="dk_icon_image default"
+                                                                src="../img/payment_method.png" alt="My Profile">
+                                                            <img class="dk_icon_image hover"
+                                                                src="../img/white_payment_methde.png"
+                                                                alt="My Profile Hover">
+                                                        </span>
+                                                        Payment Methods
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li onclick="showSection('credit')" class="active">Credit / Debit Cards
+                                                            </li>
+                                                            <li onclick="showSection('upi')" class="active">UPI ID</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_address.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Address
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_fasq.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            FAQs
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/terns_of_service.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_terms.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Terms of Service
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/disactive.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_deactive.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Deactivate Account
+                                        </li>
+                                    <li class="dk_menu-item">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Logout
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div>
+                                <aside class="dk_sidebar">
+                                    <ul class="dk_menu ">
+                                        <li class="dk_menu-item active">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Profile
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_order.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myorder.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Orders
+                                        </li>
+                                        <li class="dk_payment_method_main">
+                                            <div class="accordion p-0" id="accordionExample">
+                                                <div class="accordion-item dk_payment_method_item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button style="gap: 10px;"
+                                                            class="accordion-button dk_payment_method" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            <span class="dk_icon">
+                                                                <img class="dk_icon_image default"
+                                                                    src="../img/payment_method.png"
+                                                                    alt="My Profile">
+                                                                <img class="dk_icon_image hover"
+                                                                    src="../img/white_payment_methde.png"
+                                                                    alt="My Profile Hover">
+                                                            </span>
+                                                            Payment Methods
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                                        aria-labelledby="headingOne"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li onclick="showSection('credit')" class="active">Credit / Debit Cards
+                                                                </li>
+                                                                <li onclick="showSection('upi')" class="active">UPI ID</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_address.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Address
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/faqs.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_fasq.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            FAQs
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/terns_of_service.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_terms.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Terms of Service
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/disactive.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_deactive.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Deactivate Account
+                                        </li>
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/logout.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Logout
+                                        </li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                        <main class="dk_profile-content d-none">
+                            <h2>My Profile</h2>
+                            <div class="dk_profile_content_sub">
+                                <form class="dk_profile-form">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Name</label>
+                                            <input type="text" value="Alex Shroff">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Email</label>
+                                            <input type="email" value="example@gmail.com">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Mobile No.</label>
+                                            <input type="text" value="+1 56856 65656">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Gender</label>
+                                            <input type="text" value="Male">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Password</label>
+                                            <input type="text" value="Alex@1234">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Birthdate</label>
+                                            <input type="text" value="21/12/1994">
+                                        </div>
+                                        <a href=""><button type="submit">Edit Profile</button> </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </main>
+                        <div class="mv_main_my_order d-none">
+                            <p class="mv_order_heading">My Order</p>
+                            <div class="mv_order_main_class">
+                                <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mv_order_table_content" id="myTabContent">
+                                    <!-- On the way -->
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                        <div class="mv_order_review">
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                        <div class="mv_order_review">
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                        <div class="mv_order_review">
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
+                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Delivered -->
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                        <p class="mv_order_price mb-0">$12,999</p>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2">
+                                                                <img src="../mv_image/tickmark.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="mb-0 mt-1">Your item has been delivered successfully</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                        <p class="mv_order_price mb-0">$12,999</p>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2">
+                                                                <img src="../mv_image/tickmark.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="mb-0 mt-1">Your item has been delivered successfully</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Cancelled & Returned -->
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2">
+                                                                <img src="../mv_image/closemark.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="mb-0 mt-1">You requested a cancellation due to you change your mind about this product</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2">
+                                                                <img src="../mv_image/tickmark.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="mb-0 mt-1">Your request for return the product has been received successfully.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mv_order_expacted">
+                                            <div class="mv_order_date_main d-flex justify-content-between">
+                                                <div class="d-flex mv_order_date_heading_main">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">21/09/2024</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                                    </div>
+                                                    <div>
+                                                    <p class="mv_order_date mb-0">26/09/2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mv_order_product_details">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
+                                                        <div class="mv_order_product_image">
+                                                            <img src="../mv_image/image 386.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
+                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
+                                                    </div>
+                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                                        <div class="mv_order_price_track">
+                                                            <p class="mv_order_price">$12,999</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2">
+                                                                <img src="../mv_image/tickmark.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="mb-0 mt-1">Your product has been returned successfully. your refund will be credited to your original payment method.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <main class="dk_profile-content d-none">
+                            <h2 class="mb-3">Payment Methods</h2>
+                            <div class="dk_profile_payment_methods">
+                                <div id="creditSection" class="" style="display: none;">
+                                    <div class="dk_crditcard">
+                                        <div class="dk_crdit_debit_card">
+                                            <h3>Credit / Debit Cards</h3>
+                                        </div>
+                                        <div>
+                                            <button class="dk_crdit_debit_card_sub" class="btn btn-primary"
+                                                type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add
+                                                Credit / Debit Card</button>
+                                        </div>
+                                    </div>
+                                    <div class="dk_visa_cards">
+                                        <div class="row" id="cardContainer">
+                                            <div class="mb-3 col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="card1">
+                                                <div class="dk_visa_card2">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div>
+                                                            <img src="../img/visa_crad.png" alt="Visa Card 1"
+                                                                style="width:48px; border-radius: 8px;">
+                                                        </div>
+                                                        <div>
+                                                            <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal"
+                                                                onclick="setCardToDelete('card1')">
+                                                                <img src="../img/delete_visa_card.png" alt="">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dk_account_num">4364 1345 8932 8378</div>
+                                                    <div class="dk_visa_detailes">
+                                                        <div class="dk_card_holder">
+                                                            <p>CARDHOLDER NAME</p>
+                                                            <p>Alex Shroff</p>
+                                                        </div>
+                                                        <div class="dk_card_valid_date">
+                                                            <p>VALID THRU</p>
+                                                            <p>11/24</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="card2">
+                                                <div class="dk_visa_card2">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div>
+                                                            <img src="../img/visa_crad.png" alt="Visa Card 1"
+                                                                style="width:48px; border-radius: 8px;">
+                                                        </div>
+                                                        <div>
+                                                            <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal"
+                                                                onclick="setCardToDelete('card2')">
+                                                                <img src="../img/delete_visa_card.png" alt="">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dk_account_num">4364 1345 8932 8378</div>
+                                                    <div class="dk_visa_detailes">
+                                                        <div class="dk_card_holder">
+                                                            <p>CARDHOLDER NAME</p>
+                                                            <p>Alex Shroff</p>
+                                                        </div>
+                                                        <div class="dk_card_valid_date">
+                                                            <p>VALID THRU</p>
+                                                            <p>11/24</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6" id="card3">
+                                                <div class="dk_visa_card2">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div>
+                                                            <img src="../img/visa_crad.png" alt="Visa Card 1"
+                                                                style="width:48px; border-radius: 8px;">
+                                                        </div>
+                                                        <div>
+                                                            <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal"
+                                                                onclick="setCardToDelete('card3')">
+                                                                <img src="../img/delete_visa_card.png" alt="">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dk_account_num">4364 1345 8932 8378</div>
+                                                    <div class="dk_visa_detailes">
+                                                        <div class="dk_card_holder">
+                                                            <p>CARDHOLDER NAME</p>
+                                                            <p>Alex Shroff</p>
+                                                        </div>
+                                                        <div class="dk_card_valid_date">
+                                                            <p>VALID THRU</p>
+                                                            <p>11/24</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="noCardsMessage" class="dk_no_saved_card">
+                                            You have no saved cards
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="upiSection" class="dk_upi" style="display: none;">
+                                    <div class="dk_crditcard">
+                                        <div class="dk_crdit_debit_card">
+                                            <h3>UPI ID</h3>
+                                        </div>
+                                        <div>
+                                            <button class="dk_crdit_debit_card_sub" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Add UPI ID</button>
+                                        </div>
+                                    </div>
+                                    <div class="dk_upi_id_main">
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-3" id="card4">
+                                                <div class="dk_upi_id_sub">
+                                                    <div class="">
+                                                        <img src="../img/gpay_upi.png" alt="">
+                                                        <span>example56@oksbi</span>
+                                                    </div>
+                                                    <div class="p-0" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal"
+                                                    onclick="setCardToDelete('card4')">
+                                                        <img src="../img/upi_delete.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mb-3" id="card4">
+                                                <div class="dk_upi_id_sub">
+                                                    <div class="">
+                                                        <img src="../img/gpay_upi.png" alt="">
+                                                        <span>example56@oksbi</span>
+                                                    </div>
+                                                    <div  class="p-0" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal"
+                                                    onclick="setCardToDelete('card4')">
+                                                        <img src="../img/upi_delete.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="noUPIMessage" class="dk_no_saved_card" style="display: none;">
+                                            You have no saved UPI ID
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        <main class="dk_profile-content d-none">
+                            <h2>My Address</h2>
+                            <div class="dk_empty_address">
+                                <div class="row">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                        <div class="dk_empty_add_add_address mb-3" class="btn btn-primary" type="button"
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_add_address"
+                                            aria-controls="offcanvasRight">
+                                            <div class="dk_empty_add_add_address_sub">
+                                                <img src="../img/add_address.png" alt="">
+                                                <h4>Add Address</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                        <div class="dk_edit_add_card mb-3">
+                                            <div class="d-flex justify-content-between"
+                                                style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
+                                                <div class="">
+                                                    <h3>Home</h3>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="ed_dropdown" onclick="toggleDropdown('myDropdown1')">
+                                                        <img src="../img/edit_delet_menu.png" alt="">
+                                                    </button>
+                                                    <ul class="dropdown-menu dk_add_dropdown" id="myDropdown1"
+                                                        aria-labelledby="dropdownMenuButton1">
+                                                        <li type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasRight_edit_address"
+                                                            aria-controls="offcanvasRight"><a class="dropdown-item"
+                                                                href="#">Edit</a></li>
+                                                        <li>
+                                                            <a class="dropdown-item" type="button" class="btn btn-primary"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal_address"
+                                                                href="#">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div style="padding: 12px;">
+                                                <h6>Alex Shroff</h6>
+                                                <h4>+1 56565 56565</h4>
+                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                    USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                        <div class="dk_edit_add_card mb-3">
+                                            <div class="d-flex justify-content-between"
+                                                style="border-bottom: 0.5px solid #727272; padding: 5px 12px;">
+                                                <div class="">
+                                                    <h3>Home</h3>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="ed_dropdown" onclick="toggleDropdown('myDropdown2')">
+                                                        <img src="../img/edit_delet_menu.png" alt="">
+                                                    </button>
+                                                    <ul class="dropdown-menu dk_add_dropdown" id="myDropdown2"
+                                                        aria-labelledby="dropdownMenuButton2">
+                                                        <li type="button" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#offcanvasRight_edit_address"
+                                                            aria-controls="offcanvasRight"><a class="dropdown-item"
+                                                                href="#">Edit</a></li>
+                                                        <li>
+                                                            <a class="dropdown-item" type="button" class="btn btn-primary"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal_address"
+                                                                href="#">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div style="padding: 12px;">
+                                                <h6>Alex Shroff</h6>
+                                                <h4>+1 56565 56565</h4>
+                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                    USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        <main class="dk_profile-content d-none">
+                            <h2 class="mb-3">FAQs</h2>
+                            <div class="dk_profile_payment_methods dk_faqs_height">
+                                <div>
+                                    <div class="dk_faqs_accordion-body p-4">
+                                        <div class="dk_faqs_accordion">
+                                            <div class="container">
+                                                <div class="label">Can I reactivate my inactive account?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                            <hr>
+                                            <div class="container">
+                                                <div class="label">Can I use any Debit Card to pay for my order?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                            <hr>
+                                            <div class="container">
+                                                <div class="label">How can I pay with a saved Credit/Debit Card?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                            <hr>
+                                            <div class="container">
+                                                <div class="label">What are the modes of refund available after
+                                                    cancellation?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                            <hr>
+                                            <div class="container">
+                                                <div class="label">How quickly can I get my order delivered?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                            <hr>
+                                            <div class="container">
+                                                <div class="label">Why can't I track my order even though it has been
+                                                    shipped?</div>
+                                                <div class="content">Lorem ipsum dolor sit amet consectetur. Bibendum
+                                                    tellus quis eget gravida sit laoreet neque habitant nulla. Ligula
+                                                    vestibulum fames pharetra integer tincidunt. Sit massa vitae ut
+                                                    vitae vitae ipsum congue eros in. Vel nam morbi faucibus nullam nunc
+                                                    sit at bibendum orci.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        <main class="dk_profile-content d-none">
+                            <h2 class="mb-3">Terms of Service</h2>
+                            <div class="dk_profile_payment_methods dk_terms_height">
+                                <div class="dk_terms_of_service">
+                                    <h3>Terms of Use</h3>
+                                    <ul class="dk_terms_list_type">
+                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl. Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus quisque in amet. </li>
+                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.</li>
+                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at blandit vitae nibh. </li>
+                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris. Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
+                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget porta ultricies. Ut tellus imperdiet non amet.</li>
+                                        <li>Odio fringilla cursus ante arcu pulvinar. Nec urna penatibus elementum sed. Sed consequat ullamcorper nibh nibh ullamcorper luctus id convallis. Vulputate est cras arcu sed neque. Nibh pellentesque enim proin adipiscing id nullam. Facilisis egestas nulla quam fermentum nulla nec in vulputate. Non elementum nascetur gravida auctor eget facilisis tortor. Lacinia elit sit platea turpis eu leo est. Condimentum vestibulum pharetra eu sed. Mi nisl enim fermentum lacus. Amet orci diam aliquam id. At vitae laoreet ac tortor nulla volutpat facilisis nunc purus. Quam scelerisque vitae nunc luctus ac neque id.</li>
+                                        <li> Aliquam feugiat rhoncus mauris leo dui pretium. Quisque sed amet nunc nisl venenatis mi aenean consequat. Rhoncus turpis pellentesque nulla dictum aenean neque. Proin id in lorem eget. Vel nulla etiam at placerat netus pretium cras dapibus. Imperdiet felis suscipit tellus duis lacus lacus ullamcorper. Nisl amet neque congue arcu. Non pretium id nam leo eu ultrices id. Sagittis elementum leo cursus integer. Ultrices magna metus amet id nibh.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dk_terms_of_service2">
+                                    <h3>Conditions</h3>
+                                    <ul class="dk_terms_list_type">
+                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl. Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus quisque in amet. </li>
+                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.</li>
+                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at blandit vitae nibh.  </li>
+                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris. Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
+                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget porta ultricies. Ut tellus imperdiet non amet.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </main>
+                        <main class="dk_profile-content d-none">
+                            <h2 class="mb-3">Deactivate Account</h2>
+                            <div class="dk_profile_payment_methods dk_terms_height">
+                                <div class="dk_deactive_account">
+                                    <h3>When you deactivate your account</h3>
+                                    <ul class="dk_deactive_list_type">
+                                        <li>You are logged out of your Quickcart Account</li>
+                                        <li>Your public profile on Quickcart is no longer visible</li>
+                                        <li>Your reviews/ratings are still visible, while your profile information is shown as ‘unavailable’ as a result of deactivation.</li>
+                                        <li>Your wishlist items are no longer accessible through the associated public hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation</li>
+                                        <li>You will be unsubscribed from receiving promotional emails from Quickcart.</li>
+                                        <li>Your wishlist items are no longer accessible through the associated public hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation</li>
+                                        <li> You will be unsubscribed from receiving promotional emails from Quickcart.
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-dark dk_deactive_button" data-bs-toggle="modal" data-bs-target="#deactivateModal">
+                                        Deactivate Account
+                                    </button>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <!-- Footer -->
+     <div id="footer"></div>
+
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="../js/owl.carousel.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+         crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+     <!-- script Header and Footer -->
+     <script>
+         // navbar include
+         fetch("../darshit/header.html")
+             .then((response) => response.text())
+             .then((data) => {
+                 document.getElementById("header").innerHTML = data;
+             });
+         // footer include
+         fetch("../darshit/footer.html")
+             .then((response) => response.text())
+             .then((data) => {
+                 document.getElementById("footer").innerHTML = data;
+             });
+     </script>
+    
+    <!--************* my profile and edit frofile script  **********************-->
+    <!-- eyase input passwoed hide and show -->
+    <script>
+        const togglePassword =
+            document.querySelector('#togglePassword');
+
+        const password =
+            document.querySelector('#id_password');
+
+        togglePassword.
+            addEventListener('click', function (e) {
+
+                // Toggle the type attribute 
+                const type = password.getAttribute(
+                    'type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+
+                // Toggle the eye slash icon 
+                if (togglePassword.src.match(
+                    "../")) {
+                    togglePassword.src =
+                        "../img/hide.png";
+                } else {
+                    togglePassword.src =
+                        "../img/hi.png";
+                }
+            }); 
+    </script>
+    <!-- date input  -->
+    <script>
+        // Optional: Close calendar when clicking outside
+        window.onclick = function (event) {
+            const input = document.getElementById('birthdate');
+            const icon = document.querySelector('.calendar-icon');
+            if (!input.contains(event.target) && !icon.contains(event.target)) {
+                input.blur(); // This will close the calendar
+            }
+        }
+    </script>
+    <!-- *************************************************************************-->
+
+     <!-- *********payment methode cards script and offcanvas and model ********* -->
+     <!-- payment methode page  -->
+    <script>
+        function showSection(section) {
+            // Hide both sections initially
+            document.getElementById('creditSection').style.display = 'none';
+            document.getElementById('upiSection').style.display = 'none';
+
+            // Show the selected section
+            if (section === 'credit') {
+                document.getElementById('creditSection').style.display = 'block';
+            } else if (section === 'upi') {
+                document.getElementById('upiSection').style.display = 'block';
+            }
+        }
+
+        // Default to showing the Credit/Debit Card section on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('credit');
+        });
+    </script>
+    <!-- delete card -->
+    <script>
+        function deleteCard(cardId) {
+            const dk_visa_card2 = document.getElementById(cardId);
+            if (dk_visa_card2) {
+                dk_visa_card2.remove();
+            }
+        }
+    </script>
+    <!-- upi id Select & input  -->
+    <script>
+        // Show the dropdown when the input is focused
+        document.getElementById('upiInput').addEventListener('focus', function() {
+            document.getElementById('upiDropdown').style.display = 'block';
+        });
+    
+        // Hide the dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const upiInput = document.getElementById('upiInput');
+            const upiDropdown = document.getElementById('upiDropdown');
+            if (!upiInput.contains(event.target) && !upiDropdown.contains(event.target)) {
+                upiDropdown.style.display = 'none';
+            }
+        });
+    
+        // Function to update input field with selected dropdown value
+        function selectUPI(value) {
+            document.getElementById('upiInput').value = value;
+            document.getElementById('upiDropdown').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        const upiInput = document.getElementById('upiInput');
+        const upiSelect = document.getElementById('upiSelect');
+
+        // Listen for changes in the dropdown selection
+        upiSelect.addEventListener('change', function() {
+            // Get the user's entered ID without any domain and the selected domain
+            const userInput = upiInput.value.split('@')[0];
+            const selectedDomain = upiSelect.value;
+
+            // Update the input field with the entered ID followed by the selected domain
+            upiInput.value = userInput + selectedDomain;
+        });
+    </script>
+     <!-- print no card / upi msg   -->
+     <script>
+        let cardToDelete = null;
+    
+        function setCardToDelete(cardId) {
+            cardToDelete = cardId;
+        }
+    
+        function confirmDelete() {
+            if (cardToDelete) {
+                const cardElement = document.getElementById(cardToDelete);
+                if (cardElement) {
+                    cardElement.remove();
+                }
+                cardToDelete = null;
+            }
+    
+            // Check if any cards remain
+            const remainingCards = document.querySelectorAll('.dk_visa_card2');
+            const remainingUPI = document.querySelectorAll('.dk_upi_id_sub');
+            const noCardsMessage = document.getElementById("noCardsMessage");
+            const noUPIMessage = document.getElementById("noUPIMessage");
+    
+            // Display message if no cards are left
+            if (remainingCards.length === 0) {
+                noCardsMessage.style.display = "block";
+            } else {
+                noCardsMessage.style.display = "none";
+            }
+    
+            // Display message if no UPI IDs are left
+            if (remainingUPI.length === 0) {
+                noUPIMessage.style.display = "block";
+            } else {
+                noUPIMessage.style.display = "none";
+            }
+        }
+    </script>
+    <!-- delete cards model and scripts -->
+    <div class="modal fade" id="exampleModal_address" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content dk_delete_card_model">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dk_delete_address">
+                        <h3>Are you sure you want to delete?</h3>
+                    </div>
+                </div>
+                <div class="modal-footer dk_delete_address_sub">
+                    <button type="button" class="btn dk_delete_add_conform" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2" onclick="confirmDelete()"
+                        data-bs-dismiss="modal">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- add Credit / Debit Cards  -->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Credit / Debit Card </h5>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group dk_add_address_margine">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Card
+                        holder name</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group dk_add_address_margine">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Card
+                        number</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group dk_add_address_margine">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Expiry
+                        date</label>
+                    <input type="datetime" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group dk_add_address_margine">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">CVV</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add upi id  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add UPI ID </h5>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group dk_add_address_margine" style="display: flex; align-items: center;">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">UPI ID</label>
+                    
+                    <!-- Input field for UPI ID -->
+                    <input type="text" class="form-control dk_custom_input" id="upiInput" placeholder="Enter UPI ID" style="flex: 1;">
+                    
+                    <!-- Dropdown for selection -->
+                    <select id="upiSelect" class="form-control dk_focus_select" style="width: 100px; margin-left: 10px; border-left: 0.5px solid #727272 !important; border-radius: 0px;">
+                        <option value="" disabled selected>@okicici</option>
+                        <option value="@oksbi">@oksbi</option>
+                        <option value="@okicici">@okicici</option>
+                        <option value="@okaxis">@okaxis</option>
+                        <option value="@okhdfcbank">@okhdfcbank</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>           
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  ********************************************************************* -->
+
+    <!--*************** add address offcanvas model script ****************** -->
+    <!-- add address  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_add_address" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Address</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Name</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Mobile
+                        No.</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Area or
+                        Street</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Landmark</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Pincode</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">City</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">State</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="dk_addres_tyap">
+                    <h4>Address Type</h4>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Home</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Work</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Other</p>
+                    </label>
+                </div>
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- edit address  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_edit_address" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Address</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Name</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Mobile
+                        No.</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Area or
+                        Street</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Landmark</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Pincode</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">City</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-5">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">State</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="dk_addres_tyap">
+                    <h4>Address Type</h4>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Home</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Work</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Other</p>
+                    </label>
+                </div>
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- delete address -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dk_delete_address">
+                        <h3>Are you sure you want to delete?</h3>
+                    </div>
+                </div>
+                <div class="modal-footer dk_delete_address_sub">
+                    <button type="button" class="btn dk_delete_add_conform">Cancel</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2"
+                        data-bs-dismiss="modal">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMPTY ADDRESS DROP DOWN EDIT DELETE  -->
+    <script>
+        function toggleDropdown(id) {
+            // Get the dropdown element by ID
+            var dropdown = document.getElementById(id);
+            // Close any other open dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+                if (menu.id !== id) {
+                    menu.style.display = 'none';
+                }
+            });
+            // Toggle the selected dropdown's visibility
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+                    menu.style.display = 'none';
+                });
+            }
+        });
+    </script>
+    <!-- ******************************************************************** -->
+
+     <!--***************** accordian faqs page ****************************** -->
+     <script>
+        const accordion = document.getElementsByClassName('container');
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+    <!-- ******************************************************************** -->
+
+    <!--**************************** deactive page *************************** -->
+    <!-- deactivate account model -->
+    <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deactivateModalLabel">Deactivate Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body dk_deactive_model">
+                    <div class="dk_delete_address">
+                        <h3>Are you sure you want to leave?</h3>
+                    </div>
+                    <div class="mb-3 dk_combined_input">
+                        <input type="text" class="form-control dk_deactive_inp" placeholder="+1 56565 65656">
+                        <button type="button" class="dk_send_otp_button">Send OTP</button>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <!-- OTP input boxes -->
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h6 style="font-size: 13px; color: #727272;">Didn’t receive code yet?<a class="dk_resend text-decoration-underline" href="">Resend</a></h6>
+                    </div>
+                </div>
+                <div class="modal-footer dk_delete_address_sub mb-3 dk_size_box">
+                    <button type="button" class="btn dk_delete_add_conform">Let me stay</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2" data-bs-dismiss="modal">Deactivate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ********************************************************************  -->
+     
+</body>
+</html>

@@ -37,15 +37,17 @@
                             <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
                                 <h2 class="dk_account">Account</h2>
                                 <ul class="dk_menu ">
-                                    <li class="dk_menu-item active">
-                                        <span class="dk_icon">
-                                            <img class="dk_icon_image default" src="../img/my_profile.png"
-                                                alt="My Profile">
-                                            <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
-                                                alt="My Profile Hover">
-                                        </span>
-                                        My Profile
-                                    </li>
+                                    <a href="/darshit/my_profile.html">
+                                        <li class="dk_menu-item active">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Profile
+                                        </li>
+                                    </a>
                                     <li class="dk_menu-item">
                                         <span class="dk_icon">
                                             <img class="dk_icon_image default" src="../img/my_order.png"
@@ -55,45 +57,49 @@
                                         </span>
                                         My Orders
                                     </li>
-                                    <li class="dk_payment_method_main">
-                                        <div class="accordion p-0" id="accordionExample">
-                                            <div class="accordion-item dk_payment_method_item ">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button style="gap: 10px;"
-                                                        class="accordion-button dk_payment_method" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
-                                                        <span class="dk_icon">
-                                                            <img class="dk_icon_image default"
-                                                                src="../img/payment_method.png" alt="My Profile">
-                                                            <img class="dk_icon_image hover"
-                                                                src="../img/white_payment_methde.png"
-                                                                alt="My Profile Hover">
-                                                        </span>
-                                                        Payment Methods
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        <ul>
-                                                            <li>Credit / Debit Cards</li>
-                                                            <li>UPI ID</li>
-                                                        </ul>
+                                    <a href="/darshit/payment_methods_cards.html">
+                                        <li class="dk_payment_method_main">
+                                            <div class="accordion p-0" id="accordionExample">
+                                                <div class="accordion-item dk_payment_method_item ">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button style="gap: 10px;"
+                                                            class="accordion-button dk_payment_method" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            <span class="dk_icon">
+                                                                <img class="dk_icon_image default"
+                                                                    src="../img/payment_method.png" alt="My Profile">
+                                                                <img class="dk_icon_image hover"
+                                                                    src="../img/white_payment_methde.png"
+                                                                    alt="My Profile Hover">
+                                                            </span>
+                                                            Payment Methods
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>Credit / Debit Cards</li>
+                                                                <li>UPI ID</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="dk_menu-item">
-                                        <span class="dk_icon">
-                                            <img class="dk_icon_image default" src="../img/my_address.png"
-                                                alt="My Profile">
-                                            <img class="dk_icon_image hover" src="../img/white_myaddress.png"
-                                                alt="My Profile Hover">
-                                        </span>
-                                        My Address
-                                    </li>
+                                        </li>
+                                    </a>
+                                    <a href="/darshit/empty_address.html">
+                                        <li class="dk_menu-item">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_address.png"
+                                                    alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            My Address
+                                        </li>
+                                    </a>
                                     <a href="/darshit/faqs.html">
                                     <li class="dk_menu-item">
                                         <span class="dk_icon">
@@ -302,7 +308,7 @@
                 document.getElementById("footer").innerHTML = data;
             });
     </script>
-    <!-- delete address -->
+    <!-- deactivate account model -->
     <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
