@@ -144,7 +144,9 @@
                   <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
                 </div>
                 <div>
-                  <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
+                  <a href="./return_refund.html">
+                    <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -249,15 +251,6 @@
                     orderDate: "22/09/2024",
                     expectedDelivery: "27/09/2024",
                     statusMessage: "Your item has been delivered successfully"
-                },
-                {
-                    name: "OnePlus 11 5G",
-                    description: "Titanium Black, 8GB RAM, 256GB Storage",
-                    price: "$9,999",
-                    image: "../mv_image/image 386.png",
-                    orderDate: "23/09/2024",
-                    expectedDelivery: "28/09/2024",
-                    statusMessage: "Your item has been delivered successfully"
                 }
             ];
             
@@ -336,7 +329,7 @@
                                 <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
                                     <div class="mv_order_price_track">
                                         <p class="mv_order_price">${product.price}</p>
-                                        <p class="mb-0"><a class="mv_order_track" href="#">Track Order</a></p>
+                                        <p class="mb-0"><a class="mv_order_track" href="./track_order.html">Track Order</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +380,7 @@
                                 </div>
                                 <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-0">
                                     <div class="mv_order_price_track">
-                                        <p class="mv_order_price"><a class="mv_order_track" href="#">Submit Review</a></p>
+                                        <p class="mv_order_price"><a class="mv_order_track" href="./review.html">Submit Review</a></p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between mv_item_successfully mt-2">
@@ -396,7 +389,7 @@
                                             <img src="../mv_image/tickmark.png" alt="Tickmark">
                                         </div>
                                         <div>
-                                            <p class="mb-0 mt-1">${product.statusMessage}</p>
+                                            <p class="mb-0 mt-1 mv_your_item">${product.statusMessage}</p>
                                         </div>
                                     </div>
                                     <div>
@@ -459,7 +452,7 @@
                                             <img src="${product.imageclose}" alt="">
                                         </div>
                                         <div>
-                                            <p class="mb-0 mt-1">${product.statusMessage}</p>
+                                            <p class="mb-0 mt-1 mv_your_item">${product.statusMessage}</p>
                                         </div>
                                         </div>
                                             <div>
