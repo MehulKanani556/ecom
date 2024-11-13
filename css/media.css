@@ -198,6 +198,10 @@
     }
 }
 @media(max-width:1200px){
+    /* Track Refund */
+    .dk_track_refund_without_line{
+        width: 89%;
+    }
     /* Cart Without Address */
     /* .overflow-auto {
         overflow-x: auto; 
@@ -601,6 +605,14 @@
     }
 }
 @media(max-width:991px){
+    /* Track Refund */
+    .dk_track_refund_without_line{
+        width: 84%;
+    }
+    /* Return & Refund */
+    .mv_order_tracking_line{
+        width: 90%;
+    }
     /* Login with Email & Mobile */
     .dk_login_form{
         padding-top: 30px;
@@ -1193,7 +1205,12 @@
         display: none !important;
     }
      /* My Order */
-     .mv_main_my_order{
+     .dk_custom_label{
+        top: -12px !important;
+        left: 5px !important;
+        background-color: #fff !important;
+    }
+    .mv_main_my_order{
         margin-left: 0px !important;
     }
     .mv_main_my_order{
@@ -1212,6 +1229,17 @@
     .dk_contact_us_sub {
         box-shadow: 1px 6px 19px 0px #A4A4A433;
         padding: 40px 20px;
+    }
+    .dk_profile_width{
+        width: 100% !important;
+    }
+    .dk_my_profile_sub {
+        width: 100% !important;
+        /* justify-content: center; */
+    }
+    .dk_profile-content {
+        padding: 20px 40px;
+        width: 100% !important;
     }
  } 
  @media(max-width:767px){
@@ -1266,6 +1294,21 @@
     .mv_mobile_img{
         padding-right: 12px !important;
         padding-left: 12px !important;
+    }
+    /* Track Refund */
+    .dk_track_refund_without_line{
+        width: 82%;
+    }
+    /* Review & Feedback */
+    .mv_main_review_feedback{
+        display: block !important;
+    }
+    .mv_review_feedback_width{
+        width: 100% !important;
+    }
+    /* Return & Refund */
+    .mv_order_tracking_line{
+        width: 580px;
     }
     /* about us page  */
     .dk_about_sub{
@@ -1539,6 +1582,16 @@
      .mv_item_successfully{
         display: block;
         flex-direction: column;
+    }
+    /* Invoice */
+    .mv_invoice_main{
+        padding: 1rem !important;
+    }
+    .mv_main_payment_method{
+        margin-bottom: 1rem;
+    }
+    .mv_main_invoice_sub_footer{
+        padding: 1rem !important;
     }
     /* <!-- Payment Methods Cards page --> */
     .dk_profile_payment_methods {
@@ -2067,6 +2120,36 @@
     .mv_order_date_heading_main{
         margin-bottom: 5px;
     }
+    .mv_off_request_for_OTP{
+        width: 300px;
+    }
+    /* Track Order */
+    .mv_order_date_delivery{
+        display: block !important;
+    }
+    .mv_track_order_sub_heading{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .mv_off_continue{
+        width: 300px;
+    }
+    /* Track Order(Model) */
+    .mv_offcanvas_cancle_order{
+        width: 350px !important;
+    }
+    /* Track Refund */
+    .dk_track_refund_without_line{
+        width: 79%;
+    }
+    /* Review & Feedback */
+    .mv_main_review_heading{
+        font-size: 21px;
+    }
+    /* Invoice */
+    .mv_invoice_item{
+        overflow-x:  scroll !important;
+    }
     /* <!-- Payment Methods Cards page --> */
     .dk_crditcard {
         display: flex;
@@ -2081,8 +2164,57 @@
         line-height: 22px;
         margin-bottom: 0px;
     }
+    /* my profile page  */
+    .dk_profile-content {
+        padding: 20px 0px;
+        width: 100% !important;
+    }
+    /* address page  */
+    .dk_empty_address {
+        padding: 30px 0px;
+    }
+    /* faqs page  */
+    .dk_faq_padd {
+        padding: 40px 0px;
+    }
+    /* term and service  */
+    .dk_terms_of_service {
+        padding: 30px 0px;
+    }
 }
 @media (max-width: 375px) {
+    /* My Order */
+    .mv_off_request_for_OTP{
+        width: 250px;
+    }
+    .mv_otp_input{
+        width: 30px;
+        height: 30px;
+    }
+    /* Track Order */
+    .mv_track_order_sub_heading{
+        font-size: 10px;
+    }
+    .mv_off_continue{
+        width: 250px;
+    }
+    /* Track Order(Model) */
+    .mv_back_to_home{
+        padding: 6px 10px;
+    }
+    .mv_track_refund{
+        padding: 6px 10px;
+    }
+    .mv_offcanvas_cancle_order{
+        width: 280px !important;
+    }
+    .dk_track_refund_without_line{
+        width: 70%;
+    }
+    /* Return & Refund */
+    .mv_order_tracking_line{
+        width: 440px !important;
+    }
     .dk_banner_info{
         text-align: center;
         position: absolute;

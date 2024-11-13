@@ -18,6 +18,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+
+    <style>
+        .dk_dis_nb {
+            display: none; /* Hide sections by default */
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -33,10 +39,10 @@
                 <div class="dk_my_profile">
                     <div class="dk_my_profile_sub dk_profile_width">
                         <div> 
-                            <aside class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
+                            <aside id="toggle-header" class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
                                 <h2 class="dk_account">Account</h2>
                                 <ul class="dk_menu ">
-                                    <li class="dk_menu-item active">
+                                    <li class="dk_menu-item dk_nav-item active" data-section="profileSection">
                                         <span class="dk_icon">
                                             <img class="dk_icon_image default" src="../img/my_profile.png"
                                                 alt="My Profile">
@@ -45,7 +51,7 @@
                                         </span>
                                         My Profile
                                     </li>
-                                    <li class="dk_menu-item">
+                                    <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
                                         <span class="dk_icon">
                                             <img class="dk_icon_image default" src="../img/my_order.png"
                                                 alt="My Profile">
@@ -54,7 +60,7 @@
                                         </span>
                                         My Orders
                                     </li>
-                                    <li class="dk_payment_method_main">
+                                    <li class="dk_payment_method_main" data-section="paymentMethodsSection">
                                         <div class="accordion p-0" id="accordionExample">
                                             <div class="accordion-item dk_payment_method_item ">
                                                 <h2 class="accordion-header" id="headingOne">
@@ -76,16 +82,16 @@
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <ul>
-                                                            <li onclick="showSection('credit')" class="active">Credit / Debit Cards
+                                                            <li onclick="showpaymentSection('credit')" class="active">Credit / Debit Cards
                                                             </li>
-                                                            <li onclick="showSection('upi')" class="active">UPI ID</li>
+                                                            <li onclick="showpaymentSection('upi')" class="active">UPI ID</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="MyaddressSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/my_address.png"
                                                     alt="My Profile">
@@ -94,7 +100,7 @@
                                             </span>
                                             My Address
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
                                                 <img class="dk_icon_image hover" src="../img/white_fasq.png"
@@ -102,7 +108,7 @@
                                             </span>
                                             FAQs
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/terns_of_service.png"
                                                     alt="My Profile">
@@ -111,7 +117,7 @@
                                             </span>
                                             Terms of Service
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/disactive.png"
                                                     alt="My Profile">
@@ -120,14 +126,16 @@
                                             </span>
                                             Deactivate Account
                                         </li>
-                                    <li class="dk_menu-item">
-                                        <span class="dk_icon">
-                                            <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
-                                            <img class="dk_icon_image hover" src="../img/white_logout.svg"
-                                                alt="My Profile Hover">
-                                        </span>
-                                        Logout
-                                    </li>
+                                        <li class="dk_menu-item" class="dropdown-item" type="button" class="btn btn-primary"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal_login"
+                                        href="#">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                    alt="My Profile Hover">
+                                            </span>
+                                            Logout
+                                        </li> 
                                 </ul>
                             </aside>
                         </div>
@@ -142,7 +150,7 @@
                             <div>
                                 <aside class="dk_sidebar">
                                     <ul class="dk_menu ">
-                                        <li class="dk_menu-item active">
+                                        <li class="dk_menu-item dk_nav-item active" data-section="profileSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/my_profile.png"
                                                     alt="My Profile">
@@ -151,7 +159,7 @@
                                             </span>
                                             My Profile
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/my_order.png"
                                                     alt="My Profile">
@@ -160,7 +168,7 @@
                                             </span>
                                             My Orders
                                         </li>
-                                        <li class="dk_payment_method_main">
+                                        <li class="dk_payment_method_main dk_nav-item" data-section="paymentMethodsSection">
                                             <div class="accordion p-0" id="accordionExample">
                                                 <div class="accordion-item dk_payment_method_item">
                                                     <h2 class="accordion-header" id="headingOne">
@@ -184,16 +192,16 @@
                                                         data-bs-parent="#accordionExample">
                                                         <div class="accordion-body">
                                                             <ul>
-                                                                <li onclick="showSection('credit')" class="active">Credit / Debit Cards
+                                                                <li onclick="showpaymentSection('credit')" class="active">Credit / Debit Cards
                                                                 </li>
-                                                                <li onclick="showSection('upi')" class="active">UPI ID</li>
+                                                                <li onclick="showpaymentSection('upi')" class="active">UPI ID</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="MyaddressSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/my_address.png"
                                                     alt="My Profile">
@@ -202,7 +210,7 @@
                                             </span>
                                             My Address
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/faqs.png"
                                                     alt="My Profile">
@@ -211,7 +219,7 @@
                                             </span>
                                             FAQs
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/terns_of_service.png"
                                                     alt="My Profile">
@@ -220,7 +228,7 @@
                                             </span>
                                             Terms of Service
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/disactive.png"
                                                     alt="My Profile">
@@ -229,7 +237,7 @@
                                             </span>
                                             Deactivate Account
                                         </li>
-                                        <li class="dk_menu-item">
+                                        <li class="dk_menu-item dk_nav-item">
                                             <span class="dk_icon">
                                                 <img class="dk_icon_image default" src="../img/logout.png"
                                                     alt="My Profile">
@@ -243,447 +251,89 @@
                             </div>
                         </div>
                     </div>
-                        <main class="dk_profile-content d-none">
-                            <h2>My Profile</h2>
-                            <div class="dk_profile_content_sub">
-                                <form class="dk_profile-form">
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Name</label>
-                                            <input type="text" value="Alex Shroff">
-                                        </div>
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Email</label>
-                                            <input type="email" value="example@gmail.com">
-                                        </div>
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Mobile No.</label>
-                                            <input type="text" value="+1 56856 65656">
-                                        </div>
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Gender</label>
-                                            <input type="text" value="Male">
-                                        </div>
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Password</label>
-                                            <input type="text" value="Alex@1234">
-                                        </div>
-                                        <div class="col-lg-6 mb-0">
-                                            <label>Birthdate</label>
-                                            <input type="text" value="21/12/1994">
-                                        </div>
-                                        <a href=""><button type="submit">Edit Profile</button> </a>
+                    <main id="profileSection" class="dk_profile-content" style="display: block;">
+                        <h2 class="mb-3">My Profile</h2>
+                        <div class="dk_profile_content_sub">
+                            <form class="dk_profile-form">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Name</label>
+                                        <input type="text" value="Alex Shroff">
                                     </div>
-                                </form>
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Email</label>
+                                        <input type="email" value="example@gmail.com">
+                                    </div>
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Mobile No.</label>
+                                        <input type="text" value="+1 56856 65656">
+                                    </div>
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Gender</label>
+                                        <input type="text" value="Male">
+                                    </div>
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Password</label>
+                                        <input type="text" value="Alex@1234">
+                                    </div>
+                                    <div class="col-lg-6 mb-0">
+                                        <label>Birthdate</label>
+                                        <input type="text" value="21/12/1994">
+                                    </div>
+                                    <a href=""><button type="submit">Edit Profile</button> </a>
+                                </div>
+                            </form>
+                        </div>
+                    </main>
+                    <div id="ordersSection" class="mv_main_my_order dk_profile-content" style="display: none;">
+                        <p class="mv_order_heading">My Order</p>
+                    <div class="mv_order_main_class">
+                        <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
+                            <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
+                            </li>
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
+                            <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
+                            </li>
+                            <li class="nav-item mv_oredr_nav_item" role="presentation">
+                            <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content mv_order_table_content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <div id="mv_order_on_the_way"></div>
+                                <div id="no-data-message-on-the-way" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
+                                    </div>
+                                    <p class="text-center">You have no order in process</p>
+                                </div>
                             </div>
-                        </main>
-                        <div class="mv_main_my_order d-none">
-                            <p class="mv_order_heading">My Order</p>
-                            <div class="mv_order_main_class">
-                                <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                    <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                    <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                    <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content mv_order_table_content" id="myTabContent">
-                                    <!-- On the way -->
-                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                        <div class="mv_order_review">
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                        <div class="mv_order_review">
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                        <div class="mv_order_review">
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_yellow"></i>
-                                                            <i class="fa-solid fa-star mv_order_review_gray"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">Track Order</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <div id="mv_order_delivered"></div>
+                                <div id="no-data-message-delivered" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
                                     </div>
-                                    <!-- Delivered -->
-                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                        <p class="mv_order_price mb-0">$12,999</p>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="me-2">
-                                                                <img src="../mv_image/tickmark.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <p class="mb-0 mt-1">Your item has been delivered successfully</p>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                        <p class="mv_order_price mb-0">$12,999</p>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price"><a class="mv_order_track" href="">Submit Review</a></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="me-2">
-                                                                <img src="../mv_image/tickmark.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <p class="mb-0 mt-1">Your item has been delivered successfully</p>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">Request for Return</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <p class="text-center">You have no order in process</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                <div id="mv_order_cancelled"></div>
+                                <div id="no-data-message-cancelled" class="mv_no_order_item" style="display: none;">
+                                    <div class="mv_main_no_order">
+                                        <img src="../mv_image/no_order_logo.png" alt="">
                                     </div>
-                                    <!-- Cancelled & Returned -->
-                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="me-2">
-                                                                <img src="../mv_image/closemark.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <p class="mb-0 mt-1">You requested a cancellation due to you change your mind about this product</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="me-2">
-                                                                <img src="../mv_image/tickmark.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <p class="mb-0 mt-1">Your request for return the product has been received successfully.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mv_order_expacted">
-                                            <div class="mv_order_date_main d-flex justify-content-between">
-                                                <div class="d-flex mv_order_date_heading_main">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">21/09/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
-                                                    </div>
-                                                    <div>
-                                                    <p class="mv_order_date mb-0">26/09/2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mv_order_product_details">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12 mv_mobile_img">
-                                                        <div class="mv_order_product_image">
-                                                            <img src="../mv_image/image 386.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 mv_mobile_img">
-                                                        <p class="mv_order_product_text">Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)</p>
-                                                    </div>
-                                                    <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
-                                                        <div class="mv_order_price_track">
-                                                            <p class="mv_order_price">$12,999</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mv_item_successfully mt-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="me-2">
-                                                                <img src="../mv_image/tickmark.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <p class="mb-0 mt-1">Your product has been returned successfully. your refund will be credited to your original payment method.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0"><a class="mv_order_track" href="">View return & refund status</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="text-center">You have no order in process</p>
                                 </div>
                             </div>
                         </div>
-                        <main class="dk_profile-content d-none">
+                    </div>
+                    </div>
+                        <main id="paymentMethodsSection" class="dk_profile-content" style="display: none;">
                             <h2 class="mb-3">Payment Methods</h2>
                             <div class="dk_profile_payment_methods">
-                                <div id="creditSection" class="" style="display: none;">
+                                <div id="creditSection" class="">
                                     <div class="dk_crditcard">
                                         <div class="dk_crdit_debit_card">
                                             <h3>Credit / Debit Cards</h3>
@@ -706,7 +356,7 @@
                                                         </div>
                                                         <div>
                                                             <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal"
+                                                                data-bs-target="#deletepaymentcard"
                                                                 onclick="setCardToDelete('card1')">
                                                                 <img src="../img/delete_visa_card.png" alt="">
                                                             </span>
@@ -734,7 +384,7 @@
                                                         </div>
                                                         <div>
                                                             <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal"
+                                                                data-bs-target="#deletepaymentcard"
                                                                 onclick="setCardToDelete('card2')">
                                                                 <img src="../img/delete_visa_card.png" alt="">
                                                             </span>
@@ -762,7 +412,7 @@
                                                         </div>
                                                         <div>
                                                             <span class="dk_delete_btn btn p-0" data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal"
+                                                                data-bs-target="#deletepaymentcard"
                                                                 onclick="setCardToDelete('card3')">
                                                                 <img src="../img/delete_visa_card.png" alt="">
                                                             </span>
@@ -805,7 +455,7 @@
                                                         <span>example56@oksbi</span>
                                                     </div>
                                                     <div class="p-0" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal"
+                                                    data-bs-target="#deletepaymentcard"
                                                     onclick="setCardToDelete('card4')">
                                                         <img src="../img/upi_delete.png" alt="">
                                                     </div>
@@ -818,7 +468,7 @@
                                                         <span>example56@oksbi</span>
                                                     </div>
                                                     <div  class="p-0" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal"
+                                                    data-bs-target="#deletepaymentcard"
                                                     onclick="setCardToDelete('card4')">
                                                         <img src="../img/upi_delete.png" alt="">
                                                     </div>
@@ -832,8 +482,8 @@
                                 </div>
                             </div>
                         </main>
-                        <main class="dk_profile-content d-none">
-                            <h2>My Address</h2>
+                        <main id="MyaddressSection" class="dk_profile-content" style="display: none;"> 
+                            <h2 class="mb-3">My Address</h2>
                             <div class="dk_empty_address">
                                 <div class="row">
                                     <div class="col-xxl-4 col-xl-4 col-lg-6">
@@ -915,11 +565,11 @@
                                 </div>
                             </div>
                         </main>
-                        <main class="dk_profile-content d-none">
+                        <main id="FaqsSection" class="dk_profile-content " style="display: none;">
                             <h2 class="mb-3">FAQs</h2>
                             <div class="dk_profile_payment_methods dk_faqs_height">
                                 <div>
-                                    <div class="dk_faqs_accordion-body p-4">
+                                    <div class="dk_faqs_accordion-body dk_faq_padd">
                                         <div class="dk_faqs_accordion">
                                             <div class="container">
                                                 <div class="label">Can I reactivate my inactive account?</div>
@@ -981,7 +631,7 @@
                                 </div>
                             </div>
                         </main>
-                        <main class="dk_profile-content d-none">
+                        <main id="termsofserviceSection" class="dk_profile-content " style="display: none;">
                             <h2 class="mb-3">Terms of Service</h2>
                             <div class="dk_profile_payment_methods dk_terms_height">
                                 <div class="dk_terms_of_service">
@@ -1009,7 +659,7 @@
                                 </div>
                             </div>
                         </main>
-                        <main class="dk_profile-content d-none">
+                        <main id="deactivateaccountSection" class="dk_profile-content " style="display: none;">
                             <h2 class="mb-3">Deactivate Account</h2>
                             <div class="dk_profile_payment_methods dk_terms_height">
                                 <div class="dk_deactive_account">
@@ -1064,6 +714,83 @@
                  document.getElementById("footer").innerHTML = data;
              });
      </script>
+
+    <script>
+    // Function to show the selected section (Credit or UPI)
+    function showpaymentSection(section) {
+    // Hide both sections initially
+    document.getElementById('paymentMethodsSection').style.display = 'block';
+    document.getElementById('profileSection').style.display = 'none';
+    document.getElementById('ordersSection').style.display = 'none';
+    document.getElementById('MyaddressSection').style.display = 'none';
+    document.getElementById('FaqsSection').style.display = 'none';
+    document.getElementById('termsofserviceSection').style.display = 'none';
+    document.getElementById('deactivateaccountSection').style.display = 'none';
+
+    document.getElementById('creditSection').style.display = 'none';
+    document.getElementById('upiSection').style.display = 'none';
+
+    // Show the selected section
+    if (section === 'credit') {
+        document.getElementById('creditSection').style.display = 'block';
+    } else if (section === 'upi') {
+        document.getElementById('upiSection').style.display = 'block';
+    }
+}
+
+// Wait for the DOM content to load
+document.addEventListener("DOMContentLoaded", function () {
+    // Show the "Credit/Debit" section by default on page load
+    showpaymentSection('credit');
+
+    // Set up the sidebar click listener
+    const sidebar = document.querySelector(".dk_menu");
+    const sections = document.querySelectorAll('.dk_profile-content');
+
+    // Function to show the selected section
+    function showSection(sectionId) {
+        console.log("Showing section: ", sectionId); // Debugging
+
+        // Hide all sections
+        sections.forEach(section => section.style.display = 'none');
+
+        // Show the selected section
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+            section.style.display = 'block';
+        } else {
+            console.error(`Section with id "${sectionId}" not found!`); // Error message if section not found
+        }
+    }
+
+    // Event listener on sidebar for click delegation
+    sidebar.addEventListener("click", function (event) {
+        const menuItem = event.target.closest(".dk_nav-item ");
+
+        // If a valid menu item is clicked
+        if (menuItem) {
+            // Get the section ID from the data-section attribute
+            const sectionId = menuItem.getAttribute("data-section");
+
+            console.log("Clicked menu item, section ID: ", sectionId); // Debugging
+
+            // Show the selected section
+            showSection(sectionId);
+
+            // Remove 'active' class from all menu items
+            document.querySelectorAll(".dk_menu-item").forEach(item => item.classList.remove("active"));
+
+            // Add 'active' class to the clicked menu item
+            menuItem.classList.add("active");
+        }
+    });
+
+    // Show the "My Profile" section by default on page load
+    showSection('profileSection');
+});
+
+    </script>
     
     <!--************* my profile and edit frofile script  **********************-->
     <!-- eyase input passwoed hide and show -->
@@ -1106,81 +833,50 @@
     </script>
     <!-- *************************************************************************-->
 
-     <!-- *********payment methode cards script and offcanvas and model ********* -->
-     <!-- payment methode page  -->
-    <script>
-        function showSection(section) {
-            // Hide both sections initially
-            document.getElementById('creditSection').style.display = 'none';
-            document.getElementById('upiSection').style.display = 'none';
+    <!-- *********payment methode cards script and offcanvas and model ********* -->
 
-            // Show the selected section
-            if (section === 'credit') {
-                document.getElementById('creditSection').style.display = 'block';
-            } else if (section === 'upi') {
-                document.getElementById('upiSection').style.display = 'block';
-            }
-        }
-
-        // Default to showing the Credit/Debit Card section on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            showSection('credit');
-        });
-    </script>
-    <!-- delete card -->
-    <script>
-        function deleteCard(cardId) {
-            const dk_visa_card2 = document.getElementById(cardId);
-            if (dk_visa_card2) {
-                dk_visa_card2.remove();
-            }
-        }
-    </script>
     <!-- upi id Select & input  -->
     <script>
-        // Show the dropdown when the input is focused
-        document.getElementById('upiInput').addEventListener('focus', function() {
-            document.getElementById('upiDropdown').style.display = 'block';
-        });
-    
-        // Hide the dropdown when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener("DOMContentLoaded", function () {
             const upiInput = document.getElementById('upiInput');
-            const upiDropdown = document.getElementById('upiDropdown');
-            if (!upiInput.contains(event.target) && !upiDropdown.contains(event.target)) {
-                upiDropdown.style.display = 'none';
-            }
-        });
+            const upiSelect = document.getElementById('upiSelect');
+            
+            // Show the dropdown when the input is focused (if needed)
+            upiInput.addEventListener('focus', function() {
+                // You can show a custom dropdown if needed, otherwise this part can be skipped if select is enough.
+                if (document.getElementById('upiDropdown')) {
+                    document.getElementById('upiDropdown').style.display = 'block';
+                }
+            });
     
-        // Function to update input field with selected dropdown value
-        function selectUPI(value) {
-            document.getElementById('upiInput').value = value;
-            document.getElementById('upiDropdown').style.display = 'none';
-        }
+            // Hide the dropdown when clicking outside (if using a custom dropdown)
+            document.addEventListener('click', function(event) {
+                if (!upiInput.contains(event.target) && !upiSelect.contains(event.target)) {
+                    // If you were using a custom dropdown, hide it
+                    if (document.getElementById('upiDropdown')) {
+                        document.getElementById('upiDropdown').style.display = 'none';
+                    }
+                }
+            });
+    
+            // Function to update input field with selected dropdown value
+            upiSelect.addEventListener('change', function () {
+                const selectedValue = upiSelect.value;
+                if (upiInput) {
+                    // Append the selected value to the input field
+                    upiInput.value += selectedValue; // Appending the selected value to the current input value
+                }
+            });
+        });
     </script>
 
     <script>
-        const upiInput = document.getElementById('upiInput');
-        const upiSelect = document.getElementById('upiSelect');
-
-        // Listen for changes in the dropdown selection
-        upiSelect.addEventListener('change', function() {
-            // Get the user's entered ID without any domain and the selected domain
-            const userInput = upiInput.value.split('@')[0];
-            const selectedDomain = upiSelect.value;
-
-            // Update the input field with the entered ID followed by the selected domain
-            upiInput.value = userInput + selectedDomain;
-        });
-    </script>
-     <!-- print no card / upi msg   -->
-     <script>
         let cardToDelete = null;
-    
+
         function setCardToDelete(cardId) {
             cardToDelete = cardId;
         }
-    
+
         function confirmDelete() {
             if (cardToDelete) {
                 const cardElement = document.getElementById(cardToDelete);
@@ -1189,20 +885,20 @@
                 }
                 cardToDelete = null;
             }
-    
+
             // Check if any cards remain
             const remainingCards = document.querySelectorAll('.dk_visa_card2');
             const remainingUPI = document.querySelectorAll('.dk_upi_id_sub');
             const noCardsMessage = document.getElementById("noCardsMessage");
             const noUPIMessage = document.getElementById("noUPIMessage");
-    
+
             // Display message if no cards are left
             if (remainingCards.length === 0) {
                 noCardsMessage.style.display = "block";
             } else {
                 noCardsMessage.style.display = "none";
             }
-    
+
             // Display message if no UPI IDs are left
             if (remainingUPI.length === 0) {
                 noUPIMessage.style.display = "block";
@@ -1210,9 +906,10 @@
                 noUPIMessage.style.display = "none";
             }
         }
-    </script>
+    </script> 
+
     <!-- delete cards model and scripts -->
-    <div class="modal fade" id="exampleModal_address" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deletepaymentcard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content dk_delete_card_model">
                 <div class="modal-header">
@@ -1541,6 +1238,419 @@
         </div>
     </div>
     <!-- ********************************************************************  -->
+
+    <!--*********************** login page model ***************************** -->
+    <div class="modal fade" id="exampleModal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dk_delete_address">
+                        <h3>Are you sure you want to logout?</h3>
+                    </div>
+                </div>
+                <div class="modal-footer dk_delete_address_sub">
+                    <button type="button" class="btn dk_delete_add_conform">Cancel</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2"
+                        data-bs-dismiss="modal">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ********************************************************************* -->
+
+    <!--*********************** My Order Page ***************************** -->
+    <!-- Script Dynamic On The Way -->
+    <script>
+        window.onload = function() {
+            const orderContainerOnTheWay = document.getElementById('mv_order_on_the_way');
+            const orderContainerDelivered = document.getElementById('mv_order_delivered');
+            const orderContainerCancelled = document.getElementById('mv_order_cancelled');
+            const noDataMessageOnTheWay = document.querySelector("#home-tab-pane #no-data-message-on-the-way");
+            const noDataMessageDelivered = document.querySelector("#profile-tab-pane #no-data-message-delivered");
+            const noDataMessageCancelled = document.querySelector("#contact-tab-pane #no-data-message-cancelled");
+    
+            // On The Way
+            const productDataOnTheWay = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    rating: 4,
+                },
+                {
+                    name: "Apple iPhone 15 Pro Max",
+                    description: "Space Black, 6GB RAM, 128GB Storage",
+                    price: "$14,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "22/09/2024",
+                    expectedDelivery: "27/09/2024",
+                    rating: 5,
+                },
+                {
+                    name: "OnePlus 11 5G",
+                    description: "Titanium Black, 8GB RAM, 256GB Storage",
+                    price: "$9,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "23/09/2024",
+                    expectedDelivery: "28/09/2024",
+                    rating: 3,
+                }
+            ];
+    
+            // Delivered Data
+            const productDataDelivered = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "Your item has been delivered successfully"
+                },
+                {
+                    name: "Apple iPhone 15 Pro Max",
+                    description: "Space Black, 6GB RAM, 128GB Storage",
+                    price: "$14,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "22/09/2024",
+                    expectedDelivery: "27/09/2024",
+                    statusMessage: "Your item has been delivered successfully"
+                }
+            ];
+            
+            // Cancelled & Returned
+            const productDataCancelled = [
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/closemark.png",
+                },
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/tickmark.png",
+                    viewstatus: "View return & refund status"
+                },
+                {
+                    name: "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+                    description: "Phantom Black, 12GB RAM, 256GB Storage",
+                    price: "$12,999",
+                    image: "../mv_image/image 386.png",
+                    orderDate: "21/09/2024",
+                    expectedDelivery: "26/09/2024",
+                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    imageclose: "../mv_image/tickmark.png",
+                    viewstatus: "View return & refund status"
+                },
+            ];
+    
+            // Display "On the Way" Products
+            if (productDataOnTheWay.length > 0) {
+                let productHTMLOnTheWay = "";
+                productDataOnTheWay.forEach((product) => {
+                    productHTMLOnTheWay += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="${product.name}">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                    <div class="mv_order_review">
+                                        ${generateRatingStars(product.rating)}
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">${product.price}</p>
+                                        <p class="mb-0"><a class="mv_order_track" href="./track_order.html">Track Order</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                });
+                orderContainerOnTheWay.innerHTML = productHTMLOnTheWay;
+                noDataMessageOnTheWay.style.display = 'none';
+            } else {
+                noDataMessageOnTheWay.style.display = 'block';
+            }
+    
+            // Display "Delivered" Products
+            if (productDataDelivered.length > 0) {
+                let productHTMLDelivered = "";
+                productDataDelivered.forEach((product) => {
+                    productHTMLDelivered += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex mv_order_date_heading_main">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="${product.name}">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                    <p class="mv_order_price mb-0">${product.price}</p>
+                                </div>
+                                <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price"><a class="mv_order_track" href="./review.html">Submit Review</a></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <img src="../mv_image/tickmark.png" alt="Tickmark">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 mt-1 mv_your_item">${product.statusMessage}</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightReturn" aria-controls="offcanvasRight" class="mv_order_track" href="#">Request for Return</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                });
+                noDataMessageDelivered.style.display = 'none';
+                orderContainerDelivered.innerHTML = productHTMLDelivered;
+            } else {
+                noDataMessageDelivered.style.display = 'block';
+            }
+
+            // Display "Cancelled & Returned" Products
+            if (productDataCancelled.length > 0) {
+                let productHTMLDelivered = "";
+                productDataCancelled.forEach((product) => {
+                    productHTMLDelivered += `
+                    <div class="mv_order_expacted">
+                        <div class="mv_order_date_main d-flex justify-content-between">
+                            <div class="d-flex mv_order_date_heading_main">
+                                <div>
+                                    <p class="mv_order_date_heading mb-0">Order Date:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.orderDate}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                            ${product.expectedDelivery ? `<div>
+                                    <p class="mv_order_date_heading mb-0">Expected Delivery:</p>
+                                </div>
+                                <div>
+                                    <p class="mv_order_date mb-0">${product.expectedDelivery}</p>
+                                </div>` : ''}
+                            </div>
+                        </div>
+                        <div class="mv_order_product_details">
+                            <div class="row">
+                                <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="mv_order_product_image">
+                                        <img src="${product.image}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                </div>
+                                <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
+                                    <div class="mv_order_price_track">
+                                        <p class="mv_order_price">${product.price}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mv_item_successfully mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <img src="${product.imageclose}" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 mt-1 mv_your_item">${product.statusMessage}</p>
+                                        </div>
+                                        </div>
+                                            <div>
+                                            ${product.viewstatus ? `<p class="mb-0"><a class="mv_order_track" href="">${product.viewstatus}</a></p>` : ""}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                orderContainerCancelled.innerHTML = productHTMLDelivered;
+                noDataMessageCancelled.style.display = 'none';
+            } else {
+                noDataMessageCancelled.style.display = 'block';
+            }
+        };
+    
+        function generateRatingStars(rating) {
+            let starsHTML = "";
+            for (let i = 0; i < 5; i++) {
+                if (i < rating) {
+                    starsHTML += `<i class="fa-solid fa-star mv_order_review_yellow"></i>`;
+                } else {
+                    starsHTML += `<i class="fa-solid fa-star mv_order_review_gray"></i>`;
+                }
+            }
+            return starsHTML;
+        }
+    </script>
+
+    <!-- Offcanvas Return Order -->
+    <div class="offcanvas offcanvas-end mv_offcanvas_cancle_order" tabindex="-1" id="offcanvasRightReturn" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header mv_cancel_order_border">
+          <h5 class="offcanvas-title mv_cancel_order_heading" id="offcanvasRightLabel">Cancel Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="form-group dk_custom_input_group">
+                <label for="emailOrMobile" class="dk_custom_label"
+                    style="font-weight: 500; color: #000000;">Order ID <span style="color: red;">*</span></label>
+                <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+            </div>
+            <div class="form-group dk_custom_input_group">
+                <label for="emailOrMobile" class="dk_custom_label"
+                    style="font-weight: 500; color: #000000;">Reason for Return <span style="color: red;">*</span></label>
+                <select class="form-select mv_offcanvas_form_select" aria-label="Default select example">
+                    <option selected>Reason for Return</option>
+                    <option value="1">I was hopping for a shorter delivery time</option>
+                    <option value="2">Product quality does not match the level of its worth</option>
+                    <option value="3">The product doesn't look like the online picture</option>
+                    <option value="4">The product was damaged in transit or was poorly made </option>
+                    <option value="5">The product information was misleading</option>
+                    <option value="6">My reason are not listed here</option>
+                </select>
+            </div>
+            <div class="form-group dk_custom_input_group mb-4">
+                <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">
+                    Mobile No. <span style="color: red;">*</span>
+                </label>
+                <input type="text" class="form-control dk_custom_input" id="emailOrMobile" placeholder=""
+                       maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+            <div class="mv_otp_box">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
+            </div>
+            <div class="d-flex justify-content-center position-relative">
+                <button class="mv_off_request_for_OTP" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Request for OTP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Order Model -->
+    <div class="modal fade" id="staticBackdrop" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <img src="../mv_image/oredr_return_refund_logo.png" alt="">
+              </div>
+              <p class="mb-5 text-center mv_successfully_text">Your request for return product has been successfully received</p>
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="me-4">
+                  <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
+                </div>
+                <div>
+                    <a href="./return_refund.html">
+                        <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- script Return Order OTP -->
+    <script>
+        function validateAndMove(current, nextId) {
+
+            if (!/^\d$/.test(current.value)) {
+                current.value = '';
+                return;
+            }
+
+            if (current.value.length === 1 && nextId) {
+                document.getElementById(nextId).focus();
+            }
+        }
+
+        function moveToPrevious(event, previousId) {
+            if (event.key === "Backspace" && event.target.value === "" && previousId) {
+                document.getElementById(previousId).focus();
+            }
+        }
+    </script>
+
+    <!-- ********************************************************************* -->
      
 </body>
 </html>
+
+
