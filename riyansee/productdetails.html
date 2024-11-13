@@ -12,13 +12,15 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        .main-product-image{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
         .product-brand {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             color: #333;
         }
 
         .product-title {
-            font-size: 1.25rem;
             color: #555;
         }
 
@@ -38,7 +40,6 @@
             font-size: 0.8rem;
             color: #666;
         }
-
         .product-options label {
             color: #888888;
             display: block;
@@ -48,12 +49,6 @@
             width: 50px;
             cursor: pointer;
         }
-
-        .delivery-options h5 {
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
         .nav-tabs .nav-link.active {
             background-color: #000;
             color: #fff;
@@ -67,7 +62,38 @@
 
         .thumbnail-images img {
             width: 80px;
+            height: 80px;
+            object-fit: cover;
+            box-sizing: border-box;
+        }   
+        .r_buttons{
+            padding: 4px 30px;
+            border-radius: 5px;
+            background-color:transparent;
+            color: black;
+            border: 1px solid black;
         }
+        .r_buttons:hover{
+            background-color: black;
+            color: white;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: auto;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+        .table th {
+            color: #727272;
+            font-weight: 500;
+        }
+        .table td {
+            color: #333;
+        }
+
     </style>
 </head>
 
@@ -91,21 +117,21 @@
 
             <!-- Right Column: Product Details -->
             <div class="col-lg-7">
-                <h2 class="product-brand">RED TAPE</h2>
-                <h4 class="product-title">Polo Collar Pure Cotton T-Shirt</h4>
-                <div class="d-flex mt-3 mb-3">
+                <h4 class="product-brand mb-1">RED TAPE</h4>
+                <p class="product-title mb-0">Polo Collar Pure Cotton T-Shirt</p>
+                <div class="d-flex mt-2 mb-2">
                     <i class="fa-solid fa-star" style="color: #F8A120;"></i>
                     <i class="fa-solid fa-star" style="color: #F8A120;"></i>
                     <i class="fa-solid fa-star" style="color: #F8A120;"></i>
                     <i class="fa-solid fa-star" style="color: #F8A120;"></i>
                     <i class="fa-solid fa-star" style="color: #727272;"></i>
                 </div>
-                <p class="price">
+                <p class="price mb-2">
                     <span class="current-price">$199</span>
                     <span><strike>$399</strike></span>
                     <span class="discount">30% OFF</span>
                 </p>
-                <p class="product-description">
+                <p class="product-description mb-3">
                     Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est
                     blandit amet. Tortor in vulputate nulla vitae quam.Lorem ipsum dolor sit amet consectetur. Massa
                     facilisis scelerisque.
@@ -133,37 +159,43 @@
                 </div>
 
                 <!-- Buttons for Cart and Wishlist -->
-                <div class="mt-3">
-                    <button class="btn btn-primary">Add to Cart</button>
-                    <button class="btn btn-outline-secondary">Add to Wishlist</button>
+                <div class="mt-2">
+                    <button class="r_buttons me-3">Add to Cart</button>
+                    <button class="r_buttons">Add to Wishlist</button>
                 </div>
 
                 <!-- Delivery Options -->
-                <div class="delivery-options mt-4">
-                    <h5>Delivery Options</h5>
-                    <p>Free standard shipping on orders over $35 before tax, plus free returns</p>
-                    <table>
-                        <tr>
-                            <th>TYPE</th>
-                            <th>HOW LONG</th>
-                            <th>CHARGE</th>
-                        </tr>
-                        <tr>
-                            <td>Standard delivery</td>
-                            <td>1-2 business days</td>
-                            <td>$29</td>
-                        </tr>
-                        <tr>
-                            <td>Express delivery</td>
-                            <td>1 business day</td>
-                            <td>$39</td>
-                        </tr>
-                        <tr>
-                            <td>Free delivery</td>
-                            <td>Expected 5-10 days</td>
-                            <td>FREE</td>
-                        </tr>
-                    </table>
+                <div class="card p-3 mt-3">
+                    <h6 class="card-title">Delivery Options</h6>
+                    <p style="font-size: 14px;">Free standard shipping on orders over $35 before tax, plus free returns</p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr style="font-size: 11px;">
+                                    <th scope="col">TYPE</th>
+                                    <th scope="col">HOW LONG</th>
+                                    <th scope="col">CHARGE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Standard delivery</td>
+                                    <td>1-2 business days</td>
+                                    <td>$29</td>
+                                </tr>
+                                <tr>
+                                    <td>Express delivery</td>
+                                    <td>1 business day</td>
+                                    <td>$39</td>
+                                </tr>
+                                <tr>
+                                    <td>Free delivery</td>
+                                    <td>Expected 5-10 days</td>
+                                    <td>FREE</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
