@@ -19,8 +19,6 @@ a{
     font-size: 28px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 20px;
-    padding-top: 20px;
 }
 .mv_order_nav_tabs .mv_order_navs_button {
     font-size: 16px;
@@ -35,6 +33,14 @@ a{
     color: #000000 !important;
     border: none;
     border-bottom: 1px solid #5c5c5c !important;
+}
+.mv_order_navs_button:focus-visible {
+    outline: none !important;
+}
+.mv_oredr_nav_item{
+    width: 33.33% !important;
+    display: flex;
+    justify-content: center;
 }
 .mv_order_nav_tabs .mv_order_navs_button:hover {
     border: none;
@@ -90,6 +96,12 @@ a{
     color: #000000;
     margin-bottom: 40px;
 }
+.mv_your_item{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #000000;
+}
 .mv_order_track{
     font-size: 12px;
     font-weight: 500;
@@ -103,11 +115,568 @@ a{
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
-.mv_main_my_order{
-    margin-left: 50px;
-    width: 60% !important;
+.mv_no_order_item{
+    height: 300px;
+    margin-top: 100px;
+}
+.mv_main_no_order{
+    display: flex !important;
+    justify-content: center;
+}
+/* Offcanvas Return Order */
+.mv_otp_box{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.mv_otp_input{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+}
+.mv_off_request_for_OTP{
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    width: 350px;
+    background-color: #040404;
+    position: absolute;
+    top: 485px;
+    border: none !important;
+}
+.mv_refund_back_to_home{
+    width: 195px !important;
+}
+.dk_custom_input_group{
+    margin-bottom: 35px !important;
 }
 /********************************/
+
+/*********** Track Order ***********/
+.dk_order_tracking{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0px;
+    position: relative;
+}
+.dk_order_tracking_step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.dk_order_tracking_circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    z-index: 1;
+}
+.dk_order_tracking_active{
+    background-color: black;
+}
+.dk_order_tracking_without_line{
+    position: absolute;
+    top: 27%;
+    left: 8px;
+    right: 2%;
+    height: 2px;
+    background-color: #d2d2d2;
+    z-index: 0;
+    width: 95%;
+}
+.dk_order_tracking_line{
+    position: absolute;
+    top: 32%;
+    left: 0;
+    right: 2%;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0;
+    width: 50%;
+}
+.dk_order_tracking_line_one{
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    right: 2%;
+    height: 2px;
+    background-color: #b8b8b8;
+    z-index: 0;
+    width: 50%;
+}
+.dk_order_tracking_line_paymet{
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    right: 2%;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0;
+    width: 50%;
+}
+.mv_product_details_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;
+}
+.mv_track_order_sub_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    margin-top: 10px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.mv_order_product_details_main{
+    margin: 0px 0px 80px 0px !important;
+    border: 1px solid #040404;
+    border-radius: 4px;
+}
+.mv_order_product_details_item{
+    padding-right: calc(var(--bs-gutter-x) * 0px) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0px) !important;
+}
+.mv_order_details{
+    padding: 20px 10px;
+}
+.mv_product_details_sub_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 0.5px solid #b8b8b8;
+}
+.mv_order_id_content{
+    padding: 10px;
+}
+.mv_order_id_heading{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #727272;
+}
+.mv_order_date_delivery{
+    display: flex;
+}
+.mv_oredr_status{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #0f993e;
+}
+.mv_order_id{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #000000;
+}
+.mv_delivery_address_name{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+}
+.mv_delivery_address{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #000000;
+}
+.mv_download_invoice{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+    text-decoration: underline !important;
+}
+.mv_download_invoice:hover{
+    color: #000000;
+}
+.mv_cancel_order button{
+    border-radius: 4px;
+    background-color: #fff !important;
+    border: 1px solid #000000 !important;
+}
+.mv_cancel_order{
+    margin-top: 50px;
+}
+.mv_cancel_order_button{
+    padding: 6px 20px;
+    border: none !important;
+}
+/* Offcanvas */
+.mv_cancel_order_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #000000;
+}
+.mv_cancel_order_border{
+    border-bottom: 1px solid #f2f2f2 !important;
+}
+.dk_custom_label{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: gray;
+}
+.dk_custom_input_group{
+    position: relative;
+    margin-top: 20px;
+}
+.dk_custom_input{
+    padding: 0.75rem 2.25rem 0.75rem 0.75rem !important;
+    border: 1px solid #727272 !important;
+}
+.dk_custom_input:focus{
+    box-shadow: none !important;
+}
+.mv_offcanvas_form_select{
+    border: 1px solid #727272 !important;
+    padding: 0.75rem 2.25rem 0.75rem 0.75rem !important;
+}
+.mv_offcanvas_form_select:focus{
+    box-shadow: none !important;
+}
+.mv_off_continue{
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    width: 350px;
+    background-color: #040404;
+    position: absolute;
+    top: 550px;
+    border: none !important;
+}
+/* Cancel Order Model */
+.mv_successfully_text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;
+}
+.mv_back_to_home{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+    background-color: #fff;
+    padding: 6px 30px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    width: 155px;
+}
+.mv_track_refund{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    background-color: #000000;
+    padding: 6px 30px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    width: 155px;
+}
+/********************************/
+
+/******** Track Refund *********/
+.dk_track_refund_without_line{
+    position: absolute;
+    top: 27%;
+    left: 50px;
+    right: 2%;
+    height: 2px;
+    background-color: #d2d2d2;
+    z-index: 0;
+    width: 90%;
+}
+/********************************/
+
+/******* Review & Feedback *******/
+.mv_main_review_feedback{
+    display: flex;
+}
+.mv_main_review_heading{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.mv_review_feedback_width{
+    width: 60% !important;
+}
+.mv_main_review_and_feedback{
+    padding: 20px;
+    margin-bottom: 100px;
+    box-shadow: 1px 6px 19px 0px #a4a4a433;
+}
+.mv_review_and_feedback{
+    padding: 5px;
+    border-bottom: 0.5px solid #b8b8b8;
+}
+.mv_overall_reting_heading{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #000000;
+}
+.mv_overall_rating_star i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.mv_add_photo{
+    position: relative;
+}
+.mv_add_photo img{
+    width: 79px;
+    width: 79px;
+    margin-right: 10px;
+}
+.mv_close_photo{
+    position: absolute;
+    background-color: #fff;
+    padding: 1.5px 7px;
+    border-radius: 50%;
+    top: -10px;
+    right: 3px;
+    cursor: pointer;
+}
+.mv_upload_button{
+    display: inline-block;
+    padding: 5.5px 24px;
+    color: #727272;
+    background-color: #d5d5d5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    font-size: 45px;
+}
+.mv_add_img[type="file"]{
+    display: none;
+}
+/* .upload-button:hover {
+    background-color: #b3b3b3;
+}
+.preview-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+.preview-container img,
+.preview-container video {
+    width: 79px;
+    height: 79px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.close-button {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+} */
+.mv_feedback_box{
+    border: 1px solid #040404 !important;
+}
+.mv_feedback_box:focus{
+    box-shadow: none !important;
+    border: 1px solid #040404 !important;
+}
+.mv_review_submit_button{
+    padding: 5px;
+}
+.mv_review_submit_button button{
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    padding: 6px 20px;
+    width: 200px;
+    border-radius: 4px;
+}
+/********************************/
+
+/******* Return & Refund *******/
+.mv_oredr_tracking{
+    margin-right: 50px;
+}
+.mv_oredr_tracking:last-child{
+    margin-right: 0px;
+}
+.mv_track_order_heading{
+  white-space: nowrap;
+}
+/********************************/
+
+/************ Invoice ************/
+.mv_invoice_main{
+    padding: 3rem;
+}
+.mv_invoice_logo{
+    font-size: 11.88px;
+    font-weight: 700;
+    line-height: 14.38px;
+    color: #000000;
+}
+.mv_invoice_text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000000;    
+}
+.mv_invoice_no_heading{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #727272;
+}
+.mv_invoice_number{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000;
+}
+.mv_billed_to{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12.1px;
+    color: #727272;
+}
+.mv_alex_shrof{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_alex_address{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_alex_number{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_invoice_item thead tr th{
+    border-bottom-color: #fff !important;
+    border-bottom: 0.5px solid #B8B8B8 !important;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    color: #000000;
+}
+.mv_invoice_item tbody tr th{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000;
+    border: none;
+}
+.mv_invoice_item tbody tr td{
+    border: none;
+}
+.mv_samsung_heading{
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #737373;
+}
+.mv_note_heading{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_note_text{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #727272;
+}
+.mv_discount{
+    color: #0F993E;
+}
+.mv_total_amount{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_smile_logo{
+    height: 10px;
+    width: 10px;
+    margin-top: 3px;
+}
+.mv_thankyou{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000CC;
+}
+.mv_main_invoice_sub_footer{
+    padding: 3rem;
+}
+.mv_invoice_footer{
+    background-color: #040404;
+    color: #fff;
+}
+.mv_payment_method{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12.1px;
+    color: #959595;
+}
+.mv_bank_name{
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+/********************************/
+
+/***** On Click Delivered Order *****/
+.mv_in_click_delivered_tracking{
+    background-color: #000000 !important;
+}
+.mv_on_click_main_review_heading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+}
+/*************************************/
 
 
 
@@ -2508,7 +3077,7 @@ input[type="checkbox"] {
 }
 .dk_profile-content {
     padding: 20px 40px;
-    width: 100%;
+    width: 80%;
 }
 .dk_profile_content_sub{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
@@ -2708,7 +3277,7 @@ input[type="date"] {
 .dk_empty_address{
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     padding: 30px;
-    width: 80% !important;
+    width: 100% !important;
     height: 500px;
 }
 .dk_empty_add_add_address{
@@ -3028,6 +3597,9 @@ input[type="date"] {
 }
 
 /* faqs PAGE */
+.dk_faq_padd{
+    padding: 40px;
+}
 .dk_faqs_accordion{
     width: 95%;
     /* margin: 90px auto; */
@@ -3107,6 +3679,7 @@ input[type="date"] {
     font-weight: 400;
     line-height: 16.94px;
     color: #000000;
+    margin-bottom: 15px !important;
   }
   .dk_terms_of_service2{
     padding: 0px 30px 30px 30px;
