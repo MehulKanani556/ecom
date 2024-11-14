@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,148 +8,206 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/darshit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .swiper {
-            width: 100%;
-            height: 400px;
+        .product-brand {
+            font-size: 1.5rem;
+            color: #333;
         }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+        .product-title {
+            font-size: 1.25rem;
+            color: #555;
         }
-        .thumb-swiper {
-            height: 100px;
-            margin-top: 10px;
+
+        .price .current-price {
+            font-size: 1.2rem;
+            color: #000;
+            font-weight: bold;
         }
-        .thumb-swiper .swiper-slide {
-            opacity: 0.4;
+
+        .price .discount {
+            font-size: 1rem;
+            color: #0F993E;
+            margin-left: 10px;
+        }
+
+        .product-description {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .product-options label {
+            color: #888888;
+            display: block;
+        }
+
+        .thumbnail-images img {
+            width: 50px;
             cursor: pointer;
         }
-        .thumb-swiper .swiper-slide-thumb-active {
-            opacity: 1;
+
+        .delivery-options h5 {
+            font-size: 1.1rem;
+            font-weight: bold;
         }
-        .color-option {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 5px;
-            cursor: pointer;
-            border: 2px solid #ddd;
-        }
-        .color-option.active {
-            border-color: #000;
-        }
-        .size-option {
-            border: 1px solid #ddd;
-            padding: 5px 15px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .size-option.active {
+
+        .nav-tabs .nav-link.active {
             background-color: #000;
-            color: white;
+            color: #fff;
         }
-        .product-info td {
-            padding: 8px 0;
+
+        .tab-content {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .thumbnail-images img {
+            width: 80px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container py-5">
+    <div class="container my-5">
         <div class="row">
-            <!-- Product Images -->
-            <div class="col-md-6">
-                <div class="swiper main-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Product Image 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Product Image 2">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Product Image 3">
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <!-- Left Column: Product Image and Thumbnails -->
+            <div class="col-lg-5">
+                <div class="main-product-image">
+                    <img src="../r_img/product-1.png" alt="Main Product" class="img-fluid">
                 </div>
-                <div class="swiper thumb-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Thumbnail 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Thumbnail 2">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../r_img/t-2.png" alt="Thumbnail 3">
-                        </div>
-                    </div>
+                <div class="thumbnail-images mt-3 d-flex gap-2">
+                    <img src="../r_img/b-1.png" class="img-thumbnail" alt="Thumb 1">
+                    <img src="../r_img/b-2.png" class="img-thumbnail" alt="Thumb 2">
+                    <img src="../r_img/b-3.png" class="img-thumbnail" alt="Thumb 3">
+                    <img src="../r_img/b-4.png" class="img-thumbnail" alt="Thumb 4">
+                    <img src="../r_img/b-5.png" class="img-thumbnail" alt="Thumb 5">
+                    <img src="../r_img/b-6.png" class="img-thumbnail" alt="Thumb 6">
                 </div>
             </div>
 
-            <!-- Product Details -->
-            <div class="col-md-6">
-                <h2 class="mb-3">Classic Polo Shirt</h2>
-                <div class="d-flex align-items-center mb-3">
-                    <div class="text-warning">
-                        ★★★★☆
-                    </div>
-                    <span class="ms-2">(4.0)</span>
+            <!-- Right Column: Product Details -->
+            <div class="col-lg-7">
+                <h2 class="product-brand">RED TAPE</h2>
+                <h4 class="product-title">Polo Collar Pure Cotton T-Shirt</h4>
+                <div class="d-flex mt-3 mb-3">
+                    <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                    <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                    <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                    <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                    <i class="fa-solid fa-star" style="color: #727272;"></i>
                 </div>
-                <h3 class="mb-4">$99.99</h3>
+                <p class="price">
+                    <span class="current-price">$199</span>
+                    <span><strike>$399</strike></span>
+                    <span class="discount">30% OFF</span>
+                </p>
+                <p class="product-description">
+                    Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est
+                    blandit amet. Tortor in vulputate nulla vitae quam.Lorem ipsum dolor sit amet consectetur. Massa
+                    facilisis scelerisque.
+                </p>
 
-                <!-- Color Selection -->
-                <div class="mb-4">
-                    <h6>Color Options:</h6>
-                    <div>
-                        <span class="color-option active" style="background-color: #000000;"></span>
-                        <span class="color-option" style="background-color: navy;"></span>
-                        <span class="color-option" style="background-color: #ff0000;"></span>
+                <!-- Size and Color Options -->
+                <div class="product-options">
+                    <div class="sizes">
+                        <label>Size:</label>
+                        <button class="btn btn-outline-secondary">M</button>
+                        <button class="btn btn-outline-secondary">L</button>
+                        <button class="btn btn-outline-secondary">XL</button>
+                        <button class="btn btn-outline-secondary">2XL</button>
+                        <button class="btn btn-outline-secondary">3XL</button>
+                    </div>
+                    <div class="colors mt-2">
+                        <label>Color:</label>
+                        <img src="../r_img/t-2r4.png" class="img-thumbnail" alt="Color 1">
+                        <img src="../r_img/t-2r1.png" class="img-thumbnail" alt="Color 2">
+                        <img src="../r_img/t-2r2.png" class="img-thumbnail" alt="Color 2">
+                        <img src="../r_img/t-2r3.png" class="img-thumbnail" alt="Color 2">
+                        <img src="../r_img/t-2r4.png" class="img-thumbnail" alt="Color 2">
+                        <img src="../r_img/t-2r5.png" class="img-thumbnail" alt="Color 2">
                     </div>
                 </div>
 
-                <!-- Size Selection -->
-                <div class="mb-4">
-                    <h6>Size:</h6>
-                    <div>
-                        <span class="size-option">S</span>
-                        <span class="size-option active">M</span>
-                        <span class="size-option">L</span>
-                        <span class="size-option">XL</span>
-                    </div>
+                <!-- Buttons for Cart and Wishlist -->
+                <div class="mt-3">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-outline-secondary">Add to Wishlist</button>
                 </div>
 
-                <!-- Add to Cart -->
-                <button class="btn btn-dark w-100 mb-4">Add to Cart</button>
-
-                <!-- Product Information -->
-                <div class="product-info">
-                    <table class="w-100">
+                <!-- Delivery Options -->
+                <div class="delivery-options mt-4">
+                    <h5>Delivery Options</h5>
+                    <p>Free standard shipping on orders over $35 before tax, plus free returns</p>
+                    <table>
                         <tr>
-                            <td>Material</td>
-                            <td>100% Cotton</td>
+                            <th>TYPE</th>
+                            <th>HOW LONG</th>
+                            <th>CHARGE</th>
                         </tr>
                         <tr>
-                            <td>Style</td>
-                            <td>Casual</td>
+                            <td>Standard delivery</td>
+                            <td>1-2 business days</td>
+                            <td>$29</td>
                         </tr>
                         <tr>
-                            <td>Pattern</td>
-                            <td>Solid</td>
+                            <td>Express delivery</td>
+                            <td>1 business day</td>
+                            <td>$39</td>
+                        </tr>
+                        <tr>
+                            <td>Free delivery</td>
+                            <td>Expected 5-10 days</td>
+                            <td>FREE</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+
+        <!-- Tabs for Additional Information -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details"
+                            type="button" role="tab">Product Details</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews"
+                            type="button" role="tab">Rating & Reviews</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="offers-tab" data-bs-toggle="tab" data-bs-target="#offers"
+                            type="button" role="tab">Offers</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="productTabContent">
+                    <div class="tab-pane fade show active" id="details" role="tabpanel">
+                        <ul>
+                            <li>Details about the product go here.</li>
+                            <li>Additional points in bullet format.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <p>Customer reviews and ratings will appear here.</p>
+                    </div>
+                    <div class="tab-pane fade" id="offers" role="tabpanel">
+                        <p>Information about offers goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-     <!-- Similar Products -->
-     <section>
+    <!-- Similar Products -->
+    <section>
         <div class="container">
-            <div><h2>Similar Products</h2></div>
+            <div>
+                <h2>Similar Products</h2>
+            </div>
             <div class="dk_women_card_main p-0">
                 <div class="dk_women_container row">
                     <div class="col-xl-3 col-sm-6 text p-2">
@@ -207,8 +266,7 @@
 
                                 <!-- Slider for main images -->
                                 <div class="slider">
-                                    <img src="../r_img/t-2.png" alt="Product Image 1"
-                                        class="slider-image active">
+                                    <img src="../r_img/t-2.png" alt="Product Image 1" class="slider-image active">
                                     <img src="../r_img/t-2.png" alt="Product Image 2" class="slider-image">
                                     <img src="../r_img/t-2.png" alt="Product Image 3" class="slider-image">
                                     <img src="../r_img/t-2.png" alt="Product Image 4" class="slider-image">
@@ -223,6 +281,7 @@
                                     <span class="dot" data-index="3"></span>
                                     <span class="dot" data-index="4"></span>
                                 </div>
+                                
 
                                 <h2>Vero Moda</h2>
                                 <p>Women Flared High-Rise Parallel Trousers</p>
@@ -255,8 +314,7 @@
 
                                 <!-- Slider for main images -->
                                 <div class="slider">
-                                    <img src="../r_img/t-3.png" alt="Product Image 1"
-                                        class="slider-image active">
+                                    <img src="../r_img/t-3.png" alt="Product Image 1" class="slider-image active">
                                     <img src="../r_img/t-3.png" alt="Product Image 2" class="slider-image">
                                     <img src="../r_img/t-3.png" alt="Product Image 3" class="slider-image">
                                     <img src="../r_img/t-3.png" alt="Product Image 4" class="slider-image">
@@ -303,8 +361,7 @@
 
                                 <!-- Slider for main images -->
                                 <div class="slider">
-                                    <img src="../r_img/t-4.png" alt="Product Image 1"
-                                        class="slider-image active">
+                                    <img src="../r_img/t-4.png" alt="Product Image 1" class="slider-image active">
                                     <img src="../r_img/t-4.png" alt="Product Image 2" class="slider-image">
                                     <img src="../r_img/t-4.png" alt="Product Image 3" class="slider-image">
                                     <img src="../r_img/t-4.png" alt="Product Image 4" class="slider-image">
@@ -368,14 +425,14 @@
 
         // Color and Size Selection
         document.querySelectorAll('.color-option').forEach(option => {
-            option.addEventListener('click', function() {
+            option.addEventListener('click', function () {
                 document.querySelector('.color-option.active').classList.remove('active');
                 this.classList.add('active');
             });
         });
 
         document.querySelectorAll('.size-option').forEach(option => {
-            option.addEventListener('click', function() {
+            option.addEventListener('click', function () {
                 document.querySelector('.size-option.active').classList.remove('active');
                 this.classList.add('active');
             });
@@ -389,26 +446,26 @@
                 const dots = card.querySelectorAll('.dot');
                 let currentIndex = 0;
 
-              
+
                 function showImage(index) {
                     images.forEach((img, i) => {
-                        img.classList.toggle('active', i === index); 
+                        img.classList.toggle('active', i === index);
                     });
                     dots.forEach((dot, i) => {
-                        dot.classList.toggle('active', i === index); 
+                        dot.classList.toggle('active', i === index);
                     });
                 }
 
-            
+
                 const autoplayInterval = setInterval(() => {
-                    currentIndex = (currentIndex + 1) % images.length; 
+                    currentIndex = (currentIndex + 1) % images.length;
                     showImage(currentIndex);
-                }, 3000); 
+                }, 3000);
 
                 thumbnails.forEach((thumbnail, index) => {
                     thumbnail.addEventListener('click', () => {
-                        clearInterval(autoplayInterval); 
-                        currentIndex = index; 
+                        clearInterval(autoplayInterval);
+                        currentIndex = index;
                         showImage(currentIndex);
                     });
                 });
@@ -416,12 +473,13 @@
                 dots.forEach(dot => {
                     dot.addEventListener('click', () => {
                         clearInterval(autoplayInterval); // 
-                        currentIndex = parseInt(dot.getAttribute('data-index'), 10); 
-                        showImage(currentIndex); 
+                        currentIndex = parseInt(dot.getAttribute('data-index'), 10);
+                        showImage(currentIndex);
                     });
                 });
             });
         });
     </script>
 </body>
+
 </html>
