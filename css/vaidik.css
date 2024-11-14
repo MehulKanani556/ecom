@@ -108,6 +108,12 @@ a{
 .mv_order_track:hover{
     color: #000000;
 }
+.mv_your_item{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: #000000;
+}
 .mv_no_order_item{
     height: 300px;
     margin-top: 100px;
@@ -138,7 +144,7 @@ a{
     width: 350px;
     background-color: #040404;
     position: absolute;
-    top: 580px;
+    top: 485px;
     border: none !important;
 }
 .mv_refund_back_to_home{
@@ -337,7 +343,7 @@ a{
 }
 .dk_custom_input{
     padding: 0.75rem 2.25rem 0.75rem 0.75rem !important;
-    order: 1px solid #727272 !important;
+    border: 1px solid #727272 !important;
 }
 .dk_custom_input:focus{
     box-shadow: none !important;
@@ -356,7 +362,7 @@ a{
     width: 350px;
     background-color: #040404;
     position: absolute;
-    top: 625px;
+    top: 550px;
     border: none !important;
 }
 /* Cancel Order Model */
@@ -531,6 +537,135 @@ a{
 }
 /********************************/
 
+/************ Invoice ************/
+.mv_invoice_main{
+    padding: 3rem;
+}
+.mv_invoice_logo{
+    font-size: 11.88px;
+    font-weight: 700;
+    line-height: 14.38px;
+    color: #000000;
+}
+.mv_invoice_text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000000;    
+}
+.mv_invoice_no_heading{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #727272;
+}
+.mv_invoice_number{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000;
+}
+.mv_billed_to{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12.1px;
+    color: #727272;
+}
+.mv_alex_shrof{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_alex_address{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_alex_number{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_invoice_item thead tr th{
+    border-bottom-color: #fff !important;
+    border-bottom: 0.5px solid #B8B8B8 !important;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    color: #000000;
+}
+.mv_invoice_item tbody tr th{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000;
+    border: none;
+}
+.mv_invoice_item tbody tr td{
+    border: none;
+}
+.mv_samsung_heading{
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #737373;
+}
+.mv_note_heading{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_note_text{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #727272;
+}
+.mv_discount{
+    color: #0F993E;
+}
+.mv_total_amount{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000000;
+}
+.mv_smile_logo{
+    height: 10px;
+    width: 10px;
+    margin-top: 3px;
+}
+.mv_thankyou{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #000000CC;
+}
+.mv_main_invoice_sub_footer{
+    padding: 3rem;
+}
+.mv_invoice_footer{
+    background-color: #040404;
+    color: #fff;
+}
+.mv_payment_method{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12.1px;
+    color: #959595;
+}
+.mv_bank_name{
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+/********************************/
+
 /***** On Click Delivered Order *****/
 .mv_in_click_delivered_tracking{
     background-color: #000000 !important;
@@ -605,10 +740,20 @@ a{
 }
 
 @media (max-width: 575px){
-  /* My Order */
+    /* My Order */
     .mv_item_successfully{
         display: block;
         flex-direction: column;
+    }
+    /* Invoice */
+    .mv_invoice_main{
+        padding: 1rem !important;
+    }
+    .mv_main_payment_method{
+        margin-bottom: 1rem;
+    }
+    .mv_main_invoice_sub_footer{
+        padding: 1rem !important;
     }
 }
 
@@ -653,7 +798,11 @@ a{
     }
     /* Review & Feedback */
     .mv_main_review_heading{
-        font-size: 25px;
+        font-size: 21px;
+    }
+    /* Invoice */
+    .mv_invoice_item{
+        overflow-x:  scroll !important;
     }
 }
 
