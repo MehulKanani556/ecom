@@ -19,13 +19,14 @@ a{
     font-size: 28px;
     font-weight: 600;
     color: #000000;
+    padding-top: 20px;
 }
 .mv_order_nav_tabs .mv_order_navs_button {
     font-size: 16px;
     font-weight: 500;
     color: #727272;
     padding: 20px 10px;
-    /* width: 100%; */
+    width: 100%;
 }
 .mv_order_nav_tabs .mv_order_navs_button.active{
     font-size: 16px;
@@ -136,7 +137,7 @@ a{
     font-size: 20px;
     text-align: center;
     border-radius: 4px;
-    border-color: #b8b8b8;
+    border: 1px solid #b8b8b8;
 }
 .mv_off_request_for_OTP{
     color: #fff;
@@ -188,7 +189,7 @@ a{
 .dk_order_tracking_without_line{
     position: absolute;
     top: 27%;
-    left: 8px;
+    left: 14px;
     right: 2%;
     height: 2px;
     background-color: #d2d2d2;
@@ -338,7 +339,7 @@ a{
     font-size: 16px;
     color: gray;
 }
-.dk_custom_input_group{
+.dk_custom_input_group_track{
     position: relative;
     margin-top: 20px;
 }
@@ -363,7 +364,7 @@ a{
     width: 350px;
     background-color: #040404;
     position: absolute;
-    top: 550px;
+    top: 600px;
     border: none !important;
 }
 /* Cancel Order Model */
@@ -732,13 +733,14 @@ a{
     position: relative;
     margin-top: 20px;
     border: 1px solid #727272 !important;
+    border-radius: 4px;
   }
   .dk_custom_input_group input{
     border: none !important;
   }
-  .dk_custom_input_group select{
+  /* .dk_custom_input_group select{
     border: none !important; 
-  }
+  } */
 
 .dk_register{
     padding-top: 80px;
@@ -1860,7 +1862,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 60px;
+    /* margin: 50px 60px; */
     position: relative;
 }
 .dk_order_tracking_step {
@@ -1884,16 +1886,16 @@ a{
 .dk_order_tracking_active {
     background-color: black;
 }
-.dk_order_tracking_without_line {
+/* .dk_order_tracking_without_line {
     position: absolute;
-    top: 32%;
+    top: 27%;
     left: 0;
     right: 2%;
     height: 2px;
     background-color: #D2D2D2;
     z-index: 0; 
     width: 96%;
-}
+} */
 .dk_order_tracking_line {
     position: absolute;
     top: 32%;
@@ -2413,25 +2415,24 @@ input {
     display: none;
 }
 
-button {
+.dk_apply_coupen_radio {
     padding: 10px 20px;
     background-color: grey;
     color: white;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
     transition: background-color 0.3s;
 }
 
-button.clicked {
+.dk_apply_coupen_radio.clicked {
     background-color: #000000;
 }
 
-button.active {
-    background-color: #727272; /* New color when radio button is selected */
+.dk_apply_coupen_radio.active {
+    background-color: #727272;
 }
 
-button.input-focused {
+.dk_apply_coupen_radio.input-focused {
     background-color: #000000;
 }
 
@@ -3012,7 +3013,6 @@ input[type="checkbox"] {
     box-shadow: 1px 6px 19px 0px #A4A4A433;
     border-radius: 4px;
 }
-
 .dk_account {
     font-weight: bold;
     padding: 20px;
@@ -3333,6 +3333,8 @@ input[type="date"] {
     border-radius: 4px;
     position: absolute;
     bottom: 30px;
+    padding: 5px 0px;
+    border: none;
 }
 .dk_adress_type{
     margin-top: 2px;
@@ -3469,7 +3471,9 @@ input[type="date"] {
     font-size: 12px;
     font-weight: 600;
     line-height: 24px;
-    text-align: center;      
+    text-align: center; 
+    color: #ffffff;  
+    padding: 5px 10px;   
 }
 .dk_visa_cards {
     /* display: flex; */
@@ -3535,10 +3539,10 @@ input[type="date"] {
     height: 100%; 
     margin-top: 120px; 
 }
-.dk_my_profile .accordion-button:not(.collapsed){
+/* .dk_my_profile .accordion-button:not(.collapsed){
     background-color: #040404;
     color: #fff;
-}
+} */
 .dk_upi_id_main{
     padding: 30px;
 }
@@ -3964,5 +3968,3 @@ input[type="date"] {
     border: none !important;
     border-color: #727272;
 }
-
-
