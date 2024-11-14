@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending Deals</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    body {
+      background-color: #212529;
+      color: #fff;
+    }
+    .container {
+      padding-top: 50px;
+    }
+    .card {
+      background-color: #343a40;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .discount {
+      font-size: 0.9rem;
+      color: #5cb85c;
+    }
+    .owl-carousel {
+      margin-top: 30px;
+    }
+    .owl-nav button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+ padding: 10px;
+    }
+    .owl-dots .owl-dot span {
+      background: #5cb85c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Trending Deals</h1>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="card">
+          <img src="image1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text">Description of Product 1</p>
+            <p class="price">$19.99</p>
+            <p class="discount">20% off</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <img src="image2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text">Description of Product 2</p>
+            <p class="price">$29.99</p>
+            <p class="discount">15% off</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true
+      });
+    });
+  </script>
+</body>
+</html>

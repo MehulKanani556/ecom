@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Slider</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        .swiper {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+        .product-slider {
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        .swiper-pagination {
+            position: relative;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-slider">
+        <div class="container">
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Using placeholder images instead of the actual product image -->
+                    <div class="swiper-slide">
+                        <img src="../r_img/t-2.png" alt="Product View 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../r_img/t-2.png" alt="Product View 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../r_img/t-2.png" alt="Product View 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../r_img/t-2.png" alt="Product View 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../r_img/t-2.png" alt="Product View 5">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.product-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+</html>
