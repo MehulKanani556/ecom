@@ -20,6 +20,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .dk_ordder_tracking_without_address {
+            position: absolute;
+            top: 27%;
+            left: 14px;
+            right: 2%;
+            height: 2px;
+            background-color: #d2d2d2;
+            z-index: 0;
+            width: 95%;
+        }
+
+        @media (max-width:575px){
+            .dk_ordder_tracking_without_address{
+                left: 10px;
+            }
+        }
+        @media (max-width:425px){
+            .dk_ordder_tracking_without_address{
+                left: 3px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -47,14 +70,14 @@
                             </div>
                             <h3>Cart</h3>
                         </div>
-                        <div class="dk_order_tracking_without_line"></div>
+                        <div class="dk_ordder_tracking_without_address"></div>
                         <div class="dk_order_tracking_step">
                             <div class="dk_order_tracking_circle">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <h4>Delivery Details</h4>
                         </div>
-                        <div class="dk_order_tracking_without_line"></div>
+                        <div class="dk_ordder_tracking_without_address"></div>
                         <div class="dk_order_tracking_step">
                             <div class="dk_order_tracking_circle">
                                 <i class="fa-solid fa-dollar-sign"></i>
