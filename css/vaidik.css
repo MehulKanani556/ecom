@@ -678,12 +678,16 @@ a{
 /*************************************/
 
 /************ sportswear ************/
+/* slider1 */
 .mv_air_max_bg_img{
     background-image: url(../mv_image/air_max_bg.png);
     height: 640px !important;
 }
+.mv_ari_max_shoes{
+    padding-top: 50px;
+}
 .mv_ari_max_shoes img{
-    width: 80% !important;
+    width: 70% !important;
     height: 100% !important;
 }
 .mv_trending_card_dis{
@@ -693,7 +697,11 @@ a{
     color: #fff;
 }
 .mv_air_max_width{
-    width: 550px !important;
+    width: 35% !important;
+    top: 50%;
+    left: 10%;
+    width: 50%;
+    transform: translateY(-50%);
 }
 .mv_air_max_heading{
     font-size: 128px !important;
@@ -702,32 +710,173 @@ a{
     line-height: 110px;
 }
 .mv_nike_air{
-    font-size: 38.43px;
+    font-size: 38.43px !important;
     font-style: italic;
     font-weight: 200;
     /* line-height: 46.5px;   */
 }
 .mv_air_price{
-    font-size: 38.43px;
+    font-size: 38.43px !important;
     font-style: italic;
     font-weight: 600;
     /* line-height: 46.5px; */
 }
 .mv_air_discription{
-    font-size: 16.49px;
+    font-size: 16.49px !important;
     font-style: italic;
     font-weight: 200;
-    line-height: 25px;
+    line-height: 20px;
+    width: 550px;
+    margin-top: 10px;
+}
+.mv_shop_now_sport{
+    padding: 5px 25px !important;
+}
+.mv_main_style_take{
+    height: 640px;
+    background-color: #0097FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.mv_nike_logo_image{
+    /* height: 86px !important; */
+    width: 85% !important;
+    /* padding: 0px 5px; */
+}
+.mv_style_take{
+    writing-mode: vertical-rl;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    letter-spacing: 1.39em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* slider2 */
+.mv_air_max_pro_bg_img{
+    background-image: url(../mv_image/air_max_bg2.png) !important;
+}
+.mv_nike_pro_logo_image{
+    width: 85% !important;
+    margin: 25px 0px 15px 0px !important;
+}
+.mv_air_max_pro_heading{
+    font-family: Black Ops One;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.mv_nike_pro_air{
+    font-family: "Cabin", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+}
+.mv_air_pro_discription{
+    font-family: "Cabin", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 20px;
+    width: 550px;
+    margin-bottom: 0px;
+}
+.mv_air_pro_price{
+    font-family: Dosis;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 5px;
+    margin-bottom: 15px !important;
+}
+
+/* slider3 */
+.mv_puma_bg_img{
+    background-image: url(../mv_image/puma_bg.png) !important;
 }
 /*************************************/
 
 
 
 
+@media (max-width: 1440px){
+    /* sportswear */
+    /* slider1 */
+    .mv_air_max_heading {
+        font-size: 100px !important;
+    }
+    .mv_air_discription{
+        width: 450px;
+    }
+    .mv_ari_max_shoes{
+        padding-top: 100px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading{
+        font-size: 100px !important;
+    }
+    .mv_air_pro_discription{
+        width: 450px;
+    }
+}
+
 @media (max-width: 1200px){
     /* Track Refund */
     .dk_track_refund_without_line{
         width: 89%;
+    }
+    /* sportswear */
+    /* slider1 */
+    .mv_main_style_take{
+        height: 470px !important;
+    }
+    .mv_style_take{
+        letter-spacing: .9em !important;
+    }
+    .mv_air_max_bg_img{
+        height: 470px !important;
+    }
+    .mv_air_max_heading {
+        font-size: 80px !important;
+        line-height: 90px;
+    }
+    .mv_nike_air{
+        font-size: 30px !important;
+        line-height: 20px !important;
+    }
+    .mv_air_price{
+        font-size: 30px !important;
+    }
+    .mv_air_discription{
+        width: 350px;
+        font-size: 14px !important;
+    }
+    .mv_ari_max_shoes{
+        padding-top: 50px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 80px !important;
+        line-height: 70px;
+    }
+    .mv_nike_pro_air{
+        font-size: 30px !important;
+    }
+    .mv_air_pro_price{
+        font-size: 30px !important;
+    }
+    .mv_air_pro_discription{
+        width: 350px;
+        font-size: 14px !important;
     }
 }
 
@@ -740,6 +889,86 @@ a{
     .mv_order_tracking_line{
         width: 90%;
     }
+    /* sportswear */
+    /* slider1 */
+    .mv_air_max_heading {
+        font-size: 70px !important;
+        line-height: 80px;
+    }
+    .mv_nike_air{
+        font-size: 25px !important;
+        line-height: 20px !important;
+    }
+    .mv_air_price{
+        font-size: 25px !important;
+    }
+    .mv_air_discription{
+        width: 300px;
+    }
+    .mv_style_take{
+        letter-spacing: .6em !important;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 70px !important;
+        line-height: 60px;
+    }
+    .mv_nike_pro_air{
+        font-size: 25px !important;
+    }
+    .mv_air_pro_price{
+        font-size: 25px !important;
+    }
+    .mv_air_pro_discription{
+        width: 300px;
+    }
+}
+
+@media (max-width: 900px){
+    /* sportswear */
+    /* slider1 */
+    .mv_main_style_take{
+        height: 400px !important;
+    }
+    .mv_air_max_bg_img{
+        height: 400px !important;
+    }
+    .mv_air_max_heading {
+        font-size: 50px !important;
+        line-height: 60px;
+    }
+    .mv_nike_air {
+        font-size: 18px !important;
+        line-height: 20px !important;
+    }
+    .mv_air_price{
+        font-size: 18px !important;
+    }
+    .mv_air_discription{
+        width: 350px;
+        font-size: 14px !important;
+        margin-top: 0px !important;
+    }
+    .mv_ari_max_shoes{
+        padding-top: 50px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 50px !important;
+        line-height: 60px;
+    }
+    .mv_nike_pro_air {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+    .mv_air_pro_price{
+        font-size: 18px !important;
+    }
+    .mv_air_pro_discription{
+        width: 350px;
+        font-size: 14px !important;
+        margin-top: 0px !important;
+    }
 }
 
 @media (max-width: 768px){
@@ -748,6 +977,52 @@ a{
         top: -12px !important;
         left: 5px !important;
         background-color: #fff !important;
+    }
+    /* sportswear */
+    /* slider1 */
+    .mv_main_style_take{
+        height: 350px !important;
+    }
+    .mv_style_take{
+        letter-spacing: .6em !important;
+    }
+    .mv_air_max_bg_img{
+        height: 350px !important;
+    }
+    .mv_air_max_heading {
+        font-size: 50px !important;
+        line-height: 50px;
+    }
+    .mv_nike_air {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+    .mv_air_price{
+        font-size: 15px !important;
+        line-height: 30px;
+    }
+    .mv_air_discription{
+        font-size: 12px !important;
+        line-height: 16px;
+        width: 250px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 50px !important;
+        line-height: 50px;
+    }
+    .mv_nike_pro_air {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+    .mv_air_pro_price{
+        font-size: 15px !important;
+        line-height: 30px;
+    }
+    .mv_air_pro_discription{
+        font-size: 12px !important;
+        line-height: 16px;
+        width: 250px;
     }
 }
 
@@ -799,10 +1074,54 @@ a{
     .mv_main_invoice_sub_footer{
         padding: 1rem !important;
     }
+    /* sportswear */
+    /* slider1 */
+    .mv_air_max_width{
+        top: 45%;
+        left: 18%;
+    }
+    .mv_main_style_take{
+        height: 350px !important;
+    }
+    .mv_style_take{
+        letter-spacing: .5em !important;
+    }
+    .mv_air_max_bg_img{
+        height: 350px !important;
+    }
+    .mv_air_max_heading {
+        font-size: 30px !important;
+        line-height: 30px;
+    }
+    .mv_nike_air{
+        font-size: 13px !important;
+    }
+    .mv_air_price{
+        font-size: 13px !important;
+    }
+    .mv_air_discription {
+        width: 220px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 30px !important;
+        line-height: 30px;
+    }
+    .mv_nike_pro_air{
+        font-size: 13px !important;
+        line-height: 30px !important;
+    }
+    .mv_air_pro_price{
+        font-size: 13px !important;
+        margin-bottom: 5px !important;
+    }
+    .mv_air_pro_discription {
+        width: 200px;
+    }
 }
 
 @media (max-width: 425px){
-  /* My Order */
+    /* My Order */
     .mv_order_nav_tabs{
         display: block !important;
     }
@@ -848,6 +1167,39 @@ a{
     .mv_invoice_item{
         overflow-x:  scroll !important;
     }
+    /* sportswear */
+    /* slider1 */
+    .mv_main_style_take{
+        height: 320px !important;
+    }
+    .mv_style_take{
+        letter-spacing: .5em !important;
+    }
+    .mv_air_max_bg_img{
+        height: 320px !important;
+    }
+    .mv_air_max_heading {
+        font-size: 25px !important;
+        line-height: 25px;
+    }
+    .mv_air_discription {
+        width: 180px;
+    }
+    .mv_ari_max_shoes {
+        padding-top: 80px;
+    }
+    .mv_ari_max_shoes img{
+        width: 90% !important;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 25px !important;
+        line-height: 25px;
+    }
+    .mv_air_pro_discription {
+        width: 180px;
+        line-height: 14px;
+    }
 }
 
 @media (max-width: 375px){
@@ -882,5 +1234,33 @@ a{
     /* Return & Refund */
     .mv_order_tracking_line{
         width: 440px !important;
+    }
+    /* sportswear */
+    /* slider1 */
+    .mv_shop_now_sport{
+        padding: 5px 10px !important;
+    }
+    .mv_air_max_width{
+        left: 15%;
+    }
+    .mv_air_discription {
+        width: 150px;
+    }
+    .mv_air_max_bg_img {
+        height: 350px !important;
+    }
+    .mv_main_style_take {
+        height: 350px !important;
+    }
+    /* slider2 */
+    .mv_air_pro_discription{
+        width: 150px;
+    }
+}
+
+@media (max-width: 320px){
+    /* sportswear */
+    .mv_ari_max_shoes {
+        padding-top: 100px;
     }
 }
