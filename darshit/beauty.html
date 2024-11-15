@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty</title>
+    <link rel="stylesheet" href="../css/darshit.css">
+    <link rel="stylesheet" href="../css/vaidik.css">
+    <link rel="stylesheet" href="../css/riyansee.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.theme.default.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Demo styles -->
+    <style>
+         .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .swiper{
+            padding-top: 0 !important;
+        }
+        .card {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 0 !important;
+            color: white;
+        }
+
+        .card .card-img-top{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 !important;
+        }
+
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            left:0;
+            /* transform: translateX(-50%); */
+            color: white !important;
+            font-weight: bold;
+            padding: 0 !important;
+            width: 100%;
+        }
+        .card-body  img{
+            height: auto;
+        }
+        .card-text{
+            color: white !important;
+            margin-bottom: 0;
+        }
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-pagination-bullet-active {
+           outline: solid;
+           padding: 5px;
+        }
+        .swiper-pagination{
+            color: #000;   
+        }
+    </style>
+
+</head>
+<body>
+    <!-- header -->
+   <div id="header"></div>
+    <main>
+        <!-- slider -->
+        <div id="promo-slider" class="owl-carousel owl-theme">
+            <!-- Slide 1 -->
+            <div class="item">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../img/beuty_slider1.png" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="dk_position_slider1_content position-absolute d-flex flex-column justify-content-center align-items-start text-white dk_beauty_slider1">
+                        <img src="../img/remee2.png" alt="Brand Logo" class="dk_beauty_slider1_img">
+                        <h2 class="dk_incridible_lips">INCRIDIBLE LIPSTICS</h2>
+                        <p class="dk_be_bold">Be Bold, Be Beautiful</p>
+                        <a href="#" class="btn btn-light dk_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../img/beuty_slider2.png" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="dk_position_slider2_content position-absolute d-flex flex-column justify-content-center align-items-start text-white dk_beauty_slider2">
+                        <img src="../img/lotus2.png" alt="Brand Logo" class="dk_beauty_slider2_img">
+                        <h2 class="dk_younger">Younger Looking <span>Everyday!</span></h2>
+                        <a href="#" class="btn btn-light dk_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../img/beuty_slider3.png" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="dk_position_slider3_content position-absolute d-flex flex-column justify-content-center align-items-start text-white dk_beauty_slider3">
+                        <img src="../img/nykaa2.png" alt="Brand Logo" class="dk_beauty_slider3_img">
+                        <div class="dk_unlock">
+                            <h4>Unlock your </h4>
+                            <h2>Natural Beauty!</h2>
+                        </div>
+                        <a href="#" class="btn btn-light dk_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide-content position-relative ">
+                    <!-- Background Image -->
+                    <img src="../img/beuty_slider4.png" alt="Slider Image" class="r_mainimg">
+                    <!-- Overlay Content -->
+                    <div
+                        class="dk_position_slider4_content position-absolute d-flex flex-column justify-content-center align-items-start text-white dk_beauty_slider4">
+                        <div class="dk_best_2024">
+                            <h2>Best seller of 2024</h2>
+                            <p>Advanced Snail 96 Mucin Power</p>
+                            <p>Essence for 20% off!</p>
+                            <p>No code needed, add to cart now.</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="btn btn-light dk2_btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Brand -->
+        <section>
+            <div class="dk_best_electronics_mian">
+                <div class="container">
+                    <div class="best-electronics">
+                        <h2>Top Brands</h2>
+                        <div class="dk_product-container">
+                            <div class="dk_product-item">
+                                <img src="../img/lorel.png" alt="Xiaomi Smart TV">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/chenal.png" alt="Dell Laptop">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/remee.png" alt="Smartphones">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/maybeline.png" alt="Gaming Accessories">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/mac.png" alt="Gaming Accessories">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/iconic.png" alt="Wireless Speakers">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/colorbar.png" alt="Smart Watches">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/facescanada.png" alt="Noise Earbuds">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/purpale.png" alt="JBL Headphones">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/nyka.png" alt="Tablets">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/mamaearth.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/nieva.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/plome.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/sugar.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                            <div class="dk_product-item">
+                                <img src="../img/lotus.png" alt="Gaming Laptops">
+                                <p>Upto 10% OFF</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore More -->
+        <section style="background-color: black;">
+            <div class="container explore-more">
+                <div class="row justify-content-center">
+                    <!-- Topwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/face.png" alt="Topwear">
+                        <p style="color: #fff;">Face</p>
+                    </div>
+                    <!-- Bottomwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/eyes.png" alt="Bottomwear">
+                        <p style="color: #fff;">Eyes</p>
+                    </div>
+                    <!-- Indianwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/lips.png" alt="Indianwear">
+                        <p style="color: #fff;">Lips</p>
+                    </div>
+                    <!-- Footwear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/skin.png" alt="Footwear">
+                        <p style="color: #fff;">Skin</p>
+                    </div>
+                    <!-- Sports & Activewear -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/hair.png" alt="Sports & Activewear">
+                        <p style="color: #fff;">Hair</p>
+                    </div>
+                    <!-- Accessories -->
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                        <img src="../img/aceseress.png" alt="Accessories">
+                        <p style="color: #fff;">Accessories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New On Quickcart -->
+        <section>
+            <div class="container">
+                <h2 class="text-center mt-5 mb-4">New On Quickcart</h2>
+            
+                <!-- Swiper -->
+                <div class="swiper mySwiper mb-5">
+                    <div class="swiper-wrapper">
+            
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/iconic2.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_iconic.png" alt="" class="mx-auto" style="height: 25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/cenal2.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_chanel.png" alt="" class="mx-auto" style="height:25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/lorel2.png" class="card-img-top" alt="Van Heusen">
+                               
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_loreal.png" alt="" class="mx-auto" style="height:25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 25% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/sugar2.png" class="card-img-top" alt="Allen Solly">
+                               
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_sugar.png" alt="" class="mx-auto" style="height:25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 40% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/mac2.png" class="card-img-top" alt="ZARA">
+                             
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_mac.png" alt="" class="mx-auto" style="height:25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/iconic2.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <div>
+                                        <img src="../img/s_iconic.png" alt="" class="mx-auto" style="height: 25px;">
+                                    </div>
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <!-- Pagination dots -->
+                    <div style="position: relative; margin-top: 20px;" class="swiper-pagination mv_swiper_pagination_sports"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending in Sports Accessories -->
+        <section>
+            <div class="container">
+                <h2 class="text-center mt-5 mb-4">Trending in Sports Accessories</h2>
+            
+                <!-- Swiper -->
+                <div class="swiper mySwiper mb-5">
+                    <div class="swiper-wrapper">
+            
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup1.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <span class="text-center mv_trending_card_dis">T&C Apply</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup2.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup3.png" class="card-img-top" alt="Van Heusen">
+                               
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 25% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup4.png" class="card-img-top" alt="Allen Solly">
+                               
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 40% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup5.png" class="card-img-top" alt="ZARA">
+                             
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="../img/makeup1.png" class="card-img-top" alt="Calvin Klein">
+                               
+                                <div class="card-body">
+                                    <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to 20% OFF</p>
+                                    <small class="text-center mv_trending_card_dis">T&C Apply</small>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <!-- Pagination dots -->
+                    <div style=" position: relative; margin-top: 20px;" class="swiper-pagination mv_swiper_pagination_sports"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+
+     <!-- script header and footer -->
+     <script>
+        // navbar include
+        fetch("../darshit/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+          });
+        // footer include
+        fetch("../darshit/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    <!-- jQuery -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+        // main slider
+        $(document).ready(function () {
+            $("#promo-slider").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: true,
+                // autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        });
+    </script>
+   <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1440: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        }
+    });
+</script>
+</body>
+
+</html>
