@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +22,12 @@
 
     <style>
         .dk_dis_nb {
-            display: none; /* Hide sections by default */
+            display: none;
+            /* Hide sections by default */
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <div id="header"></div>
@@ -32,14 +35,15 @@
     <main>
         <section>
             <div class="container">
-                <button style="display: none;" class="btn btn-dark  dk_vertical_header dk_offcanva_menu" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <button style="display: none;" class="btn btn-dark  dk_vertical_header dk_offcanva_menu" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="dk_my_profile">
                     <div class="dk_my_profile_sub dk_profile_width">
-                        <div> 
-                            <aside id="toggle-header" class="dk_sidebar dk_vertical_header_sidebar" style="display: block;">
+                        <div>
+                            <aside id="toggle-header" class="dk_sidebar dk_vertical_header_sidebar"
+                                style="display: block;">
                                 <h2 class="dk_account">Account</h2>
                                 <ul class="dk_menu ">
                                     <li class="dk_menu-item dk_nav-item active" data-section="profileSection">
@@ -82,123 +86,127 @@
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <ul>
-                                                            <li onclick="showpaymentSection('credit')" class="active">Credit / Debit Cards
+                                                            <li onclick="showpaymentSection('credit')" class="active">
+                                                                Credit / Debit Cards
                                                             </li>
-                                                            <li onclick="showpaymentSection('upi')" class="active">UPI ID</li>
+                                                            <li onclick="showpaymentSection('upi')" class="">UPI ID</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                        <li class="dk_menu-item dk_nav-item" data-section="MyaddressSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/my_address.png"
-                                                    alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_myaddress.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            My Address
-                                        </li>
-                                        <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_fasq.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            FAQs
-                                        </li>
-                                        <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/terns_of_service.png"
-                                                    alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_terms.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            Terms of Service
-                                        </li>
-                                        <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/disactive.png"
-                                                    alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_deactive.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            Deactivate Account
-                                        </li>
-                                        <li class="dk_menu-item" class="dropdown-item" type="button" class="btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal_login"
-                                        href="#">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_logout.svg"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            Logout
-                                        </li> 
+                                    <li class="dk_menu-item dk_nav-item" data-section="MyaddressSection">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/my_address.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_myaddress.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        My Address
+                                    </li>
+                                    <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_fasq.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        FAQs
+                                    </li>
+                                    <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/terns_of_service.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_terms.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Terms of Service
+                                    </li>
+                                    <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/disactive.png"
+                                                alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_deactive.png"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Deactivate Account
+                                    </li>
+                                    <li class="dk_menu-item" class="dropdown-item" type="button" class="btn btn-primary"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal_login" href="#">
+                                        <span class="dk_icon">
+                                            <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
+                                            <img class="dk_icon_image hover" src="../img/white_logout.svg"
+                                                alt="My Profile Hover">
+                                        </span>
+                                        Logout
+                                    </li>
                                 </ul>
                             </aside>
                         </div>
                         <div class="offcanvas offcanvas-start dk_sidebar_off_can" tabindex="-1" id="offcanvasExample"
-                        aria-labelledby="offcanvasExampleLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <div>
-                                <aside class="dk_sidebar">
-                                    <ul class="dk_menu ">
-                                        <li class="dk_menu-item dk_nav-item active" data-section="profileSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/my_profile.png"
-                                                    alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            My Profile
-                                        </li>
-                                        <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/my_order.png"
-                                                    alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_myorder.png"
-                                                    alt="My Profile Hover">
-                                            </span>
-                                            My Orders
-                                        </li>
-                                        <li class="dk_payment_method_main" data-section="paymentMethodsSection">
-                                            <div class="accordion p-0" id="accordionExample">
-                                                <div class="accordion-item dk_payment_method_item ">
-                                                    <h2 class="accordion-header" id="headingOne">
-                                                        <button style="gap: 10px;"
-                                                            class="accordion-button dk_payment_method" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                            aria-expanded="true" aria-controls="collapseOne">
-                                                            <span class="dk_icon">
-                                                                <img class="dk_icon_image default"
-                                                                    src="../img/payment_method.png" alt="My Profile">
-                                                                <img class="dk_icon_image hover"
-                                                                    src="../img/white_payment_methde.png"
-                                                                    alt="My Profile Hover">
-                                                            </span>
-                                                            Payment Methods
-                                                        </button>
-                                                    </h2>
-                                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
-                                                            <ul>
-                                                                <li onclick="showpaymentSection('credit')" class="active">Credit / Debit Cards
-                                                                </li>
-                                                                <li onclick="showpaymentSection('upi')" class="active">UPI ID</li>
-                                                            </ul>
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    <aside class="dk_sidebar">
+                                        <ul class="dk_menu ">
+                                            <li class="dk_menu-item dk_nav-item active" data-section="profileSection">
+                                                <span class="dk_icon">
+                                                    <img class="dk_icon_image default" src="../img/my_profile.png"
+                                                        alt="My Profile">
+                                                    <img class="dk_icon_image hover" src="../img/my_profile_hover.png"
+                                                        alt="My Profile Hover">
+                                                </span>
+                                                My Profile
+                                            </li>
+                                            <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
+                                                <span class="dk_icon">
+                                                    <img class="dk_icon_image default" src="../img/my_order.png"
+                                                        alt="My Profile">
+                                                    <img class="dk_icon_image hover" src="../img/white_myorder.png"
+                                                        alt="My Profile Hover">
+                                                </span>
+                                                My Orders
+                                            </li>
+                                            <li class="dk_payment_method_main" data-section="paymentMethodsSection">
+                                                <div class="accordion p-0" id="accordionExample">
+                                                    <div class="accordion-item dk_payment_method_item ">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button style="gap: 10px;"
+                                                                class="accordion-button dk_payment_method" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                <span class="dk_icon">
+                                                                    <img class="dk_icon_image default"
+                                                                        src="../img/payment_method.png"
+                                                                        alt="My Profile">
+                                                                    <img class="dk_icon_image hover"
+                                                                        src="../img/white_payment_methde.png"
+                                                                        alt="My Profile Hover">
+                                                                </span>
+                                                                Payment Methods
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <ul>
+                                                                    <li onclick="showpaymentSection('credit')"
+                                                                        class="active">Credit / Debit Cards
+                                                                    </li>
+                                                                    <li onclick="showpaymentSection('upi')"
+                                                                        class="active">UPI ID</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
+                                            </li>
                                             <li class="dk_menu-item dk_nav-item" data-section="MyaddressSection">
                                                 <span class="dk_icon">
                                                     <img class="dk_icon_image default" src="../img/my_address.png"
@@ -210,7 +218,8 @@
                                             </li>
                                             <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
+                                                    <img class="dk_icon_image default" src="../img/faqs.png"
+                                                        alt="My Profile">
                                                     <img class="dk_icon_image hover" src="../img/white_fasq.png"
                                                         alt="My Profile Hover">
                                                 </span>
@@ -225,7 +234,8 @@
                                                 </span>
                                                 Terms of Service
                                             </li>
-                                            <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
+                                            <li class="dk_menu-item dk_nav-item"
+                                                data-section="deactivateaccountSection">
                                                 <span class="dk_icon">
                                                     <img class="dk_icon_image default" src="../img/disactive.png"
                                                         alt="My Profile">
@@ -234,100 +244,117 @@
                                                 </span>
                                                 Deactivate Account
                                             </li>
-                                            <li class="dk_menu-item" class="dropdown-item" type="button" class="btn btn-primary"
-                                            data-bs-toggle="modal" data-bs-target="#exampleModal_login"
-                                            href="#">
+                                            <li class="dk_menu-item" class="dropdown-item" type="button"
+                                                class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal_login" href="#">
                                                 <span class="dk_icon">
-                                                    <img class="dk_icon_image default" src="../img/logout.png" alt="My Profile">
+                                                    <img class="dk_icon_image default" src="../img/logout.png"
+                                                        alt="My Profile">
                                                     <img class="dk_icon_image hover" src="../img/white_logout.svg"
                                                         alt="My Profile Hover">
                                                 </span>
                                                 Logout
-                                            </li> 
-                                    </ul>
-                                </aside>
-                            </div>
-                        </div>
-                    </div>
-                    <main id="profileSection" class="dk_profile-content" style="display: block;">
-                        <h2 class="mb-3">My Profile</h2>
-                        <div class="dk_profile_content_sub">
-                            <form class="dk_profile-form">
-                                <div class="row">
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Name</label>
-                                        <input type="text" value="Alex Shroff">
-                                    </div>
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Email</label>
-                                        <input type="email" value="example@gmail.com">
-                                    </div>
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Mobile No.</label>
-                                        <input type="text" value="+1 56856 65656">
-                                    </div>
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Gender</label>
-                                        <input type="text" value="Male">
-                                    </div>
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Password</label>
-                                        <input type="text" value="Alex@1234">
-                                    </div>
-                                    <div class="col-lg-6 mb-0">
-                                        <label>Birthdate</label>
-                                        <input type="text" value="21/12/1994">
-                                    </div>
-                                    <a href=""><button type="submit">Edit Profile</button> </a>
-                                </div>
-                            </form>
-                        </div>
-                    </main>
-                    <div id="ordersSection" class="mv_main_my_order dk_profile-content" style="display: none;">
-                        <p class="mv_order_heading">My Order</p>
-                    <div class="mv_order_main_class">
-                        <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
-                            <li class="nav-item mv_oredr_nav_item" role="presentation">
-                            <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">On the way</button>
-                            </li>
-                            <li class="nav-item mv_oredr_nav_item" role="presentation">
-                            <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Delivered</button>
-                            </li>
-                            <li class="nav-item mv_oredr_nav_item" role="presentation">
-                            <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled & Returned</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content mv_order_table_content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                <div id="mv_order_on_the_way"></div>
-                                <div id="no-data-message-on-the-way" class="mv_no_order_item" style="display: none;">
-                                    <div class="mv_main_no_order">
-                                        <img src="../mv_image/no_order_logo.png" alt="">
-                                    </div>
-                                    <p class="text-center">You have no order in process</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                <div id="mv_order_delivered"></div>
-                                <div id="no-data-message-delivered" class="mv_no_order_item" style="display: none;">
-                                    <div class="mv_main_no_order">
-                                        <img src="../mv_image/no_order_logo.png" alt="">
-                                    </div>
-                                    <p class="text-center">You have no order in process</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                                <div id="mv_order_cancelled"></div>
-                                <div id="no-data-message-cancelled" class="mv_no_order_item" style="display: none;">
-                                    <div class="mv_main_no_order">
-                                        <img src="../mv_image/no_order_logo.png" alt="">
-                                    </div>
-                                    <p class="text-center">You have no order in process</p>
+                                            </li>
+                                        </ul>
+                                    </aside>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                        <main id="profileSection" class="dk_profile-content" style="display: block;">
+                            <h2 class="mb-3">My Profile</h2>
+                            <div class="dk_profile_content_sub">
+                                <form class="dk_profile-form">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Name</label>
+                                            <input type="text" value="Alex Shroff">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Email</label>
+                                            <input type="email" value="example@gmail.com">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Mobile No.</label>
+                                            <input type="text" value="+1 56856 65656">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Gender</label>
+                                            <input type="text" value="Male">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Password</label>
+                                            <input type="text" value="Alex@1234">
+                                        </div>
+                                        <div class="col-lg-6 mb-0">
+                                            <label>Birthdate</label>
+                                            <input type="text" value="21/12/1994">
+                                        </div>
+                                        <a href=""><button type="submit">Edit Profile</button> </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </main>
+                        <div id="ordersSection" class="mv_main_my_order dk_profile-content" style="display: none;">
+                            <p class="mv_order_heading">My Order</p>
+                            <div class="mv_order_main_class">
+                                <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab"
+                                    role="tablist">
+                                    <li class="nav-item mv_oredr_nav_item" role="presentation">
+                                        <button class="nav-link mv_order_navs_button active" id="home-tab"
+                                            data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+                                            role="tab" aria-controls="home-tab-pane" aria-selected="true">On the
+                                            way</button>
+                                    </li>
+                                    <li class="nav-item mv_oredr_nav_item" role="presentation">
+                                        <button class="nav-link mv_order_navs_button" id="profile-tab"
+                                            data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+                                            role="tab" aria-controls="profile-tab-pane"
+                                            aria-selected="false">Delivered</button>
+                                    </li>
+                                    <li class="nav-item mv_oredr_nav_item" role="presentation">
+                                        <button class="nav-link mv_order_navs_button" id="contact-tab"
+                                            data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+                                            role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled
+                                            & Returned</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mv_order_table_content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <div id="mv_order_on_the_way"></div>
+                                        <div id="no-data-message-on-the-way" class="mv_no_order_item"
+                                            style="display: none;">
+                                            <div class="mv_main_no_order">
+                                                <img src="../mv_image/no_order_logo.png" alt="">
+                                            </div>
+                                            <p class="text-center">You have no order in process</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                        aria-labelledby="profile-tab" tabindex="0">
+                                        <div id="mv_order_delivered"></div>
+                                        <div id="no-data-message-delivered" class="mv_no_order_item"
+                                            style="display: none;">
+                                            <div class="mv_main_no_order">
+                                                <img src="../mv_image/no_order_logo.png" alt="">
+                                            </div>
+                                            <p class="text-center">You have no order in process</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                        aria-labelledby="contact-tab" tabindex="0">
+                                        <div id="mv_order_cancelled"></div>
+                                        <div id="no-data-message-cancelled" class="mv_no_order_item"
+                                            style="display: none;">
+                                            <div class="mv_main_no_order">
+                                                <img src="../mv_image/no_order_logo.png" alt="">
+                                            </div>
+                                            <p class="text-center">You have no order in process</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <main id="paymentMethodsSection" class="dk_profile-content" style="display: none;">
                             <h2 class="mb-3">Payment Methods</h2>
                             <div class="dk_profile_payment_methods">
@@ -441,7 +468,10 @@
                                             <h3>UPI ID</h3>
                                         </div>
                                         <div>
-                                            <button class="dk_crdit_debit_card_sub" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Add UPI ID</button>
+                                            <button class="dk_crdit_debit_card_sub" class="btn btn-primary"
+                                                type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Add UPI
+                                                ID</button>
                                         </div>
                                     </div>
                                     <div class="dk_upi_id_main">
@@ -453,8 +483,8 @@
                                                         <span>example56@oksbi</span>
                                                     </div>
                                                     <div class="p-0" data-bs-toggle="modal"
-                                                    data-bs-target="#deletepaymentcard"
-                                                    onclick="setCardToDelete('card4')">
+                                                        data-bs-target="#deletepaymentcard"
+                                                        onclick="setCardToDelete('card4')">
                                                         <img src="../img/upi_delete.png" alt="">
                                                     </div>
                                                 </div>
@@ -465,9 +495,9 @@
                                                         <img src="../img/gpay_upi.png" alt="">
                                                         <span>example56@oksbi</span>
                                                     </div>
-                                                    <div  class="p-0" data-bs-toggle="modal"
-                                                    data-bs-target="#deletepaymentcard"
-                                                    onclick="setCardToDelete('card4')">
+                                                    <div class="p-0" data-bs-toggle="modal"
+                                                        data-bs-target="#deletepaymentcard"
+                                                        onclick="setCardToDelete('card4')">
                                                         <img src="../img/upi_delete.png" alt="">
                                                     </div>
                                                 </div>
@@ -480,7 +510,7 @@
                                 </div>
                             </div>
                         </main>
-                        <main id="MyaddressSection" class="dk_profile-content" style="display: none;"> 
+                        <main id="MyaddressSection" class="dk_profile-content" style="display: none;">
                             <h2 class="mb-3">My Address</h2>
                             <div class="dk_empty_address">
                                 <div class="row">
@@ -502,7 +532,8 @@
                                                     <h3>Home</h3>
                                                 </div>
                                                 <div class="dropdown">
-                                                    <button style="border: none;" class="ed_dropdown" onclick="toggleDropdown('myDropdown1')">
+                                                    <button style="border: none;" class="ed_dropdown"
+                                                        onclick="toggleDropdown('myDropdown1')">
                                                         <img src="../img/edit_delet_menu.png" alt="">
                                                     </button>
                                                     <ul class="dropdown-menu dk_add_dropdown" id="myDropdown1"
@@ -511,18 +542,21 @@
                                                             data-bs-target="#offcanvasRight_edit_address"
                                                             aria-controls="offcanvasRight"><a class="dropdown-item"
                                                                 href="#">Edit</a></li>
-                                                        <li>
-                                                            <button class="dropdown-item" type="button" class="btn btn-primary"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal_address"
-                                                                id="deleteConfirmButton">Delete</button>
-                                                        </li>
+                                                                <li>
+                                                                    <button class="dropdown-item" type="button" data-bs-toggle="modal" 
+                                                                            data-bs-target="#exampleModal_address" 
+                                                                            onclick="confirmDelete('card1')">
+                                                                        Delete
+                                                                    </button>
+                                                                </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div style="padding: 12px;">
                                                 <h6>Alex Shroff</h6>
                                                 <h4>+1 56565 56565</h4>
-                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY
+                                                    10012,
                                                     USA</p>
                                             </div>
                                         </div>
@@ -535,7 +569,8 @@
                                                     <h3>Home</h3>
                                                 </div>
                                                 <div class="dropdown">
-                                                    <button style="border: none;" class="ed_dropdown" onclick="toggleDropdown('myDropdown2')">
+                                                    <button style="border: none;" class="ed_dropdown"
+                                                        onclick="toggleDropdown('myDropdown2')">
                                                         <img src="../img/edit_delet_menu.png" alt="">
                                                     </button>
                                                     <ul class="dropdown-menu dk_add_dropdown" id="myDropdown2"
@@ -544,18 +579,21 @@
                                                             data-bs-target="#offcanvasRight_edit_address"
                                                             aria-controls="offcanvasRight"><a class="dropdown-item"
                                                                 href="#">Edit</a></li>
-                                                        <li>
-                                                            <button class="dropdown-item" type="button" class="btn btn-primary"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal_address"
-                                                                id="deleteConfirmButton">Delete</button>
-                                                        </li>
+                                                                <li>
+                                                                    <button class="dropdown-item" type="button" data-bs-toggle="modal" 
+                                                                            data-bs-target="#exampleModal_address" 
+                                                                            onclick="confirmDelete('card2')">
+                                                                        Delete
+                                                                    </button>
+                                                                </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div style="padding: 12px;">
                                                 <h6>Alex Shroff</h6>
                                                 <h4>+1 56565 56565</h4>
-                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY 10012,
+                                                <p>Ehrenkranz 13 Washington Square S, New York, Washington Square, NY
+                                                    10012,
                                                     USA</p>
                                             </div>
                                         </div>
@@ -635,24 +673,82 @@
                                 <div class="dk_terms_of_service">
                                     <h3>Terms of Use</h3>
                                     <ul class="dk_terms_list_type">
-                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl. Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus quisque in amet. </li>
-                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.</li>
-                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at blandit vitae nibh. </li>
-                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris. Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
-                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget porta ultricies. Ut tellus imperdiet non amet.</li>
-                                        <li>Odio fringilla cursus ante arcu pulvinar. Nec urna penatibus elementum sed. Sed consequat ullamcorper nibh nibh ullamcorper luctus id convallis. Vulputate est cras arcu sed neque. Nibh pellentesque enim proin adipiscing id nullam. Facilisis egestas nulla quam fermentum nulla nec in vulputate. Non elementum nascetur gravida auctor eget facilisis tortor. Lacinia elit sit platea turpis eu leo est. Condimentum vestibulum pharetra eu sed. Mi nisl enim fermentum lacus. Amet orci diam aliquam id. At vitae laoreet ac tortor nulla volutpat facilisis nunc purus. Quam scelerisque vitae nunc luctus ac neque id.</li>
-                                        <li> Aliquam feugiat rhoncus mauris leo dui pretium. Quisque sed amet nunc nisl venenatis mi aenean consequat. Rhoncus turpis pellentesque nulla dictum aenean neque. Proin id in lorem eget. Vel nulla etiam at placerat netus pretium cras dapibus. Imperdiet felis suscipit tellus duis lacus lacus ullamcorper. Nisl amet neque congue arcu. Non pretium id nam leo eu ultrices id. Sagittis elementum leo cursus integer. Ultrices magna metus amet id nibh.
+                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor
+                                            libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl.
+                                            Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer
+                                            convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus
+                                            quisque in amet. </li>
+                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada
+                                            laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa
+                                            nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus
+                                            turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec
+                                            sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.
+                                        </li>
+                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare
+                                            quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at
+                                            blandit vitae nibh. </li>
+                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus
+                                            adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis
+                                            ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget
+                                            faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas
+                                            arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris.
+                                            Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
+                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing
+                                            sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum
+                                            amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient
+                                            aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent
+                                            mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin
+                                            vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget
+                                            porta ultricies. Ut tellus imperdiet non amet.</li>
+                                        <li>Odio fringilla cursus ante arcu pulvinar. Nec urna penatibus elementum sed.
+                                            Sed consequat ullamcorper nibh nibh ullamcorper luctus id convallis.
+                                            Vulputate est cras arcu sed neque. Nibh pellentesque enim proin adipiscing
+                                            id nullam. Facilisis egestas nulla quam fermentum nulla nec in vulputate.
+                                            Non elementum nascetur gravida auctor eget facilisis tortor. Lacinia elit
+                                            sit platea turpis eu leo est. Condimentum vestibulum pharetra eu sed. Mi
+                                            nisl enim fermentum lacus. Amet orci diam aliquam id. At vitae laoreet ac
+                                            tortor nulla volutpat facilisis nunc purus. Quam scelerisque vitae nunc
+                                            luctus ac neque id.</li>
+                                        <li> Aliquam feugiat rhoncus mauris leo dui pretium. Quisque sed amet nunc nisl
+                                            venenatis mi aenean consequat. Rhoncus turpis pellentesque nulla dictum
+                                            aenean neque. Proin id in lorem eget. Vel nulla etiam at placerat netus
+                                            pretium cras dapibus. Imperdiet felis suscipit tellus duis lacus lacus
+                                            ullamcorper. Nisl amet neque congue arcu. Non pretium id nam leo eu ultrices
+                                            id. Sagittis elementum leo cursus integer. Ultrices magna metus amet id
+                                            nibh.
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="dk_terms_of_service2">
                                     <h3>Conditions</h3>
                                     <ul class="dk_terms_list_type">
-                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl. Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus quisque in amet. </li>
-                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.</li>
-                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at blandit vitae nibh.  </li>
-                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris. Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
-                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget porta ultricies. Ut tellus imperdiet non amet.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur. Eget congue volutpat sed orci dolor
+                                            libero. Donec suspendisse mus id nibh eget. Sit feugiat risus mauris nisl.
+                                            Vitae pulvinar aliquam nunc mauris vehicula pretium. Nunc ipsum nisl integer
+                                            convallis a quis nec donec ornare. Diam tincidunt elit mi nulla senectus
+                                            quisque in amet. </li>
+                                        <li>Turpis sit dictum id blandit. Ultrices dolor dui viverra magna malesuada
+                                            laoreet. Ornare amet aliquam imperdiet neque donec. Etiam nisl viverra massa
+                                            nunc eget fames ullamcorper. Erat vivamus nisl molestie tincidunt cras lacus
+                                            turpis. Arcu tellus nullam feugiat fermentum venenatis ultricies nec
+                                            sagittis. Lorem cursus viverra gravida vitae morbi etiam leo nisl mollis.
+                                        </li>
+                                        <li>Mattis magnis sit scelerisque consequat vestibulum. Parturient non ornare
+                                            quis ornare. Mauris purus risus egestas tortor. Eget orci fames nisi at
+                                            blandit vitae nibh. </li>
+                                        <li>Gravida viverra erat aliquam vitae mattis in duis magna. Morbi senectus
+                                            adipiscing nisi aliquam amet. Porttitor mattis nunc turpis sit in sagittis
+                                            ornare in egestas. Urna fringilla nibh tincidunt aliquet facilisis eget
+                                            faucibus. Turpis integer leo aliquet lectus nunc euismod in vitae. Egestas
+                                            arcu nisl elit eu amet non in faucibus nibh. Ut donec parturient in mauris.
+                                            Risus sed ac pulvinar arcu ut accumsan amet semper.</li>
+                                        <li>Eget sit bibendum egestas egestas pharetra volutpat penatibus. Adipiscing
+                                            sit integer sapien mauris pellentesque amet. Nisi bibendum amet elementum
+                                            amet sit diam placerat lacus. Gravida augue facilisis condimentum parturient
+                                            aliquam odio facilisis quis. Egestas quisque urna sagittis in risus praesent
+                                            mauris faucibus nisi. Tincidunt vestibulum morbi libero id volutpat proin
+                                            vestibulum dolor. Pharetra cursus ullamcorper nunc nisl quis volutpat eget
+                                            porta ultricies. Ut tellus imperdiet non amet.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -665,14 +761,21 @@
                                     <ul class="dk_deactive_list_type">
                                         <li>You are logged out of your Quickcart Account</li>
                                         <li>Your public profile on Quickcart is no longer visible</li>
-                                        <li>Your reviews/ratings are still visible, while your profile information is shown as ‘unavailable’ as a result of deactivation.</li>
-                                        <li>Your wishlist items are no longer accessible through the associated public hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation</li>
-                                        <li>You will be unsubscribed from receiving promotional emails from Quickcart.</li>
-                                        <li>Your wishlist items are no longer accessible through the associated public hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation</li>
+                                        <li>Your reviews/ratings are still visible, while your profile information is
+                                            shown as ‘unavailable’ as a result of deactivation.</li>
+                                        <li>Your wishlist items are no longer accessible through the associated public
+                                            hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation
+                                        </li>
+                                        <li>You will be unsubscribed from receiving promotional emails from Quickcart.
+                                        </li>
+                                        <li>Your wishlist items are no longer accessible through the associated public
+                                            hyperlink. Wishlist is shown as ‘unavailable’ as a result of deactivation
+                                        </li>
                                         <li> You will be unsubscribed from receiving promotional emails from Quickcart.
                                         </li>
                                     </ul>
-                                    <button type="button" class="btn btn-dark dk_deactive_button" data-bs-toggle="modal" data-bs-target="#deactivateModal">
+                                    <button type="button" class="btn btn-dark dk_deactive_button" data-bs-toggle="modal"
+                                        data-bs-target="#deactivateModal">
                                         Deactivate Account
                                     </button>
                                 </div>
@@ -684,34 +787,52 @@
         </section>
     </main>
 
-     <!-- Footer -->
-     <div id="footer"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-     <script src="../js/owl.carousel.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-         crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-         crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- 
-     <!-- script Header and Footer -->
-     <script>
-         // navbar include
-         fetch("../darshit/header.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("header").innerHTML = data;
-             });
-         // footer include
-         fetch("../darshit/footer.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("footer").innerHTML = data;
-             });
-     </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- script Header and Footer -->
+    <script>
+        // navbar include
+        fetch("../darshit/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("header").innerHTML = data;
+            });
+        // footer include
+        fetch("../darshit/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <!-- header color active  -->
+    <script>
+        // When the Payment Methods button is clicked, add the active class
+        document.querySelector('.dk_payment_method_main').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+
+        // When an individual list item is clicked, toggle the active class for styling
+        document.querySelectorAll('.accordion-body ul li').forEach(function (item) {
+            item.addEventListener('click', function () {
+                // Remove active class from all list items
+                document.querySelectorAll('.accordion-body ul li').forEach(li => li.classList.remove('active'));
+                // Add active class to the clicked list item
+                this.classList.add('active');
+            });
+        });
+    </script>
 
     <!-- vertical hedear script  -->
     <script>
@@ -723,8 +844,8 @@
             document.getElementById('MyaddressSection').style.display = 'none';
             document.getElementById('FaqsSection').style.display = 'none';
             document.getElementById('termsofserviceSection').style.display = 'none';
-            document.getElementById('termsofserviceSection').style.display = 'none';
-            
+            document.getElementById('deactivateaccountSection').style.display = 'none';
+
             document.getElementById('creditSection').style.display = 'none';
             document.getElementById('upiSection').style.display = 'none';
 
@@ -811,17 +932,17 @@
         document.addEventListener("DOMContentLoaded", function () {
             const upiInput = document.getElementById('upiInput');
             const upiSelect = document.getElementById('upiSelect');
-            
+
             // Show the dropdown when the input is focused (if needed)
-            upiInput.addEventListener('focus', function() {
+            upiInput.addEventListener('focus', function () {
                 // You can show a custom dropdown if needed, otherwise this part can be skipped if select is enough.
                 if (document.getElementById('upiDropdown')) {
                     document.getElementById('upiDropdown').style.display = 'block';
                 }
             });
-    
+
             // Hide the dropdown when clicking outside (if using a custom dropdown)
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 if (!upiInput.contains(event.target) && !upiSelect.contains(event.target)) {
                     // If you were using a custom dropdown, hide it
                     if (document.getElementById('upiDropdown')) {
@@ -829,7 +950,7 @@
                     }
                 }
             });
-    
+
             // Function to update input field with selected dropdown value
             upiSelect.addEventListener('change', function () {
                 const selectedValue = upiSelect.value;
@@ -877,7 +998,7 @@
                 noUPIMessage.style.display = "none";
             }
         }
-    </script> 
+    </script>
 
     <!-- delete cards model and scripts -->
     <div class="modal fade" id="deletepaymentcard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -900,11 +1021,12 @@
             </div>
         </div>
     </div>
-     <!-- add Credit / Debit Cards  -->
-     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <!-- add Credit / Debit Cards  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header dk_add_address_main_font">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Credit / Debit Card </h5>
-            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body dk_add_address_off">
             <div style="border-bottom: 0.5px solid #727272"></div>
@@ -940,19 +1062,24 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header dk_add_address_main_font">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Add UPI ID </h5>
-            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close dk_close_boxsadow" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body dk_add_address_off">
             <div style="border-bottom: 0.5px solid #727272"></div>
             <div class="dk_add_address_details">
-                <div class="form-group dk_custom_input_group dk_add_address_margine" style="display: flex; align-items: center;">
-                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">UPI ID</label>
-                    
+                <div class="form-group dk_custom_input_group dk_add_address_margine"
+                    style="display: flex; align-items: center;">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">UPI
+                        ID</label>
+
                     <!-- Input field for UPI ID -->
-                    <input type="text" class="form-control dk_custom_input" id="upiInput" placeholder="Enter UPI ID" style="flex: 1;">
-                    
+                    <input type="text" class="form-control dk_custom_input" id="upiInput" placeholder="Enter UPI ID"
+                        style="flex: 1;">
+
                     <!-- Dropdown for selection -->
-                    <select id="upiSelect" class="form-control dk_focus_select" style="width: 100px; margin-left: 10px; border-left: 0.5px solid #727272 !important; border-radius: 0px;">
+                    <select id="upiSelect" class="form-control dk_focus_select"
+                        style="width: 100px; margin-left: 10px; border-left: 0.5px solid #727272 !important; border-radius: 0px;">
                         <option value="" disabled selected>@okicici</option>
                         <option value="@oksbi">@oksbi</option>
                         <option value="@okicici">@okicici</option>
@@ -960,7 +1087,7 @@
                         <option value="@okhdfcbank">@okhdfcbank</option>
                         <!-- Add more options as needed -->
                     </select>
-                </div>           
+                </div>
                 <div class="dk_save_add_address_main">
                     <button class="dk_save_add_address">Save</button>
                 </div>
@@ -971,7 +1098,8 @@
 
     <!--*************** add address offcanvas model script ****************** -->
     <!-- add address  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_add_address" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_add_address"
+        aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header dk_add_address_main_font">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Address</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1040,7 +1168,8 @@
     </div>
 
     <!-- edit address  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_edit_address" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_edit_address"
+        aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header dk_add_address_main_font">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Address</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1109,11 +1238,12 @@
     </div>
 
     <!-- delete address -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
-    </button>
+    </button> -->
 
-    <div class="modal fade" id="exampleModal_address" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal_address" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1127,46 +1257,29 @@
                 </div>
                 <div class="modal-footer dk_delete_address_sub">
                     <button type="button" class="btn dk_delete_add_conform" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-secondary dk_delete_add_conform2" data-bs-dismiss="modal" onclick="deleteCard()">Yes</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2" data-bs-dismiss="modal"
+                        onclick="deleteCard()">Yes</button>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script>
+        let cardToDelete1 = null;
 
-let cardToDelete1 = null;
-
-function openDeleteModal(cardId) {
-    // Set the card ID to delete and ensure the modal confirms deletion on first click
-    cardToDelete1 = cardId;
-
-    // Remove any previous event listeners on the delete confirmation button to avoid multiple bindings
-    const deleteConfirmButton = document.getElementById("deleteConfirmButton");
-    deleteConfirmButton.removeEventListener("click", deleteCard);
-    deleteConfirmButton.addEventListener("click", deleteCard);
-}
-
-function deleteCard() {
-    if (cardToDelete1) {
-        const cardElement1 = document.getElementById(cardToDelete1);
-        if (cardElement1) {
-            cardElement1.remove();
+        function confirmDelete(cardId) {
+            cardToDelete1 = document.getElementById(cardId);
         }
-        
-        // Reset the variable and close the modal (if using Bootstrap)
-        cardToDelete1 = null;
 
-        // Close modal if using Bootstrap modal
-        const modal = document.getElementById("exampleModal_address");
-        const bootstrapModal = bootstrap.Modal.getInstance(modal);
-        if (bootstrapModal) {
-            bootstrapModal.hide();
+        function deleteCard() {
+            if (cardToDelete1) {
+                cardToDelete1.remove();
+                cardToDelete1 = null;
+            }
         }
-    }
-}
     </script>
-
+    
     <!-- EMPTY ADDRESS DROP DOWN EDIT DELETE  -->
     <script>
         function toggleDropdown(id) {
@@ -1193,8 +1306,8 @@ function deleteCard() {
     </script>
     <!-- ******************************************************************** -->
 
-     <!--***************** accordian faqs page ****************************** -->
-     <script>
+    <!--***************** accordian faqs page ****************************** -->
+    <script>
         const accordion = document.getElementsByClassName('container');
         for (i = 0; i < accordion.length; i++) {
             accordion[i].addEventListener('click', function () {
@@ -1206,7 +1319,8 @@ function deleteCard() {
 
     <!--**************************** deactive page *************************** -->
     <!-- deactivate account model -->
-    <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1223,20 +1337,28 @@ function deleteCard() {
                     </div>
                     <div class="d-flex justify-content-between">
                         <!-- OTP input boxes -->
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive" style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
+                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                            style="width: 45px;">
                     </div>
                     <div class="mt-2 text-center">
-                        <h6 style="font-size: 13px; color: #727272;">Didn’t receive code yet?<a class="dk_resend text-decoration-underline" href="">Resend</a></h6>
+                        <h6 style="font-size: 13px; color: #727272;">Didn’t receive code yet?<a
+                                class="dk_resend text-decoration-underline" href="">Resend</a></h6>
                     </div>
                 </div>
                 <div class="modal-footer dk_delete_address_sub mb-3 dk_size_box">
                     <button type="button" class="btn dk_delete_add_conform">Let me stay</button>
-                    <button type="button" class="btn btn-secondary dk_delete_add_conform2" data-bs-dismiss="modal">Deactivate</button>
+                    <button type="button" class="btn btn-secondary dk_delete_add_conform2"
+                        data-bs-dismiss="modal">Deactivate</button>
                 </div>
             </div>
         </div>
@@ -1244,7 +1366,8 @@ function deleteCard() {
     <!-- ********************************************************************  -->
 
     <!--*********************** logout page model ***************************** -->
-    <div class="modal fade" id="exampleModal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal_login" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1269,14 +1392,14 @@ function deleteCard() {
     <!--*********************** My Order Page ***************************** -->
     <!-- Script Dynamic On The Way -->
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const orderContainerOnTheWay = document.getElementById('mv_order_on_the_way');
             const orderContainerDelivered = document.getElementById('mv_order_delivered');
             const orderContainerCancelled = document.getElementById('mv_order_cancelled');
             const noDataMessageOnTheWay = document.querySelector("#home-tab-pane #no-data-message-on-the-way");
             const noDataMessageDelivered = document.querySelector("#profile-tab-pane #no-data-message-delivered");
             const noDataMessageCancelled = document.querySelector("#contact-tab-pane #no-data-message-cancelled");
-    
+
             // On The Way
             const productDataOnTheWay = [
                 {
@@ -1307,7 +1430,7 @@ function deleteCard() {
                     rating: 3,
                 }
             ];
-    
+
             // Delivered Data
             const productDataDelivered = [
                 {
@@ -1329,7 +1452,7 @@ function deleteCard() {
                     statusMessage: "Your item has been delivered successfully"
                 }
             ];
-            
+
             // Cancelled & Returned
             const productDataCancelled = [
                 {
@@ -1364,7 +1487,7 @@ function deleteCard() {
                     viewstatus: "View return & refund status"
                 },
             ];
-    
+
             // Display "On the Way" Products
             if (productDataOnTheWay.length > 0) {
                 let productHTMLOnTheWay = "";
@@ -1418,7 +1541,7 @@ function deleteCard() {
             } else {
                 noDataMessageOnTheWay.style.display = 'block';
             }
-    
+
             // Display "Delivered" Products
             if (productDataDelivered.length > 0) {
                 let productHTMLDelivered = "";
@@ -1547,7 +1670,7 @@ function deleteCard() {
                 noDataMessageCancelled.style.display = 'block';
             }
         };
-    
+
         function generateRatingStars(rating) {
             let starsHTML = "";
             for (let i = 0; i < 5; i++) {
@@ -1562,20 +1685,21 @@ function deleteCard() {
     </script>
 
     <!-- Offcanvas Return Order -->
-    <div class="offcanvas offcanvas-end mv_offcanvas_cancle_order" tabindex="-1" id="offcanvasRightReturn" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end mv_offcanvas_cancle_order" tabindex="-1" id="offcanvasRightReturn"
+        aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header mv_cancel_order_border">
-          <h5 class="offcanvas-title mv_cancel_order_heading" id="offcanvasRightLabel">Cancel Order</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title mv_cancel_order_heading" id="offcanvasRightLabel">Cancel Order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <div class="form-group dk_custom_input_group">
-                <label for="emailOrMobile" class="dk_custom_label"
-                    style="font-weight: 500; color: #000000;">Order ID <span style="color: red;">*</span></label>
+                <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Order ID
+                    <span style="color: red;">*</span></label>
                 <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
             </div>
             <div style="margin-bottom: 35px;" class="form-group dk_custom_input_group_track">
-                <label for="emailOrMobile" class="dk_custom_label"
-                    style="font-weight: 500; color: #000000;">Reason for Return <span style="color: red;">*</span></label>
+                <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Reason for
+                    Return <span style="color: red;">*</span></label>
                 <select class="form-select mv_offcanvas_form_select" aria-label="Default select example">
                     <option selected>Reason for Return</option>
                     <option value="1">I was hopping for a shorter delivery time</option>
@@ -1590,44 +1714,53 @@ function deleteCard() {
                 <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">
                     Mobile No. <span style="color: red;">*</span>
                 </label>
-                <input type="text" class="form-control dk_custom_input" id="emailOrMobile" placeholder=""
-                       maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <input type="text" class="form-control dk_custom_input" id="emailOrMobile" placeholder="" maxlength="10"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
             <div class="mv_otp_box">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
-                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input" oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
+                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
+                    oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
             </div>
             <div class="d-flex justify-content-center position-relative">
-                <button class="mv_off_request_for_OTP" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Request for OTP</button>
+                <button class="mv_off_request_for_OTP" type="button" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Request for OTP</button>
             </div>
         </div>
     </div>
 
     <!-- Cancel Order Model -->
-    <div class="modal fade" id="staticBackdrop" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal fade" id="staticBackdrop" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="d-flex justify-content-center">
-                <img src="../mv_image/oredr_return_refund_logo.png" alt="">
-              </div>
-              <p class="mb-5 text-center mv_successfully_text">Your request for return product has been successfully received</p>
-              <div class="d-flex align-items-center justify-content-center">
-                <div class="me-4">
-                  <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img src="../mv_image/oredr_return_refund_logo.png" alt="">
+                    </div>
+                    <p class="mb-5 text-center mv_successfully_text">Your request for return product has been
+                        successfully received</p>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="me-4">
+                            <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
+                        </div>
+                        <div>
+                            <a href="./return_refund.html">
+                                <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="./return_refund.html">
-                        <button class="mv_track_refund mv_refund_back_to_home">Track Return/Refund</button>
-                    </a>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
     </div>
 
@@ -1653,9 +1786,7 @@ function deleteCard() {
     </script>
 
     <!-- ********************************************************************* -->
-     
+
 </body>
+
 </html>
-
-
-
