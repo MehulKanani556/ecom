@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Category</title>
+    <link rel="stylesheet" href="../css/riyansee.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.theme.default.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Demo styles -->
+    <style>
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .swiper {
+            padding-top: 0 !important;
+        }
+
+        .card {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 0 !important;
+            color: white;
+        }
+
+        .card .card-img-top {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 !important;
+        }
+
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            /* transform: translateX(-50%); */
+            color: white !important;
+            font-weight: bold;
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        .card-body img {
+            height: auto;
+        }
+
+        .card-text {
+            color: white !important;
+            margin-bottom: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-pagination-bullet-active {
+            outline: solid;
+            padding: 5px;
+        }
+
+        .swiper-pagination {
+            color: #000;
+        }
+
+        .card {
+            border: none;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+
+        .card-img {
+            filter: brightness(70%);
+            transition: transform 0.3s ease;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.1);
+        }
+
+        .card-img-overlay {
+            background: rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            padding: 20px;
+            text-align: start !important;
+            margin-left: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .r_shopnowbtn {
+            padding: 7px 40px;
+            background-color: white;
+            color: black;
+        }
+        a{
+            text-decoration: none !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Trending Deals -->
+        <section class="mt-5">
+            <div class="container-fluid trending-deals-section trending-bg">
+                <div class="trending-bg"></div>
+                <div class="row content-container">
+                    <!-- Left Column (Image) -->
+                    <div class="col-md-3  d-flex align-items-center justify-content-center p-0 r_trendman">
+                        <img src="../r_img/trendingman.png" alt="Left Image" class="img-fluid">
+                        <!-- Replace with the path of your photo -->
+                    </div>
+                    <!-- Right Column (Main Slider for Cards) -->
+                    <div style="background-color: #040404; height: 100%; " class="col-md-9 d-flex r_all_slider_padding">
+                        <!-- Outer Swiper slider for cards -->
+                        <div class="swiper mainSwiper ">
+                            <div class="swiper-wrapper">
+                                <!-- Product Card 1 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../r_img/allensollyman.png"
+                                                        alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyman.png"
+                                                        alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyman.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyman.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyman.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">Allen Solly</h5>
+                                        <p class="r_textpadding">Men Khaki Slim Fit Solid Shirt</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../r_img/manthumbnail.png" alt="">
+                                            <img src="../r_img/manthumbnail.png" alt="">
+                                            <img src="../r_img/manthumbnail.png" alt="">
+                                        </div>
+                                        <div class="discount-text">40% OFF</div>
+                                        <p><strong>$459</strong> <del>$799</del></p>
+                                    </div>
+                                </div>
+                                <!-- Product Card 2 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
+                                                        alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
+                                                        alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">Allen Solly</h5>
+                                        <p class="r_textpadding">Men Grey Solid Casual Belt and...</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../r_img/allensollybelt.png" alt="">
+                                            <img src="../r_img/allensollybelt.png" alt="">
+                                            <img src="../r_img/allensollybelt.png" alt="">
+                                        </div>
+                                        <div class="discount-text">50% OFF</div>
+                                        <p><strong>$149</strong> <del>$300</del></p>
+                                    </div>
+                                </div>
+                                <!-- Product Card 3 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
+                                                        alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
+                                                        alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
+                                                        alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">Allen Solly</h5>
+                                        <p class="r_textpadding">Men Brown Slip Ons</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../r_img/allensollyshoes.png" alt="">
+                                            <img src="../r_img/allensollyshoes.png" alt="">
+                                            <img src="../r_img/allensollyshoes.png" alt="">
+                                        </div>
+                                        <div class="discount-text">40% OFF</div>
+                                        <p><strong>$789</strong> <del>$1,059</del></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Outer Pagination for Product Cards -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- jQuery -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- trending section  -->
+    <script>
+        // Initialize inner sliders for each product card
+        document.querySelectorAll('.innerSwiper').forEach((innerSlider) => {
+            new Swiper(innerSlider, {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: innerSlider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+            });
+        });
+
+        // Initialize main outer slider for product cards
+        var mainSwiper = new Swiper(".mainSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".mainSwiper .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
+
+</body>
+</html>

@@ -392,9 +392,9 @@ img {
   .r_all_slider_padding {
       padding: 0px 10px 0px 10px !important;
   }
-  .swiper-slide img{
+  /* .swiper-slide img{
     height: 500px !important;
-  }
+  } */
   .thumbnail-images{
     flex-wrap: wrap;
   }
