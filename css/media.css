@@ -27,6 +27,15 @@
         display: inline;
         vertical-align: middle
     }
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 32%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media(max-width:1440px){
     /* OTP Verification */
@@ -261,6 +270,16 @@
         flex-direction: column;
         justify-content: center;
     }
+    /************ luggage slider 3  ************/
+
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 30% !important;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media(max-width:1400px){
     /****** payment page *****/
@@ -452,6 +471,16 @@
     .dk_luggage_slider2_content{
         top: 25%;
         left: 11%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /************ luggage slider 3  ************/
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 27%;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;
@@ -715,6 +744,16 @@
     .dk_luggage_slider2_content{
         top: 25%;
         left: 11%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /************ luggage slider 3  ************/
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 26% !important;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;
@@ -1194,6 +1233,16 @@
         flex-direction: column;
         justify-content: center;
     }
+    /************ luggage slider 3  ************/
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 21% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media(max-width:991px){
     /* Track Refund */
@@ -1559,7 +1608,39 @@
         flex-direction: column;
         justify-content: center;
     }
-}
+        /************ luggage slider 3  ************/
+        .dk_travel_style h2{
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 40px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #ffffff;
+        }
+        .dk_travel_style p{
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #ffffff;
+            text-align: center;
+        }
+        .dk_luggage_slider4_content{
+            top: 50%;
+            left: 19% !important;
+            /* width: 50%; */
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .dk_travel_style{
+            text-align: center;
+        }
+    }
 @media(max-width:768px){
      /* Login with Email & Mobile */
       .dk_login_main_content {
@@ -2147,6 +2228,39 @@
         flex-direction: column;
         justify-content: center;
     }
+    /************ luggage slider 3  ************/
+    .dk_travel_style h2{
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+    .dk_travel_style p{
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 20% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_travel_style{
+        text-align: center;
+    }
  } 
  @media(max-width:767px){
     .dk_login_form {
@@ -2240,6 +2354,16 @@
     }
     .dk_contact_us {
         padding: 40px 0px 50px;
+    }
+      /************ luggage slider 3  ************/
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 15% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 /* signup */
@@ -2618,6 +2742,39 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    /************ luggage slider 3  ************/
+    .dk_travel_style h2{
+        font-size: 31px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+    .dk_travel_style p{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 12% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_travel_style{
+        text-align: center;
     }
 }
 
@@ -3192,6 +3349,39 @@
         flex-direction: column;
         justify-content: center;
     }
+    /************ luggage slider 3  ************/
+    .dk_travel_style h2{
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 3px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+    .dk_travel_style p{
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 21px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .dk_luggage_slider4_content{
+        top: 50%;
+        left: 15% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_travel_style{
+        text-align: center;
+    }
 }
 
 @media(max-width:425px){
@@ -3633,6 +3823,29 @@
         flex-direction: column;
         justify-content: center;
     }
+    /* /***** Explore more / ******/
+    .mv_card_title{
+        font-size: 22px !important;
+        line-height: 25px !important;
+    }
+    .mv_add_the{
+        font-size: 22px !important;
+        line-height: 30px !important;
+        margin-bottom: 0px !important;
+    }
+    .mv_run_to{
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 5px !important;
+    }
+    .r_shopnowbtn {
+        padding: 5px 30px !important;
+        background-color: white !important;
+        font-size: 14px !important;
+    }
+    .mv_explore_shop_more {
+        margin-top: 10px !important;
+    }
 }
 @media (max-width: 375px) {
     /* My Order */
@@ -4034,6 +4247,36 @@
         flex-direction: column;
         justify-content: center;
     }
+    /************ luggage slider 3  ************/
+    .dk_travel_style h2{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 3px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+    .dk_travel_style p{
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .dk_luggage_slider4_content{
+        top: 45% !important;
+        left: 14% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 /* OTP Verification */
 @media (max-width: 320px) {
@@ -4348,6 +4591,36 @@
     .dk_luggage_slider2_content{
         top: 30%;
         left: 12%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+      /************ luggage slider 3  ************/
+      .dk_travel_style h2{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 3px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+    .dk_travel_style p{
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .dk_luggage_slider4_content{
+        top: 40% !important;
+        left: 10% !important;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;

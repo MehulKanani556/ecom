@@ -152,7 +152,7 @@ a{
 .mv_refund_back_to_home{
     width: 195px !important;
 }
-.dk_custom_input_group{
+.mv_custome_off{
     margin-bottom: 35px !important;
 }
 /********************************/
@@ -343,11 +343,11 @@ a{
     position: relative;
     margin-top: 20px;
 }
-.dk_custom_input{
+.dk_custom_input_mv{
     padding: 0.75rem 2.25rem 0.75rem 0.75rem !important;
     border: 1px solid #727272 !important;
 }
-.dk_custom_input:focus{
+.dk_custom_input_mv:focus{
     box-shadow: none !important;
 }
 .mv_offcanvas_form_select{
@@ -4223,7 +4223,7 @@ input[type="date"] {
     text-decoration-skip-ink: none;
     color: #ffffff;
 }
-.dk_travel_style h2 p{
+.dk_travel_style p{
     font-size: 24px;
     font-weight: 300;
     line-height: 28px;
@@ -4232,4 +4232,47 @@ input[type="date"] {
     text-decoration-skip-ink: none;
     color: #ffffff;
     text-align: center;
+}
+.dk_luggage_slider4_content{
+    top: 50%;
+    left: 33% !important;
+    /* width: 50%; */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dk_travel_style{
+    text-align: center;
+}
+ /***** Explore more *******/
+.mv_card_title{
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    line-height: 36.31px !important;
+    letter-spacing: 0.05em !important;
+    color: #fff !important;
+    margin-bottom: 5px !important;
+}
+.mv_run_to{
+    font-family: Lato;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    margin-bottom: 10px !important;
+    color: #fff !important;
+}
+.mv_add_the{
+    font-family: Hedvig Letters Serif;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    line-height: 40.2px !important;
+    color: #fff !important;
+    margin-bottom: 10px !important;
+}
+.mv_explore_shop_more{
+    margin-top: 20px !important;
+}
+.mv_explore_shop_more:hover{
+    color: #fff;
 }
