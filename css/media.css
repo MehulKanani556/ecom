@@ -133,6 +133,134 @@
     .dk_sidebar {
         display: block !important;
     }
+    /******* dk_beauty_slider2 *******/
+    .dk_beauty_slider2_img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 46px !important;
+        font-weight: 700;
+        line-height: 40.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 25% !important;
+        margin-bottom: 20px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 40px !important;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 28px !important;
+        font-weight: 700;
+        line-height: 54.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 34%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 77.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 20px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 25px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+    /************ luggage slider 1  ************/
+    .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 55px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 55px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 60px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+    }
+    .dk_safari_logo img{
+        width: 70% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 16%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media(max-width:1400px){
     /****** payment page *****/
@@ -170,6 +298,165 @@
     .dk_empty_add_add_address_sub{
         width: 100%;
         height: 190px;
+    }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 20% !important;
+        margin-bottom: 20px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:42px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    .dk_position_slider2_content {
+        top: 50%;
+        left: 34%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 41.15px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 20px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 39px !important;
+        font-weight: 700;
+        line-height: 40.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 25% !important;
+        margin-bottom: 20px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 40px !important;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 25px !important;
+        font-weight: 700;
+        line-height: 54.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 34%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 77.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 20px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 25px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }  
+        /************ luggage slider 1  ************/
+        .dk_luggage_slider1_img{
+            width: 20% !important;
+        }
+        .dk_exploring_world{
+            font-size: 53px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 72.61px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        .dk_backpack{
+            font-size: 53px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 72.61px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 60px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+    }
+    .dk_safari_logo img{
+        width: 70% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 25%;
+        left: 11%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }   
 /* perfume */
@@ -261,6 +548,178 @@
     .dk_contact_us_sub {
         box-shadow: 1px 6px 19px 0px #A4A4A433;
         padding: 40px 100px;
+    }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 20px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:36px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 20% !important;
+        margin-bottom: 20px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:42px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    /******** dk_beauty_slider2 *******/
+    .dk_position_slider2_content {
+        top: 50%;
+        left: 34%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 41.15px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 10px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 33px !important;
+        font-weight: 700;
+        line-height: 40.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 25% !important;
+        margin-bottom: 20px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 35px !important;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 19px !important;
+        font-weight: 700;
+        line-height: 36.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+     /******* dk_beauty_slider4 *******/
+     .dk_position_slider4_content {
+        top: 50%;
+        left: 30% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 77.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 20px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 25px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+     /************ luggage slider 1  ************/
+     .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 50.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 50.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 52px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+    }
+    .dk_safari_logo img{
+        width: 70% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 25%;
+        left: 11%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 @media(max-width:1199px){
@@ -603,6 +1062,138 @@
         box-shadow: 1px 6px 19px 0px #A4A4A433;
         padding: 40px 50px;
     }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 15px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:30px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    /******** dk_beauty_slider2 *******/
+    .dk_position_slider2_content {
+        top: 50%;
+        left: 34%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 41.15px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 25px !important;
+        font-weight: 700;
+        line-height: 40.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_beauty_slider3_img{
+        width: 30% !important;
+        margin-bottom: 20px;
+    }
+     /******* dk_beauty_slider4 *******/
+     .dk_position_slider4_content {
+        top: 50%;
+        left: 27% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 77.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 20px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 25px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+      /************ luggage slider 1  ************/
+      .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 45px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 45.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 45px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 45.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 72.61px;
+    }
+    .dk_safari_logo img{
+        width: 60% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 25%;
+        left: 11%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media(max-width:991px){
     /* Track Refund */
@@ -826,6 +1417,147 @@
     }
     .dk_contact_us {
         padding: 40px 20px 100px;
+    }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:27px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    .dk_position_slider1_content {
+        top: 49%;
+        left: 6%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+     /******* dk_beauty_slider3 *******/
+     .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 30% !important;
+        margin-bottom: 20px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 28px !important;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 15px !important;
+        font-weight: 700;
+        line-height: 20.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+    .dk_btn {
+        margin-top: 10px !important;
+        padding: 5px 20px !important;
+    }
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 29% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 20px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 10px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+    /************ luggage slider 1  ************/
+    .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 37px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 37.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 37px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 37.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 50.61px;
+    }
+    .dk_safari_logo{
+        width: 200px;
+    }
+    .dk_safari_logo img{
+        width: 60% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 25%;
+        left: 15%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 @media(max-width:768px){
@@ -1241,6 +1973,180 @@
         padding: 20px 40px;
         width: 100% !important;
     }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 20% !important;
+        margin-bottom: 10px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:23px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 20px !important;
+        font-weight: 500;
+        line-height: 36.6px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+     /******** dk_beauty_slider2 *******/
+     .dk_position_slider2_content {
+        top: 50%;
+        left: 31%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 0px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 20px !important;
+        font-weight: 700;
+        line-height: 40.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 35% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 20px !important;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 12px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 32% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 15px;
+        font-weight: 400;
+        /* line-height: 32.2px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 10px !important;
+        padding: 5px 50px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+    /************ luggage slider 1  ************/
+    .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 30.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 30.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 30.61px;
+    }
+    .dk_safari_logo{
+        width: 140px;
+    }
+    .dk_safari_logo img{
+        width: 70% !important;
+        padding-left: 10px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 22%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
  } 
  @media(max-width:767px){
     .dk_login_form {
@@ -1531,6 +2437,187 @@
     .dk_meet_our_team_slide p {
         margin-top: 32px;
         font-size: 0.9em;
+    }
+     /******** dk_beauty_slider1 *******/
+     .dk_beauty_slider1_img{
+        width: 15% !important;
+        margin-bottom: 10px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:16px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 15px !important;
+        font-weight: 500;
+        /* line-height: 36.6px; */
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+    .dk_btn {
+        font-size: 10px !important;
+        margin-top: 7px !important;
+        padding: 5px 20px !important;
+    }
+     /******** dk_beauty_slider2 *******/
+     .dk_position_slider2_content {
+        top: 50%;
+        left: 31%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 0px !important;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 17px !important;
+        font-weight: 700;
+        line-height: 20.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+     /******* dk_beauty_slider3 *******/
+     .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 40% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 15px !important;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 10px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 28% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 10.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 10px !important;
+        font-size: 12px !important;
+        padding: 5px 30px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+     /************ luggage slider 1  ************/
+     .dk_luggage_slider1_img{
+        width: 20% !important;
+    }
+    .dk_exploring_world{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 20.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 20.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 30.61px;
+    }
+    .dk_safari_logo{
+        width: 140px;
+    }
+    .dk_safari_logo img{
+        width: 60% !important;
+        padding-left: 5px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 14%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -1908,6 +2995,203 @@
     .dk_size_box .btn {
         font-size: 13px;
     }
+     /******** dk_beauty_slider1 *******/
+     .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 5px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:14px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 13px !important;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+    .dk_btn {
+        font-size: 10px !important;
+        margin-top: 7px !important;
+        padding: 5px 18px !important;
+    }
+    .dk_position_slider1_content {
+        top: 47%;
+        left: 6%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+     /******** dk_beauty_slider2 *******/
+     .dk_position_slider2_content {
+        top: 50%;
+        left: 31%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 0px !important;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 13px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 40% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 15px !important;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 9px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+       /******* dk_beauty_slider4 *******/
+       .dk_position_slider4_content {
+        top: 50%;
+        left: 26% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* .dk_mainimg {
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
+        background-size: cover !important;
+        background-size: 100% !important;
+    } */
+    .dk_best_2024 h2{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 10.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 10px !important;
+        font-size: 12px !important;
+        padding: 5px 30px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+      /************ luggage slider 1  ************/
+      .dk_luggage_slider1_img{
+        width: 30% !important;
+    }
+    .dk_exploring_world{
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+    /************ luggage slider 2  ************/
+    .dk_safari_heading{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 20.61px;
+    }
+    .dk_safari_logo{
+        width: 100px;
+    }
+    .dk_safari_logo img{
+        width: 70% !important;
+        padding-left: 5px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 12%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media(max-width:425px){
@@ -2181,6 +3465,174 @@
     .dk_terms_of_service {
         padding: 30px 0px;
     }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 5px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 11px !important;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+    .dk_btn {
+        font-size: 10px !important;
+        margin-top: 7px !important;
+        padding: 3px 10px !important;
+    }
+    .dk_position_slider1_content {
+        top: 47%;
+        left: 6%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+     /******** dk_beauty_slider2 *******/
+     .dk_position_slider2_content {
+        top: 48%;
+        left: 31%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 0px !important;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 12px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 40% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 12px !important;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 8px !important;
+        font-weight: 700;
+        line-height: 0.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    } 
+      /******* dk_beauty_slider4 *******/
+      .dk_position_slider4_content {
+        top: 50%;
+        left: 28% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 10.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 10.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 5px !important;
+        font-size: 10px !important;
+        padding: 5px 20px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+     /************ luggage slider 2  ************/
+     .dk_safari_heading{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15.61px;
+        margin-bottom: 0px;
+    }
+    .dk_safari_logo{
+        width: 100px;
+    }
+    .dk_safari_logo img{
+        width: 60% !important;
+        padding-left: 5px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 10%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media (max-width: 375px) {
     /* My Order */
@@ -2425,6 +3877,163 @@
         color: #D9D9D9;
         font-size: 33px;
     }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 5px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 11px !important;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+    .dk_btn {
+        font-size: 10px !important;
+        margin-top: 7px !important;
+        padding: 3px 10px !important;
+    }
+    .dk_position_slider1_content {
+        top: 45%;
+        left: 6%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 40% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 10px !important;
+        font-weight: 500;
+        line-height: 6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 7px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+    /******* dk_beauty_slider4 *******/
+    .dk_position_slider4_content {
+        top: 50%;
+        left: 24% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 10.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 10.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 5px !important;
+        font-size: 10px !important;
+        padding: 5px 20px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    } 
+     /************ luggage slider 1  ************/
+     .dk_luggage_slider1_img{
+        width: 30% !important;
+    }
+    .dk_exploring_world{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 10.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 10.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+     /************ luggage slider 2  ************/
+     .dk_safari_heading{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15.61px;
+        margin-bottom: 0px;
+    }
+    .dk_safari_logo{
+        width: 80px;
+    }
+    .dk_safari_logo img{
+        width: 63% !important;
+        padding-left: 5px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 16%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 /* OTP Verification */
 @media (max-width: 320px) {
@@ -2556,5 +4165,193 @@
         padding-bottom: 20px;
         color: #D9D9D9;
         font-size: 33px;
+    }
+    /******** dk_beauty_slider1 *******/
+    .dk_beauty_slider1_img{
+        width: 25% !important;
+        margin-bottom: 5px;
+    }
+    .dk_incridible_lips{
+        color: #F0417C;
+        font-size:10px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    .dk_be_bold{
+        /* font-family: Instrument Sans; */
+        font-size: 11px !important;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        margin-bottom: 0px; 
+    }
+    .dk_btn {
+        font-size: 9px !important;
+        margin-top: 7px !important;
+        padding: 3px 9px !important;
+    }
+    .dk_position_slider1_content {
+        top: 45%;
+        left: 6%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+      /******** dk_beauty_slider2 *******/
+      .dk_position_slider2_content {
+        top: 48%;
+        left: 31%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider2_img{
+        width: 25% !important;
+        margin-bottom: 0px;
+    }
+    .dk_younger{
+        /* font-family: Inter; */
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 0px !important;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14;
+        margin-bottom: 0px;
+    }
+    .dk_younger span{
+        /* font-family: Itim; */
+        font-size: 10px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #486C14; 
+    }
+    /******* dk_beauty_slider3 *******/
+    .dk_position_slider3_content {
+        top: 50%;
+        left: 79%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_beauty_slider3_img{
+        width: 40% !important;
+        margin-bottom: 10px;
+    }
+    .dk_unlock h4{
+        /* font-family: Inter; */
+        font-size: 10px !important;
+        font-weight: 500;
+        line-height: 0px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+    }
+    .dk_unlock h2{
+        /* font-family: Intel Clear Pro; */
+        font-size: 6px !important;
+        font-weight: 700;
+        line-height: 10.8px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+      /******* dk_beauty_slider4 *******/
+      .dk_position_slider4_content {
+        top: 50%;
+        left: 22% !important;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dk_best_2024 h2{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 10.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000; 
+        text-align: center;
+    }
+    .dk_best_2024 p{
+        /* font-family: Arial; */
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 10.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        margin-bottom: 0px;   
+    }
+    .dk2_btn{
+        margin-top: 5px !important;
+        font-size: 10px !important;
+        padding: 5px 20px !important;
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }  
+    .dk_exploring_world{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 10.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .dk_backpack{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 10.61px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 0px;
+    }
+     /************ luggage slider 2  ************/
+     .dk_safari_heading{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15.61px;
+        margin-bottom: 0px;
+    }
+    .dk_safari_logo{
+        width: 80px;
+    }
+    .dk_safari_logo img{
+        width: 63% !important;
+        padding-left: 5px;
+    }
+    .dk_luggage_slider2_content{
+        top: 30%;
+        left: 12%;
+        /* width: 50%; */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

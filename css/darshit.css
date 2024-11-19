@@ -4025,14 +4025,10 @@ input[type="date"] {
 }
 .dk_incridible_lips{
     color: #F0417C;
-    /* font-family: Jomhuria; */
     font-size:51px;
     font-weight: 700;
-    /* line-height: 114px; */
     letter-spacing: 0.05em;
     text-align: left;
-    /* text-underline-position: from-font; */
-    /* text-decoration-skip-ink: none;         */
 }
 .dk_be_bold{
     /* font-family: Instrument Sans; */
@@ -4050,18 +4046,23 @@ input[type="date"] {
 .dk_position_slider1_content {
     top: 50%;
     left: 6%;
-    width: 50%;
+    /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.dk_mainimg {
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
 }
 
 /******* dk_beauty_slider2 *******/
 .dk_position_slider2_content {
     top: 50%;
     left: 34%;
-    width: 50%;
+    /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -4097,7 +4098,7 @@ input[type="date"] {
 .dk_position_slider3_content {
     top: 50%;
     left: 79%;
-    width: 50%;
+    /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -4131,12 +4132,11 @@ input[type="date"] {
 .dk_position_slider4_content {
     top: 50%;
     left: 36%;
-    width: 50%;
+    /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    text-align: center !important;
+    justify-content: center;
 }
 .dk_best_2024 h2{
     font-size: 55px;
@@ -4165,4 +4165,71 @@ input[type="date"] {
     background-color: #000000 !important;
     color: #ffffff !important;
     border: none !important;
+}
+
+/********** luggage page  ***********/
+
+/************ luggage slider 1  ************/
+.dk_luggage_slider1_img{
+    width: 20% !important;
+}
+.dk_exploring_world{
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 72.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.dk_backpack{
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 72.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/************ luggage slider 2  ************/
+.dk_safari_heading{
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 72.61px;
+}
+.dk_safari_logo img{
+    width: 70% !important;
+    padding-left: 10px;
+}
+.dk_luggage_slider2_content{
+    top: 30%;
+    left: 25%;
+    /* width: 50%; */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/************ luggage slider 3  ************/
+.dk_travel_style h2{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 57px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #ffffff;
+}
+.dk_travel_style h2 p{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #ffffff;
+    text-align: center;
 }
