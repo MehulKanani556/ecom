@@ -1274,6 +1274,9 @@
     .dk_reset_password{
         padding-top: 30px;
     }
+    .dk_reset_pass_margin{
+        margin-top: 30px !important;
+    }
     .dk_register{
         padding-top: 25px;
       }
@@ -1643,10 +1646,6 @@
     }
 @media(max-width:768px){
      /* Login with Email & Mobile */
-      .dk_login_main_content {
-        flex-direction: column;
-        text-align: center;
-    }
 
     .dk_login_sub h4 {
         font-size: 1.25rem;
@@ -1781,16 +1780,7 @@
         right: 37%;
         z-index: 999;
     }
-    .dk_login_main_content{
-        position: relative;
-    }
-    .dk_from_abso{
-        position: absolute;
-        top: 2%;
-    }
-    .dk_login_with_email_image img{
-        opacity: 0.2;
-    }
+    
     .form-control {
         background-color: transparent !important;
     }
@@ -2263,6 +2253,20 @@
     }
  } 
  @media(max-width:767px){
+    .dk_login_main_content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dk_login_main_content{
+        position: relative;
+    }
+    .dk_from_abso{
+        position: absolute;
+        top: 2%;
+    }
+    .dk_login_with_email_image img{
+        opacity: 0.2;
+    }
     .dk_login_form {
         height: 420px;
     }
@@ -3418,6 +3422,11 @@
         top: 62%;
         right: 31%;
         z-index: 999;
+    }
+    /* my profile */
+    .dk_profile-form a{
+        width: 92%;
+        justify-content: center;
     }
     /* Women’s cards */
     .slider-image {
