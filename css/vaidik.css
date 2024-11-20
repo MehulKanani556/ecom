@@ -802,6 +802,7 @@ a{
 /* slider3 */
 .mv_puma_bg_img{
     background-image: url(../mv_image/puma_bg.png) !important;
+    height: 640px;
 }
 .mv_air_puma_heading{
     font-family: Barlow;
@@ -911,6 +912,50 @@ a{
     text-align: center;
 }
 
+/* slider6 */
+.mv_90_air_max_bg_img{
+    background-image: url(../mv_image/air_max_90_bg.png) !important;
+    height: 640px;
+}
+.mv_main_90_air_max{
+    margin-top: 80px;
+}
+.mv_90_air_max img {
+    width: 100% !important;
+    margin-top: 80px;
+    padding-left: 100px;
+}
+.mv_air_max_90_heading{
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 125px;
+    font-weight: 400;
+    line-height: 180px;
+    color: #262626;
+}
+.mv_air_max_logo{
+    position: absolute;
+    width: 200px !important;
+    top: 40px;
+    left: 215px;
+}
+.mv_max_90_air{
+    font-family: "Cabin", sans-serif;
+    font-size: 36px;
+    line-height: 42.19px;
+    margin-bottom: 10px !important;
+}
+.mv_max_90_price{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+}
+.mv_pmax_90_discription{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    color: #5F5F5F;
+}
+
 /* Explore more */
 .mv_card_title{
     font-size: 30px !important;
@@ -950,16 +995,13 @@ a{
     background-color: #040404;
     height: 640px !important;
 }
-.mv_faiting_width{
-    width: 35% !important;
-    top: 50%;
-    left: 60%;
-    width: 50%;
-    transform: translateY(-50%);
-}
 .mv_laptop_slider img{
     width: 100% !important;
-    /* height: 640px; */
+    height: 100% !important;
+    object-position: left;
+}
+.mv_main_fasting{
+    padding-left: 100px;
 }
 .mv_fasting_heading{
     font-family: StateWide-Bold;
@@ -975,6 +1017,7 @@ a{
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    margin-bottom: 25px;
 }
 /* Slider2 */
 .mv_headphone_heading{
@@ -1002,8 +1045,17 @@ a{
 .mv_headphone_image{
     margin-top: 100px !important;
 }
-/* Slider3 */
-
+/* Slider5 */
+.mv_slider_godrej{
+    width: 180px !important;
+    margin-bottom: 20px;
+}
+.mv_thought_heading{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 20px !important;
+}
 /* Explore more */
 .mv_top_deals{
     font-family: Ibarra Real Nova;
@@ -1054,6 +1106,13 @@ a{
         top: 50%;
         left: 20%;
     }
+    /* slider6 */
+    .mv_main_90_air_max {
+        margin-top: 50px;
+    }
+    .mv_90_air_max img {
+        margin-top: 50px;
+    }
     /***** Electronics *****/
     /* slider2 */
     .mv_headphone_slider img {
@@ -1063,6 +1122,10 @@ a{
     }
     .mv_headphone_heading{
         font-size: 57px;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 50px;
     }
 }
 
@@ -1116,6 +1179,9 @@ a{
         font-size: 14px !important;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 470px;
+    }
     .mv_air_puma_heading {
         font-size: 80px !important;
         line-height: 100px;
@@ -1156,12 +1222,50 @@ a{
         line-height: 22px;
         width: 650px !important;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 470px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 0px;
+    }
+    .mv_90_air_max img {
+        margin-top: 0px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 110px;
+        line-height: 120px;
+    }
+    .mv_air_max_logo{
+        width: 175px !important;
+        top: 20px;
+        left: 195px;
+    }
+    .mv_max_90_air{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .mv_max_90_price{
+        font-size: 24px;
+        line-height: 29.05px;
+    }
+    .mv_pmax_90_discription{
+        font-size: 18px;
+        line-height: 22px;
+    }
     /***** Electronics *****/
     /* slider1 */
-    .mv_laptop_slider img {
-        width: 100% !important;
-        height: 100%;
-        object-position: right;
+    .mv_main_fasting {
+        padding-left: 80px;
+    }
+    .mv_fasting_heading {
+        font-size: 85px;
+        line-height: 85px;
+    }
+    .mv_sub_fasting_heading {
+        font-size: 22px;
+        line-height: 28.13px;
+        margin-bottom: 25px;
     }
     /* slider2 */
     .mv_fasting_bg_color{
@@ -1182,10 +1286,32 @@ a{
     .mv_headphone_image{
         margin-top: 60px !important;
     }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 0px;
+    }
+    .mv_thought_heading {
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .mv_slider_godrej {
+        width: 160px !important;
+    }
+    /* slider6 */
+    
 }
 
 @media (max-width: 1024px) {
     /***** sportswear *****/
+    /* slider1 */
+    .mv_ari_max_shoes img{
+        margin-top: 40px;
+    }
+    /* slider2 */
+    .mv_air_max_pro_heading {
+        font-size: 74px !important;
+        line-height: 70px;
+    }
     /* Slide 4 */
     .mv_skechers_sports {
         top: 32%;
@@ -1196,11 +1322,56 @@ a{
         top: 45%;
         left: 19%;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 470px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 50px;
+    }
+    .mv_90_air_max img {
+        margin-top: 50px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 90px;
+        line-height: 110px;
+    }
+    .mv_air_max_logo{
+        width: 150px !important;
+        top: 20px;
+        left: 160px;
+    }
+    .mv_max_90_air{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .mv_max_90_price{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .mv_pmax_90_discription{
+        font-size: 16px;
+        line-height: 20px;
+    }
     /***** Electronics *****/
     /* slider1 */
     .mv_laptop_slider img {
-        width: 75% !important;
-        height: 470px;
+        width: 100% !important;
+    }
+    .mv_laptop_slider img {
+        object-position: -43px 0px;
+    }
+    .mv_main_fasting {
+        padding-left: 40px;
+    }
+    .mv_fasting_heading {
+        font-size: 70px;
+        line-height: 75px;
+    }
+    .mv_sub_fasting_heading {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 20px;
     }
     /* slider2 */
     .mv_headphone_heading{
@@ -1217,6 +1388,18 @@ a{
     }
     .mv_headphone_slider img {
         padding-left: 40px;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 40px;
+    }
+    .mv_thought_heading {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .mv_slider_godrej {
+        width: 150px !important;
+        margin-bottom: 10px;
     }
 }
 
@@ -1303,6 +1486,35 @@ a{
         line-height: 22px;
         width: 550px !important;
     }
+    /* slider6 */
+    .mv_main_90_air_max{
+        margin-top: 80px;
+    }
+    .mv_90_air_max img {
+        margin-top: 80px;
+        padding-left: 50px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 68px;
+        line-height: 80px;
+    }
+    .mv_air_max_logo{
+        width: 110px !important;
+        top: 15px;
+        left: 120px;
+    }
+    .mv_max_90_air{
+        font-size: 19px;
+        line-height: 25px;
+    }
+    .mv_max_90_price{
+        font-size: 16px;
+        line-height: 10px;
+    }
+    .mv_pmax_90_discription{
+        font-size: 14px;
+        line-height: 18px;
+    }
     /***** Electronics *****/
     /* slider2 */
     .mv_headphone_heading{
@@ -1363,6 +1575,9 @@ a{
         margin-top: 0px !important;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 400px;
+    }
     .mv_air_puma_heading {
         font-size: 50px !important;
         line-height: 60px;
@@ -1440,6 +1655,9 @@ a{
         width: 250px;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 350px;
+    }
     .mv_air_puma_heading {
         font-size: 50px !important;
         line-height: 70px;
@@ -1495,7 +1713,51 @@ a{
         line-height: 18px;
         width: 450px !important;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 350px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 30px;
+    }
+    .mv_90_air_max img {
+        margin-top: 30px;
+        padding-left: 50px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .mv_air_max_logo{
+        width: 80px !important;
+        top: 11px;
+        left: 105px;
+    }
+    .mv_max_90_air{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mv_max_90_price{
+        font-size: 15px;
+        line-height: 10px;
+    }
+    .mv_pmax_90_discription{
+        font-size: 13px;
+        line-height: 16px;
+    }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_fasting_heading {
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .mv_sub_fasting_heading {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mv_ari_max_shoes img{
+        margin-top: 0px;
+    }
     /* slider2 */
     .mv_fasting_bg_color {
         height: 350px !important;
@@ -1518,6 +1780,18 @@ a{
     }
     .mv_headphone_image {
         margin-top: 30px !important;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 40px;
+    }
+    .mv_thought_heading {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .mv_slider_godrej {
+        width: 140px !important;
+        margin-bottom: 10px;
     }
 }
 
@@ -1608,6 +1882,9 @@ a{
     .mv_air_discription {
         width: 220px;
     }
+    .mv_ari_max_shoes img {
+        margin-top: 40px;
+    }
     /* slider2 */
     .mv_air_max_pro_heading {
         font-size: 30px !important;
@@ -1625,6 +1902,9 @@ a{
         width: 200px;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 350px;
+    }
     .mv_air_puma_heading {
         font-size: 30px !important;
         line-height: 30px;
@@ -1677,7 +1957,58 @@ a{
         line-height: 16px;
         width: 370px !important;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 350px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 50px;
+    }
+    .mv_90_air_max img {
+        margin-top: 70px;
+        padding-left: 0px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .mv_air_max_logo{
+        width: 80px !important;
+        top: 11px;
+        left: 87px;
+    }
+    .mv_max_90_air{
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .mv_max_90_price{
+        font-size: 15px;
+        line-height: 10px;
+        margin-bottom: 10px !important;
+    }
+    .mv_pmax_90_discription{
+        font-size: 13px;
+        line-height: 16px;
+    }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img{
+        margin-top: 45px;
+        height: 230px !important;
+        object-position: left !important;
+    }
+    .mv_main_fasting {
+        padding-left: 20px;
+    }
+    .mv_fasting_heading {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .mv_sub_fasting_heading {
+        font-size: 11px;
+        line-height: 17px;
+        margin-bottom: 15px;
+    }
     /* slider2 */
     .mv_headphone_heading{
         font-size: 21px;
@@ -1697,6 +2028,18 @@ a{
     }
     .mv_headphone_image {
         margin-top: 70px !important;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 70px;
+    }
+    .mv_thought_heading {
+        font-size: 28px;
+        line-height: 33px;
+    }
+    .mv_slider_godrej {
+        width: 130px !important;
+        margin-bottom: 10px;
     }
 }
 
@@ -1774,6 +2117,7 @@ a{
     }
     .mv_ari_max_shoes img{
         width: 90% !important;
+        margin-top: 0px;
     }
     /* slider2 */
     .mv_air_max_pro_heading {
@@ -1785,6 +2129,9 @@ a{
         line-height: 14px;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 320px;
+    }
     .mv_air_puma_heading {
         font-size: 25px !important;
         line-height: 25px;
@@ -1826,6 +2173,39 @@ a{
         line-height: 16px;
         width: 300px !important;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 320px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 50px;
+    }
+    .mv_90_air_max img {
+        margin-top: 70px;
+        padding-left: 0px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .mv_air_max_logo{
+        width: 50px !important;
+        top: 10px;
+        left: 63px;
+    }
+    .mv_max_90_air{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .mv_max_90_price{
+        font-size: 12px;
+        line-height: 10px;
+        margin-bottom: 10px !important;
+    }
+    .mv_pmax_90_discription{
+        font-size: 10px;
+        line-height: 13px;
+    }
     /* Explore more */
     .mv_card_title{
         font-size: 22px !important;
@@ -1850,6 +2230,24 @@ a{
         margin-top: 10px !important;
     }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img{
+        margin-top: 80px;
+        height: 170px !important;
+        object-position: left !important;
+    }
+    .mv_main_fasting {
+        padding-left: 0px;
+    }
+    .mv_fasting_heading {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .mv_sub_fasting_heading {
+        font-size: 10px;
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
     /* slider2 */
     .mv_fasting_bg_color{
         height: 320px !important;
@@ -1865,10 +2263,24 @@ a{
         width: 190px;
     }
     .mv_headphone_text {
-        margin-top: 50px !important;
+        margin-top: 60px !important;
     }
     .mv_headphone_image {
-        margin-top: 50px !important;
+        margin-top: 60px !important;
+    }
+    /* slider5 */
+    .mv_main_thought{
+        padding-left: 10px !important;
+    }
+    .mv_all_elec_slider img{
+        margin-top: 80px;
+    }
+    .mv_thought_heading {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .mv_slider_godrej {
+        width: 100px !important;
     }
 }
 
@@ -1919,11 +2331,17 @@ a{
     .mv_main_style_take {
         height: 350px !important;
     }
+    .mv_ari_max_shoes img {
+        margin-top: 30px;
+    }
     /* slider2 */
     .mv_air_pro_discription{
         width: 150px;
     }
     /* slider3 */
+    .mv_puma_bg_img{
+        height: 350px;
+    }
     .mv_puma_discription{
         width: 150px;
     }
@@ -1962,7 +2380,32 @@ a{
         line-height: 16px;
         width: 280px !important;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 350px;
+    }
+    .mv_main_90_air_max{
+        margin-top: 50px;
+    }
+    .mv_90_air_max img {
+        margin-top: 90px;
+        padding-left: 0px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    .mv_air_max_logo{
+        width: 40px !important;
+        top: 10px;
+        left: 58px;
+    }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img {
+        margin-top: 110px;
+        height: 150px !important;
+    }
     /* slider2 */
     .mv_fasting_bg_color{
         height: 350px !important;
@@ -1981,6 +2424,18 @@ a{
     }
     .mv_headphone_image {
         margin-top: 80px !important;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 100px;
+    }
+    .mv_thought_heading {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 15px !important;
+    }
+    .mv_slider_godrej {
+        width: 80px !important;
     }
     /* Explore more */
     .mv_card_title{
@@ -2017,9 +2472,42 @@ a{
         top: 48%;
         left: 7%;
     }
+    /* slider6 */
+    .mv_90_air_max_bg_img{
+        height: 350px;
+    }
+    .mv_90_air_max img {
+        margin-top: 105px;
+        padding-left: 0px;
+    }
+    .mv_air_max_90_heading {
+        font-size: 27px;
+        line-height: 40px;
+    }
+    .mv_air_max_logo{
+        width: 30px !important;
+        top: 10px;
+        left: 50px;
+    }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img {
+        margin-top: 125px;
+        height: 125px !important;
+    }
     /* slider2 */
     .mv_sub_headphone_heading{
         width: 135px;
+    }
+    /* slider5 */
+    .mv_all_elec_slider img{
+        margin-top: 120px;
+    }
+    .mv_thought_heading {
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .mv_slider_godrej {
+        width: 70px !important;
     }
 }

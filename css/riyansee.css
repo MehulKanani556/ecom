@@ -318,7 +318,7 @@ img {
 .trending-bg {
   background-image: url(../r_img/TRENDING\ DEALS.png);
   background-position: center;
-  background-size: 55%;
+  background-size: 65%;
   background-position-y: 7%;
   background-position-x: 85%;
   background-repeat: no-repeat;
@@ -412,8 +412,8 @@ img {
 @media (min-width:1440px) {
   .trending-bg {
     
-    background-position-y: 8% !important;
-    background-position-x: 85%;
+    background-position-y: 6.5% !important;
+    background-position-x: 95%;
   }
 }
 
