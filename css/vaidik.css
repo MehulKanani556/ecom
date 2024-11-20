@@ -910,6 +910,38 @@ a{
     width: 180px;
     text-align: center;
 }
+
+/* Explore more */
+.mv_card_title{
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    line-height: 36.31px !important;
+    letter-spacing: 0.05em !important;
+    color: #fff !important;
+    margin-bottom: 5px !important;
+}
+.mv_run_to{
+    font-family: Lato;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    margin-bottom: 10px !important;
+    color: #fff !important;
+}
+.mv_add_the{
+    font-family: Hedvig Letters Serif;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    line-height: 40.2px !important;
+    color: #fff !important;
+    margin-bottom: 10px !important;
+}
+.mv_explore_shop_more{
+    margin-top: 20px !important;
+}
+.mv_explore_shop_more:hover{
+    color: #fff;
+}
 /*************************************/
 
 /************* Electronics *************/
@@ -927,6 +959,7 @@ a{
 }
 .mv_laptop_slider img{
     width: 100% !important;
+    /* height: 640px; */
 }
 .mv_fasting_heading{
     font-family: StateWide-Bold;
@@ -946,10 +979,10 @@ a{
 /* Slider2 */
 .mv_headphone_heading{
     font-family: Nunito;
-    font-size: 64px;
+    font-size: 67px;
     font-weight: 800;
     line-height: 70px;
-    margin-bottom: 10px !important;
+    margin-bottom: 30px !important;
 }
 .mv_sub_headphone_heading{
     font-family: Nunito;
@@ -959,10 +992,25 @@ a{
     width: 550px;
 }
 .mv_headphone_slider img {
-    width: 80% !important;
+    width: 90% !important;
     height: 100% !important;
-    margin-top: 100px;
-    padding-left: 100px;
+    padding-left: 80px;
+}
+.mv_headphone_text{
+    margin-top: 100px !important;
+}
+.mv_headphone_image{
+    margin-top: 100px !important;
+}
+/* Slider3 */
+
+/* Explore more */
+.mv_top_deals{
+    font-family: Ibarra Real Nova;
+    font-weight: 600 !important;
+}
+.mv_cinema{
+    font-weight: 700 !important;
 }
 /*************************************/
 
@@ -1009,10 +1057,9 @@ a{
     /***** Electronics *****/
     /* slider2 */
     .mv_headphone_slider img {
-        width: 80% !important;
+        width: 90% !important;
         height: 100% !important;
-        margin-top: 150px;
-        padding-left: 100px;
+        padding-left: 80px;
     }
     .mv_headphone_heading{
         font-size: 57px;
@@ -1110,21 +1157,30 @@ a{
         width: 650px !important;
     }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img {
+        width: 100% !important;
+        height: 100%;
+        object-position: right;
+    }
     /* slider2 */
     .mv_fasting_bg_color{
         height: 470px !important;
     }
-    .mv_headphone_slider img {
-        margin-top: 100px;
-        padding-left: 100px;
-    }
     .mv_headphone_heading{
         font-size: 47px;
         line-height: 50px;
+        margin-bottom: 20px !important;
     }
     .mv_sub_headphone_heading{
         line-height: 25px;
         width: 450px;
+    }
+    .mv_headphone_text{
+        margin-top: 60px !important;
+    }
+    .mv_headphone_image{
+        margin-top: 60px !important;
     }
 }
 
@@ -1141,12 +1197,26 @@ a{
         left: 19%;
     }
     /***** Electronics *****/
+    /* slider1 */
+    .mv_laptop_slider img {
+        width: 75% !important;
+        height: 470px;
+    }
     /* slider2 */
     .mv_headphone_heading{
         font-size: 40px;
     }
     .mv_sub_headphone_heading{
         width: 400px;
+    }
+    .mv_headphone_text{
+        margin-top: 90px !important;
+    }
+    .mv_headphone_image{
+        margin-top: 90px !important;
+    }
+    .mv_headphone_slider img {
+        padding-left: 40px;
     }
 }
 
@@ -1240,7 +1310,10 @@ a{
     }
     .mv_sub_headphone_heading{
         font-size: 18px;
-        width: 400px;
+        width: 340px;
+    }
+    .mv_headphone_slider img {
+        width: 100% !important;
     }
 }
 
@@ -1437,9 +1510,14 @@ a{
         width: 300px;
     }
     .mv_headphone_slider img {
-        margin-top: 50px;
         padding-left: 0px;
-        width: 80% !important;
+        width: 100% !important;
+    }
+    .mv_headphone_text {
+        margin-top: 30px !important;
+    }
+    .mv_headphone_image {
+        margin-top: 30px !important;
     }
 }
 
@@ -1492,7 +1570,18 @@ a{
         padding: 1rem !important;
     }
     /***** sportswear *****/
+    .owl-theme .owl-dots .owl-dot span {
+        margin: 5px !important;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 6px !important;
+        height: 6px !important;
+    }
     /* slider1 */
+    .mv_shop_now_sport{
+        font-size: 14px !important;
+        padding: 4px 15px !important;
+    }
     .mv_air_max_width{
         top: 45%;
         left: 18%;
@@ -1597,12 +1686,17 @@ a{
     .mv_sub_headphone_heading {
         font-size: 14px;
         line-height: 17px;
-        width: 220px;
+        width: 260px;
     }
     .mv_headphone_slider img {
-        margin-top: 100px;
-        padding-left: 30px;
-        width: 80% !important;
+        padding-left: 0px;
+        width: 100% !important;
+    }
+    .mv_headphone_text {
+        margin-top: 70px !important;
+    }
+    .mv_headphone_image {
+        margin-top: 70px !important;
     }
 }
 
@@ -1656,7 +1750,8 @@ a{
     /***** sportswear *****/
     /* slider1 */
     .mv_shop_now_sport{
-        padding: 4px 10px !important;
+        font-size: 12px !important;
+        padding: 3px 15px !important;
     }
     .mv_main_style_take{
         height: 320px !important;
@@ -1731,6 +1826,29 @@ a{
         line-height: 16px;
         width: 300px !important;
     }
+    /* Explore more */
+    .mv_card_title{
+        font-size: 22px !important;
+        line-height: 25px !important;
+    }
+    .mv_add_the{
+        font-size: 22px !important;
+        line-height: 30px !important;
+        margin-bottom: 0px !important;
+    }
+    .mv_run_to{
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 5px !important;
+    }
+    .r_shopnowbtn {
+        padding: 5px 30px !important;
+        background-color: white !important;
+        font-size: 14px !important;
+    }
+    .mv_explore_shop_more {
+        margin-top: 10px !important;
+    }
     /***** Electronics *****/
     /* slider2 */
     .mv_fasting_bg_color{
@@ -1739,16 +1857,18 @@ a{
     .mv_headphone_heading{
         font-size: 16px;
         line-height: 20px;
+        margin-bottom: 15px !important;
     }
     .mv_sub_headphone_heading {
         font-size: 12px;
         line-height: 17px;
-        width: 150px;
+        width: 190px;
     }
-    .mv_headphone_slider img {
-        margin-top: 80px;
-        padding-left: 10px;
-        width: 90% !important;
+    .mv_headphone_text {
+        margin-top: 50px !important;
+    }
+    .mv_headphone_image {
+        margin-top: 50px !important;
     }
 }
 
@@ -1842,21 +1962,43 @@ a{
         line-height: 16px;
         width: 280px !important;
     }
+    /***** Electronics *****/
     /* slider2 */
     .mv_fasting_bg_color{
         height: 350px !important;
     }
     .mv_headphone_heading{
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 14px;
+        line-height: 17px;
     }
     .mv_sub_headphone_heading {
         font-size: 10px;
-        line-height: 12px;
-        width: 120px;
+        line-height: 14px;
+        width: 150px;
     }
-    .mv_headphone_slider img {
-        margin-top: 120px;
+    .mv_headphone_text {
+        margin-top: 80px !important;
+    }
+    .mv_headphone_image {
+        margin-top: 80px !important;
+    }
+    /* Explore more */
+    .mv_card_title{
+        font-size: 18px !important;
+        line-height: 20px !important;
+    }
+    .mv_add_the{
+        font-size: 18px !important;
+        line-height: 25px !important;
+    }
+    .r_shopnowbtn {
+        padding: 5px 25px !important;
+        font-size: 12px !important;
+    }
+    .mv_run_to {
+        font-size: 12px !important;
+        line-height: 20px !important;
+        margin-bottom: 5px !important;
     }
 }
 
@@ -1874,5 +2016,10 @@ a{
     .mv_dreams_sports{
         top: 48%;
         left: 7%;
+    }
+    /***** Electronics *****/
+    /* slider2 */
+    .mv_sub_headphone_heading{
+        width: 135px;
     }
 }

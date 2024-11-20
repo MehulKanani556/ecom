@@ -13,6 +13,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Hedvig+Letters+Serif:opsz@12..24&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/darshit.css">
     <link rel="stylesheet" href="../css/vaidik.css">
@@ -96,6 +97,59 @@
         .swiper-pagination{
             color: #000;   
         }
+        
+        .card {
+            border: none;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+
+        .card-img {
+            filter: brightness(70%);
+            transition: transform 0.3s ease;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.1);
+        }
+
+        .card-img-overlay {
+            background: rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            padding: 20px;
+            text-align: start !important;
+            margin-left: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .r_shopnowbtn {
+            padding: 7px 40px;
+            background-color: white;
+            color: black;
+        }
+        a{
+            text-decoration: none !important;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            margin: 5px !important;
+        }
+        @media (max-width: 575px){
+            .owl-theme .owl-dots .owl-dot span {
+                margin: 3px !important;
+            }
+        }
     </style>
 
 </head>
@@ -110,14 +164,14 @@
                 <div class="slide-content position-relative">
                     <div class="mv_fasting_bg_color">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-7">
                                 <div class="mv_laptop_slider">
                                     <img src="../mv_image/laptop_slider.png" alt="">
                                 </div>
                             </div>
-                            <div class="col-ld-6 col-md-6 col-sm-6 col-6">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-white">
                                 <!-- Overlay Content -->
-                                <div class="position-absolute d-flex flex-column justify-content-center align-items-start text-white r_iconimg mv_faiting_width">
+                                <div class="">
                                     <p class="mv_fasting_heading m-0">F#!%ING FAST!</p>
                                     <p class="mv_sub_fasting_heading">wıth altaır, GO BEYOND POWER!</p>
                                     <a href="#" class="btn btn-light mv_shop_now_sport ">Shop Now</a>
@@ -131,18 +185,69 @@
             <div class="item">
                 <div class="slide-content position-relative">
                     <div class="mv_fasting_bg_color">
-                        <div class="row">
-                            <div class="col-ld-6 col-md-6 col-sm-6 col-6">
-                                <!-- Overlay Content -->
-                                <div class="position-absolute d-flex flex-column justify-content-center align-items-start text-white r_iconimg mv_air_max_width">
-                                    <p class="mv_headphone_heading">Get your next must-have Gadget</p>
-                                    <p class="mv_sub_headphone_heading">Explore our curated selection of high-tech wonders, designed to elevate your daily life and inspire your passions.</p>
-                                    <a href="#" class="btn btn-light mv_shop_now_sport ">Shop Now</a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-ld-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_text">
+                                    <!-- Overlay Content -->
+                                    <div class="text-white">
+                                        <p class="mv_headphone_heading">Get your next must-have Gadget</p>
+                                        <p class="mv_sub_headphone_heading">Collect the innovation you love.<br> 
+                                            Explore our curated selection of high-tech wonders, designed to elevate your daily life and inspire your passions.</p>
+                                        <a href="#" class="btn btn-light mv_shop_now_sport ">Shop Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_image">
+                                    <div class="mv_headphone_slider">
+                                        <img src="../mv_image/Headphone.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                <div class="mv_headphone_slider">
-                                    <img src="../mv_image/Headphone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="item">
+                <div class="slide-content position-relative">
+                    <div class="mv_fasting_bg_color">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_image">
+                                    <div class="mv_headphone_slider">
+                                        <img class="ps-0" src="../mv_image/buds.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-ld-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_text">
+                                    <!-- Overlay Content -->
+                                    <div class="text-white">
+                                        <p class="mv_headphone_heading">Discover exclusive offers</p>
+                                        <p class="mv_sub_headphone_heading">Take advantage of our limited-time offers and enjoy discounts of up to [Percentage] off. Don't miss out – shop now and elevate your tech game today!</p>
+                                        <a href="#" class="btn btn-light mv_shop_now_sport">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="item">
+                <div class="slide-content position-relative">
+                    <div class="mv_fasting_bg_color">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-ld-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_text">
+                                    <!-- Overlay Content -->
+                                    <div class="text-white">
+                                        <p class="mv_headphone_heading">Introducing Our Top Pick of the Week</p>
+                                        <p class="mv_sub_headphone_heading">Behold the <span style="color: #3498DB;">TechFit</span> Pro Smartwatch, the ultimate companion for modern living.</p>
+                                        <a href="#" class="btn btn-light mv_shop_now_sport">Shop Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-content-center mv_headphone_image">
+                                    <div class="mv_headphone_slider">
+                                        <img src="../mv_image/slider_watch.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -369,6 +474,108 @@
             </div>
         </section>
 
+        <!-- Trending Deals -->
+        <section class="mt-5">
+            <div class="container-fluid trending-deals-section trending-bg">
+                <div class="trending-bg"></div>
+                <div class="row content-container">
+                    <!-- Left Column (Image) -->
+                    <div class="col-md-3  d-flex align-items-center justify-content-center p-0 r_trendman">
+                        <img src="../mv_image/electronics_trending.png" alt="Left Image" class="img-fluid">
+                        <!-- Replace with the path of your photo -->
+                    </div>
+                    <!-- Right Column (Main Slider for Cards) -->
+                    <div style="background-color: #040404; height: 100%; " class="col-md-9 d-flex r_all_slider_padding">
+                        <!-- Outer Swiper slider for cards -->
+                        <div class="swiper mainSwiper ">
+                            <div class="swiper-wrapper">
+                                <!-- Product Card 1 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_sony.png" alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_sony.png" alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_sony.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_sony.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_sony.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">new balance</h5>
+                                        <p class="r_textpadding">Men's Fresh Foam X 1080v14</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../mv_image/new_trending_sony1.png" alt="">
+                                            <img src="../mv_image/new_trending_sony1.png" alt="">
+                                        </div>
+                                        <div class="discount-text">40% OFF</div>
+                                        <p><strong>$459</strong> <del>$799</del></p>
+                                    </div>
+                                </div>
+                                <!-- Product Card 2 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_dell.png" alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_dell.png" alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_dell.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_dell.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_dell.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">Reebok</h5>
+                                        <p class="r_textpadding">Womens Running App</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../mv_image/new_trending_dell1.png" alt="">
+                                            <img src="../mv_image/new_trending_dell1.png" alt="">
+                                        </div>
+                                        <div class="discount-text">50% OFF</div>
+                                        <p><strong>$149</strong> <del>$399</del></p>
+                                    </div>
+                                </div>
+                                <!-- Product Card 3 with Inner Swiper Slider -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <!-- Inner Swiper for Product Images -->
+                                        <div class="swiper innerSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_lg.png" alt="Product 1 Image 1" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_lg.png" alt="Product 1 Image 2" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_lg.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_lg.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                                <div class="swiper-slide"><img src="../mv_image/new_trending_lg.png" alt="Product 1 Image 3" class="r_v1img"></div>
+                                            </div>
+                                            <!-- Inner Pagination for Product Images -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <!-- Product Information -->
+                                        <h5 class="r_textpadding">SKECHERS</h5>
+                                        <p class="r_textpadding">unisex adults SK FIT YOGA MAT..</p>
+                                        <div class="r_thumbnailimg d-flex align-items-center">
+                                            <img src="../mv_image/new_trending_lg1.png" alt="">
+                                            <img src="../mv_image/new_trending_lg1.png" alt="">
+                                        </div>
+                                        <div class="discount-text">40% OFF</div>
+                                        <p><strong>$99</strong> <del>$299</del></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Outer Pagination for Product Cards -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Trending in Sports Accessories -->
         <section>
             <div class="container">
@@ -453,6 +660,52 @@
                     </div>
                     <!-- Pagination dots -->
                     <div style=" position: relative; margin-top: 20px;" class="swiper-pagination mv_swiper_pagination_sports"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore more -->
+        <section>
+            <div class="container my-5">
+                <h2 class="text-center mb-4">Explore more</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-white">
+                            <img src="../mv_image/electronic_explore_1.png" class="card-img" alt="Kurta Jacket Pairs">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <p class="mv_card_title">Audible Accessories</p>
+                                <p class="mv_run_to">Your comfort, our Priority</p>
+                                <div class="mv_explore_shop_more"> <a href="#" class="r_shopnowbtn">Shop Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-white">
+                            <img src="../mv_image/electronic_explore_2.png" class="card-img" alt="Indo Fusion Edit">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <p class="mv_add_the">Home Appliances</p>
+                                <div class="mv_explore_shop_more"> <a href="#" class="r_shopnowbtn">Shop Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-white">
+                            <img src="../mv_image/electronic_explore_3.png" class="card-img" alt="Kurta Sets">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <p class="mv_card_title mv_top_deals">Top deals on Laptops</p>
+                                <div class="mv_explore_shop_more"> <a href="#" class="r_shopnowbtn">Shop Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-white">
+                            <img src="../mv_image/electronic_explore_4.png" class="card-img" alt="Swooning Sherwanis">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <p class="mv_card_title mv_cinema">Cinema is coming home</p>
+                                <div class="mv_explore_shop_more"> <a href="#" class="r_shopnowbtn">Shop Now</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -573,6 +826,45 @@
             },
         }
     });
+    </script>
+
+    <!-- trending section  -->
+    <script>
+        // Initialize inner sliders for each product card
+        document.querySelectorAll('.innerSwiper').forEach((innerSlider) => {
+            new Swiper(innerSlider, {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: innerSlider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+            });
+        });
+
+        // Initialize main outer slider for product cards
+        var mainSwiper = new Swiper(".mainSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".mainSwiper .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
     </script>
     
 </body>
