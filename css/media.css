@@ -964,7 +964,7 @@
         z-index: 999;
     }
     .product-section {
-        background-position-y: 21%;
+        background-position-y: 14%;
     }
     /* Best Of Electronics */
     .dk_product-item {
@@ -1245,6 +1245,10 @@
     }
 }
 @media(max-width:991px){
+    /* home */
+    .dk_shoes_slider{
+        justify-content: center;
+    }
     /* Track Refund */
     .dk_track_refund_without_line{
         width: 84%;
@@ -1290,11 +1294,8 @@
         font-size: 40px;
         font-weight: 600;
     }
-    .product-section {
-       background-image: none;
-    }
     .product-grid {
-        justify-content: space-between;
+        justify-content: center;
     }
     /* .dk_search_bar {
         max-width: 250px;
@@ -1645,8 +1646,18 @@
         }
     }
 @media(max-width:768px){
+    /* Home */
+    .explore-more{
+        background: transparent;
+    }
+    .product-section {
+        background-image: none;
+     }
+    /* card with address chenges */
+    .dk_proceed_width {
+        width: 53% !important;
+    }
      /* Login with Email & Mobile */
-
     .dk_login_sub h4 {
         font-size: 1.25rem;
     }
@@ -1795,9 +1806,6 @@
     .dk_continue_main{
         padding-top: 30px;
         padding-bottom: 20px;
-    }
-    .dk_login_with_email_image2 img{
-        opacity: 0.2;
     }
     /* Best Of Electronics */
     .dk_product-item {
@@ -2251,8 +2259,17 @@
     .dk_travel_style{
         text-align: center;
     }
+    /* order conformation change  */
+    .dk_order_confirmation h2 {
+        font-size: 21px;
+        padding-bottom: 10px;
+    }
  } 
  @media(max-width:767px){
+    /* forget password chnge  */
+    .dk_login_sub{
+        box-shadow: none !important;
+    }
     .dk_login_main_content {
         flex-direction: column;
         text-align: center;
@@ -2265,6 +2282,9 @@
         top: 2%;
     }
     .dk_login_with_email_image img{
+        opacity: 0.2;
+    }
+    .dk_login_with_email_image2 img{
         opacity: 0.2;
     }
     .dk_login_form {
@@ -2783,6 +2803,13 @@
 }
 
 @media (max-width:575px) {
+    /* home */
+    .explore-more p {
+        font-size: 14px;
+    }
+    .explore-more {
+        background-size: 80%; 
+    }
     /* Order Confirmation page  */
     .dk_billing_pro_item_sub h2 {
         font-size: 18px;
@@ -2881,8 +2908,8 @@
     }
 
     .dk_otp_box {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         font-size: 16px;
         margin-bottom: 10px;
         margin-right: 0;
@@ -3389,6 +3416,20 @@
 }
 
 @media(max-width:425px){
+    /* order conformation cheng  */
+    .dk_thank_you_oid {
+        padding: 20px 0px 16px 0px !important;
+    }
+    .dk_thank_you_image img{
+        width: 40px;
+        height: 40px;
+    }
+    .dk_thank_you_image {
+        padding: 25px 16px 16px 20px;
+    }
+    .dk_order_is_confirmed {
+        padding: 16px 20px 0px;
+    }
     /* Login with Email & Mobile */
     .dk_login_with_email {
         padding: 50px 0px;
@@ -3857,6 +3898,19 @@
     }
 }
 @media (max-width: 375px) {
+    /* Offcanvas */
+    .mv_offcanvas_form_select option{
+        font-size: 12px;
+    }
+    /* order conformation change  */
+    .dk_thank_you_image {
+        padding: 25px 16px 16px 20px;
+    }
+    /* OTP Verification change */
+    .dk_otp_box {
+        width: 35px !important;
+        height: 35px !important;
+    }
     /* My Order */
     .mv_off_request_for_OTP{
         width: 250px;
@@ -4043,7 +4097,7 @@
         line-height: 24px;
         text-align: center;
         color: #FFFFFF;
-        padding: 13px 10px;
+        padding:7px 10px;
         background-color: #000000;
         border-radius: 4px;
     }
@@ -4287,11 +4341,16 @@
         justify-content: center;
     }
 }
-/* OTP Verification */
 @media (max-width: 320px) {
+
+    /* card with address chenges */
+    .dk_proceed_width {
+        width: 90% !important;
+    }
+    /* OTP Verification */
     .dk_otp_box {
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         font-size: 14px;
     }
     .dk_banner_info{

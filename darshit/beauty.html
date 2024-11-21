@@ -452,7 +452,7 @@
                             <div class="swiper-wrapper">
                                 <!-- Product Card 1 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -471,20 +471,18 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">RENEE</h5>
-                                        <p class="r_textpadding">Madness pH Lipstick, 3gm </p>
+                                        <h5 class="mv_tsmh">RENEE</h5>
+                                        <p class="mv_tssh text-start">Madness pH Lipstick, 3gm </p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../img/renee_dels_sm.png" alt="">
-                                            <!-- <img src="../img/renee_dels_sm.png" alt=""> -->
-                                            <!-- <img src="../img/renee_dels_sm.png" alt=""> -->
                                         </div>
-                                        <div class="discount-text">40% OFF</div>
-                                        <p><strong>$459</strong> <del>$799</del></p>
+                                        <div class="mv_discount_text">40% OFF</div>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$459</strong> <del class="mv_without_discount_price">$799</del></p>
                                     </div>
                                 </div>
                                 <!-- Product Card 2 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -503,20 +501,20 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">SUGAR</h5>
-                                        <p class="r_textpadding">Powder Play Banana Compact</p>
+                                        <h5 class="mv_tsmh">SUGAR</h5>
+                                        <p class="mv_tssh text-start">Powder Play Banana Compact</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../img/sugar_dels_sm.png" alt="">
                                             <!-- <img src="../img/sugar_dels_sm.png" alt=""> -->
                                             <!-- <img src="../img/sugar_dels_sm.png" alt=""> -->
                                         </div>
                                         <div class="discount-text">50% OFF</div>
-                                        <p><strong>$149</strong> <del>$300</del></p>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$149</strong> <del class="mv_without_discount_price">$300</del></p>
                                     </div>
                                 </div>
                                 <!-- Product Card 3 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -535,15 +533,15 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">COLORBAR</h5>
-                                        <p class="r_textpadding">Berry Blush Eyeshadow Palette</p>
+                                        <h5 class="mv_tsmh">COLORBAR</h5>
+                                        <p class="mv_tssh text-start">Berry Blush Eyeshadow Palette</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../img/colorbar_dels_sm.png" alt="">
                                             <!-- <img src="../img/colorbar_dels_sm.png" alt=""> -->
                                             <!-- <img src="../img/colorbar_dels_sm.png" alt=""> -->
                                         </div>
                                         <div class="discount-text">40% OFF</div>
-                                        <p><strong>$99</strong> <del>$299</del></p>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$99</strong> <del class="mv_without_discount_price">$299</del></p>
                                     </div>
                                 </div>
 
@@ -831,6 +829,10 @@
             breakpoints: {
                 425: {
                     slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                575: {
+                    slidesPerView: 2,
                     spaceBetween: 20,
                 },
                 768: {

@@ -697,7 +697,7 @@ a{
 .dk_login_form{
     padding-top: 100px;
     width: 500px;
-    height: 458px;
+    /* height: 458px; */
 }
 .dk_login_sub{
     padding: 50px 50px 30px 50px;
@@ -1143,6 +1143,37 @@ a{
 }
 
 /* *************shoes***************** */
+.dk_shoes_slider{
+    justify-content: space-between;
+}
+.explore-more {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .explore-more .category {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .explore-more img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .explore-more img:hover {
+    transform: scale(1.1);
+  }
+  
+  .explore-more .category p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 .product-section {
     background-image: url(../img/FOOTWEAR\ &\ HANDBAGS.png);
     /* padding: 60px 0px; */
@@ -1154,7 +1185,7 @@ a{
     background-repeat: no-repeat;
     background-color: #000000;
     background-size: 90%;
-    background-position-y: 30%;
+    background-position-y: 14%;
   }
   
   .container {
@@ -2574,6 +2605,10 @@ input[type="checkbox"] {
 } 
 
 /****** Payment page *******/
+/* Payment page change */
+.dk_input_padd{
+    padding: 10px 10px !important;
+}
 .dk_order_payment_det_sub_py{
     display: flex;
     justify-content: space-between;
@@ -2832,7 +2867,7 @@ input[type="checkbox"] {
   .dk_order_bill{
     border: 1px solid #727272;
     border-radius: 4px;
-    margin: 20px 40px 20px 40px;
+    margin: 20px;
   }
   .dk_order_details_ob{
     border-bottom: 0.5px solid #d3d3d3;

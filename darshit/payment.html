@@ -94,7 +94,7 @@
                                                         <label for="enter_captcha" class="dk_custom_label_payment">Enter
                                                             the captcha</label>
                                                         <div style="display: flex; align-items: center;">
-                                                            <input type="text" class="form-control dk_custom_input"
+                                                            <input type="text" class="form-control dk_custom_input dk_input_padd"
                                                                 id="enter_captcha" placeholder="">
                                                             <span class="reload-icon" onclick="reloadCaptcha()"
                                                                 style="margin-left: 10px; cursor: pointer;">&#x21bb;</span>
@@ -132,28 +132,28 @@
                                                     <div class="form-group dk_custom_input_group">
                                                         <label for="emailOrMobile" class="dk_custom_label_payment">Card holder
                                                             name</label>
-                                                        <input type="text" class="form-control dk_custom_input"
+                                                        <input type="text" class="form-control dk_custom_input dk_input_padd"
                                                             id="fullname" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group dk_custom_input_group">
                                                         <label for="emailOrMobile" class="dk_custom_label_payment">Card Number</label>
-                                                        <input type="number" class="form-control dk_custom_input"
+                                                        <input type="number" class="form-control dk_custom_input dk_input_padd"
                                                             id="fullname" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group dk_custom_input_group">
                                                         <label for="emailOrMobile" class="dk_custom_label_payment">Expiry Date</label>
-                                                        <input type="date" class="form-control dk_custom_input"
+                                                        <input type="date" class="form-control dk_custom_input dk_input_padd"
                                                             id="fullname" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group dk_custom_input_group">
                                                         <label for="emailOrMobile" class="dk_custom_label_payment">CVV</label>
-                                                        <input type="number" class="form-control dk_custom_input"
+                                                        <input type="number" class="form-control dk_custom_input dk_input_padd"
                                                             id="fullname" placeholder="">
                                                     </div>
                                                 </div>
@@ -341,7 +341,7 @@
         function toggleAccordion(panelId) {
             // Close all panels
             var panels = document.getElementsByClassName("panel");
-            for (var i = 0; i < panels.length; i++) {
+            for (var i = 0; i < panels.length; i++) { 
                 panels[i].style.display = "none";
             }
 
