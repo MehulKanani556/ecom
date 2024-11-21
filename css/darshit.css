@@ -841,7 +841,10 @@ a{
 
 /* ********** reset password  ************ */
 .dk_reset_password{
-    padding-top: 50px;
+    padding-top: 40px;
+}
+.dk_reset_pass_margin{
+    margin-top: 40px !important;
 }
 /* **************************************** */
 
@@ -3161,7 +3164,7 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-.dk_profile-form a button{
+.dk_profile-form a{
     padding: 12px;
     background-color: #000000;
     color: white;
@@ -3169,8 +3172,13 @@ input[type="checkbox"] {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    padding: 12px 58px;
     text-decoration: none;
+    width: 250px;
+    text-align: center;
+    margin-left: 12px;
+}
+.dk_profile-form a:hover{
+    color: #fff;
 }
 .dk_menu-item {
     position: relative; 
