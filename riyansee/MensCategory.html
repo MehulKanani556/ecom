@@ -112,7 +112,7 @@
         }
 
         .card-img-overlay {
-            background: rgba(0, 0, 0, 0.1);
+            /* background: rgba(0, 0, 0, 0.1); */
             color: #ffffff;
             padding: 20px;
             text-align: start !important;
@@ -136,6 +136,28 @@
         }
         a{
             text-decoration: none !important;
+        }
+        .mainSwiper > .swiper-pagination{
+            display: none !important;
+        }
+        .swiper-pagination{
+            position: unset !important;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            margin: 5px !important;
+        }
+        @media (max-width: 575px){
+            .owl-theme .owl-dots .owl-dot span {
+                margin: 3px !important;
+            }
+        }
+        .swiper-pagination-bullet-active{
+            background-color: black !important;
+            color: transparent !important;
+            outline-style: solid !important;
+            outline-color: white !important;
+            outline-width: thin !important;
         }
     </style>
 
@@ -271,7 +293,7 @@
                     <!-- Topwear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/man.png" alt="Topwear">
-                        <p>Topwear</p>
+                        <a href="../riyansee/topwear.html"><p>Topwear</p></a>
                     </div>
                     <!-- Bottomwear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
