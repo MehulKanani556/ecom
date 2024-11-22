@@ -546,13 +546,14 @@
                         <!-- Replace with the path of your photo -->
                     </div>
                     <!-- Right Column (Main Slider for Cards) -->
-                    <div style="background-color: #040404; height: 100%; " class="col-md-9 d-flex r_all_slider_padding">
+                    <div style="height: 100%; " class="col-md-9 d-flex r_all_slider_padding">
+                        
                         <!-- Outer Swiper slider for cards -->
                         <div class="swiper mainSwiper ">
                             <div class="swiper-wrapper">
                                 <!-- Product Card 1 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -571,20 +572,20 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">new balance</h5>
-                                        <p class="r_textpadding">Men's Fresh Foam X 1080v14</p>
+                                        <h5 class="mv_tsmh">new balance</h5>
+                                        <p class="mv_tssh text-start">Men's Fresh Foam X 1080v14</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../mv_image/new_balance1.png" alt="">
                                             <img src="../mv_image/new_balance2.png" alt="">
                                             <img src="../mv_image/new_balance3.png" alt="">
                                         </div>
-                                        <div class="discount-text">40% OFF</div>
-                                        <p><strong>$459</strong> <del>$799</del></p>
+                                        <div class="mv_discount_text">40% OFF</div>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$459</strong><del class="mv_without_discount_price">$799</del></p>
                                     </div>
                                 </div>
                                 <!-- Product Card 2 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -603,19 +604,18 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">Reebok</h5>
-                                        <p class="r_textpadding">Womens Running App</p>
+                                        <h5 class="mv_tsmh">Reebok</h5>
+                                        <p class="mv_tssh text-start">Womens Running App</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../mv_image/trending_reebok1.png" alt="">
-                                            <img src="../mv_image/trending_reebok2.png" alt="">
                                         </div>
-                                        <div class="discount-text">50% OFF</div>
-                                        <p><strong>$149</strong> <del>$399</del></p>
+                                        <div class="mv_discount_text">50% OFF</div>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$149</strong><del class="mv_without_discount_price">$399</del></p>
                                     </div>
                                 </div>
                                 <!-- Product Card 3 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -629,20 +629,21 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <!-- Product Information -->
-                                        <h5 class="r_textpadding">SKECHERS</h5>
-                                        <p class="r_textpadding">unisex adults SK FIT YOGA MAT..</p>
+                                        <h5 class="mv_tsmh">SKECHERS</h5>
+                                        <p class="mv_tssh text-start">unisex adults SK FIT YOGA MAT..</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
                                             <img src="../mv_image/trending_skechers1.png" alt="">
                                             <img src="../mv_image/trending_skechers1.png" alt="">
                                         </div>
-                                        <div class="discount-text">40% OFF</div>
-                                        <p><strong>$99</strong> <del>$299</del></p>
+                                        <div class="mv_discount_text">40% OFF</div>
+                                        <p class="text-start m-0"><strong class="mv_less_discount_price">$99</strong><del class="mv_without_discount_price">$299</del></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Outer Pagination for Product Cards -->
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination position-absolute"></div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -927,6 +928,10 @@
             breakpoints: {
                 425: {
                     slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                575: {
+                    slidesPerView: 2,
                     spaceBetween: 20,
                 },
                 768: {

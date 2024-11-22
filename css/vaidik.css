@@ -956,6 +956,42 @@ a{
     color: #5F5F5F;
 }
 
+/* Trendingdeals */
+.mv_tsmh{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    margin-bottom: 5px !important;
+}
+.mv_tssh{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+.mv_discount_text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #0F993E;
+    margin-bottom: 5px !important;
+}
+.mv_less_discount_price{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #000000;
+    margin-bottom: 5px !important;
+}
+.mv_without_discount_price{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #727272;
+    margin-left: 5px !important;
+}
+
 /* Explore more */
 .mv_card_title{
     font-size: 30px !important;
