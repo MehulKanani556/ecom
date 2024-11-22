@@ -30,13 +30,19 @@
                                 <h4>OTP Verification</h4>
                                 <p style="font-size: 15px;">We’ve just sent you verification code to your register email</p>
 
-                                <div class="dk_otp_main">
-                                    <input type="text" maxlength="1" class="dk_otp_box" />
-                                    <input type="text" maxlength="1" class="dk_otp_box" />
-                                    <input type="text" maxlength="1" class="dk_otp_box" />
-                                    <input type="text" maxlength="1" class="dk_otp_box" />
-                                    <input type="text" maxlength="1" class="dk_otp_box" />
-                                    <input type="text" maxlength="1" class="dk_otp_box me-0" />
+                                <div class="mv_otp_box dk_otp_main">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box "
+                                        oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
                                   </div>
 
                                   <button class="dk_continue">Verify</button>
@@ -48,5 +54,25 @@
             </div>
         </div>
     </section>  
+    <!-- script Return Order OTP -->
+    <script>
+        function validateAndMove(current, nextId) {
+
+            if (!/^\d$/.test(current.value)) {
+                current.value = '';
+                return;
+            }
+
+            if (current.value.length === 1 && nextId) {
+                document.getElementById(nextId).focus();
+            }
+        }
+
+        function moveToPrevious(event, previousId) {
+            if (event.key === "Backspace" && event.target.value === "" && previousId) {
+                document.getElementById(previousId).focus();
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1433,6 +1433,9 @@ a{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+.buy-now:hover{
+    color: #fff;
+}
 .dk_browsing_products{
     position: relative;
     height: 100% !important;
@@ -1981,9 +1984,9 @@ a{
 .dk_no_saved_addresses{
     padding: 33px 35px;
     box-shadow: 1px 6px 19px 0px #A4A4A433;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 .dk_no_saved_addresses_font h2{
     font-size: 16px;
@@ -4248,7 +4251,7 @@ input[type="date"] {
 }
 .dk_luggage_slider2_content{
     top: 30%;
-    left: 25%;
+    left: 23%;
     /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
