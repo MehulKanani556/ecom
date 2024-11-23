@@ -437,9 +437,9 @@ img {
   .r_thumbnailimg img {
     margin: 20px 0;
   }
-  .swiper-slide{
+  /* .swiper-slide{
     height: 450px !important;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -485,9 +485,9 @@ img {
   .r_thumbnailimg{
     margin:1 0;
   }
-  .swiper-slide{
+  /* .swiper-slide{
     height: 500px !important;
-  }
+  } */
 }
 
 @media screen and (max-width:425px) {
