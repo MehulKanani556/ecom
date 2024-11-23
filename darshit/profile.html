@@ -55,15 +55,15 @@
                                         </span>
                                         My Profile
                                     </li>
-                                    <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
-                                        <span class="dk_icon">
-                                            <img class="dk_icon_image default" src="../img/my_order.png"
-                                                alt="My Profile">
-                                            <img class="dk_icon_image hover" src="../img/white_myorder.png"
-                                                alt="My Profile Hover">
-                                        </span>
-                                        My Orders
-                                    </li>
+                                    <ul class="dk_menu">
+                                        <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
+                                            <span class="dk_icon">
+                                                <img class="dk_icon_image default" src="../img/my_order.png" alt="My Profile">
+                                                <img class="dk_icon_image hover" src="../img/white_myorder.png" alt="My Profile Hover">
+                                            </span>
+                                            My Orders
+                                        </li>
+                                    </ul>
                                     <li class="dk_payment_method_main" data-section="paymentMethodsSection">
                                         <div class="accordion p-0" id="accordionExample">
                                             <div class="accordion-item dk_payment_method_item ">
@@ -294,58 +294,52 @@
                                 </form>
                             </div>
                         </main>
+                        
                         <div id="ordersSection" class="mv_main_my_order dk_profile-content" style="display: none;">
                             <p class="mv_order_heading">My Order</p>
                             <div class="mv_order_main_class">
-                                <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab"
-                                    role="tablist">
+                                <ul class="nav nav-tabs justify-content-between mv_order_nav_tabs" id="myTab" role="tablist">
                                     <li class="nav-item mv_oredr_nav_item" role="presentation">
-                                        <button class="nav-link mv_order_navs_button active" id="home-tab"
-                                            data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
-                                            role="tab" aria-controls="home-tab-pane" aria-selected="true">On the
-                                            way</button>
+                                        <button class="nav-link mv_order_navs_button active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                            aria-selected="true">On the way</button>
                                     </li>
                                     <li class="nav-item mv_oredr_nav_item" role="presentation">
-                                        <button class="nav-link mv_order_navs_button" id="profile-tab"
-                                            data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
-                                            role="tab" aria-controls="profile-tab-pane"
+                                        <button class="nav-link mv_order_navs_button" id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
                                             aria-selected="false">Delivered</button>
                                     </li>
                                     <li class="nav-item mv_oredr_nav_item" role="presentation">
-                                        <button class="nav-link mv_order_navs_button" id="contact-tab"
-                                            data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
-                                            role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cancelled
-                                            & Returned</button>
+                                        <button class="nav-link mv_order_navs_button" id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                                            aria-selected="false">Cancelled & Returned</button>
                                     </li>
                                 </ul>
                                 <div class="tab-content mv_order_table_content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-                                        aria-labelledby="home-tab" tabindex="0">
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                                        tabindex="0">
                                         <div id="mv_order_on_the_way"></div>
-                                        <div id="no-data-message-on-the-way" class="mv_no_order_item"
-                                            style="display: none;">
+                                        <div id="no-data-message-on-the-way" class="mv_no_order_item" style="display: none;">
                                             <div class="mv_main_no_order">
                                                 <img src="../mv_image/no_order_logo.png" alt="">
                                             </div>
                                             <p class="text-center">You have no order in process</p>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
-                                        aria-labelledby="profile-tab" tabindex="0">
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                                        tabindex="0">
                                         <div id="mv_order_delivered"></div>
-                                        <div id="no-data-message-delivered" class="mv_no_order_item"
-                                            style="display: none;">
+                                        <div id="no-data-message-delivered" class="mv_no_order_item" style="display: none;">
                                             <div class="mv_main_no_order">
                                                 <img src="../mv_image/no_order_logo.png" alt="">
                                             </div>
                                             <p class="text-center">You have no order in process</p>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
-                                        aria-labelledby="contact-tab" tabindex="0">
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                                        tabindex="0">
                                         <div id="mv_order_cancelled"></div>
-                                        <div id="no-data-message-cancelled" class="mv_no_order_item"
-                                            style="display: none;">
+                                        <div id="no-data-message-cancelled" class="mv_no_order_item" style="display: none;">
                                             <div class="mv_main_no_order">
                                                 <img src="../mv_image/no_order_logo.png" alt="">
                                             </div>
@@ -355,6 +349,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <main id="paymentMethodsSection" class="dk_profile-content" style="display: none;">
                             <h2 class="mb-3">Payment Methods</h2>
                             <div class="dk_profile_payment_methods">
@@ -1816,7 +1811,62 @@
             }
         }
     </script>
+    <!-- My Order Footer Script -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const activeSection = localStorage.getItem("activeSection");
 
+        if (activeSection) {
+            // Hide all sections
+            document.querySelectorAll(".dk_profile-content").forEach(section => {
+                section.style.display = "none";
+            });
+
+            // Show the active section
+            const sectionToActivate = document.getElementById(activeSection);
+            if (sectionToActivate) {
+                sectionToActivate.style.display = "block";
+
+                // Highlight the active tab
+                const tabToActivate = document.querySelector(`[data-section="${activeSection}"]`);
+                if (tabToActivate) {
+                    tabToActivate.classList.add("active");
+                }
+            }
+
+            // Clear the activeSection to avoid persistent activation
+            localStorage.removeItem("activeSection");
+        }
+    });
+    </script> -->
+    <!-- My Order Footer Script -->
+    <script>
+        // On page load, check if a specific section should be active
+        document.addEventListener("DOMContentLoaded", function () {
+            const activeSection = sessionStorage.getItem("activeSection");
+
+            if (activeSection) {
+                // Remove session storage to avoid repeated redirection
+                sessionStorage.removeItem("activeSection");
+
+                // Activate the target section
+                document.querySelectorAll(".dk_profile-content").forEach((section) => {
+                    section.style.display = "none"; // Hide all sections
+                });
+
+                const targetSection = document.getElementById(activeSection);
+                if (targetSection) {
+                    targetSection.style.display = "block"; // Show the intended section
+                }
+
+                // Activate the correct tab
+                if (activeSection === "ordersSection") {
+                    document.getElementById("home-tab").classList.add("active");
+                    document.getElementById("home-tab-pane").classList.add("show", "active");
+                }
+            }
+        });
+    </script>
     <!-- ********************************************************************* -->
 
 </body>
