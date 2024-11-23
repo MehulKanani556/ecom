@@ -263,7 +263,7 @@
     }
     .dk_luggage_slider2_content{
         top: 30%;
-        left: 16%;
+        left: 18%;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;
@@ -1215,7 +1215,7 @@
     }
     /************ luggage slider 2  ************/
     .dk_safari_heading{
-        font-size: 48px;
+        font-size: 40px;
         font-style: italic;
         font-weight: 700;
         line-height: 72.61px;
@@ -1226,7 +1226,7 @@
     }
     .dk_luggage_slider2_content{
         top: 25%;
-        left: 11%;
+        left: 18%;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;
@@ -2219,7 +2219,7 @@
     }
     .dk_luggage_slider2_content{
         top: 30%;
-        left: 22%;
+        left: 25%;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;
@@ -3583,9 +3583,9 @@
     .dk_no_saved_addresses {
         padding: 20px 0px 20px 35px;
         box-shadow: 1px 6px 19px 0px #A4A4A433;
-        display: block;
-        justify-content: space-between;
-        align-items: center;
+        display: block !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
     .dk_no_saved_addresses_font h2 {
         font-size: 15px;
@@ -3866,7 +3866,7 @@
     }
     .dk_luggage_slider2_content{
         top: 30%;
-        left: 10%;
+        left: 15%;
         /* width: 50%; */
         transform: translateY(-50%);
         display: flex;

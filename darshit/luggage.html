@@ -135,6 +135,19 @@
         a{
             text-decoration: none !important;
         }
+        .mainSwiper > .swiper-pagination{
+            display: none !important;
+        }
+        .swiper-pagination{
+            position: unset !important;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: black !important;
+            color: transparent !important;
+            outline-style: solid !important;
+            outline-color: white !important;
+            outline-width: thin !important;
+        }
         .owl-theme .owl-dots .owl-dot span {
             margin: 5px !important;
         }
@@ -444,7 +457,7 @@
                             <div class="swiper-wrapper">
                                 <!-- Product Card 1 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card  w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -476,7 +489,7 @@
                                 </div>
                                 <!-- Product Card 2 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card  w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -508,7 +521,7 @@
                                 </div>
                                 <!-- Product Card 3 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
-                                    <div class="product-card">
+                                    <div class="product-card  w-100">
                                         <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
@@ -820,6 +833,10 @@
         pagination: {
             el: ".mainSwiper .swiper-pagination",
             clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
         breakpoints: {
             425: {

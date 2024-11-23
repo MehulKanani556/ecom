@@ -1335,9 +1335,9 @@
                         <input type="text" class="form-control dk_deactive_inp" placeholder="+1 56565 65656">
                         <button type="button" class="dk_send_otp_button">Send OTP</button>
                     </div>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between mv_otp_box">
                         <!-- OTP input boxes -->
-                        <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
+                        <!-- <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
                             style="width: 45px;">
                         <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
                             style="width: 45px;">
@@ -1348,7 +1348,19 @@
                         <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
                             style="width: 45px;">
                         <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
-                            style="width: 45px;">
+                            style="width: 45px;"> -->
+                            <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box "
+                                        oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp4')" id="otp3" onkeydown="moveToPrevious(event, 'otp2')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp5')" id="otp4" onkeydown="moveToPrevious(event, 'otp3')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, 'otp6')" id="otp5" onkeydown="moveToPrevious(event, 'otp4')">
+                                    <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
+                                        oninput="validateAndMove(this, '')" id="otp6" onkeydown="moveToPrevious(event, 'otp5')">
                     </div>
                     <div class="mt-2 text-center">
                         <h6 style="font-size: 13px; color: #727272;">Didn’t receive code yet?<a
@@ -1363,6 +1375,26 @@
             </div>
         </div>
     </div>
+    <!-- script Return Order OTP -->
+    <script>
+        function validateAndMove(current, nextId) {
+
+            if (!/^\d$/.test(current.value)) {
+                current.value = '';
+                return;
+            }
+
+            if (current.value.length === 1 && nextId) {
+                document.getElementById(nextId).focus();
+            }
+        }
+
+        function moveToPrevious(event, previousId) {
+            if (event.key === "Backspace" && event.target.value === "" && previousId) {
+                document.getElementById(previousId).focus();
+            }
+        }
+    </script>
     <!-- ********************************************************************  -->
 
     <!--*********************** logout page model ***************************** -->

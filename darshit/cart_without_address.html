@@ -32,13 +32,14 @@
             width: 95%;
         }
 
-        @media (max-width:575px){
-            .dk_ordder_tracking_without_address{
+        @media (max-width:575px) {
+            .dk_ordder_tracking_without_address {
                 left: 10px;
             }
         }
-        @media (max-width:425px){
-            .dk_ordder_tracking_without_address{
+
+        @media (max-width:425px) {
+            .dk_ordder_tracking_without_address {
                 left: 3px;
             }
         }
@@ -46,7 +47,7 @@
 </head>
 
 <body>
-    
+
     <!-- Header -->
     <div id="header"></div>
 
@@ -89,14 +90,68 @@
                     <div class="dk_cart_without_address_sub">
                         <div style="margin: 0px 0px !important;" class="row">
                             <div style="padding: 0px 10px !important;" class="col-lg-8">
-                                <div class="dk_no_saved_addresses">
+                                <div class="dk_no_saved_addresses" id="savedAddress" style="display: none !important;">
+                                    <div class="dk_no_saved_addresses_font d-flex">
+                                        <div>
+                                            <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-content-center">
+                                                <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
+                                                <button class="dk_cart_add_home">Home</button>
+                                            </div>
+                                            <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New
+                                                York,Washington Square, NY
+                                                10012,USA</p>
+                                        </div>
+                                    </div>
+                                    <div class="dk_add_address">
+                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                            style="border: 1px solid #000000">Change</button>
+                                        <!-- <button class="">Change</button> -->
+                                    </div>
+                                </div>
+                                <!-- <div id="savedAddress" class="dk_no_saved_addresses" style="display: none;">
+                                    <div class="dk_no_saved_addresses_font d-flex">
+                                        <div>
+                                            <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-content-center">
+                                                <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
+                                                <button class="dk_cart_add_home">Home</button>
+                                            </div>
+                                            <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New York,
+                                                Washington Square, NY 10012, USA</p>
+                                        </div>
+                                    </div>
+                                    <div class="dk_add_address">
+                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                            style="border: 1px solid #000000">Change</button>
+                                    </div>
+                                </div> -->
+                                <div id="noSavedAddress" class="dk_no_saved_addresses">
                                     <div class="dk_no_saved_addresses_font">
                                         <h2>No saved Addresses</h2>
                                     </div>
                                     <div class="dk_add_address">
-                                        <button class="dk_add_address_sub">+Add Address</button>
+                                        <button class="dk_add_address_sub" type="button"
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_add_cart_address"
+                                            aria-controls="offcanvasRight">+Add Address</button>
                                     </div>
                                 </div>
+                                <!-- <div id="noSavedAddress" class="dk_no_saved_addresses">
+                                    <div class="dk_no_saved_addresses_font">
+                                        <h2>No saved Addresses</h2>
+                                    </div>
+                                    <div class="dk_add_address">
+                                        <button class="dk_add_address_sub btn btn-primary" type="button"
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_add_cart_address"
+                                            aria-controls="offcanvasRight">+Add Address</button>
+                                    </div>
+                                </div> -->
                                 <div class="dk_select_all">
                                     <span>
                                         <input id="selectAll" style="width: 20px; height: 20px;" type="checkbox">
@@ -329,7 +384,11 @@
                                         <p>$598</p>
                                     </div>
                                     <div class="dk_proceed_checkout_cwa">
-                                        <button class="dk_proceed">Proceed to checkout</button>
+                                        <!-- <button class="dk_proceed">Proceed to checkout</button> -->
+                                        <button class="btn btn-dark dk_proceed_width" type="button"
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+                                            aria-controls="offcanvasRight2">Proceed to
+                                            checkout</button>
                                     </div>
                                 </div>
                                 <div class="dk_apply_coupon_cwa">
@@ -344,7 +403,7 @@
                                             </div>
 
                                             <div class="dk_apply-button-container">
-                                                <button id="apply-button">Apply</button>
+                                                <button class="dk_apply_coupen_radio" id="apply-button">Apply</button>
                                             </div>
                                         </div>
                                         <div class="dk_coupon_header">Applicable Coupons</div>
@@ -396,7 +455,176 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-   
+
+    <!-- add address  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight_add_cart_address"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_add_address_main_font">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Address</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body dk_add_address_off">
+            <div style="border-bottom: 0.5px solid #727272"></div>
+            <div class="dk_add_address_details">
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Name</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Mobile
+                        No.</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label" style="font-weight: 500; color: #000000;">Area or
+                        Street</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Landmark</label>
+                    <input type="text" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">Pincode</label>
+                    <input type="number" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">City</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="form-group dk_custom_input_group mb-4">
+                    <label for="emailOrMobile" class="dk_custom_label"
+                        style="font-weight: 500; color: #000000;">State</label>
+                    <input type="type" class="form-control dk_custom_input" id="fullname" placeholder="">
+                </div>
+                <div class="dk_addres_tyap">
+                    <h4>Address Type</h4>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Home</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Work</p>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="custom-radio" value="option1" onclick="toggleAccordion('panel1')">
+                        <span class="checkmark dk_adress_type"></span>
+                        <p class="mb-0">Other</p>
+                    </label>
+                </div>
+                <div class="dk_save_add_address_main">
+                    <button class="dk_save_add_address" id="saveButton">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- change ADDRESS OF CANVAS  -->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Change Address </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div style="border-bottom: 0.5px solid #d2d2d2"></div>
+            <div class="dk_off_can_add_address">
+                <i class="fa-solid fa-plus"></i>
+                <h2>Add Address</h2>
+            </div>
+            <div class="dk_off_can_add_home">
+                <div class="dk_off_can_add_home_sub">
+                    <h2>Home</h2>
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="dk_off_can_add_home_details">
+                    <h2>Alex Shroff</h2>
+                    <h2>+1 56565 56565</h2>
+                    <p class="mb-0">Ehrenkranz 13 Washington Square S, New York,Washington Square, NY 10012, USA</p>
+                </div>
+            </div>
+            <div class="dk_off_can_add_home">
+                <div class="dk_off_can_add_home_sub">
+                    <h2>Work</h2>
+                </div>
+                <div class="dk_off_can_add_home_details">
+                    <h2>Alex Shroff</h2>
+                    <h2>+1 56565 56565</h2>
+                    <p class="mb-0">Ehrenkranz 13 Washington Square S, New York,Washington Square, NY 10012, USA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proceed to checkout Delivery options of canvas  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_delivery_option_header">
+            <h5 id="offcanvasRightLabel">Delivery options</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body2">
+            <div style="border-bottom: 0.5px solid #d2d2d2; margin-bottom: 30px;"></div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Express Delivery - $39</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>Same day</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Standard Delivery - $29</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>1-2 business days</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Free Delivery</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>5-10 business days</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
     <!-- Apply Coupon -->
     <script>
         const applyButton = document.getElementById('apply-button');
@@ -440,6 +668,7 @@
             });
         });
     </script>
+
     <script>
         // Select the "Select All" checkbox 
         const selectAllCheckbox = document.getElementById('selectAll');
@@ -461,6 +690,7 @@
             });
         });
     </script>
+
     <script>
         // Select all the product cards that have increase/decrease buttons
         const quantityElements = document.querySelectorAll('.quantity');
@@ -487,6 +717,48 @@
             });
         });
     </script>
+    <script>
+        // JavaScript to handle radio button selection and update the order summary
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to necessary elements
+            const deliveryChargeElement = document.querySelector(".delivery-charge");
+            const totalAmountElement = document.querySelector(".total-amount");
+
+            // Initial price details
+            let basePrice = 597; // Base price of items
+            let discount = -600; // Discount applied
+            let platformFee = 1;  // Platform fee
+            let currentDeliveryCharge = 0; // Default (Free delivery)
+
+            // Function to calculate and update total amount
+            function updateTotalAmount() {
+                let totalAmount = basePrice + discount + platformFee + currentDeliveryCharge;
+                totalAmountElement.textContent = `$${totalAmount}`;
+            }
+
+            // Add event listener for delivery option selection
+            document.querySelectorAll('input[name="custom-radio"]').forEach(function (radio) {
+                radio.addEventListener("change", function () {
+                    if (radio.checked) {
+                        if (radio.nextElementSibling.textContent.includes("Express Delivery")) {
+                            deliveryChargeElement.innerHTML = "Express Delivery - $39";
+                            currentDeliveryCharge = 39; // Update delivery charge
+                        } else if (radio.nextElementSibling.textContent.includes("Standard Delivery")) {
+                            deliveryChargeElement.innerHTML = "Standard Delivery - $29";
+                            currentDeliveryCharge = 29; // Update delivery charge
+                        } else if (radio.nextElementSibling.textContent.includes("Free Delivery")) {
+                            deliveryChargeElement.innerHTML = '<span style="color: #727272; padding-right: 5px;"><del>$20</del></span>FREE';
+                            currentDeliveryCharge = 0; // Free delivery
+                        }
+                        updateTotalAmount(); // Recalculate total
+                    }
+                });
+            });
+        });
+
+    </script>
+
     <!-- script Header and Footer -->
     <script>
         // navbar include
@@ -512,6 +784,16 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- address toggle -->
+    <script>
+        document.getElementById("saveButton").addEventListener("click", function () {
+            // Hide "No saved addresses" and show the saved address
+            document.getElementById("noSavedAddress").style.display = "none";
+            document.getElementById("savedAddress").style.display = "block";
+        });
+
+    </script>
 </body>
 
 </html>
