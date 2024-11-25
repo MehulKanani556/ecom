@@ -962,7 +962,6 @@ a{
     font-weight: 600;
     line-height: 21.78px;
     margin-bottom: 5px !important;
-    margin-top: 10px !important;
 }
 .mv_tssh{
     font-size: 18px;
@@ -1334,6 +1333,8 @@ a{
     .mv_slider_godrej {
         width: 160px !important;
     }
+    /* slider6 */
+    
 }
 
 @media (max-width: 1024px) {
@@ -1549,23 +1550,6 @@ a{
     .mv_pmax_90_discription{
         font-size: 14px;
         line-height: 18px;
-    }
-    /* Explore more */
-    .mv_card_title{
-        font-size: 23px !important;
-        line-height: 23px !important;
-    }
-    .mv_add_the{
-        font-size: 23px !important;
-        line-height: 23px !important;
-    }
-    .r_shopnowbtn {
-        padding: 5px 30px !important;
-        background-color: white !important;
-        font-size: 14px !important;
-    }
-    .mv_explore_shop_more {
-        margin-top: 10px !important;
     }
     /***** Electronics *****/
     /* slider2 */
@@ -2272,6 +2256,11 @@ a{
         font-size: 14px !important;
         line-height: 20px !important;
         margin-bottom: 5px !important;
+    }
+    .r_shopnowbtn {
+        padding: 5px 30px !important;
+        background-color: white !important;
+        font-size: 14px !important;
     }
     .mv_explore_shop_more {
         margin-top: 10px !important;
