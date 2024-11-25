@@ -4177,7 +4177,7 @@ input[type="date"] {
 /******* dk_beauty_slider4 *******/
 .dk_position_slider4_content {
     top: 50%;
-    left: 36%;
+    left: 38%;
     /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
@@ -4251,7 +4251,7 @@ input[type="date"] {
 }
 .dk_luggage_slider2_content{
     top: 30%;
-    left: 23%;
+    left: 25%;
     /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
@@ -4281,7 +4281,7 @@ input[type="date"] {
 }
 .dk_luggage_slider4_content{
     top: 50%;
-    left: 33% !important;
+    left: 35% !important;
     /* width: 50%; */
     transform: translateY(-50%);
     display: flex;
