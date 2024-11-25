@@ -55,22 +55,24 @@
                                 </div>
                                 <div class="mt-4">
                                     <div class="form-group dk_custom_input_group">
-                                        <label for="emailOrMobile" class="dk_custom_label">Password</label>
-                                        <input type="password" class="form-control dk_custom_input" id="password"
-                                            placeholder="">
+                                        <label for="password" class="dk_custom_label">Password</label>
+                                        <input type="password" class="form-control dk_custom_input" id="password" placeholder="">
+                                        <span class="dk_toggle_icon_eyes" onclick="togglePassword('password', this)"></span>
                                     </div>
                                 </div>
                                 <div class="mt-4">
                                     <div class="form-group dk_custom_input_group">
-                                        <label for="emailOrMobile" class="dk_custom_label">Confirm Password</label>
-                                        <input type="password" class="form-control dk_custom_input" id="confimpassword"
-                                            placeholder="">
+                                        <label for="confirmpassword" class="dk_custom_label">Confirm Password</label>
+                                        <input type="password" class="form-control dk_custom_input" id="confirmpassword" placeholder="">
+                                        <span class="dk_toggle_icon_eyes" onclick="togglePassword('confirmpassword', this)"></span>
                                     </div>
                                 </div>
-                                <div class="dk_verify"><button class="dk_continue">Verify</button></div>
+                                <div class="dk_verify">
+                                    <a href="../darshit/OTP_verification.html" class="dk_continue d-block text-center">Verify</a>
+                                </div>
 
                                 <h6 style="padding-top: 30px;">Already user at Quickcart ? <a class="dk_deco"
-                                        href="">Signin</a></h6>
+                                        href="../darshit/login_with _email _mobile.html">Signin</a></h6>
                             </div>
                         </form>
                     </div>
@@ -78,6 +80,20 @@
             </div>
         </div>
     </section>
-</body>
 
+    <!-- eyes show and close -->
+    <script>
+        function togglePassword(fieldId, iconElement) {
+          const field = document.getElementById(fieldId);
+          if (field.type === "password") {
+            field.type = "text";
+            iconElement.classList.add('hide');
+          } else {
+            field.type = "password";
+            iconElement.classList.remove('hide');
+          }
+        }
+    </script>
+
+</body>
 </html>

@@ -48,7 +48,7 @@
                         <div class="dk_quick_links_ft">
                             <h3>Quick Links</h3>
                             <h5><a href="../darshit/profile.html">My Account</a></h5>
-                            <h5><a href="../darshit/profile.html" id="redirectToOrders">My Order</a></h5>
+                            <h5><a href="../darshit/profile.html#myorder">My Order</a></h5>
                             <h5><a href="../darshit/wishlist.html">My Wishlist</a></h5>
                             <h5><a href="../darshit/cart_without_address.html">My Cart</a></h5>
                         </div>
@@ -58,8 +58,8 @@
                             <h3>Let us help you</h3>
                             <h5><a href="../darshit/about_us.html">About Us</a></h5>
                             <h5><a href="../darshit/contact_us.html">Contact Us</a></h5>
-                            <h5><a href="../darshit/faqs.html">FAQs</a></h5>
-                            <h5><a href="../darshit/terms_of_service.html">Terms of use</a></h5>
+                            <h5><a href="../darshit/profile.html#faqs" >FAQs</a></h5>
+                            <h5><a href="../darshit/profile.html#termsof">Terms of use</a></h5>
                             <h5><a href="../darshit/privacy_security.html">Privacy & Security</a></h5>
                         </div>
                     </div>
@@ -107,7 +107,30 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
-    <script src="../js/tab_change_redirect.js"></script>
+    <!-- <script>
+      
+    // Wait for the DOM to fully load
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all footer links
+        const footerLinks = document.querySelectorAll(".dk_quickcart_footer_sub a");
+
+        // Attach click event listeners to each link
+        footerLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                // Check if the link has an 'id' attribute
+                const linkId = this.id;
+                if (linkId) {
+                    // Store the id in local storage
+                    localStorage.setItem("selectedFooterLinkId", linkId);
+                    console.log(`ID '${linkId}' stored in local storage.`);
+                } else {
+                    console.log("This link does not have an ID.");
+                }
+            });
+        });
+    });
+</script> -->
+
 </body>
 
 </html>

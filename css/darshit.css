@@ -683,6 +683,21 @@ a{
 
 
 /* Login with Email & Mobile */
+.dk_toggle_icon_eyes {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../mv_image/verify_with_code_eye.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.dk_toggle_icon_eyes.hide {
+  background-image: url('../mv_image/verify_with_code_eye_closed.png');
+}
 .dk_login_with_email{
     padding: 90px 0px;
 }
@@ -770,6 +785,7 @@ a{
 .dk_deco{
     font-weight: 500;
     color: #000000;
+    text-decoration: underline !important;
 } 
 .dk_deco:hover{
     color: #000000;
@@ -780,8 +796,12 @@ a{
     line-height: 24.2px;
     color: #FFFFFF;
     background-color: #040404;
-    width: 100%;
+    width: 100% !important;
     padding: 13px 0px;
+    border-radius: 4px  !important;
+}
+.dk_continue:hover{
+    color: #fff;
 }
 .dk_login_sub h6{
     font-size: 14px;
@@ -1269,7 +1289,7 @@ a{
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #000000;
-    padding: 55px 0px;
+    padding: 75px 0px;
     text-align: center;
     background-position-y: 100%;
 }
@@ -3097,7 +3117,9 @@ input[type="checkbox"] {
     background-color: black;
     color: white;
 }
-
+.dk_sidebar .dk_menu-item.active a{
+    color: #fff !important;
+}
 .dk_sidebar .dk_menu-item.active .dk_icon_image.default {
     display: none;
 }
@@ -3231,6 +3253,15 @@ input[type="checkbox"] {
     transition: background 0.3s, color 0.3s;
     border-bottom: 1px solid #D2D2D2;
 }
+.dk_menu-item a{
+    color: #000000;
+}
+.dk_menu-item:hover a{
+    color: #fff;
+}
+/* .dk_menu-item :active{
+    color: #fff !important;
+} */
 .dk_menu-item:last-child{
     border-bottom: none;
 }
@@ -4011,6 +4042,7 @@ input[type="date"] {
     background-color: #000000;
     padding: 10px 70px;
     border-radius: 4px;
+    color: #fff;
   }
 
 /* contact us page custum select  */
