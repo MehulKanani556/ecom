@@ -23,7 +23,6 @@
     <style>
         .dk_dis_nb {
             display: none;
-            /* Hide sections by default */
         }
     </style>
 </head>
@@ -55,15 +54,15 @@
                                         </span>
                                         My Profile
                                     </li>
-                                    <ul class="dk_menu">
-                                        <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
-                                            <span class="dk_icon">
-                                                <img class="dk_icon_image default" src="../img/my_order.png" alt="My Profile">
-                                                <img class="dk_icon_image hover" src="../img/white_myorder.png" alt="My Profile Hover">
-                                            </span>
-                                            My Orders
-                                        </li>
-                                    </ul>
+                                        <ul class="dk_menu">
+                                            <li class="dk_menu-item dk_nav-item" data-section="ordersSection">
+                                                <span class="dk_icon">
+                                                    <img class="dk_icon_image default" src="../img/my_order.png" alt="My Profile">
+                                                    <img class="dk_icon_image hover" src="../img/white_myorder.png" alt="My Profile Hover">
+                                                </span>
+                                               <a href="#myorder">My Orders</a>
+                                            </li>
+                                        </ul>
                                     <li class="dk_payment_method_main" data-section="paymentMethodsSection">
                                         <div class="accordion p-0" id="accordionExample">
                                             <div class="accordion-item dk_payment_method_item ">
@@ -105,22 +104,22 @@
                                         </span>
                                         My Address
                                     </li>
-                                    <li class="dk_menu-item dk_nav-item" data-section="FaqsSection">
+                                    <li class="dk_menu-item dk_nav-item" data-section="FaqsSection" >
                                         <span class="dk_icon">
                                             <img class="dk_icon_image default" src="../img/faqs.png" alt="My Profile">
                                             <img class="dk_icon_image hover" src="../img/white_fasq.png"
                                                 alt="My Profile Hover">
                                         </span>
-                                        FAQs
+                                        <a href="#faqs">FAQs</a>
                                     </li>
-                                    <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection">
+                                    <li class="dk_menu-item dk_nav-item" data-section="termsofserviceSection" >
                                         <span class="dk_icon">
                                             <img class="dk_icon_image default" src="../img/terns_of_service.png"
                                                 alt="My Profile">
                                             <img class="dk_icon_image hover" src="../img/white_terms.png"
                                                 alt="My Profile Hover">
                                         </span>
-                                        Terms of Service
+                                        <a href="#termsof">Terms of Service</a>
                                     </li>
                                     <li class="dk_menu-item dk_nav-item" data-section="deactivateaccountSection">
                                         <span class="dk_icon">
@@ -540,7 +539,7 @@
                                                                 <li>
                                                                     <button class="dropdown-item" type="button" data-bs-toggle="modal" 
                                                                             data-bs-target="#exampleModal_address" 
-                                                                            onclick="confirmDelete('card1')">
+                                                                            onclick="confirmDeleteaddress('card1')">
                                                                         Delete
                                                                     </button>
                                                                 </li>
@@ -577,7 +576,7 @@
                                                                 <li>
                                                                     <button class="dropdown-item" type="button" data-bs-toggle="modal" 
                                                                             data-bs-target="#exampleModal_address" 
-                                                                            onclick="confirmDelete('card2')">
+                                                                            onclick="confirmDeleteaddress('card2')">
                                                                         Delete
                                                                     </button>
                                                                 </li>
@@ -882,41 +881,40 @@
     <!--************* my profile and edit frofile script  **********************-->
     <!-- eyase input passwoed hide and show -->
     <script>
-        const togglePassword =
-            document.querySelector('#togglePassword');
-
-        const password =
-            document.querySelector('#id_password');
-
-        togglePassword.
-            addEventListener('click', function (e) {
-
-                // Toggle the type attribute 
-                const type = password.getAttribute(
-                    'type') === 'password' ? 'text' : 'password';
-                password.setAttribute('type', type);
-
-                // Toggle the eye slash icon 
-                if (togglePassword.src.match(
-                    "../")) {
-                    togglePassword.src =
-                        "../img/hide.png";
-                } else {
-                    togglePassword.src =
-                        "../img/hi.png";
-                }
-            }); 
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#id_password');
+    
+            if (togglePassword && password) {
+                togglePassword.addEventListener('click', function () {
+                    // Toggle the type attribute
+                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                    password.setAttribute('type', type);
+    
+                    // Toggle the eye icon
+                    if (togglePassword.src.match("../")) {
+                        togglePassword.src = "../img/hide.png";
+                    } else {
+                        togglePassword.src = "../img/hi.png";
+                    }
+                });
+            }
+        });
     </script>
     <!-- date input  -->
     <script>
-        // Optional: Close calendar when clicking outside
-        window.onclick = function (event) {
-            const input = document.getElementById('birthdate');
-            const icon = document.querySelector('.calendar-icon');
+        document.addEventListener('DOMContentLoaded', function () {
+    // Optional: Close calendar when clicking outside
+    window.onclick = function (event) {
+        const input = document.getElementById('birthdate');
+        const icon = document.querySelector('.calendar-icon');
+        if (input && icon) { // Check if elements exist
             if (!input.contains(event.target) && !icon.contains(event.target)) {
                 input.blur(); // This will close the calendar
             }
         }
+    };
+});
     </script>
     <!-- *************************************************************************-->
 
@@ -1263,7 +1261,7 @@
     <script>
         let cardToDelete1 = null;
 
-        function confirmDelete(cardId) {
+        function confirmDeleteaddress(cardId) {
             cardToDelete1 = document.getElementById(cardId);
         }
 
@@ -1363,7 +1361,7 @@
                     </div>
                 </div>
                 <div class="modal-footer dk_delete_address_sub mb-3 dk_size_box">
-                    <button type="button" class="btn dk_delete_add_conform">Let me stay</button>
+                    <button type="button" class="btn dk_delete_add_conform" data-bs-dismiss="model">Let me stay</button>
                     <button type="button" class="btn btn-secondary dk_delete_add_conform2"
                         data-bs-dismiss="modal">Deactivate</button>
                 </div>
@@ -1407,7 +1405,7 @@
                     </div>
                 </div>
                 <div class="modal-footer dk_delete_address_sub">
-                    <button type="button" class="btn dk_delete_add_conform">Cancel</button>
+                    <button type="button" class="btn dk_delete_add_conform" data-bs-dismiss="model">Cancel</button>
                     <button type="button" class="btn btn-secondary dk_delete_add_conform2"
                         data-bs-dismiss="modal">Yes</button>
                 </div>
@@ -1811,61 +1809,45 @@
             }
         }
     </script>
+    
     <!-- My Order Footer Script -->
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const activeSection = localStorage.getItem("activeSection");
-
-        if (activeSection) {
-            // Hide all sections
-            document.querySelectorAll(".dk_profile-content").forEach(section => {
-                section.style.display = "none";
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        // Get all the nav link elements
+        const navLinks = document.querySelectorAll('.nav-link');
+    
+        // Add event listener for each nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Prevent the default behavior (i.e., jumping to the href)
+                event.preventDefault();
+    
+                // Get the target tab's href attribute (e.g., "#home", "#profile", etc.)
+                const targetHash = link.getAttribute('href');
+    
+                // Update the URL's hash without reloading the page
+                window.location.hash = targetHash;
+    
+                // Activate the clicked tab
+                navLinks.forEach(tab => tab.classList.remove('active'));
+                link.classList.add('active');
+    
+                // Show the corresponding tab content
+                const targetTabContent = document.querySelector(targetHash);
+                const tabContents = document.querySelectorAll('.tab-pane');
+                tabContents.forEach(tab => tab.classList.remove('show', 'active'));
+                targetTabContent.classList.add('show', 'active');
             });
-
-            // Show the active section
-            const sectionToActivate = document.getElementById(activeSection);
-            if (sectionToActivate) {
-                sectionToActivate.style.display = "block";
-
-                // Highlight the active tab
-                const tabToActivate = document.querySelector(`[data-section="${activeSection}"]`);
-                if (tabToActivate) {
-                    tabToActivate.classList.add("active");
-                }
+        });
+    
+        // Optionally, if there's a hash in the URL on page load, activate the corresponding tab
+        if (window.location.hash) {
+            const hash = window.location.hash;
+            const activeTab = document.querySelector(`a[href="${hash}"]`);
+            if (activeTab) {
+                activeTab.click(); // This will simulate a click on the correct tab
             }
-
-            // Clear the activeSection to avoid persistent activation
-            localStorage.removeItem("activeSection");
         }
     });
-    </script> -->
-    <!-- My Order Footer Script -->
-    <script>
-        // On page load, check if a specific section should be active
-        document.addEventListener("DOMContentLoaded", function () {
-            const activeSection = sessionStorage.getItem("activeSection");
-
-            if (activeSection) {
-                // Remove session storage to avoid repeated redirection
-                sessionStorage.removeItem("activeSection");
-
-                // Activate the target section
-                document.querySelectorAll(".dk_profile-content").forEach((section) => {
-                    section.style.display = "none"; // Hide all sections
-                });
-
-                const targetSection = document.getElementById(activeSection);
-                if (targetSection) {
-                    targetSection.style.display = "block"; // Show the intended section
-                }
-
-                // Activate the correct tab
-                if (activeSection === "ordersSection") {
-                    document.getElementById("home-tab").classList.add("active");
-                    document.getElementById("home-tab-pane").classList.add("show", "active");
-                }
-            }
-        });
     </script>
     <!-- ********************************************************************* -->
 

@@ -1245,6 +1245,10 @@
     }
 }
 @media(max-width:991px){
+    /* changes */
+    .dk_profile-form a{
+        margin-top: 25px !important;
+    }
     /* home */
     .dk_shoes_slider{
         justify-content: center;
