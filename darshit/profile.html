@@ -1328,7 +1328,7 @@
                         <input type="text" class="form-control dk_deactive_inp" placeholder="+1 56565 65656">
                         <button type="button" class="dk_send_otp_button">Send OTP</button>
                     </div>
-                    <div class="d-flex justify-content-between mv_otp_box">
+                    <div class="d-flex justify-content-between mv_otp_box" id="deactivate-otp-group">
                         <!-- OTP input boxes -->
                         <!-- <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
                             style="width: 45px;">
@@ -1342,7 +1342,7 @@
                             style="width: 45px;">
                         <input type="text" maxlength="1" class="form-control text-center dk_otp_box_deactive"
                             style="width: 45px;"> -->
-                            <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box "
+                                <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box "
                                         oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
                                     <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input dk_otp_box"
                                         oninput="validateAndMove(this, 'otp3')" id="otp2" onkeydown="moveToPrevious(event, 'otp1')">
@@ -1496,7 +1496,7 @@
                     image: "../mv_image/image 386.png",
                     orderDate: "21/09/2024",
                     expectedDelivery: "26/09/2024",
-                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    statusMessage: "Your request for return the product has been recived successfully.",
                     imageclose: "../mv_image/tickmark.png",
                     viewstatus: "View return & refund status"
                 },
@@ -1507,7 +1507,7 @@
                     image: "../mv_image/image 386.png",
                     orderDate: "21/09/2024",
                     expectedDelivery: "26/09/2024",
-                    statusMessage: "You requested a cancellation due to you change your mind about this product",
+                    statusMessage: "Your product has been return successfully. your refund will be credited to your original payment method.",
                     imageclose: "../mv_image/tickmark.png",
                     viewstatus: "View return & refund status"
                 },
@@ -1595,12 +1595,16 @@
                             <div class="row">
                                 <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                     <div class="mv_order_product_image">
-                                        <img src="${product.image}" alt="${product.name}">
+                                        <a href="../darshit/on_click_delivered_order.html">
+                                            <img src="${product.image}" alt="${product.name}">
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                    <p class="mv_order_product_text">${product.name} (${product.description})</p>
-                                    <p class="mv_order_price mb-0">${product.price}</p>
+                                    <a href="../darshit/on_click_delivered_order.html">
+                                        <p class="mv_order_product_text">${product.name} (${product.description})</p>
+                                        <p class="mv_order_price mb-0">${product.price}</p>
+                                    </a>
                                 </div>
                                 <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-0">
                                     <div class="mv_order_price_track">
@@ -1680,7 +1684,7 @@
                                         </div>
                                         </div>
                                             <div>
-                                            ${product.viewstatus ? `<p class="mb-0"><a class="mv_order_track" href="">${product.viewstatus}</a></p>` : ""}
+                                            ${product.viewstatus ? `<p class="mb-0"><a class="mv_order_track" href="../darshit/return_refund.html">${product.viewstatus}</a></p>` : ""}
                                             </div>
                                         </div>
                                     </div>
@@ -1742,7 +1746,7 @@
                 <input type="text" class="form-control dk_custom_input_mv" id="emailOrMobile" placeholder="" maxlength="10"
                     oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
-            <div class="mv_otp_box">
+            <div class="mv_otp_box" id="return-otp-group">
                 <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
                     oninput="validateAndMove(this, 'otp2')" id="otp1" onkeydown="moveToPrevious(event, 'otp1')">
                 <input type="text" inputmode="numeric" maxlength="1" class="mv_otp_input"
@@ -1776,7 +1780,7 @@
                         successfully received</p>
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="me-4">
-                            <button class="mv_back_to_home mv_refund_back_to_home">Back to Home</button>
+                            <button class="mv_back_to_home mv_refund_back_to_home" data-bs-dismiss="modal">Back to Home</button>
                         </div>
                         <div>
                             <a href="./return_refund.html">
@@ -1791,23 +1795,23 @@
 
     <!-- script Return Order OTP -->
     <script>
-        function validateAndMove(current, nextId) {
+        document.querySelectorAll('.mv_otp_box').forEach(group => {
+            const inputs = group.querySelectorAll('.mv_otp_input');
 
-            if (!/^\d$/.test(current.value)) {
-                current.value = '';
-                return;
-            }
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', () => {
+                    if (/^\d$/.test(input.value) && inputs[index + 1]) {
+                        inputs[index + 1].focus();
+                    }
+                });
 
-            if (current.value.length === 1 && nextId) {
-                document.getElementById(nextId).focus();
-            }
-        }
-
-        function moveToPrevious(event, previousId) {
-            if (event.key === "Backspace" && event.target.value === "" && previousId) {
-                document.getElementById(previousId).focus();
-            }
-        }
+                input.addEventListener('keydown', (event) => {
+                    if (event.key === 'Backspace' && input.value === '' && inputs[index - 1]) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+        });
     </script>
     
     <!-- My Order Footer Script -->

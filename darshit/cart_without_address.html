@@ -90,7 +90,7 @@
                     <div class="dk_cart_without_address_sub">
                         <div style="margin: 0px 0px !important;" class="row">
                             <div style="padding: 0px 10px !important;" class="col-lg-8">
-                                <div class="dk_no_saved_addresses" id="savedAddress" style="display: none !important;">
+                                <div class="dk_no_saved_addresses d-none" id="savedAddress" >
                                     <div class="dk_no_saved_addresses_font d-flex">
                                         <div>
                                             <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
@@ -132,7 +132,7 @@
                                             style="border: 1px solid #000000">Change</button>
                                     </div>
                                 </div> -->
-                                <div id="noSavedAddress" class="dk_no_saved_addresses">
+                                <div id="noSavedAddress" class="dk_no_saved_addresses" >
                                     <div class="dk_no_saved_addresses_font">
                                         <h2>No saved Addresses</h2>
                                     </div>
@@ -575,7 +575,7 @@
                     <div class="dk_express_delivery_39">
                         <h2>Express Delivery - $39</h2>
                         <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1">
+                            <input type="radio" name="custom-radio" value="option1" id="express-delivery">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -593,7 +593,7 @@
                     <div class="dk_express_delivery_39">
                         <h2>Standard Delivery - $29</h2>
                         <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1">
+                            <input type="radio" name="custom-radio" value="option1" id="standard-delivery">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -611,7 +611,7 @@
                     <div class="dk_express_delivery_39">
                         <h2>Free Delivery</h2>
                         <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1">
+                            <input type="radio" name="custom-radio" value="option1" id="free-delivery">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -787,13 +787,44 @@
 
     <!-- address toggle -->
     <script>
-        document.getElementById("saveButton").addEventListener("click", function () {
-            // Hide "No saved addresses" and show the saved address
-            document.getElementById("noSavedAddress").style.display = "none";
-            document.getElementById("savedAddress").style.display = "block";
+        document.addEventListener("DOMContentLoaded", function () {
+            const saveButton = document.getElementById("saveButton");
+            const noSavedAddress = document.getElementById("noSavedAddress");
+            const savedAddress = document.getElementById("savedAddress");
+    
+            if (saveButton && noSavedAddress && savedAddress) {
+                saveButton.addEventListener("click", function () {
+                    // Hide "No saved addresses"
+                    noSavedAddress.classList.add("d-none");
+    
+                    // Show "Saved address"
+                    savedAddress.classList.remove("d-none");
+    
+                    console.log("No saved address hidden, saved address shown.");
+                });
+            } else {
+                console.error("One or more elements are missing!");
+            }
+        });
+    </script>
+
+    <!-- connectivity otherpage from offcanvas -->
+    <script>
+        document.getElementById('express-delivery').addEventListener('click', function() {
+            window.location.href = '../darshit/delivery_details.html';
         });
 
+        document.getElementById('standard-delivery').addEventListener('click', function() {
+            window.location.href = '../darshit/delivery_details.html';
+
+        });
+
+        document.getElementById('free-delivery').addEventListener('click', function() {
+            window.location.href = '../darshit/delivery_details.html';
+
+        });
     </script>
+    
 </body>
 
 </html>
