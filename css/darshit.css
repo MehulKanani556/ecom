@@ -1265,7 +1265,7 @@ a{
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     padding: 15px;
-    max-width: 200px; /* Adjust width to fit 5 per row */
+    max-width: 235px; /* Adjust width to fit 5 per row */
     text-align: center;
     box-shadow: 1px 6px 19px 0px #A4A4A433;
 
