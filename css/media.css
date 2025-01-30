@@ -2270,6 +2270,13 @@
     }
  } 
  @media(max-width:767px){
+    /* Chnage */
+    .dk_change_label{
+        top: -25px !important;
+        color: #000000;
+        left: -5px !important;
+        background-color: transparent !important;
+    }
     /* forget password chnge  */
     .dk_login_sub{
         box-shadow: none !important;

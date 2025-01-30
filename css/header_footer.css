@@ -188,6 +188,9 @@
     padding-bottom: 0rem;
     padding-left: 14px;
 }
+.dk_connect_logo{
+    margin-bottom: 12px;
+} 
 /****************************/
 
 
@@ -303,5 +306,24 @@
 }
 
 @media(max-width:375px){
-    
+    /* Footer */
+    .dk_quickcart_footer a{
+        font-size: 14px;
+    }
+    .dk_quickcart_footer h3{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    .dk_categories_ft h5{
+        margin-bottom: 0px !important;
+    }
+    .dk_quick_links_ft h5{
+        margin-bottom: 0px !important;
+    }
+    .dk_let_us_help_you_ft h5{
+        margin-bottom: 0px !important;
+    }
+    .dk_connect_logo{
+        margin-bottom: 7px;
+    } 
 }
