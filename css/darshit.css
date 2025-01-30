@@ -1499,7 +1499,7 @@ a{
 
 .dk_perfume .dk_shop_now {
     font-size: calc(0.8rem + 0.6vw); 
-    padding: 1vw 2vw;
+    padding: 13px 50px;
     background-color: #fff;
     color: #000;
     border: none;
@@ -1551,8 +1551,8 @@ a{
     line-height: 21.78px;
     text-align: left;
     color: #000000;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
 .dk_best_seller_slider {
