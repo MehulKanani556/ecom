@@ -1,3 +1,5 @@
+// .....................................................  sportswer page  .................................................................... //
+
 //  SportsWear page top brands
 const top_brands_shoes = [
     { 
@@ -427,3 +429,4 @@ const sportswer_ex_box = sportswer_exporing_box.map((item, index) => {
 }).join("");
 
 document.getElementById("dk_explore_more_box").innerHTML = sportswer_ex_box;
+
