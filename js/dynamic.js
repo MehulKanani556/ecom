@@ -226,6 +226,7 @@ const womenscard = [
 
 const womencardproduct = womenscard.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -233,14 +234,26 @@ const womencardproduct = womenscard.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
             <div class="dk_browsing_products">
                 <div class="card">
                     <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span style="cursor: pointer !important;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                            <i class="${heartIconClass} fa-heart"></i>
+                        </span>
+                        <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                            <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                 alt="Cart Icon" class="cart-icon">
+                        </span>
                     </div>
 
                     <div class="slider">
@@ -312,6 +325,30 @@ function toggleWishlist(event,item) {
     localStorage.setItem('wishlist', JSON.stringify(data));
 }
 
+// Add cart
+let Cart = [];
+
+function toggleCart(event, element, item) {
+    event.preventDefault();
+
+    let data = JSON.parse(localStorage.getItem('Cart')) || [];
+    let index = data.findIndex(i => i.id === item.id);
+    const img = element.querySelector("img"); // Get the cart icon image
+
+    if (index !== -1) {
+        data.splice(index, 1);
+        img.src = "../mv_image/icon_cart.png"; // Change to unselected cart icon
+    } else {
+        data.push(item);
+        img.src = "../mv_image/icon_cart_selected.png"; // Change to selected cart icon
+    }
+
+    localStorage.setItem('Cart', JSON.stringify(data));
+}
+function changeImage(element, newSrc) {
+    const mainImage = element.closest('.card').querySelector('.slider-image');
+    mainImage.src = `../img/${newSrc}`;
+}
 
 
 // Home (Best sellers)
@@ -475,6 +512,7 @@ const top_selling_smartphones = [
 
 const top_sell_phone = top_selling_smartphones.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -482,14 +520,25 @@ const top_sell_phone = top_selling_smartphones.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
             <div class="dk_browsing_products">
                 <div class="card">
                     <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span style="cursor: pointer !important;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                            <i class="${heartIconClass} fa-heart"></i></span>
+                        <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                            <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                 alt="Cart Icon" class="cart-icon">
+                        </span>
                     </div>
 
                     <div class="slider">
@@ -574,6 +623,7 @@ const yourbrowsing = [
 
 const your_brow_pro = yourbrowsing.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -581,14 +631,25 @@ const your_brow_pro = yourbrowsing.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
             <div class="dk_browsing_products">
                 <div class="card">
                     <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span style="cursor: pointer !important;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                            <i class="${heartIconClass} fa-heart"></i></span>
+                        <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                            <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                 alt="Cart Icon" class="cart-icon">
+                        </span>
                     </div>
 
                     <div class="slider">
@@ -628,3 +689,8 @@ const your_brow_pro = yourbrowsing.map((item, index) => {
 }).join(''); 
 
 document.getElementById("mv_your_browsing_product").innerHTML = your_brow_pro;
+
+
+
+
+// Wishlist
