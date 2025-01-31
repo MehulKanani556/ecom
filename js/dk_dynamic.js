@@ -6,91 +6,91 @@ const top_brands_shoes = [
         id: "1", 
         img: "adidas.png", 
         discount: "10", 
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "2", 
         img: "puma.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "3", 
         img: "nike.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "4", 
         img: "skechers.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "5", 
         img: "hrx.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "6", 
         img: "jorden.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "7", 
         img: "reebok.png", 
         discount: "10", 
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "8", 
         img: "asics.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "9", 
         img: "columbia.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "10", 
         img: "fila.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "11", 
         img: "nb.png", 
         discount: "10", 
-        link: "" 
+        link: "productdetails" 
     },
     { 
         id: "12", 
         img: "converse.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "13", 
         img: "pai.png", 
         discount: "10", 
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "14", 
         img: "under_armour.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "15", 
         img: "decathlon.png", 
         discount: "10", 
-        link: "topwear" 
+        link: "productdetails" 
     },
 ];
 
@@ -119,31 +119,31 @@ const exploremore = [
         id: "2", 
         img: "women.png", 
         name: "Womens", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "3", 
         img: "kids.png", 
         name: "Kids", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "4", 
         img: "footwear.png", 
         name: "Footewear", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "5", 
         img: "fitness_equipment.png", 
         name: "Fitness Equipment", 
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "6", 
         img: "sports_accessories.png", 
         name: "Sports Accessories", 
-        link: "topwear" 
+        link: "productdetails" 
     },
 ];
 
@@ -169,7 +169,7 @@ const new_on_quickcart = [
         img2: "logo_under_armour.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory"
+        link: "productdetails"
     },
     { 
         id: "2", 
@@ -177,7 +177,7 @@ const new_on_quickcart = [
         img2: "logo_converse.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory" 
+        link: "productdetails" 
     },
     { 
         id: "3", 
@@ -185,7 +185,7 @@ const new_on_quickcart = [
         img2: "logo_asics.png",
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory"
+        link: "productdetails"
     },
     { 
         id: "4", 
@@ -194,7 +194,7 @@ const new_on_quickcart = [
         name: "Mens", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory" 
+        link: "productdetails" 
     },
     { 
         id: "5", 
@@ -203,7 +203,7 @@ const new_on_quickcart = [
         name: "Mens", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory" 
+        link: "productdetails" 
     },
     { 
         id: "6", 
@@ -212,7 +212,7 @@ const new_on_quickcart = [
         name: "Mens", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "MensCategory"
+        link: "productdetails"
     },
 ];
 
@@ -248,7 +248,7 @@ const trending_dealing = [
         thumbnail: ["new_balance1.png", "new_balance2.png", "new_balance3.png"],
         discount: "40",
         price: "700",
-        link:""
+        link:"productdetails"
     },
     { 
         id: "2", 
@@ -258,7 +258,7 @@ const trending_dealing = [
         thumbnail: ["trending_reebok1.png"],
         discount: "50",
         price: "399",
-        link:""
+        link:"productdetails"
     },
     { 
         id: "3", 
@@ -268,7 +268,7 @@ const trending_dealing = [
         thumbnail: ["trending_skechers1.png", "trending_skechers1.png"],
         discount: "40",
         price: "299",
-        link:""
+        link:"productdetails"
     }
 ];
 
@@ -276,28 +276,30 @@ const trending_deals = trending_dealing.map(item => {
     return `
         <div class="swiper-slide">
             <div class="product-card w-100">
-                <div class="swiper innerSwiper">
-                    <div class="swiper-wrapper">
-                        ${item.images.map(img => 
-                            `<div class="swiper-slide">
-                                <img src="../mv_image/${img}" alt="${item.name} Image" class="r_v1img">
-                            </div>`
+                <a href="../darshit/${item.link}.html">
+                    <div class="swiper innerSwiper">
+                        <div class="swiper-wrapper">
+                            ${item.images.map(img => 
+                                `<div class="swiper-slide">
+                                    <img src="../mv_image/${img}" alt="${item.name} Image" class="r_v1img">
+                                </div>`
+                            ).join('')}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <h5 style="color: #000000;" class="mv_tsmh">${item.name}</h5>
+                    <p  style="color: #000000;" class="mv_tssh text-start">${item.categorydesc}</p>
+                    <div class="r_thumbnailimg d-flex align-items-center">
+                        ${item.thumbnail.map(thumb => 
+                            `<img src="../mv_image/${thumb}" alt="${item.name} Thumbnail">`
                         ).join('')}
                     </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <h5 class="mv_tsmh">${item.name}</h5>
-                <p class="mv_tssh text-start">${item.categorydesc}</p>
-                <div class="r_thumbnailimg d-flex align-items-center">
-                    ${item.thumbnail.map(thumb => 
-                        `<img src="../mv_image/${thumb}" alt="${item.name} Thumbnail">`
-                    ).join('')}
-                </div>
-                <div class="mv_discount_text">${item.discount}% OFF</div>
-                <p class="text-start m-0">
-                    <strong class="mv_less_discount_price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</strong>
-                    <del class="mv_without_discount_price">$${item.price}</del>
-                </p>
+                    <div class="mv_discount_text">${item.discount}% OFF</div>
+                    <p class="text-start m-0">
+                        <strong class="mv_less_discount_price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</strong>
+                        <del class="mv_without_discount_price">$${item.price}</del>
+                    </p>
+                </a>
             </div>
         </div>
     `;
@@ -312,42 +314,42 @@ const sportswer_accessories = [
         img: "trending_1.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "2", 
         img: "trending_2.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "3", 
         img: "trending_3.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "4", 
         img: "trending_4.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "5", 
         img: "trending_5.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "6", 
         img: "trending_1.png", 
         discount: "20", 
         info:"*T&C Apply",
-        link: "topwear"
+        link: "productdetails"
     },
 ];
 
@@ -360,7 +362,7 @@ const sportswer_acc = sportswer_accessories.map((item, index) => {
                                
                                 <div class="card-body">
                                     <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to ${item.discount}% OFF</p>
-                                    <span class="text-center mv_trending_card_dis">T&C Apply</span>
+                                    <span class="text-center mv_trending_card_dis">${item.info}</span>
                                 </div>
                             </div>
                             </a>
@@ -377,7 +379,7 @@ const sportswer_exporing_box = [
         img: "sport_explore_1.png", 
         name:"NEW STYLES",
         btn:"Shop Now",
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "2", 
@@ -385,7 +387,7 @@ const sportswer_exporing_box = [
         name:"",
         btn:"Shop Now",
         showFinalTouch:"true",
-        link: "topwear" 
+        link: "productdetails" 
     },
     { 
         id: "3", 
@@ -393,7 +395,7 @@ const sportswer_exporing_box = [
         name:"NO REST, JUST RUN",
         description:"Run to live. Live to run",
         btn:"Shop Now",
-        link: "topwear"
+        link: "productdetails"
     },
     { 
         id: "4", 
@@ -401,7 +403,7 @@ const sportswer_exporing_box = [
         name:"SPORTS ACCESSORIES",
         description:"Your comfort, our Priority",
         btn:"Shop Now",
-        link: "topwear" 
+        link: "productdetails" 
     },
 ];
 

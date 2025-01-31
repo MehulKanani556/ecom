@@ -1,229 +1,229 @@
-// .....................................................  beauty page  .................................................................... //
+// .....................................................  electronics page  .................................................................... //
 
-//  beauty page top brands
-const top_brands_makeup = [
+// electronics page top brands
+const top_brands_electonics = [
     { 
         id: "1", 
-        img: "lorel.png", 
+        img: "lg.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "chenal.png", 
+        img: "whirlpool.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "remee.png", 
+        img: "sony.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "4", 
-        img: "maybeline.png", 
+        img: "samsung.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "mac.png", 
+        img: "haier.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "iconic.png", 
+        img: "apple.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "7", 
-        img: "colorbar.png", 
+        img: "asus.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "8", 
-        img: "facescanada.png", 
+        img: "hp.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "9", 
-        img: "purpale.png", 
+        img: "dell_technologies.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "10", 
-        img: "nyka.png", 
+        img: "vivo.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "11", 
-        img: "mamaearth.png", 
+        img: "mi.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "12", 
-        img: "nieva.png", 
+        img: "godrej.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "13", 
-        img: "plome.png", 
+        img: "panasonic.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "14", 
-        img: "sugar.png", 
+        img: "noice.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "15", 
-        img: "lotus.png", 
+        img: "jbl.png", 
         discount: "10", 
         link: "productdetails" 
     },
 ];
 
-const beautyproduct = top_brands_makeup.map((item, index) => {
+const electronicsproduct = top_brands_electonics.map((item, index) => {
   return `
-                            <a href="/darshit/${item.link}.html">
-                                <div class="dk_product-item">
-                                <img src="../img/${item.img}" alt="${item.img}">
-                                <p>Upto ${item.discount}% OFF</p>
-                                </div>
-                            </a>
-                        `;
+        <div class="dk_product-item">
+            <a href="/darshit/${item.link}.html">
+            <img src="../mv_image/${item.img}" alt="${item.img}">
+                <p style="color: #000000;">Upto ${item.discount}% OFF</p>
+            </a>
+        </div>
+        `;
 }).join("");
 
-document.getElementById("dk_beauty_top_brands").innerHTML = beautyproduct;
+document.getElementById("dk_electronics_top_brand").innerHTML = electronicsproduct;
 
 
-//  beauty page explore more
-const dk_beauty_wear = [
+//  electronocs page explore more
+const dk_electronics_wear = [
     { 
         id: "1", 
-        img: "face.png", 
-        name: "Face", 
+        img: "mobiles.png", 
+        name: "Trolley", 
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "eyes.png", 
-        name: "Eyes", 
+        img: "television.png", 
+        name: "Television", 
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "lips.png", 
-        name: "Lips", 
+        img: "refrigerators.png", 
+        name: "Refrigerators", 
         link: "productdetails" 
     },
     { 
         id: "4", 
-        img: "skin.png", 
-        name: "Skin", 
+        img: "air_conditioners.png", 
+        name: "Air Conditioners", 
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "hair.png", 
-        name: "Hair", 
+        img: "washing_machin.png", 
+        name: "Washing Machin", 
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "aceseress.png", 
-        name: "Accessories", 
+        img: "laptop.png", 
+        name: "Laptop", 
         link: "productdetails" 
     },
 ];
 
-const beautymorehtml = dk_beauty_wear.map((item, index) => {
+const electronicsmorehtml = dk_electronics_wear.map((item, index) => {
   return `
         <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
         <a href="/darshit/${item.link}.html">
-            <img src="../img/${item.img}" alt="${item.img}">
+            <img src="../mv_image/${item.img}" alt="${item.img}">
             <p style="color: #fff;">${item.name}</p>
         </a>
         </div>
         `;
 }).join("");
 
-document.getElementById("dk_beauty_explore_more").innerHTML = beautymorehtml;
+document.getElementById("dk_electronics_explore_more").innerHTML = electronicsmorehtml;
 
 
-// beauty page New On Quickcart
-const dk_beauty_new_quickcart = [
+// electronics page New On Quickcart
+const dk_electronics_new_quickcart = [
     { 
         id: "1", 
-        img1: "iconic2.png", 
-        img2: "s_iconic.png", 
+        img1: "new_samsung.png", 
+        img2: "logo_samsung.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img1: "cenal2.png", 
-        img2: "s_chanel.png", 
+        img1: "new_asus.png", 
+        img2: "logo_asus.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img1: "lorel2.png", 
-        img2: "s_loreal.png",
+        img1: "new_sony.png", 
+        img2: "logo_sony.png",
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img1: "sugar2.png", 
-        img2: "s_sugar.png", 
+        img1: "new_noise.png", 
+        img2: "logo_noise.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img1: "mac2.png", 
-        img2: "s_mac.png", 
+        img1: "new_apple.png", 
+        img2: "logo_apple.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img1: "iconic2.png", 
-        img2: "s_iconic.png", 
+        img1: "new_samsung.png", 
+        img2: "logo_samsung.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
 ];
 
-const dk_beautywere = dk_beauty_new_quickcart.map((item, index) => {
+const dk_electronicwere = dk_electronics_new_quickcart.map((item, index) => {
   return `
     <div class="swiper-slide">
     <a href="/darshit/${item.link}.html">
         <div class="card">
-            <img src="../img/${item.img1}" class="card-img-top" alt="Calvin Klein">
+            <img src="../mv_image/${item.img1}" class="card-img-top" alt="Calvin Klein">
                                
                 <div class="card-body">
                     <div>
-                    <img src="../img/${item.img2}" alt="" class="mx-auto" style="height: 25px;">
+                    <img src="../mv_image/${item.img2}" alt="" class="mx-auto" style="height: 25px;">
                     </div>
                     <p style="font-size: 12px; line-height: 1" class="card-text text-center mb-0">Up to ${item.discount}% OFF</p>
                     <small class="text-center mv_trending_card_dis">${item.info}</small>
@@ -234,44 +234,44 @@ const dk_beautywere = dk_beauty_new_quickcart.map((item, index) => {
     `;
 }).join("");
 
-document.getElementById("dk_beauty_new_on_quickcart").innerHTML = dk_beautywere;
+document.getElementById("dk_electronics_new_on_quick").innerHTML = dk_electronicwere;
 
 
-// beauty page Trending Deals
-const beauty_trending_dealing = [
+// electronics page Trending Deals
+const electronics_trending_dealing = [
     { 
         id: "1", 
-        images: ["renee_dels.png","renee_dels.png","renee_dels.png","renee_dels.png","renee_dels.png"],
-        name: "RENEE",
-        categorydesc: "Madness pH Lipstick, 3gm",
-        thumbnail: ["renee_dels_sm.png"],
+        images: ["new_trending_sony.png","new_trending_sony.png","new_trending_sony.png","new_trending_sony.png","new_trending_sony.png"],
+        name: "SONY",
+        categorydesc: "Sony Bravia 9 4k TV ",
+        thumbnail: ["new_trending_sony1.png", "new_trending_sony1.png"],
         discount: "40",
         price: "799",
         link:"productdetails"
     },
     { 
         id: "2", 
-        images: ["sugar_dels.png", "sugar_dels.png", "sugar_dels.png", "sugar_dels.png", "sugar_dels.png"],
-        name: "SUGAR",
-        categorydesc: "Powder Play Banana Compact",
-        thumbnail: ["sugar_dels_sm.png"],
+        images: ["new_trending_dell.png", "new_trending_dell.png", "new_trending_dell.png", "new_trending_dell.png", "new_trending_dell.png"],
+        name: "Dell",
+        categorydesc: "new inspiron 14 plus laptop",
+        thumbnail: ["new_trending_dell1.png"],
         discount: "50",
         price: "399",
         link:"productdetails"
     },
     { 
         id: "3", 
-        images: ["colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png"],
-        name: "COLORBAR",
-        categorydesc: "Berry Blush Eyeshadow Palette",
-        thumbnail: ["colorbar_dels_sm.png"],
+        images: ["new_trending_lg.png", "new_trending_lg.png", "new_trending_lg.png", "new_trending_lg.png", "new_trending_lg.png"],
+        name: "LG",
+        categorydesc: "Refrigerator 630L, Side by Side",
+        thumbnail: ["new_trending_lg1.png", "new_trending_lg1.png"],
         discount: "40",
         price: "299",
         link:"productdetails"
     }
 ];
 
-const beautytrending_deals = beauty_trending_dealing.map(item => {
+const electronicstrending_deals = electronics_trending_dealing.map(item => {
     return `
         <div class="swiper-slide">
             <div class="product-card w-100">
@@ -280,7 +280,7 @@ const beautytrending_deals = beauty_trending_dealing.map(item => {
                     <div class="swiper-wrapper">
                             ${item.images.map(img => 
                                 `<div class="swiper-slide">
-                                <img src="../img/${img}" alt="${item.name} Image" class="r_v1img">
+                                <img src="../mv_image/${img}" alt="${item.name} Image" class="r_v1img">
                             </div>`
                         ).join('')}                 
                         </div>               
@@ -290,7 +290,7 @@ const beautytrending_deals = beauty_trending_dealing.map(item => {
                             <p  style="color: #000000;" class="mv_tssh text-start">${item.categorydesc}</p>
                         <div class="r_thumbnailimg d-flex align-items-center">
                             ${item.thumbnail.map(thumb => 
-                                `<img src="../img/${thumb}" alt="${item.name} Thumbnail">`
+                                `<img src="../mv_image/${thumb}" alt="${item.name} Thumbnail">`
                             ).join('')}
                         </div>
                         <div class="mv_discount_text">${item.discount}% OFF</div>
@@ -304,60 +304,61 @@ const beautytrending_deals = beauty_trending_dealing.map(item => {
     `;
 }).join(''); 
 
-document.getElementById("beauty_trending_deals").innerHTML = beautytrending_deals;
+document.getElementById("dk_electronics_trend_deals").innerHTML = electronicstrending_deals;
 
-//beauty page Trending in Beauty & Makeup
-const beauty_trend_accessories = [
+
+//electronic page Trending in Electronics
+const electronic_trend_accessories = [
     { 
         id: "1", 
-        img: "makeup1.png", 
+        img: "new_laptop.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "makeup2.png", 
+        img: "new_vivo.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "makeup3.png", 
+        img: "new_refrigerators.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img: "makeup4.png", 
+        img: "new_watch.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "makeup5.png", 
+        img: "new_jbl.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "makeup1.png", 
+        img: "new_laptop.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
 ];
 
-const beauty_trd_acc = beauty_trend_accessories.map((item, index) => {
+const electronic_trd_acc = electronic_trend_accessories.map((item, index) => {
                     return `
                         <div class="swiper-slide">
                         <a href="/darshit/${item.link}.html">
                             <div class="card">
-                                <img src="../img/${item.img}" class="card-img-top" alt="Calvin Klein">
+                                <img src="../mv_image/${item.img}" class="card-img-top" alt="Calvin Klein">
                                
                                 <div class="card-body">
                                     <p style="font-size: 12px; line-height: 1" class="card-text text-center">Up to ${item.discount}% OFF</p>
@@ -369,54 +370,51 @@ const beauty_trd_acc = beauty_trend_accessories.map((item, index) => {
                         `;
                     }).join("");
 
-document.getElementById("dk_trending_makeup").innerHTML = beauty_trd_acc;
+document.getElementById("dk_trending_in_electronics").innerHTML = electronic_trd_acc;
 
-//SportsWear page Explore more box
-const beauty_exporing_box = [
+
+//electronic page Explore more box
+const electronic_exporing_box = [
     { 
         id: "1", 
-        img: "beauty_ex1.png", 
-        name:"It’s Makeup Time",
+        img: "electronic_explore_1.png", 
+        name:"Audible Accessories",
+        description:"Your comfort, our Priority",
         btn:"Shop Now",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "beauty_ex2.png", 
-        name:"",
+        img: "electronic_explore_2.png", 
+        name:"Home Appliances",
         btn:"Shop Now",
         showFinalTouch:"true",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "beauty_ex3.png", 
-        name:"NEW STYLES",
-        description:"Beauty meets style",
+        img: "electronic_explore_3.png", 
+        name:"Top deals on Laptops",
         btn:"Shop Now",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img: "beauty_ex4.png", 
-        name:"Beauty Accessories",
-        description:"Your beauty, our Priority",
+        img: "electronic_explore_4.png", 
+        name:"Cinema is coming home",
         btn:"Shop Now",
         link: "productdetails" 
     },
 ];
 
-const beauty_ex_box = beauty_exporing_box.map((item, index) => {
+const electronic_ex_box = electronic_exporing_box.map((item, index) => {
     return `
        <div class="col-md-6 mb-4">
             <div class="card text-white">
-                <img src="../img/${item.img}" class="card-img" alt="${item.img}">
+                <img src="../mv_image/${item.img}" class="card-img" alt="${item.img}">
                 <div class="card-img-overlay d-flex flex-column justify-content-center">
                     <p class="mv_card_title">${item.name}</p>
                     ${item.showFinalTouch ? `
-                       <p class="mv_add_the">
-                       Add the <span style="color: #CF2A2A;">FINAL</span> <br> touch to your <span style="color: #CF2A2A;">beauty</span>
-                       </p>
                     ` : ""}
                       ${item.description ? `<p class="mv_run_to">${item.description}</p>` : ""}
                     <div class="mv_explore_shop_more"> 
@@ -428,4 +426,4 @@ const beauty_ex_box = beauty_exporing_box.map((item, index) => {
     `;
 }).join("");
 
-document.getElementById("dk_beauty_explore_box").innerHTML = beauty_ex_box;
+document.getElementById("dk_electronics_explore_box").innerHTML = electronic_ex_box;
