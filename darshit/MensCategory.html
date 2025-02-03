@@ -135,6 +135,9 @@
             background-color: white;
             color: black;
         }
+        .r_shopnowbtn:hover {
+            color: black !important;
+        }
         a{
             text-decoration: none !important;
         }
@@ -220,8 +223,8 @@
                 <div class="container">
                     <div class="best-electronics">
                         <h2>Top Brands</h2>
-                        <div class="dk_product-container">
-                            <div class="dk_product-item">
+                        <div class="dk_product-container" id="mv_top_cloth_brand">
+                            <!-- <div class="dk_product-item">
                                 <img src="../r_img/levis.png" alt="Xiaomi Smart TV">
                                 <p>Upto 10% OFF</p>
                             </div>
@@ -280,7 +283,7 @@
                             <div class="dk_product-item">
                                 <img src="../r_img/adidas.png" alt="Gaming Laptops">
                                 <p>Upto 10% OFF</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -290,37 +293,31 @@
         <!-- Explore More -->
         <section style="background-color: black !important;">
             <div class="container explore-more">
-                <div class="row justify-content-center">
-                    <!-- Topwear -->
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+                <div class="row justify-content-center" id="mv_mens_explore_more">
+                    <!-- <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/man.png" alt="Topwear">
                         <a href="../darshit/topwear.html"><p>Topwear</p></a>
                     </div>
-                    <!-- Bottomwear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/bottom.png" alt="Bottomwear">
                         <p>Bottomwear</p>
                     </div>
-                    <!-- Indianwear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/suit.png" alt="Indianwear">
                         <p>Indianwear</p>
                     </div>
-                    <!-- Footwear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/shoes.png" alt="Footwear">
                         <p>Footwear</p>
                     </div>
-                    <!-- Sports & Activewear -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/runner.png" alt="Sports & Activewear">
                         <p>Sports & Activewear</p>
                     </div>
-                    <!-- Accessories -->
                     <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
                         <img src="../r_img/cover.png" alt="Accessories">
                         <p>Accessories</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -331,10 +328,10 @@
         
             <!-- Swiper -->
             <div class="swiper mySwiper mb-5">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" id="dk_new_on_quick">
         
                     <!-- Slide 1 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/blue.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -346,10 +343,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 2 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/bagman.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -361,10 +358,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 3 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/all.png" class="card-img-top" alt="Van Heusen">
                            
@@ -376,10 +373,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 4 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/pink.png" class="card-img-top" alt="Allen Solly">
                            
@@ -391,10 +388,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 5 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/gray.png" class="card-img-top" alt="ZARA">
                          
@@ -406,10 +403,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Slide 6 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/blue.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -421,7 +418,7 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                 </div>
                 <!-- Pagination dots -->
@@ -443,11 +440,9 @@
                     <div style="background-color: #040404; height: 100%; " class="col-md-9 d-flex r_all_slider_padding">
                         <!-- Outer Swiper slider for cards -->
                         <div class="swiper mainSwiper ">
-                            <div class="swiper-wrapper">
-                                <!-- Product Card 1 with Inner Swiper Slider -->
-                                <div class="swiper-slide ">
+                            <div class="swiper-wrapper" id="mv_mens_trending_deals">
+                                <!-- <div class="swiper-slide ">
                                     <div class="product-card w-100">
-                                        <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide"><img src="../r_img/allensollyman.png"
@@ -461,10 +456,8 @@
                                                 <div class="swiper-slide"><img src="../r_img/allensollyman.png"
                                                         alt="Product 1 Image 3" class="r_v1img"></div>
                                             </div>
-                                            <!-- Inner Pagination for Product Images -->
                                             <div class="swiper-pagination"></div>
                                         </div>
-                                        <!-- Product Information -->
                                         <h5 class="mv_tsmh">Allen Solly</h5>
                                         <p class="mv_tssh text-start">Men Khaki Slim Fit Solid Shirt</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
@@ -476,10 +469,8 @@
                                         <p class="text-start"><strong class="mv_less_discount_price">$459</strong><del class="mv_without_discount_price">$799</del></p>
                                     </div>
                                 </div>
-                                <!-- Product Card 2 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
                                     <div class="product-card w-100">
-                                        <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
@@ -493,10 +484,8 @@
                                                 <div class="swiper-slide"><img src="../r_img/allensollybelt.png"
                                                         alt="Product 1 Image 3" class="r_v1img"></div>
                                             </div>
-                                            <!-- Inner Pagination for Product Images -->
                                             <div class="swiper-pagination"></div>
                                         </div>
-                                        <!-- Product Information -->
                                         <h5 class="mv_tsmh">Allen Solly</h5>
                                         <p class="mv_tssh text-start">Men Grey Solid Casual Belt and...</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
@@ -508,10 +497,8 @@
                                         <p class="text-start"><strong class="mv_less_discount_price">$149</strong><del class="mv_without_discount_price">$300</del></p>
                                     </div>
                                 </div>
-                                <!-- Product Card 3 with Inner Swiper Slider -->
                                 <div class="swiper-slide">
                                     <div class="product-card w-100">
-                                        <!-- Inner Swiper for Product Images -->
                                         <div class="swiper innerSwiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
@@ -525,10 +512,8 @@
                                                 <div class="swiper-slide"><img src="../r_img/allensollyshoes.png"
                                                         alt="Product 1 Image 3" class="r_v1img"></div>
                                             </div>
-                                            <!-- Inner Pagination for Product Images -->
                                             <div class="swiper-pagination"></div>
                                         </div>
-                                        <!-- Product Information -->
                                         <h5 class="mv_tsmh">Allen Solly</h5>
                                         <p class="mv_tssh text-start">Men Brown Slip Ons</p>
                                         <div class="r_thumbnailimg d-flex align-items-center">
@@ -539,7 +524,7 @@
                                         <div class="mv_discount_text">40% OFF</div>
                                         <p class="text-start"><strong class="mv_less_discount_price">$789</strong><del class="mv_without_discount_price">$1,059</del></p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- Outer Pagination for Product Cards -->
                             <div class="swiper-pagination"></div>
@@ -555,10 +540,10 @@
         
             <!-- Swiper -->
             <div class="swiper mySwiper mb-5">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" id="mv_mens_acc">
         
                     <!-- Slide 1 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/watch.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -567,10 +552,10 @@
                                 <span class="text-center mv_trending_card_dis">T&C Apply</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 2 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/wallet.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -579,10 +564,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 3 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/belt.png" class="card-img-top" alt="Van Heusen">
                            
@@ -591,10 +576,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 4 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/perfume.png" class="card-img-top" alt="Allen Solly">
                            
@@ -603,10 +588,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <!-- Slide 5 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/gogals.png" class="card-img-top" alt="ZARA">
                          
@@ -615,10 +600,10 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Slide 6 -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card">
                             <img src="../r_img/blue.png" class="card-img-top" alt="Calvin Klein">
                            
@@ -627,7 +612,7 @@
                                 <small class="text-center mv_trending_card_dis">T&C Apply</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                 </div>
                 <!-- Pagination dots -->
@@ -639,8 +624,8 @@
         <section>
             <div class="container my-5">
                 <h2 class="text-center mb-4">Explore Ethnic Wear</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
+                <div class="row" id="mv_explore_ethnic">
+                    <!-- <div class="col-md-6 mb-4">
                         <div class="card text-white">
                             <img src="../r_img/wear-1.png" class="card-img" alt="Kurta Jacket Pairs">
                             <div class="card-img-overlay d-flex flex-column justify-content-center">
@@ -679,7 +664,7 @@
                                 <div class="mt-3"> <a href="#" class="r_shopnowbtn">Shop Now</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -716,6 +701,8 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- dynamic -->
+    <script src="../js/mens_category.js"></script>
 
     <script>
         // main slider

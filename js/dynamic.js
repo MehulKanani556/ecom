@@ -10,31 +10,31 @@ const category = [
         id: "2", 
         img: "woman.png", 
         name: "Womens Fashion", 
-        link: "" 
+        link: "productdetails",
     },
     { 
         id: "3", 
         img: "kids.png", 
         name: "Kids Fashion", 
-        link: "" 
+        link: "productdetails",
     },
     { 
         id: "4", 
         img: "electorics.png", 
         name: "Electronics", 
-        link: "" 
+        link: "productdetails",
     },
     { 
         id: "5", 
         img: "beuty.png", 
         name: "Beauty", 
-        link: "" 
+        link: "productdetails",
     },
     { 
         id: "6", 
         img: "sports.png", 
         name: "Sports", 
-        link: "" 
+        link: "productdetails",
     },
 ];
 
@@ -65,35 +65,35 @@ const footwear = [
         id: "2", 
         img: "pair-brown-shoes-with-black-leather-sole-word-bottom 1.png", 
         name: "Mens Shoes", 
-        link: "" 
+        link: "sportswear" 
     },
     { 
         id: "3", 
         img: "small-purse-studio-still-life 1.png", 
         name: "Handbags", 
-        link: "" 
+        link: "productdetails",
     },
     { 
         id: "4", 
         img: "high-heel-shoes 1.png", 
         name: "Women Heels", 
-        link: "" 
+        link: "productdetails", 
     },
     { 
         id: "5", 
         img: "infant-background-birthday-child-newborn 1.png", 
         name: "Kids Shoes", 
-        link: "" 
+        link: "sportswear" 
     },
 ];
 
 const sportshoes = footwear.map((item, index) => {
     return `
         <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-        ${item.link ? `<a style="cursor: pointer !important;" href="../darshit/${item.link}.html">` :""}
-                <img src="../img/${item.img}">
-                <p style="color: #fff; font-weight: 500;">${item.name}</p>
-            </a>
+            ${item.link ? `<a style="cursor: pointer !important;" href="../darshit/${item.link}.html">` :""}
+                    <img src="../img/${item.img}">
+                    <p style="color: #fff; font-weight: 500;">${item.name}</p>
+                </a>
         </div>`;
 }).join("");
 
@@ -109,60 +109,70 @@ const electronic = [
         img: "image 383.png", 
         name: "Xiaomi Smart TV", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "2", 
         img: "image 384.png", 
         name: "Dell Laptop", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "3", 
         img: "image 385.png", 
         name: "Smartphones", 
         startprice: "30%", 
+        link: "productdetails",
     },
     { 
         id: "4", 
         img: "Frame 1000003134.png", 
         name: "Gaming Accessories", 
         startprice: "20%", 
+        link: "productdetails",
     },
     { 
         id: "5", 
         img: "image 380.png", 
         name: "Wireless Speakers", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "6", 
         img: "rendering-smart-home-device 1.png", 
         name: "Smart Watches", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "7", 
         img: "image 379.png", 
         name: "Noise Earbuds", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "8", 
         img: "image 2.png", 
         name: "JBL Headphones", 
         startprice: "$99", 
+        link: "productdetails",
     },
     { 
         id: "9", 
         img: "Frame 1000003136.png", 
         name: "Tablets", 
         startprice: "30%", 
+        link: "productdetails",
     },
     { 
         id: "10", 
         img: "image 389.png", 
         name: "Gaming Laptops", 
         startprice: "20%", 
+        link: "productdetails",
     },
 ];
 
@@ -171,7 +181,7 @@ const electronicsec = electronic.map((item, index) => {
         ? `Up to ${item.startprice} OFF`  
         : `Start from <b>${item.startprice}</b>`;
         return `
-            <a href="" class="dk_product-item">
+            <a href="../darshit/${item.link}.html" class="dk_product-item">
                 <img src="../img/${item.img}">
                 <h5 style="color: #000000; font-weight: 500;">${item.name}</h5>
                 <p style="color: #000000; font-weight: 400;">${priceText}</p>
@@ -194,6 +204,7 @@ const womenscard = [
         thumbnail:["ketty2.png","ketty2.png","ketty2.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "2", 
@@ -202,7 +213,8 @@ const womenscard = [
         categorydesc:"Women Flared High-Rise Parallel Trousers",
         thumbnail:["vero moda sub.png","vero moda sub.png","vero moda sub.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "3", 
@@ -211,7 +223,8 @@ const womenscard = [
         categorydesc:"Ribbed Cotton Pullover Navy Blue Sweater",
         thumbnail:["vero modo sub2.png","vero modo sub2.png","vero modo sub2.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "4", 
@@ -220,12 +233,14 @@ const womenscard = [
         categorydesc:"Women Geometric Printed Straight Fit Culottes Trousers",
         thumbnail:["vano modo sub3.png","vano modo sub3.png","vano modo sub3.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
 ];
 
 const womencardproduct = womenscard.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -233,48 +248,62 @@ const womencardproduct = womenscard.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
-            <div class="dk_browsing_products">
-                <div class="card">
-                    <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
+            <a href="../darshit/${item.link}.html">
+                <div class="dk_browsing_products">
+                    <div class="card">
+                        <div class="icon-container">
+                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                                <i class="${heartIconClass} fa-heart"></i>
+                            </span>
+                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                    alt="Cart Icon" class="cart-icon">
+                            </span>
+                        </div>
 
-                    <div class="slider">
-                        ${item.images.map(img => 
-                            `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                        ).join('')}
-                    </div>
+                        <div class="slider">
+                            ${item.images.map(img => 
+                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
+                            ).join('')}
+                        </div>
 
-                    <div class="dots-container">
-                        ${item.images.map((_, id) => 
-                            `<span class="dot" data-index="${id}"></span>`
-                        ).join('')}
-                    </div>
+                        <div class="dots-container">
+                            ${item.images.map((_, id) => 
+                                `<span class="dot" data-index="${id}"></span>`
+                            ).join('')}
+                        </div>
 
-                    <h2>${item.name}</h2>
-                    <p>${item.categorydesc}</p>
+                        <h2>${item.name}</h2>
+                        <p>${item.categorydesc}</p>
 
-                    <div class="thumbnails">
-                        ${item.thumbnail.map(thumb => 
-                            `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                        ).join('')}
-                    </div>
+                        <div class="thumbnails">
+                            ${item.thumbnail.map(thumb => 
+                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
+                            ).join('')}
+                        </div>
 
-                    <div class="off">
-                        <span class="off-price">${item.discount}% OFF</span>
-                    </div>
+                        <div class="off">
+                            <span class="off-price">${item.discount}% OFF</span>
+                        </div>
 
-                    <div class="price">
-                        <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                        <span class="original-price">$${item.price}</span>
+                        <div class="price">
+                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
+                            <span class="original-price">$${item.price}</span>
+                        </div>
                     </div>
+                    <button class="buy-now">Buy Now</button>
                 </div>
-                <button class="buy-now">Buy Now</button>
-            </div>
+            </a>
         </div>
     `;
 }).join(''); 
@@ -312,6 +341,30 @@ function toggleWishlist(event,item) {
     localStorage.setItem('wishlist', JSON.stringify(data));
 }
 
+// Add cart
+let Cart = [];
+
+function toggleCart(event, element, item) {
+    event.preventDefault();
+
+    let data = JSON.parse(localStorage.getItem('Cart')) || [];
+    let index = data.findIndex(i => i.id === item.id);
+    const img = element.querySelector("img"); // Get the cart icon image
+
+    if (index !== -1) {
+        data.splice(index, 1);
+        img.src = "../mv_image/icon_cart.png"; // Change to unselected cart icon
+    } else {
+        data.push(item);
+        img.src = "../mv_image/icon_cart_selected.png"; // Change to selected cart icon
+    }
+
+    localStorage.setItem('Cart', JSON.stringify(data));
+}
+function changeImage(element, newSrc) {
+    const mainImage = element.closest('.card').querySelector('.slider-image');
+    mainImage.src = `../img/${newSrc}`;
+}
 
 
 // Home (Best sellers)
@@ -325,6 +378,7 @@ const bestseller = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "2", 
@@ -334,7 +388,8 @@ const bestseller = [
         categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
         thumbnail:["ketty demo.png","ketty demo.png","ketty demo.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "3", 
@@ -344,7 +399,8 @@ const bestseller = [
         categorydesc:"LG 32LM563BPTC 32 Inches HD Ready Smart LED TV (1366x768), Dark Iron Gray,80 cm",
         thumbnail:["tv demo.png","tv demo.png","tv demo.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "4", 
@@ -354,7 +410,8 @@ const bestseller = [
         categorydesc:"ASUS ROG Strix G16 (2024) Gaming Laptop, 16” 16:10 FHD 165Hz Display, NVIDIA GeForc..",
         thumbnail:["leptop1.png","leptop2.png","leptop3.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "5", 
@@ -363,7 +420,8 @@ const bestseller = [
         categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
         thumbnail:["ketty demo.png","ketty demo.png","ketty demo.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "6", 
@@ -372,7 +430,8 @@ const bestseller = [
         categorydesc:"LG 32LM563BPTC 32 Inches HD Ready Smart LED TV (1366x768), Dark Iron Gray,80 cm",
         thumbnail:["tv demo.png","tv demo.png","tv demo.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "7", 
@@ -382,6 +441,7 @@ const bestseller = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "8", 
@@ -390,44 +450,47 @@ const bestseller = [
         categorydesc:"ASUS ROG Strix G16 (2024) Gaming Laptop, 16” 16:10 FHD 165Hz Display, NVIDIA GeForc..",
         thumbnail:["leptop1.png","leptop2.png","leptop3.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
 ];
 
 const bestsellproduct = bestseller.map((item, index) => {
     return `
         <div class="col-xl-3 col-sm-6 p-2">
-            <div class="dk_best_seller_card">
-                <div class="dk_bedge">
-                    ${item.best === "true" ? `<p class="mb-0">Best Seller</p>` : ""}
-                </div>
+            <a href="../darshit/${item.link}.html">
+                <div class="dk_best_seller_card">
+                    <div class="dk_bedge">
+                        ${item.best === "true" ? `<p class="mb-0">Best Seller</p>` : ""}
+                    </div>
 
-                <div class="owl-carousel owl-theme dk_best_seller_slider pb-4 mt-3">
-                    ${item.images.map(img => 
-                        `<div class="dk_caro_img mx-auto">
-                            <img src="../img/${img}" alt="Product Image" class="object_cover w-100 h-100">
-                        </div>`
-                    ).join('')}
-                </div>
+                    <div class="owl-carousel owl-theme dk_best_seller_slider pb-4 mt-3">
+                        ${item.images.map(img => 
+                            `<div class="dk_caro_img mx-auto">
+                                <img src="../img/${img}" alt="Product Image" class="object_cover w-100 h-100">
+                            </div>`
+                        ).join('')}
+                    </div>
 
-                <p style="font-size: 18px; font-weight: 600; margin-bottom: 0px;">${item.name}</p>
-                <h4 style="font-size: 18px; font-weight: 400; padding: 0px;">${item.categorydesc}</h4>
+                    <p style="font-size: 18px; font-weight: 600; margin-bottom: 0px; color: #000000;">${item.name}</p>
+                    <h4 style="font-size: 18px; font-weight: 400; padding: 0px;">${item.categorydesc}</h4>
 
-                <div class="dk_best_seller_thumbnails">
-                    ${item.thumbnail.map(thumb => 
-                        `<img src="../img/${thumb}" alt="Thumbnail" class="dk_best_seller_thumbnail">`
-                    ).join('')}
-                </div>
+                    <div class="dk_best_seller_thumbnails">
+                        ${item.thumbnail.map(thumb => 
+                            `<img src="../img/${thumb}" alt="Thumbnail" class="dk_best_seller_thumbnail">`
+                        ).join('')}
+                    </div>
 
-                <div class="dk_best_seller_off">
-                    <span class="dk_best_seller_off-price">${item.discount}% OFF</span>
-                </div>
+                    <div class="dk_best_seller_off">
+                        <span class="dk_best_seller_off-price">${item.discount}% OFF</span>
+                    </div>
 
-                <div class="dk_best_seller_price">
-                    <span class="dk_best_seller_discount-price">$${(item.price * (1 - item.discount / 100)).toFixed(2)}</span>
-                    <span class="dk_best_seller_original-price">$${item.price}</span>
+                    <div class="dk_best_seller_price">
+                        <span class="dk_best_seller_discount-price">$${(item.price * (1 - item.discount / 100)).toFixed(2)}</span>
+                        <span class="dk_best_seller_original-price">$${item.price}</span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     `;
 }).join(''); 
@@ -446,6 +509,7 @@ const top_selling_smartphones = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "6", 
@@ -454,6 +518,7 @@ const top_selling_smartphones = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "7", 
@@ -462,6 +527,7 @@ const top_selling_smartphones = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "8", 
@@ -470,11 +536,13 @@ const top_selling_smartphones = [
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
 ];
 
 const top_sell_phone = top_selling_smartphones.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -482,47 +550,60 @@ const top_sell_phone = top_selling_smartphones.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
-            <div class="dk_browsing_products">
-                <div class="card">
-                    <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
+            <a href="../darshit/${item.link}.html">
+                <div class="dk_browsing_products">
+                    <div class="card">
+                        <div class="icon-container">
+                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                                <i class="${heartIconClass} fa-heart"></i></span>
+                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                    alt="Cart Icon" class="cart-icon">
+                            </span>
+                        </div>
 
-                    <div class="slider">
-                        ${item.images.map(img => 
-                            `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                        ).join('')}
-                    </div>
+                        <div class="slider">
+                            ${item.images.map(img => 
+                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
+                            ).join('')}
+                        </div>
 
-                    <div class="dots-container">
-                        ${item.images.map((_, id) => 
-                            `<span class="dot" data-index="${id}"></span>`
-                        ).join('')}
-                    </div>
+                        <div class="dots-container">
+                            ${item.images.map((_, id) => 
+                                `<span class="dot" data-index="${id}"></span>`
+                            ).join('')}
+                        </div>
 
-                    <h4 class="dk_your_sumsung mb-3">${item.categorydesc}</h4>
+                        <h4 class="dk_your_sumsung mb-3">${item.categorydesc}</h4>
 
-                    <div class="thumbnails">
-                        ${item.thumbnail.map(thumb => 
-                            `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                        ).join('')}
-                    </div>
+                        <div class="thumbnails">
+                            ${item.thumbnail.map(thumb => 
+                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
+                            ).join('')}
+                        </div>
 
-                    <div class="off">
-                        <span class="off-price">${item.discount}% OFF</span>
-                    </div>
+                        <div class="off">
+                            <span class="off-price">${item.discount}% OFF</span>
+                        </div>
 
-                    <div class="price">
-                        <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                        <span class="original-price">$${item.price}</span>
+                        <div class="price">
+                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
+                            <span class="original-price">$${item.price}</span>
+                        </div>
                     </div>
+                    <button class="buy-now">Buy Now</button>
                 </div>
-                <button class="buy-now">Buy Now</button>
-            </div>
+            </a>
         </div>
     `;
 }).join(''); 
@@ -542,6 +623,7 @@ const yourbrowsing = [
         thumbnail:["ketty2.png","ketty2.png","ketty2.png"],
         discount:"30",
         price:"200",
+        link: "productdetails",
     },
     { 
         id: "10", 
@@ -550,7 +632,8 @@ const yourbrowsing = [
         categorydesc:"Men Black Slim Fit Opaque Cotton Casual Shirt",
         thumbnail:["Dennis_Lingo_sub.png","Dennis_Lingo_sub.png","Dennis_Lingo_sub.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "11", 
@@ -559,7 +642,8 @@ const yourbrowsing = [
         categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
         thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
     { 
         id: "12", 
@@ -568,12 +652,14 @@ const yourbrowsing = [
         categorydesc:"Women Geometric Printed Straight Fit Culottes Trousers",
         thumbnail:["vano modo sub3.png","vano modo sub3.png","vano modo sub3.png"],
         discount:"30",
-        price:"200"
+        price:"200",
+        link: "productdetails",
     },
 ];
 
 const your_brow_pro = yourbrowsing.map((item, index) => {
 
+    // Add wishlist
     const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
     const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
     
@@ -581,48 +667,61 @@ const your_brow_pro = yourbrowsing.map((item, index) => {
 
     let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
 
+    // Add Cart
+    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
+    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
+    
+    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+
+    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+
     return `
         <div class="col-xl-3 col-sm-6 text p-2">
-            <div class="dk_browsing_products">
-                <div class="card">
-                    <div class="icon-container">
-                        <span class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                        <i class="${heartIconClass} fa-heart"></i></span>
-                        <span class="icon cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
+            <a href="../darshit/${item.link}.html">
+                <div class="dk_browsing_products">
+                    <div class="card">
+                        <div class="icon-container">
+                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
+                                <i class="${heartIconClass} fa-heart"></i></span>
+                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
+                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
+                                    alt="Cart Icon" class="cart-icon">
+                            </span>
+                        </div>
 
-                    <div class="slider">
-                        ${item.images.map(img => 
-                            `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                        ).join('')}
-                    </div>
+                        <div class="slider">
+                            ${item.images.map(img => 
+                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
+                            ).join('')}
+                        </div>
 
-                    <div class="dots-container">
-                        ${item.images.map((_, id) => 
-                            `<span class="dot" data-index="${id}"></span>`
-                        ).join('')}
-                    </div>
+                        <div class="dots-container">
+                            ${item.images.map((_, id) => 
+                                `<span class="dot" data-index="${id}"></span>`
+                            ).join('')}
+                        </div>
 
-                    <h2>${item.name}</h2>
-                    <p>${item.categorydesc}</p>
+                        <h2>${item.name}</h2>
+                        <p>${item.categorydesc}</p>
 
-                    <div class="thumbnails">
-                        ${item.thumbnail.map(thumb => 
-                            `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                        ).join('')}
-                    </div>
+                        <div class="thumbnails">
+                            ${item.thumbnail.map(thumb => 
+                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
+                            ).join('')}
+                        </div>
 
-                    <div class="off">
-                        <span class="off-price">${item.discount}% OFF</span>
-                    </div>
+                        <div class="off">
+                            <span class="off-price">${item.discount}% OFF</span>
+                        </div>
 
-                    <div class="price">
-                        <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                        <span class="original-price">$${item.price}</span>
+                        <div class="price">
+                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
+                            <span class="original-price">$${item.price}</span>
+                        </div>
                     </div>
+                    <button class="buy-now">Buy Now</button>
                 </div>
-                <button class="buy-now">Buy Now</button>
-            </div>
+            </a>
         </div>
     `;
 }).join(''); 

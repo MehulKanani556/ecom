@@ -359,7 +359,7 @@ img {
 }
 
 .product-card img {
-  width: 100%;
+  width: 100% !important;
   object-fit: contain;
 }
 
@@ -377,7 +377,7 @@ img {
 }
 
 .r_thumbnailimg img{
-  width: 40px;
+  width: 40px !important;
   height: 40px !important;
   object-fit: cover;
   box-sizing: border-box;
