@@ -1,154 +1,153 @@
-// .....................................................  beauty page  .................................................................... //
+// .....................................................  luggage page  .................................................................... //
 
-//  beauty page top brands
-const top_brands_makeup = [
+// luggage page top brands
+const top_brands_luggage = [
     { 
         id: "1", 
-        img: "lorel.png", 
+        img: "Luggage_brand1.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "chenal.png", 
+        img: "Luggage_brand2.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "remee.png", 
+        img: "Luggage_brand3.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "4", 
-        img: "maybeline.png", 
+        img: "Luggage_brand4.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "mac.png", 
+        img: "Luggage_brand5.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "iconic.png", 
+        img: "Luggage_brand6.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "7", 
-        img: "colorbar.png", 
+        img: "Luggage_brand7.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "8", 
-        img: "facescanada.png", 
+        img: "Luggage_brand8.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "9", 
-        img: "purpale.png", 
+        img: "Luggage_brand9.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "10", 
-        img: "nyka.png", 
+        img: "Luggage_brand10.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "11", 
-        img: "mamaearth.png", 
+        img: "Luggage_brand11.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "12", 
-        img: "nieva.png", 
+        img: "Luggage_brand12.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "13", 
-        img: "plome.png", 
+        img: "Luggage_brand13.png", 
         discount: "10", 
         link: "productdetails"
     },
     { 
         id: "14", 
-        img: "sugar.png", 
+        img: "Luggage_brand14.png", 
         discount: "10", 
         link: "productdetails" 
     },
     { 
         id: "15", 
-        img: "lotus.png", 
+        img: "Luggage_brand15.png", 
         discount: "10", 
         link: "productdetails" 
     },
 ];
 
-const beautyproduct = top_brands_makeup.map((item, index) => {
+const luggageproduct = top_brands_luggage.map((item, index) => {
   return `
-                            <a href="/darshit/${item.link}.html">
-                                <div class="dk_product-item">
-                                <img src="../img/${item.img}" alt="${item.img}">
-                                <p>Upto ${item.discount}% OFF</p>
-                                </div>
-                            </a>
-                        `;
+        <div class="dk_product-item">
+            <a href="/darshit/${item.link}.html">
+            <img src="../img/${item.img}" alt="${item.img}">
+                <p style="color: #000000;">Upto ${item.discount}% OFF</p>
+            </a>
+        </div>
+        `;
 }).join("");
 
-document.getElementById("dk_beauty_top_brands").innerHTML = beautyproduct;
+document.getElementById("dk_luggage_slider1_img_top_brands").innerHTML = luggageproduct;
 
-
-//  beauty page explore more
-const dk_beauty_wear = [
+//  luggage page explore more
+const dk_luggage_wear = [
     { 
         id: "1", 
-        img: "face.png", 
-        name: "Face", 
+        img: "Luggage_trolly.png", 
+        name: "Trolley", 
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "eyes.png", 
-        name: "Eyes", 
+        img: "Luggage_bags.png", 
+        name: "Bags", 
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "lips.png", 
-        name: "Lips", 
+        img: "Luggage_combos.png", 
+        name: "Combos", 
         link: "productdetails" 
     },
     { 
         id: "4", 
-        img: "skin.png", 
-        name: "Skin", 
+        img: "Luggage_duffle_bags.png", 
+        name: "Duffle bags", 
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "hair.png", 
-        name: "Hair", 
+        img: "Luggage_backpaks.png", 
+        name: "Backpacks", 
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "aceseress.png", 
+        img: "Luggage_accesseries'.png", 
         name: "Accessories", 
         link: "productdetails" 
     },
 ];
 
-const beautymorehtml = dk_beauty_wear.map((item, index) => {
+const luggagemorehtml = dk_luggage_wear.map((item, index) => {
   return `
         <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
         <a href="/darshit/${item.link}.html">
@@ -159,62 +158,62 @@ const beautymorehtml = dk_beauty_wear.map((item, index) => {
         `;
 }).join("");
 
-document.getElementById("dk_beauty_explore_more").innerHTML = beautymorehtml;
+document.getElementById("dk_luggage_explore_more").innerHTML = luggagemorehtml;
 
 
-// beauty page New On Quickcart
-const dk_beauty_new_quickcart = [
+// luggage page New On Quickcart
+const dk_luggage_new_quickcart = [
     { 
         id: "1", 
-        img1: "iconic2.png", 
-        img2: "s_iconic.png", 
+        img1: "monos2.png", 
+        img2: "sm_monos.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img1: "cenal2.png", 
-        img2: "s_chanel.png", 
+        img1: "away2.png", 
+        img2: "sm_away.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img1: "lorel2.png", 
-        img2: "s_loreal.png",
+        img1: "rimova2.png", 
+        img2: "sm_rimova.png",
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img1: "sugar2.png", 
-        img2: "s_sugar.png", 
+        img1: "louis vuitton2.png", 
+        img2: "sm_loise_viutton.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img1: "mac2.png", 
-        img2: "s_mac.png", 
+        img1: "delsay2.png", 
+        img2: "sm_dilsay.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img1: "iconic2.png", 
-        img2: "s_iconic.png", 
+        img1: "monos2.png", 
+        img2: "sm_monos.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
 ];
 
-const dk_beautywere = dk_beauty_new_quickcart.map((item, index) => {
+const dk_luggagewere = dk_luggage_new_quickcart.map((item, index) => {
   return `
     <div class="swiper-slide">
     <a href="/darshit/${item.link}.html">
@@ -234,44 +233,44 @@ const dk_beautywere = dk_beauty_new_quickcart.map((item, index) => {
     `;
 }).join("");
 
-document.getElementById("dk_beauty_new_on_quickcart").innerHTML = dk_beautywere;
+document.getElementById("dk_luggage_new_on_quickcart").innerHTML = dk_luggagewere;
 
 
-// beauty page Trending Deals
-const beauty_trending_dealing = [
+// luggage page Trending Deals
+const luggage_trending_dealing = [
     { 
         id: "1", 
-        images: ["renee_dels.png","renee_dels.png","renee_dels.png","renee_dels.png","renee_dels.png"],
-        name: "RENEE",
-        categorydesc: "Madness pH Lipstick, 3gm",
-        thumbnail: ["renee_dels_sm.png"],
+        images: ["lagage_safari_dels.png","lagage_safari_dels.png","lagage_safari_dels.png","lagage_safari_dels.png","lagage_safari_dels.png"],
+        name: "SAFARI",
+        categorydesc: "Polaris Castle Black Trolley Bag  ",
+        thumbnail: ["lagage_safari_dels1.png", "lagage_safari_dels1.png"],
         discount: "40",
         price: "799",
         link:"productdetails"
     },
     { 
         id: "2", 
-        images: ["sugar_dels.png", "sugar_dels.png", "sugar_dels.png", "sugar_dels.png", "sugar_dels.png"],
-        name: "SUGAR",
-        categorydesc: "Powder Play Banana Compact",
-        thumbnail: ["sugar_dels_sm.png"],
+        images: ["lagage_paris_dels.png", "lagage_paris_dels.png", "lagage_paris_dels.png", "lagage_paris_dels.png", "lagage_paris_dels.png"],
+        name: "DELSEY PARIS",
+        categorydesc: "TURENNE Duffle Bag (55cm)",
+        thumbnail: ["lagage_paris_dels1.png", "lagage_paris_dels1.png"],
         discount: "50",
         price: "399",
         link:"productdetails"
     },
     { 
         id: "3", 
-        images: ["colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png", "colorbar_dels.png"],
-        name: "COLORBAR",
-        categorydesc: "Berry Blush Eyeshadow Palette",
-        thumbnail: ["colorbar_dels_sm.png"],
+        images: ["lagage_remova_dels.png", "lagage_remova_dels.png", "lagage_remova_dels.png", "lagage_remova_dels.png", "lagage_remova_dels.png"],
+        name: "REMOWA",
+        categorydesc: "Signature - Flap Backpack Large",
+        thumbnail: ["lagage_remova_dels1.png", "lagage_remova_dels1.png", "lagage_remova_dels1.png"],
         discount: "40",
         price: "299",
         link:"productdetails"
     }
 ];
 
-const beautytrending_deals = beauty_trending_dealing.map(item => {
+const luggagetrending_deals = luggage_trending_dealing.map(item => {
     return `
         <div class="swiper-slide">
             <div class="product-card w-100">
@@ -304,55 +303,56 @@ const beautytrending_deals = beauty_trending_dealing.map(item => {
     `;
 }).join(''); 
 
-document.getElementById("beauty_trending_deals").innerHTML = beautytrending_deals;
+document.getElementById("dk_luggage_trending").innerHTML = luggagetrending_deals;
 
-//beauty page Trending in Beauty & Makeup
-const beauty_trend_accessories = [
+
+//luggage page Trending in Beauty & Makeup
+const luggage_trend_accessories = [
     { 
         id: "1", 
-        img: "makeup1.png", 
+        img: "Luggage_trand1.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "makeup2.png", 
+        img: "Luggage_trand2.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "makeup3.png", 
+        img: "Luggage_trand3.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img: "makeup4.png", 
+        img: "Luggage_trand4.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "5", 
-        img: "makeup5.png", 
+        img: "Luggage_trand5.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails" 
     },
     { 
         id: "6", 
-        img: "makeup1.png", 
+        img: "Luggage_trand2.png", 
         discount: "20", 
         info:"*T&C Apply",
         link: "productdetails"
     },
 ];
 
-const beauty_trd_acc = beauty_trend_accessories.map((item, index) => {
+const luggage_trd_acc = luggage_trend_accessories.map((item, index) => {
                     return `
                         <div class="swiper-slide">
                         <a href="/darshit/${item.link}.html">
@@ -369,44 +369,44 @@ const beauty_trd_acc = beauty_trend_accessories.map((item, index) => {
                         `;
                     }).join("");
 
-document.getElementById("dk_trending_makeup").innerHTML = beauty_trd_acc;
+document.getElementById("dk_trending_in_luggage").innerHTML = luggage_trd_acc;
 
-//SportsWear page Explore more box
-const beauty_exporing_box = [
+
+//luggage page Explore more box
+const luggage_exporing_box = [
     { 
         id: "1", 
-        img: "beauty_ex1.png", 
-        name:"It’s Makeup Time",
+        img: "lagage_ex4.png", 
+        name:"Keep up with the Trends",
         btn:"Shop Now",
         link: "productdetails"
     },
     { 
         id: "2", 
-        img: "beauty_ex2.png", 
-        name:"",
+        img: "lagage_ex1.png", 
+        name:"Voyage Premium Luggage",
         btn:"Shop Now",
         showFinalTouch:"true",
         link: "productdetails" 
     },
     { 
         id: "3", 
-        img: "beauty_ex3.png", 
-        name:"NEW STYLES",
-        description:"Beauty meets style",
+        img: "lagage_ex3.png", 
+        name:"Travel with Culture",
         btn:"Shop Now",
         link: "productdetails"
     },
     { 
         id: "4", 
-        img: "beauty_ex4.png", 
-        name:"Beauty Accessories",
-        description:"Your beauty, our Priority",
+        img: "lagage_ex2.png", 
+        name:"Luggage Accessories",
+        description:"Travel in Style & Comfort",
         btn:"Shop Now",
         link: "productdetails" 
     },
 ];
 
-const beauty_ex_box = beauty_exporing_box.map((item, index) => {
+const luggage_ex_box = luggage_exporing_box.map((item, index) => {
     return `
        <div class="col-md-6 mb-4">
             <div class="card text-white">
@@ -414,9 +414,6 @@ const beauty_ex_box = beauty_exporing_box.map((item, index) => {
                 <div class="card-img-overlay d-flex flex-column justify-content-center">
                     <p class="mv_card_title">${item.name}</p>
                     ${item.showFinalTouch ? `
-                       <p class="mv_add_the">
-                       Add the <span style="color: #CF2A2A;">FINAL</span> <br> touch to your <span style="color: #CF2A2A;">beauty</span>
-                       </p>
                     ` : ""}
                       ${item.description ? `<p class="mv_run_to">${item.description}</p>` : ""}
                     <div class="mv_explore_shop_more"> 
@@ -428,4 +425,4 @@ const beauty_ex_box = beauty_exporing_box.map((item, index) => {
     `;
 }).join("");
 
-document.getElementById("dk_beauty_explore_box").innerHTML = beauty_ex_box;
+document.getElementById("dk_luggage_explore_box").innerHTML = luggage_ex_box;
