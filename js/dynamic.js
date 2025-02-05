@@ -1,729 +1,1324 @@
 // Home  (Menas Fashion)
-const category = [
-    { 
-        id: "1", 
-        img: "man.png", 
-        name: "Mens Fashion", 
-        link: "MensCategory"
-    },
-    { 
-        id: "2", 
-        img: "woman.png", 
-        name: "Womens Fashion", 
-        link: "productdetails",
-    },
-    { 
-        id: "3", 
-        img: "kids.png", 
-        name: "Kids Fashion", 
-        link: "productdetails",
-    },
-    { 
-        id: "4", 
-        img: "electorics.png", 
-        name: "Electronics", 
-        link: "productdetails",
-    },
-    { 
-        id: "5", 
-        img: "beuty.png", 
-        name: "Beauty", 
-        link: "productdetails",
-    },
-    { 
-        id: "6", 
-        img: "sports.png", 
-        name: "Sports", 
-        link: "productdetails",
-    },
-];
 
-const categoryHtml = category.map((item, index) => {
-    return `
-        <a href="../darshit/${item.link}.html">
-            <div class="swiper-slide">
-                <img src="../img/${item.img}" alt="${item.name}">
-                <p style="color: #000000; font-weight: 500;">${item.name}</p>
-            </div>
-        </a>`;
-}).join("");
+async function loadCategory() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-document.getElementById("mv_mens_fashion").innerHTML = categoryHtml;
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const category = data.homecategory;
+
+        const categoryHtml = category.map((item, index) => {
+            return (
+                `
+                <div class="swiper-slide">
+                                <img src="../img/man.png" alt="Mens Fashion">
+                                <p>Mens Fashion</p>
+                            </div>`
+            )
+        }).join("")
+
+        if (document.getElementById("mv_mens_fashion")) {
+            document.getElementById("mv_mens_fashion").innerHTML = categoryHtml;
+        }
+
+    } catch (error) {
+        console.error("Error loading categories:", error);
+    }
+}
 
 
 
+// const categoryHtml = category.map((item, index) => {
+//     return `
+//         <a href="../darshit/${item.link}.html">
+//             <div class="swiper-slide">
+//                 <img src="../img/${item.img}" alt="${item.name}">
+//                 <p style="color: #000000; font-weight: 500;">${item.name}</p>
+//             </div>
+//         </a>`;
+// }).join("");
+
+// document.getElementById("mv_mens_fashion").innerHTML = categoryHtml;
 
 // Home  (Footwear & Handbags)
-const footwear = [
-    { 
-        id: "1", 
-        img: "dsaggg 1.png", 
-        name: "Sports Shoes", 
-        link: "sportswear"
-    },
-    { 
-        id: "2", 
-        img: "pair-brown-shoes-with-black-leather-sole-word-bottom 1.png", 
-        name: "Mens Shoes", 
-        link: "sportswear" 
-    },
-    { 
-        id: "3", 
-        img: "small-purse-studio-still-life 1.png", 
-        name: "Handbags", 
-        link: "productdetails",
-    },
-    { 
-        id: "4", 
-        img: "high-heel-shoes 1.png", 
-        name: "Women Heels", 
-        link: "productdetails", 
-    },
-    { 
-        id: "5", 
-        img: "infant-background-birthday-child-newborn 1.png", 
-        name: "Kids Shoes", 
-        link: "sportswear" 
-    },
-];
 
-const sportshoes = footwear.map((item, index) => {
-    return `
-        <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-            ${item.link ? `<a style="cursor: pointer !important;" href="../darshit/${item.link}.html">` :""}
+async function loadFootwear() {
+    try {
+        const response = await fetch('./../data/db.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const footwear = data.homefootwear;
+
+        const footwearHtml = footwear.map((item, index) => {
+            return (
+                `<div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
+            ${item.link ? `<a style="cursor: pointer !important;" href="../darshit/${item.link}.html">` : ""}
                     <img src="../img/${item.img}">
                     <p style="color: #fff; font-weight: 500;">${item.name}</p>
                 </a>
-        </div>`;
-}).join("");
+        </div>`
+            );
+        }).join("");
 
-document.getElementById("mv_sport_shoes").innerHTML = sportshoes;
+        if (document.getElementById("mv_sport_shoes")) {
+            document.getElementById("mv_sport_shoes").innerHTML = footwearHtml;
+        }
 
-
-
+    } catch (error) {
+        console.error("Error loading categories:", error);
+    }
+}
 
 // Home  (Electronics)
-const electronic = [
-    { 
-        id: "1", 
-        img: "image 383.png", 
-        name: "Xiaomi Smart TV", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "2", 
-        img: "image 384.png", 
-        name: "Dell Laptop", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "3", 
-        img: "image 385.png", 
-        name: "Smartphones", 
-        startprice: "30%", 
-        link: "productdetails",
-    },
-    { 
-        id: "4", 
-        img: "Frame 1000003134.png", 
-        name: "Gaming Accessories", 
-        startprice: "20%", 
-        link: "productdetails",
-    },
-    { 
-        id: "5", 
-        img: "image 380.png", 
-        name: "Wireless Speakers", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "6", 
-        img: "rendering-smart-home-device 1.png", 
-        name: "Smart Watches", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "7", 
-        img: "image 379.png", 
-        name: "Noise Earbuds", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "8", 
-        img: "image 2.png", 
-        name: "JBL Headphones", 
-        startprice: "$99", 
-        link: "productdetails",
-    },
-    { 
-        id: "9", 
-        img: "Frame 1000003136.png", 
-        name: "Tablets", 
-        startprice: "30%", 
-        link: "productdetails",
-    },
-    { 
-        id: "10", 
-        img: "image 389.png", 
-        name: "Gaming Laptops", 
-        startprice: "20%", 
-        link: "productdetails",
-    },
-];
 
-const electronicsec = electronic.map((item, index) => {
-    let priceText = item.startprice.includes('%') 
-        ? `Up to ${item.startprice} OFF`  
-        : `Start from <b>${item.startprice}</b>`;
-        return `
-            <a href="../darshit/${item.link}.html" class="dk_product-item">
-                <img src="../img/${item.img}">
-                <h5 style="color: #000000; font-weight: 500;">${item.name}</h5>
-                <p style="color: #000000; font-weight: 400;">${priceText}</p>
-            </a>
-        `;
-}).join("");
+async function loadHomeElectronic() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-document.getElementById("mv_electronic").innerHTML = electronicsec;
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
+        const data = await response.json();
+        const homelectronic = data.homebestelectronic;
 
+        const homelectronicHtml = homelectronic.map((item, index) => {
+            let priceText = item.startprice.includes('%')
+                ? `Up to ${item.startprice} OFF`
+                : `Start from <b>${item.startprice}</b>`;
 
+            return (
+                `<a href="../darshit/${item.link}.html" class="dk_product-item">
+                    <img src="../img/${item.img}" alt="${item.name}">
+                    <h5 style="color: #000000; font-weight: 500;">${item.name}</h5>
+                    <p style="color: #000000; font-weight: 400;">${priceText}</p>
+                </a>`
+            )
+        }).join("");
+
+        if (document.getElementById("mv_electronic")) {
+            document.getElementById("mv_electronic").innerHTML = homelectronicHtml;
+        }
+
+    } catch (error) {
+        console.error("Error loading home electronics:", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadCategory();
+    await loadFootwear();
+    await loadHomeElectronic();
+    await loadProduct();
+    await loadBestsellerProduct();
+    await loadTopsellingSmartphone();
+    await loadBrowsingproduct();
+    await loadwishlistdata();
+    geturl();
+});
 
 // Home (Women’s cards)
-const womenscard = [
-    { 
-        id: "1", 
-        images: ["kotty.png","kotty.png","kotty.png","kotty.png","kotty.png"],
-        name:"Kotty",
-        categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-        thumbnail:["ketty2.png","ketty2.png","ketty2.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "2", 
-        images: ["vero moda.png","vero moda.png","vero moda.png","vero moda.png","vero moda.png"],
-        name:"Vero Moda",
-        categorydesc:"Women Flared High-Rise Parallel Trousers",
-        thumbnail:["vero moda sub.png","vero moda sub.png","vero moda sub.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "3", 
-        images: ["vro modo2.png","vro modo2.png","vro modo2.png","vro modo2.png","vro modo2.png"],
-        name:"Vero Moda",
-        categorydesc:"Ribbed Cotton Pullover Navy Blue Sweater",
-        thumbnail:["vero modo sub2.png","vero modo sub2.png","vero modo sub2.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "4", 
-        images: ["vro moda3.png","vro moda3.png","vro moda3.png","vro moda3.png","vro moda3.png"],
-        name:"Vero Moda",
-        categorydesc:"Women Geometric Printed Straight Fit Culottes Trousers",
-        thumbnail:["vano modo sub3.png","vano modo sub3.png","vano modo sub3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-];
 
-const womencardproduct = womenscard.map((item, index) => {
+async function loadProduct() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-    // Add wishlist
-    const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
-    const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
-    
-    const heartIconClass = isInWishlist ? 'fa-solid text-danger' : 'fa-regular';
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const data = await response.json();
+        const product = data.products.slice(0, 4);
 
-    // Add Cart
-    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
-    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
-    
-    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const productHtml = product.map((item, index) => {
 
-    return `
-        <div class="col-xl-3 col-sm-6 text p-2">
-            <a href="../darshit/${item.link}.html">
-                <div class="dk_browsing_products">
-                    <div class="card">
-                        <div class="icon-container">
-                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                                <i class="${heartIconClass} fa-heart"></i>
-                            </span>
-                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
-                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
-                                    alt="Cart Icon" class="cart-icon">
-                            </span>
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a href="productdetails.html?id=${item.id}">
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                <div class="icon-container">
+                                    <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+                                       <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+                                    </span>
+                                    <span style="cursor: pointer !important;">
+                                        <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                            alt="Cart Icon" class="cart-icon">
+                                    </span>
+                                </div>
+
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Buy Now</button>
                         </div>
-
-                        <div class="slider">
-                            ${item.images.map(img => 
-                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                            ).join('')}
-                        </div>
-
-                        <div class="dots-container">
-                            ${item.images.map((_, id) => 
-                                `<span class="dot" data-index="${id}"></span>`
-                            ).join('')}
-                        </div>
-
-                        <h2>${item.name}</h2>
-                        <p>${item.categorydesc}</p>
-
-                        <div class="thumbnails">
-                            ${item.thumbnail.map(thumb => 
-                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                            ).join('')}
-                        </div>
-
-                        <div class="off">
-                            <span class="off-price">${item.discount}% OFF</span>
-                        </div>
-
-                        <div class="price">
-                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                            <span class="original-price">$${item.price}</span>
-                        </div>
-                    </div>
-                    <button class="buy-now">Buy Now</button>
+                    </a>
                 </div>
-            </a>
-        </div>
-    `;
-}).join(''); 
+            `;
+        }).join("");
 
-document.getElementById("mv_womens_cards").innerHTML = womencardproduct;
-
-// Add wishlist
-let wishlist = [];
-
-function toggleWishlist(event,item) {
-    console.log(item)
-    event.preventDefault();
-
-    let data = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-    let index = data.findIndex(i => i.id === item.id);
-    const heartIcon = event.currentTarget.querySelector('i');
-
-    if (index !== -1) {
-        data.splice(index, 1);
-
-        if (heartIcon) {
-            heartIcon.classList.remove('fa-solid', 'text-danger');
-            heartIcon.classList.add('fa-regular');
+        if (document.getElementById("mv_womens_cards")) {
+            document.getElementById("mv_womens_cards").innerHTML = productHtml;
         }
-    } else {
-        data.push(item);
 
-        if (heartIcon) {
-            heartIcon.classList.remove('fa-regular');
-            heartIcon.classList.add('fa-solid', 'text-danger');
+        initializeSliders();
+
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+
+// Function to handle image slider functionality
+function initializeSliders() {
+    document.querySelectorAll('.card').forEach(card => {
+        const images = card.querySelectorAll('.slider-image');
+        const dots = card.querySelectorAll('.dot');
+        const thumbnails = card.querySelectorAll('.thumbnail');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
         }
-    }
 
-    localStorage.setItem('wishlist', JSON.stringify(data));
+        // Autoplay functionality
+        let autoplayInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }, 3000);
+
+        // Dot Click Event
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(autoplayInterval);
+                currentIndex = parseInt(dot.getAttribute('data-index'), 10);
+                showImage(currentIndex);
+            });
+        });
+
+        // Thumbnail Click Event
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                clearInterval(autoplayInterval);
+                currentIndex = parseInt(thumbnail.getAttribute('data-index'), 10);
+                showImage(currentIndex);
+            });
+        });
+    });
 }
 
-// Add cart
-let Cart = [];
 
-function toggleCart(event, element, item) {
-    event.preventDefault();
 
-    let data = JSON.parse(localStorage.getItem('Cart')) || [];
-    let index = data.findIndex(i => i.id === item.id);
-    const img = element.querySelector("img"); // Get the cart icon image
-
-    if (index !== -1) {
-        data.splice(index, 1);
-        img.src = "../mv_image/icon_cart.png"; // Change to unselected cart icon
-    } else {
-        data.push(item);
-        img.src = "../mv_image/icon_cart_selected.png"; // Change to selected cart icon
-    }
-
-    localStorage.setItem('Cart', JSON.stringify(data));
-}
-function changeImage(element, newSrc) {
-    const mainImage = element.closest('.card').querySelector('.slider-image');
-    mainImage.src = `../img/${newSrc}`;
-}
 
 
 // Home (Best sellers)
-const bestseller = [
-    { 
-        id: "1", 
-        best: "true",
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        name:"",
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "2", 
-        best: "true",
-        images: ["kotty.png","kotty.png","kotty.png","kotty.png","kotty.png"],
-        name:"Kotty",
-        categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-        thumbnail:["ketty demo.png","ketty demo.png","ketty demo.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "3", 
-        best: "true",
-        images: ["smart tv.png","smart tv.png","smart tv.png","smart tv.png","smart tv.png"],
-        name:"",
-        categorydesc:"LG 32LM563BPTC 32 Inches HD Ready Smart LED TV (1366x768), Dark Iron Gray,80 cm",
-        thumbnail:["tv demo.png","tv demo.png","tv demo.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "4", 
-        best: "true",
-        images: ["leptop.png","leptop.png","leptop.png","leptop.png","leptop.png"],
-        name:"",
-        categorydesc:"ASUS ROG Strix G16 (2024) Gaming Laptop, 16” 16:10 FHD 165Hz Display, NVIDIA GeForc..",
-        thumbnail:["leptop1.png","leptop2.png","leptop3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "5", 
-        images: ["kotty.png","kotty.png","kotty.png","kotty.png","kotty.png"],
-        name:"Kotty",
-        categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-        thumbnail:["ketty demo.png","ketty demo.png","ketty demo.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "6", 
-        images: ["smart tv.png","smart tv.png","smart tv.png","smart tv.png","smart tv.png"],
-        name:"",
-        categorydesc:"LG 32LM563BPTC 32 Inches HD Ready Smart LED TV (1366x768), Dark Iron Gray,80 cm",
-        thumbnail:["tv demo.png","tv demo.png","tv demo.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "7", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        name:"",
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "8", 
-        images: ["leptop.png","leptop.png","leptop.png","leptop.png","leptop.png"],
-        name:"",
-        categorydesc:"ASUS ROG Strix G16 (2024) Gaming Laptop, 16” 16:10 FHD 165Hz Display, NVIDIA GeForc..",
-        thumbnail:["leptop1.png","leptop2.png","leptop3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-];
 
-const bestsellproduct = bestseller.map((item, index) => {
-    return `
-        <div class="col-xl-3 col-sm-6 p-2">
-            <a href="../darshit/${item.link}.html">
-                <div class="dk_best_seller_card">
-                    <div class="dk_bedge">
-                        ${item.best === "true" ? `<p class="mb-0">Best Seller</p>` : ""}
-                    </div>
+async function loadBestsellerProduct() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-                    <div class="owl-carousel owl-theme dk_best_seller_slider pb-4 mt-3">
-                        ${item.images.map(img => 
-                            `<div class="dk_caro_img mx-auto">
-                                <img src="../img/${img}" alt="Product Image" class="object_cover w-100 h-100">
-                            </div>`
-                        ).join('')}
-                    </div>
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-                    <p style="font-size: 18px; font-weight: 600; margin-bottom: 0px; color: #000000;">${item.name}</p>
-                    <h4 style="font-size: 18px; font-weight: 400; padding: 0px;">${item.categorydesc}</h4>
+        const data = await response.json();
+        const bestsellerProducts = data.products.filter(item => item.bestseller).slice(0, 8);
 
-                    <div class="dk_best_seller_thumbnails">
-                        ${item.thumbnail.map(thumb => 
-                            `<img src="../img/${thumb}" alt="Thumbnail" class="dk_best_seller_thumbnail">`
-                        ).join('')}
-                    </div>
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-                    <div class="dk_best_seller_off">
-                        <span class="dk_best_seller_off-price">${item.discount}% OFF</span>
-                    </div>
+        const bestsellerproductHtml = bestsellerProducts.map((item, index) => {
 
-                    <div class="dk_best_seller_price">
-                        <span class="dk_best_seller_discount-price">$${(item.price * (1 - item.discount / 100)).toFixed(2)}</span>
-                        <span class="dk_best_seller_original-price">$${item.price}</span>
-                    </div>
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a>
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                 <div class="dk_bedge">
+                                    ${item.bestseller === true ? `<p class="mb-0">Best Seller</p>` : ""}
+                                </div>
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Buy Now</button>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-    `;
-}).join(''); 
+            `;
+        }).join("");
 
-document.getElementById("mv_best_sellers").innerHTML = bestsellproduct;
+        if (document.getElementById("mv_best_sellers")) {
+            document.getElementById("mv_best_sellers").innerHTML = bestsellerproductHtml;
+        }
 
+        initializeSliders();
 
-
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
 
 // Home (Top Selling Smartphones)
-const top_selling_smartphones = [
-    { 
-        id: "5", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "6", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "7", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "8", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-];
 
-const top_sell_phone = top_selling_smartphones.map((item, index) => {
+async function loadTopsellingSmartphone() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-    // Add wishlist
-    const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
-    const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
-    
-    const heartIconClass = isInWishlist ? 'fa-solid text-danger' : 'fa-regular';
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const data = await response.json();
+        const besttopsellingsmartphone = data.products.filter(item => item.category === "electronic").slice(0, 4);
 
-    // Add Cart
-    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
-    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
-    
-    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const besttopsellingsmartphoneHtml = besttopsellingsmartphone.map((item, index) => {
 
-    return `
-        <div class="col-xl-3 col-sm-6 text p-2">
-            <a href="../darshit/${item.link}.html">
-                <div class="dk_browsing_products">
-                    <div class="card">
-                        <div class="icon-container">
-                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                                <i class="${heartIconClass} fa-heart"></i></span>
-                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
-                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
-                                    alt="Cart Icon" class="cart-icon">
-                            </span>
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a>
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                 <div class="dk_bedge">
+                                    ${item.bestseller === true ? `<p class="mb-0">Best Seller</p>` : ""}
+                                </div>
+                                <div class="icon-container">
+                                    <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+                                       <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+                                    </span>
+                                    <span style="cursor: pointer !important;">
+                                        <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                            alt="Cart Icon" class="cart-icon">
+                                    </span>
+                                </div>
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Buy Now</button>
                         </div>
-
-                        <div class="slider">
-                            ${item.images.map(img => 
-                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                            ).join('')}
-                        </div>
-
-                        <div class="dots-container">
-                            ${item.images.map((_, id) => 
-                                `<span class="dot" data-index="${id}"></span>`
-                            ).join('')}
-                        </div>
-
-                        <h4 class="dk_your_sumsung mb-3">${item.categorydesc}</h4>
-
-                        <div class="thumbnails">
-                            ${item.thumbnail.map(thumb => 
-                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                            ).join('')}
-                        </div>
-
-                        <div class="off">
-                            <span class="off-price">${item.discount}% OFF</span>
-                        </div>
-
-                        <div class="price">
-                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                            <span class="original-price">$${item.price}</span>
-                        </div>
-                    </div>
-                    <button class="buy-now">Buy Now</button>
+                    </a>
                 </div>
-            </a>
-        </div>
-    `;
-}).join(''); 
+            `;
+        }).join("");
 
-document.getElementById("mv_top_selling_phone").innerHTML = top_sell_phone;
+        if (document.getElementById("mv_top_selling_phone")) {
+            document.getElementById("mv_top_selling_phone").innerHTML = besttopsellingsmartphoneHtml;
+        }
 
+        initializeSliders();
 
-
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
 
 //Home (Your Browsing products)
-const yourbrowsing = [
-    { 
-        id: "9", 
-        images: ["kotty.png","kotty.png","kotty.png","kotty.png","kotty.png"],
-        name:"Kotty",
-        categorydesc:"Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-        thumbnail:["ketty2.png","ketty2.png","ketty2.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "10", 
-        images: ["Dennis_Lingo.png","Dennis_Lingo.png","Dennis_Lingo.png","Dennis_Lingo.png","Dennis_Lingo.png"],
-        name:"Dennis Lingo",
-        categorydesc:"Men Black Slim Fit Opaque Cotton Casual Shirt",
-        thumbnail:["Dennis_Lingo_sub.png","Dennis_Lingo_sub.png","Dennis_Lingo_sub.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "11", 
-        images: ["sumsung.png","sumsung.png","sumsung.png","sumsung.png","sumsung.png"],
-        name:"",
-        categorydesc:"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-        thumbnail:["sumsung demo1.png","sumsung demo2.png","sumsung demo3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-    { 
-        id: "12", 
-        images: ["vro moda3.png","vro moda3.png","vro moda3.png","vro moda3.png","vro moda3.png"],
-        name:"Vero Moda",
-        categorydesc:"Women Geometric Printed Straight Fit Culottes Trousers",
-        thumbnail:["vano modo sub3.png","vano modo sub3.png","vano modo sub3.png"],
-        discount:"30",
-        price:"200",
-        link: "productdetails",
-    },
-];
 
-const your_brow_pro = yourbrowsing.map((item, index) => {
+async function loadBrowsingproduct() {
+    try {
+        const response = await fetch('./../data/db.json');
 
-    // Add wishlist
-    const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
-    const isInWishlist = wishlistData.some(wishlistItem => wishlistItem.id === item.id);
-    
-    const heartIconClass = isInWishlist ? 'fa-solid text-danger' : 'fa-regular';
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    let currnt_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const data = await response.json();
+        const broweringproduct = data.products.slice(0, 4);
 
-    // Add Cart
-    const CartData = JSON.parse(localStorage.getItem('Cart')) || [];
-    const isInCart = CartData.some(cartItem => cartItem.id === item.id);
-    
-    const cartIconClass = isInCart ? 'fa-solid text-danger' : 'fa-regular';
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-    let currnt_cart_record = JSON.stringify(item).replace(/"/g, '&quot;');
+        const broweringproductHtml = broweringproduct.map((item, index) => {
 
-    return `
-        <div class="col-xl-3 col-sm-6 text p-2">
-            <a href="../darshit/${item.link}.html">
-                <div class="dk_browsing_products">
-                    <div class="card">
-                        <div class="icon-container">
-                            <span style="cursor: pointer !important; color: #000000;" class="icon heart" onclick='toggleWishlist(event,${currnt_record})'>
-                                <i class="${heartIconClass} fa-heart"></i></span>
-                            <span style="cursor: pointer !important;" class="" onclick='toggleCart(event, this, ${currnt_cart_record})'>
-                                <img height="25px" width="25px" src="../mv_image/${isInCart ? 'icon_cart_selected.png' : 'icon_cart.png'}" 
-                                    alt="Cart Icon" class="cart-icon">
-                            </span>
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a>
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                 <div class="dk_bedge">
+                                    ${item.bestseller === true ? `<p class="mb-0">Best Seller</p>` : ""}
+                                </div>
+                                 <div class="icon-container">
+                                    <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+                                       <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+                                    </span>
+                                    <span style="cursor: pointer !important;">
+                                        <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                            alt="Cart Icon" class="cart-icon">
+                                    </span>
+                                </div>
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+                                
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Buy Now</button>
                         </div>
+                    </a>
+                </div>
+            `;
+        }).join("");
 
-                        <div class="slider">
-                            ${item.images.map(img => 
-                                `<img src="../img/${img}" alt="Product Image" class="slider-image">`
-                            ).join('')}
+        if (document.getElementById("mv_your_browsing_product")) {
+            document.getElementById("mv_your_browsing_product").innerHTML = broweringproductHtml;
+        }
+
+        initializeSliders();
+
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+// add wishlist 
+async function toggleWishlist(event, productId) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const heartSpan = event.currentTarget;
+    const icon = heartSpan.querySelector('i');
+
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (wishlist.includes(productId)) {
+        wishlist = wishlist.filter(id => id !== productId);
+        icon.classList.replace('fa-solid', 'fa-regular');
+        heartSpan.style.color = '#000000';
+    } else {
+        wishlist.push(productId);
+        icon.classList.replace('fa-regular', 'fa-solid');
+        heartSpan.style.color = '#ff0000';
+    }
+
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    await loadwishlistdata();
+    await DK_update_data1();
+}
+
+// wishlist page 
+
+async function loadwishlistdata() {
+
+    try {
+        const response = await fetch('./../data/db.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const emptyWishlist = document.querySelector("#dk_empty_wishlist");
+        const dk_wishlistdata = document.querySelector("#dk_wishlistdata");
+        const wishlistCount = document.getElementById("wishlist_count");
+
+        const wishlistProducts = data.products.filter(product => wishlist.includes(product.id));
+
+        if (wishlistProducts?.length > 0) {
+            if (emptyWishlist) {
+                emptyWishlist.style.display = "none";
+            }
+            if (dk_wishlistdata) {
+                dk_wishlistdata.style.display = "block";
+            }
+            if (wishlistCount) {
+                wishlistCount.textContent = wishlist.length;
+            }
+
+            const productHtml = wishlistProducts.map((item, index) => {
+                return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a>
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+
+                                <div class="dk_wishlist_icon_container">
+                                        <span onclick="toggleWishlist(event, ${item.id})" class="icon heart dk_cursor"><i class="fa-solid fa-heart" style="width: 26px; color: #F9595F;" data-product-id="${item.id}"></i></span>
+                                        <span onclick="toggleWishlist(event, ${item.id})" class="icon cart dk_cart_icon dk_cursor"><i class="fa-solid fa-xmark" style="width: 26px;" data-product-id="${item.id}"></i></span>
+                                    </div>
+
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                    `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+                ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                    `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+                ).join('')}
+                                </div>
+
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                    `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+                ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Move to Cart</button>
                         </div>
+                    </a>
+                </div>
+            `;
+            }).join("");
 
-                        <div class="dots-container">
-                            ${item.images.map((_, id) => 
-                                `<span class="dot" data-index="${id}"></span>`
-                            ).join('')}
+
+            if (document.getElementById("mv_wishlist_data")) {
+                document.getElementById("mv_wishlist_data").innerHTML = productHtml;
+            }
+        }
+        else {
+            emptyWishlist.style.display = "block"
+            dk_wishlistdata.style.display = "none"
+        }
+
+        initializeSliders();
+        DK_update_data1();
+
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+async function DK_update_data1() {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    if (wishlist.length > 0) {
+        if (document.getElementById('dK_wishlist_count')) {
+            document.getElementById('dK_wishlist_count').innerHTML = wishlist.length;
+        }
+    }
+    else {
+        if (document.getElementById('dK_wishlist_count')) {
+            document.getElementById('dK_wishlist_count').innerHTML = wishlist.length;
+        }
+    }
+}
+
+// product details
+
+
+function geturl() {
+    let url = window.location.search;
+    let params = new URLSearchParams(url);
+    let id = params.get("id");  
+
+    if (id) {
+        fetch('../data/db.json') 
+            .then(response => response.json())
+            .then(data => {
+                const product = data.products.find(item => item.id == id); 
+                console.log(product)
+
+                if (product) {
+                    single_data(product);
+                } else {
+                    console.error("Product not found");
+                }
+            })
+            .catch(error => console.error("Error fetching product details:", error));
+    }
+}
+
+function single_data(item) {
+    let oneitem = document.getElementById('DK_singleproduct');
+
+    if (oneitem) {
+        oneitem.innerHTML = `
+        <div class="row">
+                <div class="col-lg-4">
+                    <div class="swiper r_shadow">
+                        <div class="swiper-wrapper">
+                        ${item.images.map((img,index) => {
+                            return(
+                                `
+                                <div class="swiper-slide"><img src="/img/${img}" class="img-thumbnail"
+                                    alt="Thumb 1">
+                            </div>`
+                            )
+                        })}
                         </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="r_shareicon"><i class="fa-solid fa-share-nodes"></i></div>
+                    </div>
+                    <div class="thumbnail-images mt-3 d-flex gap-2">
+                ${item.images.map((img,index) => {
+                    return(
+                        `
+                        <img src="/img/${img}" class="img-thumbnail thumbnail" alt="Thumb 1" data-bs-toggle="modal"
+                            data-bs-target="#imageModal" data-large="/img/${img}">`
+                    )
+                }).join('')}
+                    </div>
 
-                        <h2>${item.name}</h2>
-                        <p>${item.categorydesc}</p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body position-relative">
+                                    <!-- Main Image -->
+                                    <img id="mainImage" src="../r_img/product-1.png" alt="Main Image"
+                                        class="d-block mx-auto">
 
-                        <div class="thumbnails">
-                            ${item.thumbnail.map(thumb => 
-                                `<img src="../img/${thumb}" alt="Thumbnail" class="thumbnail">`
-                            ).join('')}
-                        </div>
+                                    <!-- Next/Previous Arrows -->
+                                    <button id="prevArrow"
+                                        class="btn position-absolute top-50 start-0 translate-middle-y"
+                                        style="z-index: 10;">
+                                        &#10094;
+                                    </button>
+                                    <button id="nextArrow" class="btn position-absolute top-50 end-0 translate-middle-y"
+                                        style="z-index: 10;">
+                                        &#10095;
+                                    </button>
 
-                        <div class="off">
-                            <span class="off-price">${item.discount}% OFF</span>
-                        </div>
-
-                        <div class="price">
-                            <span class="discount-price">$${item.price - (item.price * (item.discount / 100)).toFixed(0)}</span>
-                            <span class="original-price">$${item.price}</span>
+                                    <!-- Thumbnails -->
+                                    <div class="thumbnail-container mt-3 d-flex justify-content-center gap-2 flex-wrap">
+                                    ${item.images.map((img,index) => {
+                                        return(
+                                                ` <img src="/img/${img}" alt="Thumb 1" data-large=""/img/${img}"
+                                            class="thumbnail">`
+                                        )
+                                    }).join("")}
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button class="buy-now">Buy Now</button>
                 </div>
-            </a>
-        </div>
-    `;
-}).join(''); 
 
-document.getElementById("mv_your_browsing_product").innerHTML = your_brow_pro;
+                <!-- Right Column: Product Details -->
+                <div class="col-lg-8">
+                    <h4 class="product-brand mb-1">${item.name}</h4>
+                    <p class="product-title mb-0">${item.categorydesc}</p>
+                    <div class="d-flex mt-2 mb-2">
+                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
+                        <i class="fa-solid fa-star" style="color: #727272;"></i>
+                    </div>
+                    <p class="price mb-2">
+                        <span class="current-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                        <span><strike>$${item.price}</strike></span>
+                        <span class="discount">${item.discount}% OFF</span>
+                    </p>
+                    <p class="product-description mb-3">
+                        ${item.desc}
+                    </p>
+
+                    <!-- Size and Color Options -->
+                    <div class="product-options">
+                        <div class="sizes">
+                            <label>Size:</label>
+                            ${item.size.map((sizename,index) => {
+                                return(
+                                    `<button class="btn btn-outline-secondary me-2">${sizename}</button>`
+                                )
+                            }).join("")}
+                            
+                        </div>
+                        <div class="colors mt-2">
+                            <label>Color:</label>
+                            ${item.color.map((colorimg,index) => {
+                                return(
+                                    `<img src="/r_img/${colorimg}" class="img-thumbnail me-2" alt="Color 1">`
+                                )
+                            }).join("")}
+                        </div>
+                    </div>
+
+                    <!-- Buttons for Cart and Wishlist -->
+                    <div class="mt-3">
+                        <button class="r_buttons me-3">Add to Cart</button>
+                        <button class="r_buttons" onclick="toggleWishlist(event, ${item.id})">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Delivery Options -->
+                    <div class="card p-3 mt-4">
+                        <h6 class="card-title">Delivery Options</h6>
+                        <p style="font-size: 14px;">Free standard shipping on orders over $35 before tax, plus free
+                            returns
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr style="font-size: 11px;">
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">HOW LONG</th>
+                                        <th scope="col">CHARGE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Standard delivery</td>
+                                        <td>1-2 business days</td>
+                                        <td>$29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Express delivery</td>
+                                        <td>1 business day</td>
+                                        <td>$39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Free delivery</td>
+                                        <td>Expected 5-10 days</td>
+                                        <td>FREE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs for Additional Information -->
+            <!-- Navigation Tabs -->
+            <ul class="nav nav-tabs mt-5 r_ulitems " id="productTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="product-details-tab" data-bs-toggle="tab" href="#product-details"
+                        role="tab" aria-controls="product-details" aria-selected="true">Product Details</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="rating-reviews-tab" data-bs-toggle="tab" href="#rating-reviews" role="tab"
+                        aria-controls="rating-reviews" aria-selected="false">Rating & Reviews</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="offers-tab" data-bs-toggle="tab" href="#offers" role="tab"
+                        aria-controls="offers" aria-selected="false">Offers</a>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="productTabsContent">
+
+                <!-- Product Details Tab -->
+                <div class="tab-pane fade show active" id="product-details" role="tabpanel"
+                    aria-labelledby="product-details-tab">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum
+                            purus.
+                            Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst
+                            nibh.
+                            Aliquam tellus mauris aliquam malesuada accumsan non lorem.</li>
+                        <li>Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque
+                            mattis
+                            integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan
+                            id
+                            iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque.
+                            Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames
+                            at
+                            rhoncus eu nulla amet leo. </li>
+                    </ul>
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <div class="specs-label">Product Name</div>
+                            <div class="specs-value">${item.name}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Pattern</div>
+                            <div class="specs-value">${item.pattern}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Length</div>
+                            <div class="specs-value">${item.length}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Neck</div>
+                            <div class="specs-value">${item.neck}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Sleeve</div>
+                            <div class="specs-value">${item.sleeve}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Fabric</div>
+                            <div class="specs-value">${item.fabric}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Fit</div>
+                            <div class="specs-value">${item.fit}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Wash care</div>
+                            <div class="specs-value">${item.washcare}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Occasional</div>
+                            <div class="specs-value">${item.occasional}</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Sustainable</div>
+                            <div class="specs-value">${item.sustainable}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating & Reviews Tab -->
+                <div class="tab-pane fade" id="rating-reviews" role="tabpanel" aria-labelledby="rating-reviews-tab">
+                    <!-- First Row: Rating Overview -->
+                    <div class="row rating-section">
+                        <div class="col-md-3 text-center d-flex justify-content-center align-items-center">
+                            <div class="rating-circle me-4">
+                                <div class="rating-number">4.5</div>
+                            </div>
+                            <div>
+                                <div class="d-flex">
+                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                </div>
+                                <div>
+                                    <p style="color: #727272;" class="mb-0">from 1,25k reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-2">5.0 <span><i class="fas fa-star star-rating ms-1 "></i></span></div>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" style="width: 95%"></div>
+                                </div>
+                                <div class="rating-count">2823</div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-2">4.0 <span><i class="fas fa-star star-rating ms-1 "></i></span></div>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" style="width: 4%"></div>
+                                </div>
+                                <div class="rating-count">38</div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-2">3.0 <span><i class="fas fa-star star-rating ms-1 "></i></span></div>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" style="width: 1%"></div>
+                                </div>
+                                <div class="rating-count">4</div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-2">2.0 <span><i class="fas fa-star star-rating ms-1 "></i></span></div>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" style="width: 0%"></div>
+                                </div>
+                                <div class="rating-count">0</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="me-2">1.0 <span><i class="fas fa-star star-rating ms-1 "></i></span></div>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" style="width: 0%"></div>
+                                </div>
+                                <div class="rating-count">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Row: Filters and Reviews -->
+                    <div class="row">
+                        <!-- Left Column: Filters -->
+                        <div class="col-md-3">
+                            <div class="accordion" id="reviewFilters">
+                                <!-- Rating Filter -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="ratingFilter">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseRating">
+                                            Reviews Filter
+                                        </button>
+                                    </h2>
+                                    <div id="collapseRating" class="accordion-collapse collapse show"
+                                        data-bs-parent="#reviewFilters">
+                                        <div class="accordion-body">
+                                            <div>Rating</div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="star5">
+                                                <label class="form-check-label" for="star5">
+                                                    <i class="fas fa-star star-rating"></i> 5
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="star4">
+                                                <label class="form-check-label" for="star4">
+                                                    <i class="fas fa-star star-rating"></i> 4
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="star3">
+                                                <label class="form-check-label" for="star3">
+                                                    <i class="fas fa-star star-rating"></i> 3
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="star2">
+                                                <label class="form-check-label" for="star2">
+                                                    <i class="fas fa-star star-rating"></i> 2
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="star1">
+                                                <label class="form-check-label" for="star1">
+                                                    <i class="fas fa-star star-rating"></i> 1
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Topics Filter -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="topicsFilter">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTopics">
+                                            Review Topics
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTopics" class="accordion-collapse collapse"
+                                        data-bs-parent="#reviewFilters">
+                                        <div class="accordion-body">
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="quality">
+                                                <label class="form-check-label" for="quality">
+                                                    Product Quality
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="service">
+                                                <label class="form-check-label" for="service">
+                                                    Seller Services
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="price">
+                                                <label class="form-check-label" for="price">
+                                                    Product Price
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="shipping">
+                                                <label class="form-check-label" for="shipping">
+                                                    Shipment
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="description">
+                                                <label class="form-check-label" for="description">
+                                                    Match with Description
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Reviews -->
+                        <div class="col-md-9">
+                            <div class="review-list">
+                                <div>
+                                    <h5>Review Lists</h5>
+                                </div>
+                                <div class="filter-buttons">
+                                    <button class="btn r_reviewbutons me-2">All Reviews</button>
+                                    <button class="btn r_reviewbutons me-2">With Photo & Video</button>
+                                    <button class="btn r_reviewbutons">With Description</button>
+                                </div>
+
+                                <!-- Review Items -->
+                                <div class="review-item">
+                                    <div class="mb-2">
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                    </div>
+                                    <p class="mb-0 fw-bold">This is amazing product I have.</p>
+                                    <img src="../r_img/b-4.png" alt=""
+                                        style="width: 40px; height: 40px;object-fit: cover;box-sizing: border-box;">
+                                    <div class="review-date mb-3">July 2, 2023 03:29 PM</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar me-2">
+                                                <img src="../r_img/review-1.png" alt="">
+                                            </div>
+                                            <div>
+                                                <div class="fw-500">Darnell Steward</div>
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-interaction me-2">
+                                                <i class="fas fa-thumbs-up"></i> 128
+                                            </button>
+                                            <button class="btn btn-interaction">
+                                                <i class="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item">
+                                    <div class="mb-2">
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                    </div>
+                                    <p class="mb-0">This is amazing product I have.</p>
+                                    <div class="review-date mb-3">July 2, 2023 03:25 PM</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar me-2">
+                                                <img src="../r_img/review-2.png" alt="">
+                                            </div>
+                                            <div>
+                                                <div class="fw-500">Darlence Robertson</div>
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-interaction me-2">
+                                                <i class="fas fa-thumbs-up"></i> 128
+                                            </button>
+                                            <button class="btn btn-interaction">
+                                                <i class="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item">
+                                    <div class="mb-2">
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                    </div>
+                                    <p class="mb-0">This is amazing product I have.</p>
+                                    <div class="review-date mb-3">July 26, 2020 10:03 PM</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar me-2">
+                                                <img src="../r_img/review-3.png" alt="">
+                                            </div>
+                                            <div>
+                                                <div class="fw-500">Kathryn Murphy</div>
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-interaction me-2">
+                                                <i class="fas fa-thumbs-up"></i> 128
+                                            </button>
+                                            <button class="btn btn-interaction">
+                                                <i class="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item">
+                                    <div class="mb-2">
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                        <i class="fas fa-star star-rating"></i>
+                                    </div>
+                                    <p class="mb-0">This is amazing product I have.</p>
+                                    <div class="review-date mb-3">July 7, 2020 10:14 AM</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar me-2">
+                                                <img src="../r_img/review-4.png" alt="">
+                                            </div>
+                                            <div>
+                                                <div class="fw-500">Ronald Richards</div>
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-interaction me-2">
+                                                <i class="fas fa-thumbs-up"></i> 128
+                                            </button>
+                                            <button class="btn btn-interaction">
+                                                <i class="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offers Tab -->
+                <div class="tab-pane fade" id="offers" role="tabpanel" aria-labelledby="offers-tab">
+                    <!-- TD Bank -->
+                    <div class="bank-card d-flex align-items-center ">
+                        <div class="bank-info">
+                            <img src="../r_img/td.png" alt="TD Bank Logo" class="bank-logo">
+                        </div>
+                        <div>
+                            <h2 class="bank-name">TD Bank</h2>
+                            <p class="offer-text">Extra ₹500 off on TD Bank Pixel Credit Card EMI Transactions. Min Txn
+                                Value: ₹5,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Capital One -->
+                    <div class="bank-card d-flex align-items-center ">
+                        <div class="bank-info">
+                            <img src="../r_img/capital.png" alt="TD Bank Logo" class="bank-logo">
+                        </div>
+                        <div>
+                            <h2 class="bank-name">Capital One bank</h2>
+                            <p class="offer-text">Extra ₹500 off on Capital Bank Pixel Credit Card EMI Transactions. Min
+                                Txn
+                                Value: ₹5,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Wells Fargo -->
+                    <div class="bank-card d-flex align-items-center ">
+                        <div class="bank-info">
+                            <img src="../r_img/wells.png" alt="TD Bank Logo" class="bank-logo">
+                        </div>
+                        <div>
+                            <h2 class="bank-name">Wells Fargo Bank</h2>
+                            <p class="offer-text">Extra ₹500 off on Wells Fargo Bank Pixel Credit Card EMI Transactions.
+                                Min
+                                Txn Value: ₹5,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Citi Bank -->
+                    <div class="bank-card d-flex align-items-center ">
+                        <div class="bank-info">
+                            <img src="../r_img/citi.png" alt="TD Bank Logo" class="bank-logo">
+                        </div>
+                        <div>
+                            <h2 class="bank-name">Citi Bank</h2>
+                            <p class="offer-text">Extra ₹500 off on Citi Bank Pixel Credit Card EMI Transactions. Min
+                                Txn
+                                Value: ₹5,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Image Modal Handling
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('mainImage');
+    const prevArrow = document.getElementById('prevArrow');
+    const nextArrow = document.getElementById('nextArrow');
+
+    let currentIndex = 0;
+
+    // Update the main image and active thumbnail
+    function updateMainImage(index) {
+        if (!thumbnails.length) return;
+
+        currentIndex = index;
+        const largeImageURL = thumbnails[index].getAttribute('data-large');
+        
+        if (mainImage) {
+            mainImage.src = largeImageURL;
+        }
+
+        // Update active thumbnail
+        thumbnails.forEach((thumb) => thumb.classList.remove('active'));
+        thumbnails[index].classList.add('active');
+    }
+
+    // Thumbnail click event
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            updateMainImage(index);
+        });
+    });
+
+    // Previous arrow click event
+    if (prevArrow) {
+        prevArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+            updateMainImage(currentIndex);
+        });
+    }
+
+    // Next arrow click event
+    if (nextArrow) {
+        nextArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % thumbnails.length;
+            updateMainImage(currentIndex);
+        });
+    }
+
+    // Swiper Initialization
+    if (typeof Swiper !== 'undefined') {
+        const thumbSwiper = new Swiper('.r_shadow', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
+    }
+});
+
+
+window.onload = geturl;
+

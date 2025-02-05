@@ -198,26 +198,7 @@
         <section class="product-section">
             <div class="container explore-more">
                 <div class="row dk_shoes_slider" id="mv_sport_shoes">
-                    <!-- <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-                        <img src="../img/dsaggg 1.png" alt="Topwear">
-                        <p>Sports Shoes</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-                        <img src="../img/pair-brown-shoes-with-black-leather-sole-word-bottom 1.png" alt="Bottomwear">
-                        <p>Mens Shoes</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-                        <img src="../img/small-purse-studio-still-life 1.png" alt="Indianwear">
-                        <p>Handbags</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-                        <img src="../img/high-heel-shoes 1.png" alt="Footwear">
-                        <p>Women Heels</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-2 text-center category">
-                        <img src="../img/infant-background-birthday-child-newborn 1.png" alt="Sports & Activewear">
-                        <p>Kids Shoes</p>
-                    </div> -->
+                   
                 </div>
             </div>
         </section>
@@ -228,56 +209,6 @@
                     <div class="best-electronics">
                         <h2>Best Of Electronics</h2>
                         <div class="dk_product-container" id="mv_electronic">
-                            <!-- <div class="dk_product-item">
-                                <img src="../img/image 383.png" alt="Xiaomi Smart TV">
-                                <p>Xiaomi Smart TV</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 384.png" alt="Dell Laptop">
-                                <p>Dell Laptop</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 385.png" alt="Smartphones">
-                                <p>Smartphones</p>
-                                <p>Up to 30% OFF</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/Frame 1000003134.png" alt="Gaming Accessories">
-                                <p>Gaming Accessories</p>
-                                <p>Up to 20% OFF</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 380.png" alt="Wireless Speakers">
-                                <p>Wireless Speakers</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/rendering-smart-home-device 1.png" alt="Smart Watches">
-                                <p>Smart Watches</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 379.png" alt="Noise Earbuds">
-                                <p>Noise Earbuds</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 2.png" alt="JBL Headphones">
-                                <p>JBL Headphones</p>
-                                <p>Starts from $99</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/Frame 1000003136.png" alt="Tablets">
-                                <p>Tablets</p>
-                                <p>Up to 30% OFF</p>
-                            </div>
-                            <div class="dk_product-item">
-                                <img src="../img/image 389.png" alt="Gaming Laptops">
-                                <p>Gaming Laptops</p>
-                                <p>Up to 20% OFF</p>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -294,6 +225,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Women’s cards -->
         <section>
             <div class="container">
@@ -497,7 +429,7 @@
         <section>
             <div class="dk_best_sellers">
                 <div class="container">
-                    <h2>Best sellers</h2>
+                    <h2 class="dk_head">Best sellers</h2>
                     <div class="row" id="mv_best_sellers">
 
                         <!-- <div class="col-xl-3 col-sm-6 p-2">
@@ -1389,6 +1321,7 @@
             .then((response) => response.text())
             .then((data) => {
             document.getElementById("header").innerHTML = data;
+            // DK_update_data1();
             });
         // footer include
         fetch("../darshit/footer.html")
@@ -1458,7 +1391,7 @@
         });
     </script>
     <!-- Your Browsing products -->
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll('.card').forEach(card => {
                 const images = card.querySelectorAll('.slider-image');
@@ -1499,7 +1432,7 @@
                 });
             });
         });
-    </script>
+    </script> -->
     <!-- Best Sellers  -->
     <script>
         $('.dk_best_seller_slider').owlCarousel({

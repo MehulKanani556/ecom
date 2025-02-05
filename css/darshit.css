@@ -9,6 +9,9 @@ a{
 .container{
     width: 90%;
 }
+.dk_cursor{
+    cursor: pointer;
+}
 
 /*********** My Order ***********/
 .mv_order_main_class{
@@ -1510,7 +1513,7 @@ a{
 .dk_best_sellers {
     padding: 50px 0px 80px 0px;
 }
-.dk_best_sellers h2 {
+.dk_best_sellers .dk_head {
     font-size: 28px;
     font-weight: 600;
     line-height: 33.89px;
