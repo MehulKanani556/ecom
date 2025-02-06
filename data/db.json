@@ -349,4 +349,538 @@
         }
     ]
     
+},
+  "topBrands": [
+    {
+      "id": 1,
+      "img": "adidas.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 2,
+      "img": "puma.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "img": "nike.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img": "skechers.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img": "hrx.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "img": "jorden.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 7,
+      "img": "reebok.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 8,
+      "img": "asics.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 9,
+      "img": "columbia.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 10,
+      "img": "fila.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 11,
+      "img": "nb.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 12,
+      "img": "converse.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 13,
+      "img": "pai.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 14,
+      "img": "under_armour.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    },
+    {
+      "id": 15,
+      "img": "decathlon.png",
+      "discount": "Upto 10% OFF",
+      "link": "productdetails"
+    }
+  ],
+  "exploreMore": [
+    {
+      "id": 1,
+      "img": "men.png",
+      "name": "Mens",
+      "link": "MensCategory"
+    },
+    {
+      "id": 2,
+      "img": "women.png",
+      "name": "Womens",
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "img": "kids.png",
+      "name": "Kids",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img": "footwear.png",
+      "name": "Footwear",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img": "fitness_equipment.png",
+      "name": "Fitness Equipment",
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "img": "sports_accessories.png",
+      "name": "Sports Accessories",
+      "link": "productdetails"
+    }
+  ],
+  "newOnQuickcart": [
+    {
+      "id": 1,
+      "img1": "new_under_armour.png",
+      "img2": "logo_under_armour.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": 2,
+      "img1": "new_converse.png",
+      "img2": "logo_converse.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "img1": "new_asics.png",
+      "img2": "logo_asics.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img1": "new_columbia.png",
+      "img2": "logo_columbia.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img1": "new_nb.png",
+      "img2": "logo_nb.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "img1": "new_under_armour.png",
+      "img2": "logo_under_armour.png",
+      "discount": "UP to 20% OFF",
+      "apply": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "trendingDeal": [
+    {
+      "id": "1",
+      "images": [
+        "new_balance.png",
+        "new_balance.png",
+        "new_balance.png",
+        "new_balance.png",
+        "new_balance.png"
+      ],
+      "name": "New Balance",
+      "categorydesc": "Men's Fresh Foam X 1080v14",
+      "thumbnail": ["new_balance1.png", "new_balance2.png", "new_balance3.png"],
+      "discount": "40",
+      "price": "700",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "images": [
+        "trending_reebok.png",
+        "trending_reebok.png",
+        "trending_reebok.png",
+        "trending_reebok.png",
+        "trending_reebok.png"
+      ],
+      "name": "Reebok",
+      "categorydesc": "Women's Running App",
+      "thumbnail": ["trending_reebok1.png"],
+      "discount": "50",
+      "price": "399",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "images": [
+        "trending_skechers.png",
+        "trending_skechers.png",
+        "trending_skechers.png",
+        "trending_skechers.png",
+        "trending_skechers.png"
+      ],
+      "name": "SKECHERS",
+      "categorydesc": "Unisex Adults SK FIT YOGA MAT..",
+      "thumbnail": ["trending_skechers1.png", "trending_skechers1.png"],
+      "discount": "40",
+      "price": "299",
+      "link": "productdetails"
+    }
+  ],
+  "sportswerAcc": [
+    {
+      "id": "1",
+      "img": "trending_1.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "trending_2.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "trending_3.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "trending_4.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "trending_5.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "trending_1.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "sportswerExporingBox": [
+    {
+      "id": "1",
+      "img": "sport_explore_1.png",
+      "name": "NEW STYLES",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "sport_explore_2.png",
+      "name": "",
+      "btn": "Shop Now",
+      "showFinalTouch": "true",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "sport_explore_3.png",
+      "name": "NO REST, JUST RUN",
+      "description": "Run to live. Live to run",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "sport_explore_4.png",
+      "name": "SPORTS ACCESSORIES",
+      "description": "Your comfort, our Priority",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    }
+  ],
+
+  "beautyTopbrands": [
+    {
+      "id": "1",
+      "img": "lorel.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "chenal.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "remee.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "maybeline.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "mac.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "iconic.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "7",
+      "img": "colorbar.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "8",
+      "img": "facescanada.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "9",
+      "img": "purpale.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "10",
+      "img": "nyka.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "11",
+      "img": "mamaearth.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "12",
+      "img": "nieva.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "13",
+      "img": "plome.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "14",
+      "img": "sugar.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "15",
+      "img": "lotus.png",
+      "discount": "10",
+      "link": "productdetails"
+    }
+  ],
+  "beautyExploreMore": [
+    {
+      "id": "1",
+      "img": "face.png",
+      "name": "Face",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "eyes.png",
+      "name": "Eyes",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "lips.png",
+      "name": "Lips",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "skin.png",
+      "name": "Skin",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "hair.png",
+      "name": "Hair",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "aceseress.png",
+      "name": "Accessories",
+      "link": "productdetails"
+    }
+  ],
+  "beautyNewOnQuickCart": [
+    {
+      "id": "1",
+      "img1": "iconic2.png",
+      "img2": "s_iconic.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img1": "cenal2.png",
+      "img2": "s_chanel.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img1": "lorel2.png",
+      "img2": "s_loreal.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img1": "sugar2.png",
+      "img2": "s_sugar.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img1": "mac2.png",
+      "img2": "s_mac.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img1": "iconic2.png",
+      "img2": "s_iconic.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+
+  "beautyTrendAcc": [
+    {
+      "id": "1",
+      "img": "makeup1.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "makeup2.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "makeup3.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "makeup4.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "makeup5.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "makeup1.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ]
 }
