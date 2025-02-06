@@ -95,14 +95,14 @@
 // ];
 
 // const beautyproduct = top_brands_makeup.map((item, index) => {
-//   return `
-//                             <a href="/darshit/${item.link}.html">
-//                                 <div class="dk_product-item">
-//                                 <img src="../img/${item.img}" alt="${item.img}">
-//                                 <p>Upto ${item.discount}% OFF</p>
-//                                 </div>
-//                             </a>
-//                         `;
+// return `
+//         <a href="/darshit/${item.link}.html">
+//             <div class="dk_product-item">
+//             <img src="../img/${item.img}" alt="${item.img}">
+//             <p>Upto ${item.discount}% OFF</p>
+//             </div>
+//         </a>
+//     `;
 // }).join("");
 
 // document.getElementById("dk_beauty_top_brands").innerHTML = beautyproduct;
@@ -568,48 +568,101 @@ async function beautyTrendAcc() {
 }
 
 //SportsWear page Explore more box
-const beauty_exporing_box = [
-  {
-    id: "1",
-    img: "beauty_ex1.png",
-    name: "It’s Makeup Time",
-    btn: "Shop Now",
-    link: "productdetails",
-  },
-  {
-    id: "2",
-    img: "beauty_ex2.png",
-    name: "",
-    btn: "Shop Now",
-    showFinalTouch: "true",
-    link: "productdetails",
-  },
-  {
-    id: "3",
-    img: "beauty_ex3.png",
-    name: "NEW STYLES",
-    description: "Beauty meets style",
-    btn: "Shop Now",
-    link: "productdetails",
-  },
-  {
-    id: "4",
-    img: "beauty_ex4.png",
-    name: "Beauty Accessories",
-    description: "Your beauty, our Priority",
-    btn: "Shop Now",
-    link: "productdetails",
-  },
-];
+// const beautyExporingBox = [
+//   {
+//     id: "1",
+//     img: "beauty_ex1.png",
+//     name: "It’s Makeup Time",
+//     btn: "Shop Now",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "2",
+//     img: "beauty_ex2.png",
+//     name: "",
+//     btn: "Shop Now",
+//     showFinalTouch: "true",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "3",
+//     img: "beauty_ex3.png",
+//     name: "NEW STYLES",
+//     description: "Beauty meets style",
+//     btn: "Shop Now",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "4",
+//     img: "beauty_ex4.png",
+//     name: "Beauty Accessories",
+//     description: "Your beauty, our Priority",
+//     btn: "Shop Now",
+//     link: "productdetails",
+//   },
+// ];
 
-const beauty_ex_box = beauty_exporing_box
-  .map((item, index) => {
-    return `
-       <div class="col-md-6 mb-4">
+// const beauty_ex_box = beauty_exporing_box
+//   .map((item, index) => {
+//     return `
+//        <div class="col-md-6 mb-4">
+//             <div class="card text-white">
+//                 <img src="../img/${item.img}" class="card-img" alt="${
+//       item.img
+//     }">
+//                 <div class="card-img-overlay d-flex flex-column justify-content-center">
+//                     <p class="mv_card_title">${item.name}</p>
+//                     ${
+//                       item.showFinalTouch
+//                         ? `
+//                        <p class="mv_add_the">
+//                        Add the <span style="color: #CF2A2A;">FINAL</span> <br> touch to your <span style="color: #CF2A2A;">beauty</span>
+//                        </p>
+//                     `
+//                         : ""
+//                     }
+//                       ${
+//                         item.description
+//                           ? `<p class="mv_run_to">${item.description}</p>`
+//                           : ""
+//                       }
+//                     <div class="mv_explore_shop_more">
+//                     <a href="/darshit/${item.link}.html" class="r_shopnowbtn">${
+//       item.btn
+//     }</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     `;
+//   })
+//   .join("");
+
+// document.getElementById("dk_beauty_explore_box").innerHTML = beauty_ex_box;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await beautyExporingBox();
+});
+
+async function beautyExporingBox() {
+  try {
+    const response = await fetch("./../data/db.json");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const beautyExporingBox = data.beautyExporingBox;
+
+    const beautyExporingBoxHtml = beautyExporingBox
+      .map(
+        (item) => `
+         <div class="col-md-6 mb-4">
             <div class="card text-white">
                 <img src="../img/${item.img}" class="card-img" alt="${
-      item.img
-    }">
+          item.img
+        }">
                 <div class="card-img-overlay d-flex flex-column justify-content-center">
                     <p class="mv_card_title">${item.name}</p>
                     ${
@@ -628,14 +681,19 @@ const beauty_ex_box = beauty_exporing_box
                       }
                     <div class="mv_explore_shop_more"> 
                     <a href="/darshit/${item.link}.html" class="r_shopnowbtn">${
-      item.btn
-    }</a>
+          item.btn
+        }</a>
                     </div>
                 </div>
             </div>
         </div>
-    `;
-  })
-  .join("");
+          `
+      )
+      .join("");
 
-document.getElementById("dk_beauty_explore_box").innerHTML = beauty_ex_box;
+    document.getElementById("dk_beauty_explore_box").innerHTML =
+      beautyExporingBoxHtml;
+  } catch (error) {
+    console.error("Error loading categories:", error);
+  }
+}
