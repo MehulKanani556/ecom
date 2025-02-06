@@ -165,6 +165,43 @@
             "washcare":"Machine Wash",
             "occasional":"Casual",
             "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -177,6 +214,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -189,6 +275,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -201,6 +336,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -213,6 +397,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -225,6 +458,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -237,6 +519,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -249,6 +580,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -261,6 +641,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -273,6 +702,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -285,6 +763,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -297,6 +824,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":true,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -309,6 +885,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -321,6 +946,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -333,6 +1007,55 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         },
         {
@@ -345,12 +1068,59 @@
             "discount": "30",
             "price": "200",
             "bestseller":false,
+            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+            "size":["M","L","XL","2XL","3XL"],
+            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
+            "pattern":"Solid",
+            "length":"Regular",
+            "neck":"Polo Collar",
+            "sleeve":"Short / Half Sleeve",
+            "fabric":"Pure Cotton",
+            "fit":"Regular Fit",
+            "washcare":"Machine Wash",
+            "occasional":"Casual",
+            "sustainable":"Regular",
+            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
+            "totalrank":"4",
+            "totalreview":"125k",
+            "reviews":[
+                {
+                    "star":5,
+                    "desc":"",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":4,
+                    "desc":"This is amazing product I have.",
+                    "img":"",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                },
+                {
+                    "star":3,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darrell Steward"
+                },
+                {
+                    "star":5,
+                    "desc":"This is amazing product I have.",
+                    "img":"b-4.png",
+                    "datetime":"July 2, 2020 03:29 PM",
+                    "userimg":"review-1.png",
+                    "username":"Darlene Robertson"
+                }
+            ],
             "link": "productdetails"
         }
-    ]
-    
-},
-  "topBrands": [
+    ],
+    "topBrands": [
     {
       "id": 1,
       "img": "adidas.png",
@@ -882,5 +1652,6 @@
       "info": "*T&C Apply",
       "link": "productdetails"
     }
-  ]
+  ]  
 }
+  

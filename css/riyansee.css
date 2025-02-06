@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+:focus{
+  box-shadow: none !important;
+}
+.btn.active{
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none !important;
+}
+.btn:hover{
+  color: #fff !important;
+}
 
 img {
   object-fit: cover;
@@ -12,6 +23,10 @@ img {
 .slide-content {
   position: relative;
 }
+/* .r_reviewbutons:hover{
+  background-color: #000;
+  color: white ;
+} */
 
 .overlay-content {
   top: 50%;
