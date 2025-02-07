@@ -56,211 +56,435 @@
         <section>
             <div class="dk_cart_without_address">
                 <div class="container">
-                    <div class="dk_shopping_cart_main">
-                        <div class="shopping_cart_sub">
-                            <h2>Shopping Cart(03)</h2>
-                        </div>
-                        <div class="dk_add_from_wishlist">
-                            <button class="dk_add_from">+Add From Wishlist</button>
-                        </div>
+                    <div class="dk_empty_cart" id="dk_empty_cartdata">
+                        <img src="../img/emptycart.png" alt="">
+                        <h2>Your cart is empty</h2>
+                        <p>You have no items in your cart</p>
+                        <button class="dk_continue_shopp">Continue Shopping</button>
                     </div>
-                    <div class="dk_order_tracking">
-                        <div class="dk_order_tracking_step">
-                            <div class="dk_order_tracking_circle dk_order_tracking_active">
-                                <i class="fa-solid fa-cart-shopping"></i>
+                    <div id="dk_cartdatasection">
+                        <div class="dk_shopping_cart_main">
+                            <div class="shopping_cart_sub">
+                                <h2>Shopping Cart(<span id="dK_shoppingcart"></span>)</h2>
                             </div>
-                            <h3>Cart</h3>
+                            <div class="dk_add_from_wishlist">
+                                <button class="dk_add_from">+Add From Wishlist</button>
+                            </div>
                         </div>
-                        <div class="dk_ordder_tracking_without_address"></div>
-                        <div class="dk_order_tracking_step">
-                            <div class="dk_order_tracking_circle">
-                                <i class="fa-solid fa-location-dot"></i>
+                        <div class="dk_order_tracking">
+                            <div class="dk_order_tracking_step">
+                                <div class="dk_order_tracking_circle dk_order_tracking_active">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                                <h3>Cart</h3>
                             </div>
-                            <h4>Delivery Details</h4>
+                            <div class="dk_ordder_tracking_without_address"></div>
+                            <div class="dk_order_tracking_step">
+                                <div class="dk_order_tracking_circle">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <h4>Delivery Details</h4>
+                            </div>
+                            <div class="dk_ordder_tracking_without_address"></div>
+                            <div class="dk_order_tracking_step">
+                                <div class="dk_order_tracking_circle">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <h4>Payment</h4>
+                            </div>
                         </div>
-                        <div class="dk_ordder_tracking_without_address"></div>
-                        <div class="dk_order_tracking_step">
-                            <div class="dk_order_tracking_circle">
-                                <i class="fa-solid fa-dollar-sign"></i>
-                            </div>
-                            <h4>Payment</h4>
-                        </div>
-                    </div>
 
-                    <div class="dk_cart_without_address_sub">
-                        <div style="margin: 0px 0px !important;" class="row">
-                            <div style="padding: 0px 10px !important;" class="col-lg-8">
-                                <div class="dk_no_saved_addresses d-none" id="savedAddress">
-                                    <div class="dk_no_saved_addresses_font d-flex">
-                                        <div>
-                                            <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
-                                        </div>
-                                        <div>
-                                            <div class="d-flex align-content-center">
-                                                <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
-                                                <button class="dk_cart_add_home">Home</button>
+                        <div class="dk_cart_without_address_sub">
+                            <div style="margin: 0px 0px !important;" class="row">
+                                <div style="padding: 0px 10px !important;" class="col-lg-8">
+                                    <div class="dk_no_saved_addresses d-none" id="savedAddress">
+                                        <div class="dk_no_saved_addresses_font d-flex">
+                                            <div>
+                                                <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
                                             </div>
-                                            <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New
-                                                York,Washington Square, NY
-                                                10012,USA</p>
-                                        </div>
-                                    </div>
-                                    <div class="dk_add_address">
-                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
-                                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                            style="border: 1px solid #000000">Change</button>
-                                        <!-- <button class="">Change</button> -->
-                                    </div>
-                                </div>
-                                <!-- <div id="savedAddress" class="dk_no_saved_addresses" style="display: none;">
-                                    <div class="dk_no_saved_addresses_font d-flex">
-                                        <div>
-                                            <p class="mb-0 text-nowrap" style="padding-right: 10px;">Deliver to:</p>
-                                        </div>
-                                        <div>
-                                            <div class="d-flex align-content-center">
-                                                <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
-                                                <button class="dk_cart_add_home">Home</button>
+                                            <div>
+                                                <div class="d-flex align-content-center">
+                                                    <h2 class="mb-0" style="padding-right: 10px;">Alex Shroff</h2>
+                                                    <button class="dk_cart_add_home">Home</button>
+                                                </div>
+                                                <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New
+                                                    York,Washington Square, NY
+                                                    10012,USA</p>
                                             </div>
-                                            <p style="padding-top: 5px;">Ehrenkranz 13 Washington Square S, New York,
-                                                Washington Square, NY 10012, USA</p>
+                                        </div>
+                                        <div class="dk_add_address">
+                                            <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                                style="border: 1px solid #000000">Change</button>
+                                            <!-- <button class="">Change</button> -->
                                         </div>
                                     </div>
-                                    <div class="dk_add_address">
-                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
-                                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                            style="border: 1px solid #000000">Change</button>
-                                    </div>
-                                </div> -->
-                                <div id="noSavedAddress" class="dk_no_saved_addresses">
-                                    <div class="dk_no_saved_addresses_font">
-                                        <h2>No saved Addresses</h2>
-                                    </div>
-                                    <div class="dk_add_address">
-                                        <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
-                                            data-bs-target="#offcanvasRight_add_cart_address"
-                                            aria-controls="offcanvasRight">+Add Address</button>
-                                    </div>
-                                </div>
-                                <!-- <div id="noSavedAddress" class="dk_no_saved_addresses">
-                                    <div class="dk_no_saved_addresses_font">
-                                        <h2>No saved Addresses</h2>
-                                    </div>
-                                    <div class="dk_add_address">
-                                        <button class="dk_add_address_sub btn btn-primary" type="button"
-                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_add_cart_address"
-                                            aria-controls="offcanvasRight">+Add Address</button>
-                                    </div>
-                                </div> -->
-                                <div class="dk_select_all">
-                                    <span>
-                                        <input id="selectAll" style="width: 20px; height: 20px;" type="checkbox">
-                                    </span>
-                                    <h4 class="mb-0">Select All</h4>
-                                </div>
-                                <div id="dk_cartdata">
 
-                                </div>
-
-                                <p style="padding-top: 10px;">Note : Order details will be send on Whatsapp or Email.
-                                </p>
-
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="dk_order_details_cwa">
-                                    <div class="dk_you_will_save">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <h2>You will save $600 on this order</h2>
-                                    </div>
-                                    <div class="dk_order_info">
-                                        <h2>Order Details</h2>
-                                    </div>
-                                    <div id="dk_billcount">
-                                        <div class="dk_order_payment_det">
-                                            <div class="dk_order_payment_det_sub">
-                                                <h2>Price (3 Items)</h2>
-                                                <p>$597</p>
-                                            </div>
-                                            <div class="dk_order_payment_det_sub">
-                                                <h2>Discount</h2>
-                                                <p style="color:#0F993E;">-$600</p>
-                                            </div>
-                                            <div class="dk_order_payment_det_sub">
-                                                <h2>Platform Fee</h2>
-                                                <p>$1</p>
-                                            </div>
-                                            <div class="dk_order_payment_det_sub">
-                                                <h2>Delivery Charges</h2>
-                                                <p style="color: #0F993E;"><span
-                                                        style="color: #727272; padding-right: 5px;">
-                                                        <del>$20</del></span>FREE</p>
-                                            </div>
+                                    <div id="noSavedAddress" class="dk_no_saved_addresses">
+                                        <div class="dk_no_saved_addresses_font">
+                                            <h2>No saved Addresses</h2>
                                         </div>
-                                        <div class="dk_total_amount_cwa">
-                                            <h2>Total Amount</h2>
-                                            <p>$598</p>
+                                        <div class="dk_add_address">
+                                            <button class="dk_add_address_sub" type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasRight_add_cart_address"
+                                                aria-controls="offcanvasRight">+Add Address</button>
                                         </div>
                                     </div>
-                                    <div class="dk_proceed_checkout_cwa">
-                                        <!-- <button class="dk_proceed">Proceed to checkout</button> -->
-                                        <button class="btn btn-dark dk_proceed_width" type="button"
-                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
-                                            aria-controls="offcanvasRight2">Proceed to
-                                            checkout</button>
+
+                                    <div id="dk_cartsection">
+                                        <div class="dk_select_all">
+                                            <span>
+                                                <input id="selectAll" style="width: 20px; height: 20px;"
+                                                    type="checkbox">
+                                            </span>
+                                            <h4 class="mb-0">Select All</h4>
+                                        </div>
+                                        <div id="dk_cartdata">
+                                        </div>
+                                        <p style="padding-top: 10px;">Note : Order details will be send on Whatsapp or
+                                            Email.
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="dk_apply_coupon_cwa">
-                                    <div class="dk_apply_coupon_font">
-                                        <h2>Apply Coupon</h2>
-                                    </div>
-                                    <div class="dk_coupon_container">
-                                        <div class="dk_input_container">
-                                            <div class="dk_coupon-container input-container">
-                                                <input type="text" id="coupon-code" placeholder="Enter coupon code">
-                                                <span class="clear-button" id="clear-button">&times;</span>
+                                    <div id="dk_deliverysection" class="d-none">
+                                        <div class="dk_payment_category">
+                                            <div class="dk_pay_on_delivery_main">
+                                                <!-- Pay on delivery section -->
+                                                <div class="dk_pay_on_delivery_sub">
+                                                    <div class="d-flex">
+                                                        <label class="custom-radio">
+                                                            <input type="radio" name="custom-radio" value="option1"
+                                                                onclick="toggleAccordion('panel1')">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <h4 class="mb-0">Pay on delivery</h4>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../img/pay_on_delivery.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="panel" id="panel1">
+                                                    <p>Enter the captcha to confirm order.</p>
+                                                    <div class="dk_captcha_main">
+                                                        <div class="dk_captch_iamge">
+                                                            <img src="../img/captcha 1.png" alt="">
+                                                        </div>
+                                                        <div class="dk_caotcha_enter">
+                                                            <div class="form-group dk_custom_input_group">
+                                                                <label for="enter_captcha"
+                                                                    class="dk_custom_label_payment">Enter
+                                                                    the captcha</label>
+                                                                <div style="display: flex; align-items: center;">
+                                                                    <input type="text"
+                                                                        class="form-control dk_custom_input dk_input_padd"
+                                                                        id="enter_captcha" placeholder="">
+                                                                    <span class="reload-icon" onclick="reloadCaptcha()"
+                                                                        style="margin-left: 10px; cursor: pointer;">&#x21bb;</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <a href="../darshit/order_confirmation.html">
+                                                                    <button class="dk_pay_payment_button">Pay
+                                                                        $497</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="dk_apply-button-container">
-                                                <button class="dk_apply_coupen_radio" id="apply-button">Apply</button>
+                                            <div class="dk_pay_on_delivery_main">
+                                                <!-- Credit Card / Debit Card section -->
+                                                <div class="dk_pay_on_delivery_sub">
+                                                    <div class="d-flex">
+                                                        <label class="custom-radio">
+                                                            <input type="radio" name="custom-radio" value="option2"
+                                                                onclick="toggleAccordion('panel2')">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <h4 class="mb-0">Credit Card / Debit Card</h4>
+                                                    </div>
+                                                    <div style="text-align: right;">
+                                                        <img src="../img/visa.png" alt="">
+                                                        <img src="../img/Credit card.png" alt="">
+                                                        <img src="../img/amex.png" alt="">
+                                                        <img src="../img/discover.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="panel" id="panel2">
+                                                    <div class="row dk_credit_card">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group dk_custom_input_group">
+                                                                <label for="emailOrMobile"
+                                                                    class="dk_custom_label_payment">Card holder
+                                                                    name</label>
+                                                                <input type="text"
+                                                                    class="form-control dk_custom_input dk_input_padd"
+                                                                    id="fullname" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group dk_custom_input_group">
+                                                                <label for="emailOrMobile"
+                                                                    class="dk_custom_label_payment">Card Number</label>
+                                                                <input type="number"
+                                                                    class="form-control dk_custom_input dk_input_padd"
+                                                                    id="fullname" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group dk_custom_input_group">
+                                                                <label for="emailOrMobile"
+                                                                    class="dk_custom_label_payment">Expiry Date</label>
+                                                                <input type="date"
+                                                                    class="form-control dk_custom_input dk_input_padd"
+                                                                    id="fullname" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group dk_custom_input_group">
+                                                                <label for="emailOrMobile"
+                                                                    class="dk_custom_label_payment">CVV</label>
+                                                                <input type="number"
+                                                                    class="form-control dk_custom_input dk_input_padd"
+                                                                    id="fullname" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <a href="../darshit/order_confirmation.html">
+                                                            <button class="dk_pay_payment_button">Pay $497</button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="dk_pay_on_delivery_main">
+                                                <!-- UPI section -->
+                                                <div class="dk_pay_on_delivery_sub">
+                                                    <div class="d-flex">
+                                                        <label class="custom-radio">
+                                                            <input type="radio" name="custom-radio" value="option3"
+                                                                onclick="toggleAccordion('panel3')">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <h4 class="mb-0">UPI</h4>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../img/lipi.png" alt="">
+                                                        <img src="../img/pytem.png" alt="">
+                                                        <img src="../img/googlepay.png" alt="">
+                                                        <img src="../img/phonepay.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="panel" id="panel3">
+                                                    <div class="dk_upi">
+                                                        <div class="form-group">
+                                                            <label for="upiID">UPI ID</label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="upiID"
+                                                                    placeholder="">
+                                                                <div class="input-group-append">
+                                                                    <span class="input-group-text"
+                                                                        style="background-color:#ffffff;">@okicici <i
+                                                                            class="fa-solid fa-chevron-down"
+                                                                            style="font-size: 10px; padding-left: 10px;"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <a href="../darshit/order_confirmation.html">
+                                                                <button class="dk_pay_payment_button">Pay $497</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="dk_pay_on_delivery_main">
+                                                <!-- Net banking section -->
+                                                <div class="dk_pay_on_delivery_sub">
+                                                    <div class="d-flex">
+                                                        <label class="custom-radio">
+                                                            <input type="radio" name="custom-radio" value="option4"
+                                                                onclick="toggleAccordion('panel4')">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <h4 class="mb-0">Net banking</h4>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../img/citi.png" alt="">
+                                                        <img src="../img/wells.png" alt="">
+                                                        <img src="../img/capitalone.png" alt="">
+                                                        <img src="../img/td.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="panel" id="panel4">
+                                                    <div class="dk_net_banking">
+                                                        <form>
+                                                            <input class="dk_search_in" type="text" name="search"
+                                                                placeholder="Search bank">
+                                                        </form>
+                                                        <div class="row dk_net_banking_sub">
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt1.png" alt="">
+                                                                <p>Citi Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt2.png" alt="">
+                                                                <p>Wells Fargo Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt3.png" alt="">
+                                                                <p>Capital One Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt4.png" alt="">
+                                                                <p>TD Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt1.png" alt="">
+                                                                <p>Citi Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt2.png" alt="">
+                                                                <p>Wells Fargo Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt3.png" alt="">
+                                                                <p>Capital One Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt4.png" alt="">
+                                                                <p>TD Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt1.png" alt="">
+                                                                <p>Citi Bank</p>
+                                                            </div>
+                                                            <div
+                                                                class="col-xxl-1 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                                                                <img src="../img/nt2.png" alt="">
+                                                                <p>Wells Fargo Bank</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="dk_coupon_header">Applicable Coupons</div>
-                                        <ul class="dk_coupons_list">
-                                            <li class="dk_coupon_item">
-                                                <label class="custom-radio">
-                                                    <input id="coupon1" onchange="handleDiscount(this.value)" type="radio" name="custom-radio" value="50">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                                <label for="coupon1">
-                                                    <h2 class="mb-1">NEW100</h2>
-                                                    Get Flat $100 Off on cart value of 500 & Above
-                                                    <p>Save $50</p>
-                                                </label>
-                                            </li>
-                                            <li class="dk_coupon_item">
-                                                <label class="custom-radio">
-                                                    <input id="coupon2" type="radio" onchange="handleDiscount(this.value)" name="custom-radio" value="100">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                                <label for="coupon2">
-                                                    <h2 class="mb-1">NEW100</h2>
-                                                    Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque
-                                                    iaculis habitant congue est blandit amet.
-                                                    <p>Save $100</p>
-                                                </label>
-                                            </li>
-                                            <li class="dk_coupon_item">
-                                                <label class="custom-radio">
-                                                    <input id="coupon3" type="radio" onchange="handleDiscount(this.value)" name="custom-radio" value="150">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                                <label for="coupon3">
-                                                    <h2 class="mb-1">NEW100</h2>
-                                                    Get Flat $100 Off on cart value of 500 & Above
-                                                    <p>Save $150</p>
-                                                </label>
-                                            </li>
-                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="dk_order_details_cwa">
+                                        <div class="dk_you_will_save">
+                                            <i class="fa-solid fa-sack-dollar"></i>
+                                            <h2>You will save $600 on this order</h2>
+                                        </div>
+                                        <div class="dk_order_info">
+                                            <h2>Order Details</h2>
+                                        </div>
+                                        <div id="dk_billcount">
+                                            <div class="dk_order_payment_det">
+                                                <div class="dk_order_payment_det_sub">
+                                                    <h2>Price (3 Items)</h2>
+                                                    <p>$597</p>
+                                                </div>
+                                                <div class="dk_order_payment_det_sub">
+                                                    <h2>Discount</h2>
+                                                    <p style="color:#0F993E;">-$600</p>
+                                                </div>
+                                                <div class="dk_order_payment_det_sub">
+                                                    <h2>Platform Fee</h2>
+                                                    <p>$1</p>
+                                                </div>
+                                                <div class="dk_coupon_offers">
+                                                    <h2>Coupon Offers</h2>
+                                                    <p style="color:#0F993E;">-$100</p>
+                                                </div>
+                                                <div class="dk_order_payment_det_sub">
+                                                    <h2>Delivery Charges</h2>
+                                                    <p style="color: #0F993E;"><span
+                                                            style="color: #727272; padding-right: 5px;">
+                                                            <del>$20</del></span>FREE</p>
+                                                </div>
+                                            </div>
+                                            <div class="dk_total_amount_cwa">
+                                                <h2>Total Amount</h2>
+                                                <p>$598</p>
+                                            </div>
+                                        </div>
+                                        <div class="dk_proceed_checkout_cwa">
+                                            <!-- <button class="dk_proceed">Proceed to checkout</button> -->
+                                            <button class="btn btn-dark dk_proceed_width dk_proceed"
+                                                type="button">Proceed to checkout</button>
+                                        </div>
+                                    </div>
+                                    <div class="dk_apply_coupon_cwa">
+                                        <div class="dk_apply_coupon_font">
+                                            <h2>Apply Coupon</h2>
+                                        </div>
+                                        <div class="dk_coupon_container">
+                                            <div class="dk_input_container">
+                                                <div class="dk_coupon-container input-container">
+                                                    <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                                                    <span class="clear-button" id="clear-button">&times;</span>
+                                                </div>
+
+                                                <div class="dk_apply-button-container">
+                                                    <button class="dk_apply_coupen_radio"
+                                                        id="apply-button">Apply</button>
+                                                </div>
+                                            </div>
+                                            <div class="dk_coupon_header">Applicable Coupons</div>
+                                            <ul class="dk_coupons_list">
+                                                <li class="dk_coupon_item">
+                                                    <label class="custom-radio">
+                                                        <input id="coupon1" type="radio" name="custom-radio" value="50">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label for="coupon1">
+                                                        <h2 class="mb-1">NEW100</h2>
+                                                        Get Flat $100 Off on cart value of 500 & Above
+                                                        <p>Save $50</p>
+                                                    </label>
+                                                </li>
+                                                <li class="dk_coupon_item">
+                                                    <label class="custom-radio">
+                                                        <input id="coupon2" type="radio" name="custom-radio"
+                                                            value="100">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label for="coupon2">
+                                                        <h2 class="mb-1">NEW100</h2>
+                                                        Lorem ipsum dolor sit amet consectetur. Massa facilisis
+                                                        scelerisque
+                                                        iaculis habitant congue est blandit amet.
+                                                        <p>Save $100</p>
+                                                    </label>
+                                                </li>
+                                                <li class="dk_coupon_item">
+                                                    <label class="custom-radio">
+                                                        <input id="coupon3" type="radio" name="custom-radio"
+                                                            value="150">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label for="coupon3">
+                                                        <h2 class="mb-1">NEW100</h2>
+                                                        Get Flat $100 Off on cart value of 500 & Above
+                                                        <p>Save $150</p>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -270,6 +494,70 @@
             </div>
         </section>
     </main>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header dk_delivery_option_header">
+            <h5 id="offcanvasRightLabel">Delivery options</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body2">
+            <div style="border-bottom: 0.5px solid #d2d2d2; margin-bottom: 30px;"></div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Express Delivery - $39</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1" id="express-delivery">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>Same day</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Standard Delivery - $29</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1" id="standard-delivery">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>1-2 business days</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dk_express_delivery_main">
+                <div>
+                    <div class="dk_express_delivery_39">
+                        <h2>Free Delivery</h2>
+                        <label class="custom-radio">
+                            <input type="radio" name="custom-radio" value="option1" id="free-delivery">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="dk_delivery_details">
+                        <ul>
+                            <li>5-10 business days</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div id="footer"></div>
@@ -344,6 +632,8 @@
         </div>
     </div>
 
+
+
     <!-- change ADDRESS OF CANVAS  -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
@@ -381,136 +671,75 @@
     </div>
 
     <!-- Proceed to checkout Delivery options of canvas  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header dk_delivery_option_header">
-            <h5 id="offcanvasRightLabel">Delivery options</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body2">
-            <div style="border-bottom: 0.5px solid #d2d2d2; margin-bottom: 30px;"></div>
-            <div class="dk_express_delivery_main">
-                <div>
-                    <div class="dk_express_delivery_39">
-                        <h2>Express Delivery - $39</h2>
-                        <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1" id="express-delivery">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="dk_delivery_details">
-                        <ul>
-                            <li>Same day</li>
-                            <li>Lorem ipsum dolor sit amet consectetur. </li>
-                            <li>Lorem ipsum dolor sit amet consectetur. </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="dk_express_delivery_main">
-                <div>
-                    <div class="dk_express_delivery_39">
-                        <h2>Standard Delivery - $29</h2>
-                        <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1" id="standard-delivery">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="dk_delivery_details">
-                        <ul>
-                            <li>1-2 business days</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="dk_express_delivery_main">
-                <div>
-                    <div class="dk_express_delivery_39">
-                        <h2>Free Delivery</h2>
-                        <label class="custom-radio">
-                            <input type="radio" name="custom-radio" value="option1" id="free-delivery">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="dk_delivery_details">
-                        <ul>
-                            <li>5-10 business days</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur. </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Apply Coupon -->
-        <script>
-            const applyButton = document.getElementById('apply-button');
-            const inputField = document.getElementById('coupon-code');
-            const clearButton = document.getElementById('clear-button');
 
-            applyButton.addEventListener('click', function () {
-                applyButton.classList.add('clicked');
+    <!-- Apply Coupon -->
+    <!-- <script>
+        const applyButton = document.getElementById('apply-button');
+        const inputField = document.getElementById('coupon-code');
+        const clearButton = document.getElementById('clear-button');
+
+        applyButton.addEventListener('click', function () {
+            applyButton.classList.add('clicked');
+        });
+
+        inputField.addEventListener('input', function () {
+            if (inputField.value) {
+                clearButton.style.display = 'block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+        });
+
+        clearButton.addEventListener('click', function () {
+            inputField.value = '';
+            clearButton.style.display = 'none';
+        });
+
+        inputField.addEventListener('focus', function () {
+            applyButton.classList.add('input-focused');
+        });
+
+        inputField.addEventListener('blur', function () {
+            applyButton.classList.remove('input-focused');
+        });
+
+        const radioButtons = document.querySelectorAll('input[name="custom-radio"]');
+
+        radioButtons.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const h2Text = this.closest('.dk_coupon_item').querySelector('h2').textContent;
+                inputField.value = h2Text;
+                clearButton.style.display = 'block';
+
+                applyButton.classList.add('active');
             });
+        });
+    </script>
 
-            inputField.addEventListener('input', function () {
-                if (inputField.value) {
-                    clearButton.style.display = 'block';
-                } else {
-                    clearButton.style.display = 'none';
+    <script>
+        // Select the "Select All" checkbox 
+        const selectAllCheckbox = document.getElementById('selectAll');
+        const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+        selectAllCheckbox.addEventListener('change', function () {
+            itemCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
+
+        itemCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (!this.checked) {
+                    selectAllCheckbox.checked = false;
+                }
+                if (document.querySelectorAll('.item-checkbox:checked').length === itemCheckboxes.length) {
+                    selectAllCheckbox.checked = true;
                 }
             });
+        });
+    </script> -->
 
-            clearButton.addEventListener('click', function () {
-                inputField.value = '';
-                clearButton.style.display = 'none';
-            });
-
-            inputField.addEventListener('focus', function () {
-                applyButton.classList.add('input-focused');
-            });
-
-            inputField.addEventListener('blur', function () {
-                applyButton.classList.remove('input-focused');
-            });
-
-            const radioButtons = document.querySelectorAll('input[name="custom-radio"]');
-
-            radioButtons.forEach((radio) => {
-                radio.addEventListener('change', function () {
-                    const h2Text = this.closest('.dk_coupon_item').querySelector('h2').textContent;
-                    inputField.value = h2Text;
-                    clearButton.style.display = 'block';
-
-                    applyButton.classList.add('active');
-                });
-            });
-        </script>
-
-        <script>
-            // Select the "Select All" checkbox 
-            const selectAllCheckbox = document.getElementById('selectAll');
-            const itemCheckboxes = document.querySelectorAll('.item-checkbox');
-            selectAllCheckbox.addEventListener('change', function () {
-                itemCheckboxes.forEach(checkbox => {
-                    checkbox.checked = this.checked;
-                });
-            });
-
-            itemCheckboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function () {
-                    if (!this.checked) {
-                        selectAllCheckbox.checked = false;
-                    }
-                    if (document.querySelectorAll('.item-checkbox:checked').length === itemCheckboxes.length) {
-                        selectAllCheckbox.checked = true;
-                    }
-                });
-            });
-        </script>
-
-        <!-- <script>
+    <!-- <script>
         // Select all the product cards that have increase/decrease buttons
         const quantityElements = document.querySelectorAll('.quantity');
         const increaseButtons = document.querySelectorAll('.increase');
@@ -536,7 +765,7 @@
             });
         });
     </script> -->
-        <!-- <script>
+    <!-- <script>
         // JavaScript to handle radio button selection and update the order summary
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -578,58 +807,74 @@
 
     </script> -->
 
-        <!-- script Header and Footer -->
-        <script>
-            // navbar include
-            fetch("../darshit/header.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("header").innerHTML = data;
-                });
-            // footer include
-            fetch("../darshit/footer.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("footer").innerHTML = data;
-                });
-        </script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="../js/owl.carousel.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="/js/dynamic.js"></script>
-
-        <!-- address toggle -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const saveButton = document.getElementById("saveButton");
-                const noSavedAddress = document.getElementById("noSavedAddress");
-                const savedAddress = document.getElementById("savedAddress");
-
-                if (saveButton && noSavedAddress && savedAddress) {
-                    saveButton.addEventListener("click", function () {
-                        // Hide "No saved addresses"
-                        noSavedAddress.classList.add("d-none");
-
-                        // Show "Saved address"
-                        savedAddress.classList.remove("d-none");
-
-                        console.log("No saved address hidden, saved address shown.");
-                    });
-                } else {
-                    console.error("One or more elements are missing!");
-                }
+    <!-- script Header and Footer -->
+    <script>
+        // navbar include
+        fetch("../darshit/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("header").innerHTML = data;
             });
-        </script>
+        // footer include
+        fetch("../darshit/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/dynamic.js"></script>
 
-        <!-- connectivity otherpage from offcanvas -->
-        <script>
+    <!-- address toggle -->
+    <script>
+
+        function toggleAccordion(panelId) {
+            // Close all panels
+            var panels = document.getElementsByClassName("panel");
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].style.display = "none";
+            }
+
+            // Open the selected panel
+            var selectedPanel = document.getElementById(panelId);
+            selectedPanel.style.display = "block";
+        }
+
+        // Optional: Open the first panel by default
+        document.getElementById("panel1").style.display = "block";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const saveButton = document.getElementById("saveButton");
+            const noSavedAddress = document.getElementById("noSavedAddress");
+            const savedAddress = document.getElementById("savedAddress");
+
+            if (saveButton && noSavedAddress && savedAddress) {
+                saveButton.addEventListener("click", function () {
+                    // Hide "No saved addresses"
+                    noSavedAddress.classList.add("d-none");
+
+                    // Show "Saved address"
+                    savedAddress.classList.remove("d-none");
+
+                    console.log("No saved address hidden, saved address shown.");
+                });
+            } else {
+                console.error("One or more elements are missing!");
+            }
+        });
+    </script>
+
+    <!-- connectivity otherpage from offcanvas -->
+    <!-- <script>
             document.getElementById('express-delivery').addEventListener('click', function () {
                 window.location.href = '../darshit/delivery_details.html';
             });
@@ -643,7 +888,7 @@
                 window.location.href = '../darshit/delivery_details.html';
 
             });
-        </script>
+        </script> -->
 
 </body>
 

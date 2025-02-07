@@ -15,14 +15,32 @@ async function loadCategory() {
             return (
                 `
                 <div class="swiper-slide">
-                                <img src="../img/man.png" alt="Mens Fashion">
-                                <p>Mens Fashion</p>
+                                <img src="/img/${item.img}" alt="Mens Fashion">
+                                <p>${item.name}</p>
                             </div>`
             )
         }).join("")
 
         if (document.getElementById("mv_mens_fashion")) {
             document.getElementById("mv_mens_fashion").innerHTML = categoryHtml;
+
+            $(".owl-carousel.dk_men_slider").owlCarousel({
+                loop: false,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                dots: true,
+                responsive: {
+                    320: { items: 2, dots: true },
+                    375: { items: 2, dots: true },
+                    425: { items: 2, dots: true },
+                    768: { items: 3, dots: true },
+                    1024: { items: 4, dots: true },
+                    1199: { items: 4, dots: true },
+                    1440: { items: 6, dots: true },
+                }
+            });
         }
 
     } catch (error) {
@@ -124,6 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadwishlistdata();
     await loadSimilarProduct();
     await loadcartdata();
+    // await loadtopwearProduct();
 
     geturl();
 });
@@ -195,7 +214,7 @@ async function loadProduct() {
                                 </a>
                             </div>
                             
-                            <button class="buy-now">Buy Now</button>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
                     
                 </div>
@@ -299,7 +318,7 @@ async function loadBestsellerProduct() {
                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
             ).join('')}
                                 </div>
-
+<a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
 
@@ -317,8 +336,9 @@ async function loadBestsellerProduct() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
-                            <button class="buy-now">Buy Now</button>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
                     </a>
                 </div>
@@ -368,7 +388,7 @@ async function loadTopsellingSmartphone() {
                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
 
                                     </span>
-                                    <span style="cursor: pointer !important;">
+                                    <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
                                             alt="Cart Icon" class="cart-icon">
                                     </span>
@@ -384,7 +404,7 @@ async function loadTopsellingSmartphone() {
                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
             ).join('')}
                                 </div>
-
+<a href="productdetails.html?id=${item.id}">
                                 <p>${item.categorydesc}</p>
 
                                 <div class="thumbnails">
@@ -401,8 +421,9 @@ async function loadTopsellingSmartphone() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
-                            <button class="buy-now">Buy Now</button>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
                     </a>
                 </div>
@@ -452,7 +473,7 @@ async function loadBrowsingproduct() {
                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
 
                                     </span>
-                                    <span style="cursor: pointer !important;">
+                                    <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
                                             alt="Cart Icon" class="cart-icon">
                                     </span>
@@ -468,7 +489,7 @@ async function loadBrowsingproduct() {
                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
             ).join('')}
                                 </div>
-                                
+                                <a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
 
@@ -486,8 +507,9 @@ async function loadBrowsingproduct() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
-                            <button class="buy-now">Buy Now</button>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
                     </a>
                 </div>
@@ -588,7 +610,7 @@ async function loadwishlistdata() {
                     `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
                 ).join('')}
                                 </div>
-
+                                <a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
 
@@ -606,8 +628,9 @@ async function loadwishlistdata() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
-                            <button class="buy-now">Move to Cart</button>
+                            <button class="buy-now" onclick="addToCart(event, ${item.id})">Move to Cart</button>
                         </div>
                     </a>
                 </div>
@@ -634,6 +657,7 @@ async function loadwishlistdata() {
 
 async function DK_update_data1() {
     let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
     if (wishlist.length > 0) {
         if (document.getElementById('dK_wishlist_count')) {
             document.getElementById('dK_wishlist_count').innerHTML = wishlist.length;
@@ -644,10 +668,25 @@ async function DK_update_data1() {
             document.getElementById('dK_wishlist_count').innerHTML = wishlist.length;
         }
     }
+    if (cart.length > 0) {
+        if (document.getElementById('dK_cart_count')) {
+            document.getElementById('dK_cart_count').innerHTML = cart.length;
+        }
+        if (document.getElementById('dK_shoppingcart')) {
+            document.getElementById('dK_shoppingcart').innerHTML = cart.length;
+        }
+    }
+    else {
+        if (document.getElementById('dK_cart_count')) {
+            document.getElementById('dK_cart_count').innerHTML = cart.length;
+        }
+        if (document.getElementById('dK_shoppingcart')) {
+            document.getElementById('dK_shoppingcart').innerHTML = cart.length;
+        }
+    }
 }
 
 // product details
-
 
 function geturl() {
     let url = window.location.search;
@@ -790,9 +829,9 @@ function single_data(item) {
                         </div>
                         <div class="colors mt-2">
                             <label>Color:</label>
-                            ${item.color.map((colorimg, index) => {
+                            ${item.color.map((color, index) => {
             return (
-                `<img src="/r_img/${colorimg}" class="img-thumbnail me-2" alt="Color 1">`
+                `<img src="/r_img/${color.colorimg}" class="img-thumbnail me-2" alt="Color 1">`
             )
         }).join("")}
                         </div>
@@ -1389,10 +1428,7 @@ function generateReviewHTML(reviews) {
     `).join('');
 }
 
-// Wait for DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
 
-});
 
 
 async function loadSimilarProduct() {
@@ -1422,7 +1458,7 @@ async function loadSimilarProduct() {
                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
 
                                     </span>
-                                    <span style="cursor: pointer !important;">
+                                    <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
                                             alt="Cart Icon" class="cart-icon">
                                     </span>
@@ -1439,7 +1475,7 @@ async function loadSimilarProduct() {
                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
             ).join('')}
                                 </div>
-
+<a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
 
@@ -1457,8 +1493,9 @@ async function loadSimilarProduct() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
-                            <button class="buy-now">Buy Now</button>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
                     </a>
                 </div>
@@ -1501,11 +1538,12 @@ function addToCart(event, productId) {
 
                     cartItems.push(cartProduct);
 
-                    
+
 
                     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
                     alert('Product added to cart successfully!');
+                    DK_update_data1();
                 }
             })
             .catch(error => {
@@ -1516,34 +1554,49 @@ function addToCart(event, productId) {
     }
 }
 
-// var cupanPrice = 0
-// const handleDiscount = (price) => {
-//     cupanPrice = parseInt(price)
-//     console.log("ghdfgderghderg ",cupanPrice);
-//     calculateCartTotals(cupanPrice)
-// }
-
 
 async function loadcartdata() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-     const savedCheckboxStates = JSON.parse(localStorage.getItem('checkboxStates')) || {};
+    const emptycartdata = document.querySelector("#dk_empty_cartdata");
+    const dk_cartdata = document.querySelector("#dk_cartdatasection");
+    const cartSection = document.querySelector("#dk_cartsection");
+    const savedCheckboxStates = JSON.parse(localStorage.getItem('checkboxStates')) || {};
+    const isDeliverySection = checkoutStep === 2;
 
-    const productHtml = cartItems.map((item, index) => {
+    // For delivery section, only show items that were checked in the cart
+    const itemsToDisplay = isDeliverySection ?
+        cartItems.filter(item => savedCheckboxStates[item.id]) :
+        cartItems;
+
+        if (!cartItems || cartItems.length === 0) {
+            if (emptycartdata) emptycartdata.style.display = "block";
+            if (dk_cartdata) dk_cartdata.style.display = "none";
+            if (cartSection) cartSection.style.display = "none";
+            return; 
+        }
+    
+        if (emptycartdata) emptycartdata.style.display = "none";
+        if (dk_cartdata) dk_cartdata.style.display = "block";
+        if (cartSection) cartSection.style.display = "block";
+
+
+    const productHtml = itemsToDisplay.map((item, index) => {
         const isChecked = savedCheckboxStates[item.id] !== undefined ? savedCheckboxStates[item.id] : false;
-        const discountedPrice = (item.price - (item.price * (item.discount / 100))).toFixed(0);
-        const itemTotal = item.itemTotal ? item.itemTotal.toFixed(0) : (discountedPrice * item.quantity).toFixed(0);
+        const itemTotal = item.price * item.quantity;
+        const colorNames = item.color.map(col => col.colorname);
 
         return `
         <div class="">
             <div class="" style="width:100%;">
-                <div class="d-flex align-items-center mb-4 ">
+                <div class="d-flex align-items-center mb-4">
+                    ${!isDeliverySection ? `
                     <span class="pe-3">
                         <input class="item-checkbox" style="width: 20px; height: 20px;"
-                            type="checkbox" ${isChecked ? 'checked' : ''}>
+                            type="checkbox" data-item-id="${item.id}" ${isChecked ? 'checked' : ''}>
                     </span>
+                    ` : ''}
                     <div class="row justify-content-between w-100 dk_product_card_without_add"
                         style="margin: 0px 0px !important;" data-item-id="${item.id}">
-                        <!-- Previous HTML content remains the same -->
                         <div class="col-xxl-2 col-sm-6">
                             ${item.bestseller === true ? ` <div class="dk_best_seller_cart_add">Best Seller</div>` : ""}
                             <img class="dk_highlander_add w-100"
@@ -1557,23 +1610,25 @@ async function loadcartdata() {
                             </div>
                             <div class="dk_pro_size">
                                 <p>Size : <b style="color: #000000;">${item.size[0]}</b></p>
-                                <p style="padding-left: 16px;">Color : <b style="color: #000000;">${item.color[0]}</b></p>
+                                <p style="padding-left: 16px;">Color : <b style="color: #000000;">${colorNames[0]}</b></p>
                             </div>
                             <p>7 days return</p>
-                            <h2 class="dk_pro_price">$${item.price}</h2>
+                            <h2 class="dk_pro_price">$${itemTotal}</h2>
                         </div>
                         <div class="col-xxl-5">
-                            <!-- Quantity controls and other elements remain the same -->
                             <div class="dk_move_to_remove">
                                 <div class="dk_pro_remove">
+                                    ${!isDeliverySection ? `
                                     <a href="" onclick="removeFromCart(${item.id})">Remove</a>
+                                    ` : ''}
                                     <p>Delivered by :<b style="color: #000000;">${getDeliveryDate()}</b></p>
+                                    ${!isDeliverySection ? `
                                     <div class="align-content-center dk_move_to_wishlist_main">
                                         <div onclick="toggleWishlist(event, ${item.id})">
                                             <button class="dk_move_to_wishlist">Move to Wishlist</button>
                                         </div>
                                         <div class="dk_pro_caounting">
-                                            <a  class="decrease dk_cursor" onclick="updateQuantity(${item.id}, 'decrease')">
+                                            <a class="decrease dk_cursor" onclick="updateQuantity(${item.id}, 'decrease')">
                                                 <i class="fa-solid fa-minus" style="padding-right: 15px;"></i>
                                             </a>
                                             <span class="quantity">${item.quantity}</span>
@@ -1582,6 +1637,7 @@ async function loadcartdata() {
                                             </a>
                                         </div>
                                     </div>
+                                    ` : ''}
                                 </div>
                             </div>
                         </div>
@@ -1592,19 +1648,37 @@ async function loadcartdata() {
         `;
     }).join("");
 
-    if (document.getElementById("dk_cartdata")) {
-        document.getElementById("dk_cartdata").innerHTML = productHtml;
+    const cartContainer = document.getElementById("dk_cartdata");
+    if (cartContainer) {
+        cartContainer.innerHTML = productHtml;
     }
 
- 
-    
+
+    // Save checkbox states when moving to delivery section
+    if (!isDeliverySection) {
+        document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const itemId = e.target.dataset.itemId;
+                savedCheckboxStates[itemId] = e.target.checked;
+                localStorage.setItem('checkboxStates', JSON.stringify(savedCheckboxStates));
+            });
+        });
+    }
+
     updateCartTotals();
-    addItemCheckboxListeners();
-    updateSelectAllStatus();
+    if (!isDeliverySection) {
+        addItemCheckboxListeners();
+        updateSelectAllStatus();
+    }
+}
+
+// Add this function to clear checkbox states when needed
+function clearCheckboxStates() {
+    localStorage.removeItem('checkboxStates');
 }
 
 
-function calculateCartTotals(cartItems , cupanPrice) {
+function calculateCartTotals(cartItems, couponValue = 0) {
     let subtotal = 0;
     let totalDiscount = 0;
     let itemCount = 0;
@@ -1612,29 +1686,15 @@ function calculateCartTotals(cartItems , cupanPrice) {
     cartItems.forEach(item => {
         const originalPrice = item.price * item.quantity;
         const discountAmount = originalPrice * (item.discount / 100);
-        const itemTotal = originalPrice - discountAmount;
 
         subtotal += originalPrice;
         totalDiscount += discountAmount;
         itemCount += item.quantity;
     });
 
-    console.log(cartItems)
-
- 
-
     const platformFee = 1;
-    const deliveryCharge = 0; // FREE delivery
-    const totalAmount = subtotal - totalDiscount + platformFee + deliveryCharge;
-
-    const bill ={
-        subtotal,
-        totalDiscount,
-        itemCount,
-        totalAmount
-    }
-
-    localStorage.setItem("bill",JSON.stringify(bill))
+    const deliveryCharge = 0;
+    let totalAmount = subtotal - totalDiscount - couponValue + platformFee + deliveryCharge;
 
     return {
         subtotal,
@@ -1642,14 +1702,12 @@ function calculateCartTotals(cartItems , cupanPrice) {
         itemCount,
         platformFee,
         deliveryCharge,
+        couponDiscount: couponValue,
         totalAmount
     };
 }
 
-
-
 function updateOrderSummary(totals) {
-    // Update the order summary section
     const orderSummaryHtml = `
     <div class="dk_order_payment_det">
         <div class="dk_order_payment_det_sub">
@@ -1664,15 +1722,25 @@ function updateOrderSummary(totals) {
             <h2>Platform Fee</h2>
             <p>$${totals.platformFee}</p>
         </div>
+        ${totals.couponDiscount ? `
+        <div class="dk_coupon_offers">
+            <h2>Coupon Offers</h2>
+            <p style="color:#0F993E;">-$${totals.couponDiscount}</p>
+        </div>
+        ` : ''}
         <div class="dk_order_payment_det_sub">
             <h2>Delivery Charges</h2>
-            <p style="color: #0F993E;"><span style="color: #727272; padding-right: 5px;"><del>$20</del></span>FREE</p>
+            <p style="color: #0F993E;">
+                ${totals.deliveryCharge > 0 ?
+            `$${totals.deliveryCharge}` :
+            `<span style="color: #727272; padding-right: 5px;"><del>$20</del></span>FREE`}
+            </p>
         </div>
-        </div>
-        <div class="dk_total_amount_cwa">
-                <h2>Total Amount</h2>
-                <p>$${totals.totalAmount.toFixed(0)}</p>
-        </div>
+    </div>
+    <div class="dk_total_amount_cwa">
+        <h2>Total Amount</h2>
+        <p>$${totals.totalAmount.toFixed(0)}</p>
+    </div>
     `;
 
     const orderDetailsElement = document.querySelector('#dk_billcount');
@@ -1680,10 +1748,10 @@ function updateOrderSummary(totals) {
         orderDetailsElement.innerHTML = orderSummaryHtml;
     }
 
-    // Update the savings amount
     const savingsElement = document.querySelector('.dk_you_will_save h2');
     if (savingsElement) {
-        savingsElement.textContent = `You will save $${totals.totalDiscount.toFixed(0)} on this order`;
+        const totalSavings = totals.totalDiscount + (totals.couponDiscount || 0);
+        savingsElement.textContent = `You will save $${totalSavings.toFixed(0)} on this order`;
     }
 }
 
@@ -1726,7 +1794,7 @@ async function updateQuantity(productId, action) {
             const itemTotal = (discountedPrice * cartItems[itemIndex].quantity).toFixed(0);
             const priceElement = productCard.querySelector('.dk_pro_price');
             if (priceElement) {
-                priceElement.textContent = `$${itemTotal}`;
+                priceElement.textContent = `$${cartItems[itemIndex].price * cartItems[itemIndex].quantity}`;
             }
         }
 
@@ -1738,7 +1806,7 @@ async function updateQuantity(productId, action) {
 function updateCartTotals() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const selectedItems = [];
-    
+
     // Get selected items based on checkboxes
     document.querySelectorAll('.item-checkbox').forEach((checkbox, index) => {
         if (checkbox.checked && cartItems[index]) {
@@ -1759,7 +1827,7 @@ function removeFromCart(productId) {
     loadCartData();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const selectAllCheckbox = document.getElementById('selectAll');
     selectAllCheckbox.addEventListener('change', handleSelectAll);
 
@@ -1792,13 +1860,13 @@ function updateSelectAllStatus() {
     const selectAllCheckbox = document.getElementById('selectAll');
     const itemCheckboxes = document.querySelectorAll('.item-checkbox');
     const allChecked = Array.from(itemCheckboxes).every(checkbox => checkbox.checked);
-    selectAllCheckbox.checked = allChecked;
+    // selectAllCheckbox.checked = allChecked;
 }
 
 function calculateSelectedItems() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const selectedItems = [];
-    
+
     document.querySelectorAll('.item-checkbox').forEach((checkbox, index) => {
         if (checkbox.checked && cartItems[index]) {
             selectedItems.push(cartItems[index]);
@@ -1808,3 +1876,684 @@ function calculateSelectedItems() {
     const totals = calculateCartTotals(selectedItems);
     updateOrderSummary(totals);
 }
+
+
+let checkoutStep = 1; // 1: Cart, 2: Delivery, 3: Payment
+let selectedCoupon = null;
+let selectedDeliveryOption = null;
+
+function handleProceedButton() {
+    const proceedButton = document.querySelector('.dk_proceed');
+    const cartSection = document.getElementById('dk_cartsection');
+    const deliverySection = document.getElementById('dk_deliverysection');
+    const couponSection = document.querySelector('.dk_apply_coupon_cwa');
+    const selectAllSection = document.querySelector('.dk_select_all');
+    const paybtn = document.querySelector(".dk_pay_payment_button");
+
+    if (checkoutStep === 1) {
+        const checkedItems = document.querySelectorAll('.item-checkbox:checked');
+        if (checkedItems.length === 0) {
+            alert('Please select at least one item to proceed');
+            return;
+        }
+
+        // Handle coupon selection and save checked items
+        const selectedCouponRadio = document.querySelector('.dk_coupon_item input[type="radio"]:checked');
+        if (selectedCouponRadio) {
+            selectedCoupon = {
+                code: selectedCouponRadio.closest('.dk_coupon_item').querySelector('h2').textContent,
+                value: parseInt(selectedCouponRadio.value)
+            };
+        }
+
+        // Hide coupon and select all sections
+        if (couponSection) couponSection.style.display = 'none';
+        if (selectAllSection) selectAllSection.style.display = 'none';
+
+        // Show delivery options offcanvas
+        const deliveryOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight2'));
+        deliveryOffcanvas.show();
+
+        // Save checkbox states
+        const checkboxStates = {};
+        checkedItems.forEach(checkbox => {
+            const itemId = checkbox.dataset.itemId;
+            checkboxStates[itemId] = true;
+        });
+        localStorage.setItem('checkboxStates', JSON.stringify(checkboxStates));
+
+        checkoutStep = 2;
+        loadcartdata();
+        updateOrderTrackingUI(2);
+    }
+    else if (checkoutStep === 2) {
+        // Move to delivery details section
+        cartSection.classList.add('d-none');
+        deliverySection.classList.remove('d-none');
+
+        updateOrderTrackingUI(3);
+        checkoutStep = 3;
+
+        if (proceedButton) {
+            proceedButton.style.display = 'none';
+        }
+
+        // Show payment button if it exists
+        if (paybtn) {
+            paybtn.style.display = 'block';
+        }
+    }
+}
+
+
+function handleCouponSelection() {
+    const couponInputs = document.querySelectorAll('.dk_coupon_item input[type="radio"]');
+    couponInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+            selectedCoupon = {
+                code: e.target.closest('.dk_coupon_item').querySelector('h2').textContent,
+                value: parseInt(e.target.value)
+            };
+
+            // Update the coupon input field
+            document.getElementById('coupon-code').value = selectedCoupon.code;
+
+            // Update order summary with coupon
+            updateOrderSummaryWithCoupon(selectedCoupon);
+        });
+    });
+}
+
+function handleDeliverySelection() {
+    const deliveryOptions = document.querySelectorAll('#offcanvasRight2 input[type="radio"]');
+    deliveryOptions.forEach(option => {
+        option.addEventListener('change', (e) => {
+            selectedDeliveryOption = e.target.id;
+            const deliveryCharge = getDeliveryCharge(selectedDeliveryOption);
+
+            // Update order summary with delivery charge
+            updateOrderSummaryWithDelivery(deliveryCharge);
+
+            // Close the delivery options offcanvas after a short delay
+            setTimeout(() => {
+                const deliveryOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRight2'));
+                if (deliveryOffcanvas) {
+                    deliveryOffcanvas.hide();
+                }
+            }, 300);
+        });
+    });
+}
+
+function getDeliveryCharge(option) {
+    switch (option) {
+        case 'express-delivery':
+            return 39;
+        case 'standard-delivery':
+            return 29;
+        case 'free-delivery':
+            return 0;
+        default:
+            return 0;
+    }
+}
+
+function updateOrderSummaryWithCoupon(coupon) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totals = calculateCartTotals(cartItems, coupon.value);
+    updateOrderSummary(totals);
+}
+
+function updateOrderSummaryWithDelivery(deliveryCharge) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totals = calculateCartTotals(cartItems, selectedCoupon ? selectedCoupon.value : 0);
+    totals.deliveryCharge = deliveryCharge;
+    totals.totalAmount = totals.subtotal - totals.totalDiscount -
+        (selectedCoupon ? selectedCoupon.value : 0) +
+        totals.platformFee + deliveryCharge;
+
+    updateOrderSummary(totals);
+}
+
+function updateOrderTrackingUI(step) {
+    const circles = document.querySelectorAll('.dk_order_tracking_circle');
+    const steps = document.querySelectorAll('.dk_order_tracking_step h4, .dk_order_tracking_step h3');
+
+    circles.forEach((circle, index) => {
+        if (index < step) {
+            circle.classList.add('dk_order_tracking_active');
+        } else {
+            circle.classList.remove('dk_order_tracking_active');
+        }
+    });
+
+    steps.forEach((stepText, index) => {
+        if (index < step) {
+            stepText.style.color = '#000000';
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const proceedButton = document.querySelector('.dk_proceed');
+    if (proceedButton) {
+        proceedButton.addEventListener('click', handleProceedButton);
+    }
+
+    // Initialize delivery option handlers
+    handleDeliverySelection();
+
+    // Initialize cart data
+    loadcartdata().then(() => {
+        addItemCheckboxListeners();
+        updateSelectAllStatus();
+    });
+
+    // Add coupon selection handler
+    const couponInputs = document.querySelectorAll('.dk_coupon_item input[type="radio"]');
+    couponInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+            const couponValue = parseInt(e.target.value);
+            const couponCode = e.target.closest('.dk_coupon_item').querySelector('h2').textContent;
+
+            selectedCoupon = {
+                code: couponCode,
+                value: couponValue
+            };
+
+            // Update coupon input field
+            document.getElementById('coupon-code').value = couponCode;
+
+            // Update order summary with coupon
+            updateOrderSummaryWithDelivery(selectedDeliveryOption ?
+                getDeliveryCharge(selectedDeliveryOption) : 0);
+        });
+    });
+})
+
+
+async function loadSimilarProduct() {
+    try {
+        const response = await fetch('./../data/db.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const product = data.products.slice(0, 4);
+
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        const productHtml = product.map((item, index) => {
+
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-sm-6 col-12">
+                    <a href="productdetails.html?id=${item.id}">
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                <div class="icon-container">
+                                    <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+                                       <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+                                    </span>
+                                    <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
+                                        <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                            alt="Cart Icon" class="cart-icon">
+                                    </span>
+                                </div>
+
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+<a href="productdetails.html?id=${item.id}">
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                                </a>
+                            </div>
+                            <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
+                        </div>
+                    </a>
+                </div>
+            `;
+        }).join("");
+
+        if (document.getElementById("dk_youlikeproduct")) {
+            document.getElementById("dk_youlikeproduct").innerHTML = productHtml;
+        }
+
+        initializeSliders();
+
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+// top wear js file
+
+// async function loadtopwearProduct() {
+//     try {
+//         const response = await fetch('./../data/db.json');
+
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+
+//         const data = await response.json();
+//         const product = data.products;
+
+//         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+//         const productHtml = product.map((item, index) => {
+
+//             const isWishlist = wishlist.includes(item.id);
+
+//             return `
+//                 <div class="col-12 col-md-6 col-lg-3 mb-4">
+//                     <a href="productdetails.html?id=${item.id}">
+//                         <div class="dk_browsing_products">
+//                             <div class="card" data-card-index="${index}">
+//                                 <div class="icon-container">
+//                                     <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+//                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+//                                     </span>
+//                                     <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
+//                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+//                                             alt="Cart Icon" class="cart-icon">
+//                                     </span>
+//                                 </div>
+
+//                                 <div class="slider">
+//                                     ${item.images.map((img, imgIndex) =>
+//                 `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+//             ).join('')}
+//                                 </div>
+
+//                                 <div class="dots-container">
+//                                     ${item.images.map((_, dotIndex) =>
+//                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+//             ).join('')}
+//                                 </div>
+// <a href="productdetails.html?id=${item.id}">
+//                                 <h2>${item.name}</h2>
+//                                 <p>${item.categorydesc}</p>
+
+//                                 <div class="thumbnails">
+//                                     ${item.thumbnail.map((thumb, thumbIndex) =>
+//                 `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+//             ).join('')}
+//                                 </div>
+
+//                                 <div class="off">
+//                                     <span class="off-price">${item.discount}% OFF</span>
+//                                 </div>
+
+//                                 <div class="price">
+//                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+//                                     <span class="original-price">$${item.price}</span>
+//                                 </div>
+//                                 </a>
+//                             </div>
+//                             <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
+//                         </div>
+//                     </a>
+//                 </div>
+//             `;
+//         }).join("");
+
+//         if (document.getElementById("topwears_products")) {
+//             document.getElementById("topwears_products").innerHTML = productHtml;
+//         }
+
+//         initializeSliders();
+
+//     } catch (error) {
+//         console.error("Error loading products:", error);
+//     }
+// }
+
+// Global variables to store filter states
+let activeFilters = {
+    discount: [],
+    priceRange: 100,
+    size: [],
+    brand: [],
+    color: [],
+    rating: [],
+    sleeve: [],
+    fit: [],
+    material: [],
+    pattern: [],
+    dressStyle: []
+};
+
+let originalProducts = [];
+
+async function loadTopwearProducts() {
+    try {
+        const response = await fetch('./../data/db.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        originalProducts = data.products.slice(0, 8);
+        renderProducts(originalProducts);
+        initializeFilters();
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+function initializeFilters() {
+    // Discount filters
+    document.querySelectorAll('[id^="discount"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const discount = parseInt(checkbox.id.replace('discount', ''));
+            updateFilter('discount', discount, checkbox.checked);
+        });
+    });
+
+    // Price range filter
+    const priceRange = document.getElementById('priceRange');
+    const priceValue = document.getElementById('priceValue');
+    if (priceRange && priceValue) {
+        priceRange.addEventListener('input', (e) => {
+            const value = parseInt(e.target.value);
+            activeFilters.priceRange = value;
+            priceValue.textContent = `$${value}`;
+            applyFilters();
+        });
+    }
+
+    // Size filters
+    document.querySelectorAll('[id^="size"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const size = checkbox.id.replace('size', '');
+            updateFilter('size', size, checkbox.checked);
+        });
+    });
+
+    // Brand filters
+    document.querySelectorAll('[id^="brand"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const brandLabel = checkbox.nextElementSibling.textContent.split(' ')[0].trim();
+            updateFilter('brand', brandLabel, checkbox.checked);
+        });
+    });
+
+    // Color filters
+    document.querySelectorAll('[id^="color"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const color = checkbox.id.replace('color', '');
+            updateFilter('color', color, checkbox.checked);
+        });
+    });
+
+    // Rating filters
+    document.querySelectorAll('[id^="rating"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const rating = parseInt(checkbox.id.replace('rating', ''));
+            updateFilter('rating', rating, checkbox.checked);
+        });
+    });
+
+    // Sleeve type filters
+    document.querySelectorAll('[id^="sleeve"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const sleeveType = checkbox.id.replace('sleeve', '');
+            updateFilter('sleeve', sleeveType, checkbox.checked);
+        });
+    });
+
+    // Fit type filters
+    document.querySelectorAll('[id^="fit"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const fitType = checkbox.id.replace('fit', '');
+            updateFilter('fit', fitType, checkbox.checked);
+        });
+    });
+
+    // Material filters
+    document.querySelectorAll('[id^="material"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const material = checkbox.id.replace('material', '');
+            updateFilter('material', material, checkbox.checked);
+        });
+    });
+
+    // Pattern filters
+    document.querySelectorAll('[id^="pattern"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const pattern = checkbox.id.replace('pattern', '');
+            updateFilter('pattern', pattern, checkbox.checked);
+        });
+    });
+
+    // Dress style filters
+    document.querySelectorAll('[id^="dress"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const style = checkbox.id.replace('dress', '');
+            updateFilter('dressStyle', style, checkbox.checked);
+        });
+    });
+
+    // Clear all filters
+    document.querySelector('.r_clear').addEventListener('click', clearAllFilters);
+}
+
+function updateFilter(filterType, value, isActive) {
+    if (isActive) {
+        if (!activeFilters[filterType].includes(value)) {
+            activeFilters[filterType].push(value);
+        }
+    } else {
+        activeFilters[filterType] = activeFilters[filterType].filter(v => v !== value);
+    }
+    applyFilters();
+}
+
+function applyFilters() {
+    let filteredProducts = originalProducts.filter(product => {
+        // Discount filter
+        if (activeFilters.discount.length > 0) {
+            const meetsDiscount = activeFilters.discount.some(minDiscount => 
+                parseInt(product.discount) >= minDiscount
+            );
+            if (!meetsDiscount) return false;
+        }
+
+        // Price filter
+        const discountedPrice = product.price - (product.price * (product.discount / 100));
+        if (discountedPrice > activeFilters.priceRange) return false;
+
+        // Size filter
+        if (activeFilters.size.length > 0) {
+            const hasSize = activeFilters.size.some(size => 
+                product.size.includes(size)
+            );
+            if (!hasSize) return false;
+        }
+
+        // Brand filter
+        if (activeFilters.brand.length > 0) {
+            if (!activeFilters.brand.includes(product.brand)) return false;
+        }
+
+        // Color filter
+        if (activeFilters.color.length > 0) {
+            if (!activeFilters.color.some(color => product.color.includes(color))) return false;
+        }
+
+        // Rating filter
+        if (activeFilters.rating.length > 0) {
+            if (!activeFilters.rating.some(rating => product.rating >= rating)) return false;
+        }
+
+        // Sleeve filter
+        if (activeFilters.sleeve.length > 0) {
+            if (!activeFilters.sleeve.includes(product.sleeveType)) return false;
+        }
+
+        // Fit filter
+        if (activeFilters.fit.length > 0) {
+            if (!activeFilters.fit.includes(product.fitType)) return false;
+        }
+
+        // Material filter
+        if (activeFilters.material.length > 0) {
+            if (!activeFilters.material.includes(product.material)) return false;
+        }
+
+        // Pattern filter
+        if (activeFilters.pattern.length > 0) {
+            if (!activeFilters.pattern.includes(product.pattern)) return false;
+        }
+
+        // Dress Style filter
+        if (activeFilters.dressStyle.length > 0) {
+            if (!activeFilters.dressStyle.includes(product.dressStyle)) return false;
+        }
+
+        return true;
+    });
+
+    renderProducts(filteredProducts);
+}
+
+function clearAllFilters() {
+    // Reset all checkboxes
+    document.querySelectorAll('.form-check-input').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    // Reset price range
+    const priceRange = document.getElementById('priceRange');
+    if (priceRange) {
+        priceRange.value = 100;
+        document.getElementById('priceValue').textContent = '$100';
+    }
+
+    // Reset filter state
+    activeFilters = {
+        discount: [],
+        priceRange: 100,
+        size: [],
+        brand: [],
+        color: [],
+        rating: [],
+        sleeve: [],
+        fit: [],
+        material: [],
+        pattern: [],
+        dressStyle: []
+    };
+
+    // Reset display to show all products
+    renderProducts(originalProducts);
+}
+
+function renderProducts(products) {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+    const productHtml = products.map((item, index) => {
+        const isWishlist = wishlist.includes(item.id);
+        const discountedPrice = (item.price - (item.price * (item.discount / 100))).toFixed(0);
+        
+        return `
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="dk_browsing_products">
+                    <div class="card" data-card-index="${index}">
+                        <div class="icon-container">
+                            <span onclick="toggleWishlist(event, ${item.id})" 
+                                  style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'};" 
+                                  class="icon heart" 
+                                  data-product-id="${item.id}">
+                                <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+                            </span>
+                            <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
+                                <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png" alt="Cart Icon" class="cart-icon">
+                            </span>
+                        </div>
+
+                        <div class="slider">
+                            ${item.images.map((img, imgIndex) => `
+                                <img src="/img/${img}" 
+                                     alt="Product Image" 
+                                     class="slider-image ${imgIndex === 0 ? 'active' : ''}" 
+                                     data-index="${imgIndex}">
+                            `).join('')}
+                        </div>
+
+                        <div class="dots-container">
+                            ${item.images.map((_, dotIndex) => `
+                                <span class="dot ${dotIndex === 0 ? 'active' : ''}" 
+                                      data-index="${dotIndex}"></span>
+                            `).join('')}
+                        </div>
+
+                        <a href="productdetails.html?id=${item.id}">
+                            <h2>${item.name}</h2>
+                            <p>${item.categorydesc}</p>
+
+                            <div class="thumbnails">
+                                ${item.thumbnail.map((thumb, thumbIndex) => `
+                                    <img src="/img/${thumb}" 
+                                         alt="Thumbnail" 
+                                         class="thumbnail" 
+                                         data-index="${thumbIndex}">
+                                `).join('')}
+                            </div>
+
+                            <div class="off">
+                                <span class="off-price">${item.discount}% OFF</span>
+                            </div>
+
+                            <div class="price">
+                                <span class="discount-price">$${discountedPrice}</span>
+                                <span class="original-price">$${item.price}</span>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    const productsContainer = document.getElementById('topwears_products');
+    if (productsContainer) {
+        productsContainer.innerHTML = productHtml;
+    }
+
+    initializeSliders();
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', loadTopwearProducts);

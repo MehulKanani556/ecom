@@ -13,6 +13,10 @@ a{
     cursor: pointer;
 }
 
+.dk_fashion_list .owl-carousel .owl-dots.disabled{
+    display: block;
+}
+
 /*********** My Order ***********/
 .mv_order_main_class{
     box-shadow: 1px 6px 19px 0px #A4A4A433;

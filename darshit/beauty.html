@@ -724,21 +724,23 @@
       </script>
 
     <!-- dynamic -->
-    <script src="../js/dk_beauty.js"></script>
-
+    
     <!-- jQuery -->
     <script src="../js/jquery-3.7.1.min.js"></script>
-
+    
     <!-- Owl Carousel JS -->
     <script src="../js/owl.carousel.min.js"></script>
-
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="/js/dk_beauty.js"></script>
+    <script src="/js/dynamic.js"></script>
 
     
 
@@ -827,48 +829,48 @@
     <!-- trending section  -->
     <script>
         // Initialize inner sliders for each product card
-        document.querySelectorAll('.innerSwiper').forEach((innerSlider) => {
-            new Swiper(innerSlider, {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: innerSlider.querySelector('.swiper-pagination'),
-                    clickable: true,
-                },
-            });
-        });
+        // document.querySelectorAll('.innerSwiper').forEach((innerSlider) => {
+        //     new Swiper(innerSlider, {
+        //         slidesPerView: 1,
+        //         spaceBetween: 10,
+        //         pagination: {
+        //             el: innerSlider.querySelector('.swiper-pagination'),
+        //             clickable: true,
+        //         },
+        //     });
+        // });
     
-        // Initialize main outer slider for product cards
-        var mainSwiper = new Swiper(".mainSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: ".mainSwiper .swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                425: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                575: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                992: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            },
-        });
+        // // Initialize main outer slider for product cards
+        // var mainSwiper = new Swiper(".mainSwiper", {
+        //     slidesPerView: 1,
+        //     spaceBetween: 10,
+        //     pagination: {
+        //         el: ".mainSwiper .swiper-pagination",
+        //         clickable: true,
+        //     },
+        //     autoplay: {
+        //         delay: 2500,
+        //         disableOnInteraction: false,
+        //     },
+        //     breakpoints: {
+        //         425: {
+        //             slidesPerView: 1,
+        //             spaceBetween: 20,
+        //         },
+        //         575: {
+        //             slidesPerView: 2,
+        //             spaceBetween: 20,
+        //         },
+        //         768: {
+        //             slidesPerView: 2,
+        //             spaceBetween: 20,
+        //         },
+        //         992: {
+        //             slidesPerView: 3,
+        //             spaceBetween: 20,
+        //         },
+        //     },
+        // });
     </script>
 </body>
 
