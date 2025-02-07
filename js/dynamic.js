@@ -122,6 +122,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadTopsellingSmartphone();
     await loadBrowsingproduct();
     await loadwishlistdata();
+    await loadSimilarProduct();
+    await loadcartdata();
+
     geturl();
 });
 
@@ -146,7 +149,7 @@ async function loadProduct() {
 
             return `
                 <div class="col-xl-3 col-sm-6 text p-2">
-                    <a href="productdetails.html?id=${item.id}">
+                    
                         <div class="dk_browsing_products">
                             <div class="card" data-card-index="${index}">
                                 <div class="icon-container">
@@ -154,7 +157,7 @@ async function loadProduct() {
                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
 
                                     </span>
-                                    <span style="cursor: pointer !important;">
+                                    <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
                                             alt="Cart Icon" class="cart-icon">
                                     </span>
@@ -171,7 +174,7 @@ async function loadProduct() {
                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
             ).join('')}
                                 </div>
-
+<a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
 
@@ -189,10 +192,12 @@ async function loadProduct() {
                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
                                     <span class="original-price">$${item.price}</span>
                                 </div>
+                                </a>
                             </div>
+                            
                             <button class="buy-now">Buy Now</button>
                         </div>
-                    </a>
+                    
                 </div>
             `;
         }).join("");
@@ -512,12 +517,16 @@ async function toggleWishlist(event, productId) {
 
     if (wishlist.includes(productId)) {
         wishlist = wishlist.filter(id => id !== productId);
-        icon.classList.replace('fa-solid', 'fa-regular');
-        heartSpan.style.color = '#000000';
+        if (icon) {
+            icon.classList.replace('fa-solid', 'fa-regular');
+            heartSpan.style.color = '#000000';
+        }
     } else {
         wishlist.push(productId);
-        icon.classList.replace('fa-regular', 'fa-solid');
-        heartSpan.style.color = '#ff0000';
+        if (icon) {
+            icon.classList.replace('fa-regular', 'fa-solid');
+            heartSpan.style.color = '#ff0000';
+        }
     }
 
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
@@ -643,13 +652,13 @@ async function DK_update_data1() {
 function geturl() {
     let url = window.location.search;
     let params = new URLSearchParams(url);
-    let id = params.get("id");  
+    let id = params.get("id");
 
     if (id) {
-        fetch('../data/db.json') 
+        fetch('../data/db.json')
             .then(response => response.json())
             .then(data => {
-                const product = data.products.find(item => item.id == id); 
+                const product = data.products.find(item => item.id == id);
                 console.log(product)
 
                 if (product) {
@@ -662,6 +671,19 @@ function geturl() {
     }
 }
 
+function generateStars(review) {
+    let starsHTML = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= review) {
+            starsHTML += '<i class="fas fa-star star-rating ms-1 me-1 dk_yellow"></i>';
+        } else {
+            starsHTML += '<i class="fa-solid fa-star ms-1 me-1" style="color: #727272;"></i>';
+        }
+    }
+    return starsHTML;
+}
+
+
 function single_data(item) {
     let oneitem = document.getElementById('DK_singleproduct');
 
@@ -671,26 +693,26 @@ function single_data(item) {
                 <div class="col-lg-4">
                     <div class="swiper r_shadow">
                         <div class="swiper-wrapper">
-                        ${item.images.map((img,index) => {
-                            return(
-                                `
+                        ${item.images.map((img, index) => {
+            return (
+                `
                                 <div class="swiper-slide"><img src="/img/${img}" class="img-thumbnail"
                                     alt="Thumb 1">
                             </div>`
-                            )
-                        })}
+            )
+        })}
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="r_shareicon"><i class="fa-solid fa-share-nodes"></i></div>
                     </div>
                     <div class="thumbnail-images mt-3 d-flex gap-2">
-                ${item.images.map((img,index) => {
-                    return(
-                        `
+                ${item.images.map((img, index) => {
+            return (
+                `
                         <img src="/img/${img}" class="img-thumbnail thumbnail" alt="Thumb 1" data-bs-toggle="modal"
                             data-bs-target="#imageModal" data-large="/img/${img}">`
-                    )
-                }).join('')}
+            )
+        }).join('')}
                     </div>
 
                     <!-- Modal -->
@@ -704,7 +726,7 @@ function single_data(item) {
                                 </div>
                                 <div class="modal-body position-relative">
                                     <!-- Main Image -->
-                                    <img id="mainImage" src="../r_img/product-1.png" alt="Main Image"
+                                    <img id="mainImage" src="/img/${item.images[0]}" alt="Main Image"
                                         class="d-block mx-auto">
 
                                     <!-- Next/Previous Arrows -->
@@ -720,12 +742,14 @@ function single_data(item) {
 
                                     <!-- Thumbnails -->
                                     <div class="thumbnail-container mt-3 d-flex justify-content-center gap-2 flex-wrap">
-                                    ${item.images.map((img,index) => {
-                                        return(
-                                                ` <img src="/img/${img}" alt="Thumb 1" data-large=""/img/${img}"
-                                            class="thumbnail">`
-                                        )
-                                    }).join("")}
+                                    ${item.images.map((img, index) => `
+                                        <img src="/img/${img}" 
+                                             alt="Thumbnail ${index + 1}" 
+                                             class="modal-thumbnail ${index === 0 ? 'active' : ''}" 
+                                             data-index="${index}"
+                                             style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;"
+                                        >
+                                    `).join("")}
                                         
                                     </div>
                                 </div>
@@ -739,11 +763,10 @@ function single_data(item) {
                     <h4 class="product-brand mb-1">${item.name}</h4>
                     <p class="product-title mb-0">${item.categorydesc}</p>
                     <div class="d-flex mt-2 mb-2">
-                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
-                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
-                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
-                        <i class="fa-solid fa-star" style="color: #F8A120;"></i>
-                        <i class="fa-solid fa-star" style="color: #727272;"></i>
+                    
+                    ${generateStars(item.totalrank)}
+
+                    
                     </div>
                     <p class="price mb-2">
                         <span class="current-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
@@ -758,20 +781,20 @@ function single_data(item) {
                     <div class="product-options">
                         <div class="sizes">
                             <label>Size:</label>
-                            ${item.size.map((sizename,index) => {
-                                return(
-                                    `<button class="btn btn-outline-secondary me-2">${sizename}</button>`
-                                )
-                            }).join("")}
+                            ${item.size.map((sizename, index) => {
+            return (
+                `<button class="btn btn-outline-secondary me-2">${sizename}</button>`
+            )
+        }).join("")}
                             
                         </div>
                         <div class="colors mt-2">
                             <label>Color:</label>
-                            ${item.color.map((colorimg,index) => {
-                                return(
-                                    `<img src="/r_img/${colorimg}" class="img-thumbnail me-2" alt="Color 1">`
-                                )
-                            }).join("")}
+                            ${item.color.map((colorimg, index) => {
+            return (
+                `<img src="/r_img/${colorimg}" class="img-thumbnail me-2" alt="Color 1">`
+            )
+        }).join("")}
                         </div>
                     </div>
 
@@ -843,19 +866,11 @@ function single_data(item) {
                 <div class="tab-pane fade show active" id="product-details" role="tabpanel"
                     aria-labelledby="product-details-tab">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum
-                            purus.
-                            Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst
-                            nibh.
-                            Aliquam tellus mauris aliquam malesuada accumsan non lorem.</li>
-                        <li>Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque
-                            mattis
-                            integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan
-                            id
-                            iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque.
-                            Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames
-                            at
-                            rhoncus eu nulla amet leo. </li>
+                    ${item.description.map((description, index) => {
+            return (
+                `<li>${description}</li>`
+            )
+        }).join("")}
                     </ul>
                     <div class="specs-table">
                         <div class="specs-row">
@@ -907,18 +922,14 @@ function single_data(item) {
                     <div class="row rating-section">
                         <div class="col-md-3 text-center d-flex justify-content-center align-items-center">
                             <div class="rating-circle me-4">
-                                <div class="rating-number">4.5</div>
+                                <div class="rating-number">${item.totalrank}</div>
                             </div>
                             <div>
                                 <div class="d-flex">
-                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
-                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
-                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
-                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
-                                    <i class="fas fa-star star-rating ms-1 me-1"></i>
+                                    ${generateStars(item.totalrank)}
                                 </div>
                                 <div>
-                                    <p style="color: #727272;" class="mb-0">from 1,25k reviews</p>
+                                    <p style="color: #727272;" class="mb-0">from ${item.totalreview} reviews</p>
                                 </div>
                             </div>
                         </div>
@@ -979,35 +990,35 @@ function single_data(item) {
                                         <div class="accordion-body">
                                             <div>Rating</div>
                                             <div class="form-check my-2">
-                                                <input class="form-check-input" type="checkbox" id="star5">
-                                                <label class="form-check-label" for="star5">
-                                                    <i class="fas fa-star star-rating"></i> 5
-                                                </label>
-                                            </div>
-                                            <div class="form-check my-2">
-                                                <input class="form-check-input" type="checkbox" id="star4">
-                                                <label class="form-check-label" for="star4">
-                                                    <i class="fas fa-star star-rating"></i> 4
-                                                </label>
-                                            </div>
-                                            <div class="form-check my-2">
-                                                <input class="form-check-input" type="checkbox" id="star3">
-                                                <label class="form-check-label" for="star3">
-                                                    <i class="fas fa-star star-rating"></i> 3
-                                                </label>
-                                            </div>
-                                            <div class="form-check my-2">
-                                                <input class="form-check-input" type="checkbox" id="star2">
-                                                <label class="form-check-label" for="star2">
-                                                    <i class="fas fa-star star-rating"></i> 2
-                                                </label>
-                                            </div>
-                                            <div class="form-check my-2">
-                                                <input class="form-check-input" type="checkbox" id="star1">
-                                                <label class="form-check-label" for="star1">
-                                                    <i class="fas fa-star star-rating"></i> 1
-                                                </label>
-                                            </div>
+                <input class="form-check-input rating-filter" type="checkbox" id="star5" value="5" onchange="handleRatingFilter(${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">
+                <label class="form-check-label" for="star5">
+                    <i class="fas fa-star star-rating"></i> 5
+                </label>
+            </div>
+            <div class="form-check my-2">
+                <input class="form-check-input rating-filter" type="checkbox" id="star4" value="4" onchange="handleRatingFilter(${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">
+                <label class="form-check-label" for="star4">
+                    <i class="fas fa-star star-rating"></i> 4
+                </label>
+            </div>
+            <div class="form-check my-2">
+                <input class="form-check-input rating-filter" type="checkbox" id="star3" value="3" onchange="handleRatingFilter(${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">
+                <label class="form-check-label" for="star3">
+                    <i class="fas fa-star star-rating"></i> 3
+                </label>
+            </div>
+            <div class="form-check my-2">
+                <input class="form-check-input rating-filter" type="checkbox" id="star2" value="2" onchange="handleRatingFilter(${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">
+                <label class="form-check-label" for="star2">
+                    <i class="fas fa-star star-rating"></i> 2
+                </label>
+            </div>
+            <div class="form-check my-2">
+                <input class="form-check-input rating-filter" type="checkbox" id="star1" value="1" onchange="handleRatingFilter(${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">
+                <label class="form-check-label" for="star1">
+                    <i class="fas fa-star star-rating"></i> 1
+                </label>
+            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1066,134 +1077,17 @@ function single_data(item) {
                                     <h5>Review Lists</h5>
                                 </div>
                                 <div class="filter-buttons">
-                                    <button class="btn r_reviewbutons me-2">All Reviews</button>
-                                    <button class="btn r_reviewbutons me-2">With Photo & Video</button>
-                                    <button class="btn r_reviewbutons">With Description</button>
-                                </div>
+                    <button class="btn r_reviewbutons me-2 active" onclick="filterReviews('all', ${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">All Reviews</button>
+                    <button class="btn r_reviewbutons me-2" onclick="filterReviews('media', ${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">With Photo & Video</button>
+                    <button class="btn r_reviewbutons" onclick="filterReviews('description', ${JSON.stringify(item.reviews).replace(/"/g, '&quot;')})">With Description</button>
+                </div>
 
-                                <!-- Review Items -->
-                                <div class="review-item">
-                                    <div class="mb-2">
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                    </div>
-                                    <p class="mb-0 fw-bold">This is amazing product I have.</p>
-                                    <img src="../r_img/b-4.png" alt=""
-                                        style="width: 40px; height: 40px;object-fit: cover;box-sizing: border-box;">
-                                    <div class="review-date mb-3">July 2, 2023 03:29 PM</div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-avatar me-2">
-                                                <img src="../r_img/review-1.png" alt="">
-                                            </div>
-                                            <div>
-                                                <div class="fw-500">Darnell Steward</div>
 
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-interaction me-2">
-                                                <i class="fas fa-thumbs-up"></i> 128
-                                            </button>
-                                            <button class="btn btn-interaction">
-                                                <i class="fas fa-thumbs-down"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="review-item">
-                                    <div class="mb-2">
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                    </div>
-                                    <p class="mb-0">This is amazing product I have.</p>
-                                    <div class="review-date mb-3">July 2, 2023 03:25 PM</div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-avatar me-2">
-                                                <img src="../r_img/review-2.png" alt="">
-                                            </div>
-                                            <div>
-                                                <div class="fw-500">Darlence Robertson</div>
+                                 <div id="filteredReviews">
+                    ${generateReviewHTML(item.reviews)}
+                </div>
 
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-interaction me-2">
-                                                <i class="fas fa-thumbs-up"></i> 128
-                                            </button>
-                                            <button class="btn btn-interaction">
-                                                <i class="fas fa-thumbs-down"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="review-item">
-                                    <div class="mb-2">
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                    </div>
-                                    <p class="mb-0">This is amazing product I have.</p>
-                                    <div class="review-date mb-3">July 26, 2020 10:03 PM</div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-avatar me-2">
-                                                <img src="../r_img/review-3.png" alt="">
-                                            </div>
-                                            <div>
-                                                <div class="fw-500">Kathryn Murphy</div>
-
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-interaction me-2">
-                                                <i class="fas fa-thumbs-up"></i> 128
-                                            </button>
-                                            <button class="btn btn-interaction">
-                                                <i class="fas fa-thumbs-down"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="review-item">
-                                    <div class="mb-2">
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                        <i class="fas fa-star star-rating"></i>
-                                    </div>
-                                    <p class="mb-0">This is amazing product I have.</p>
-                                    <div class="review-date mb-3">July 7, 2020 10:14 AM</div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-avatar me-2">
-                                                <img src="../r_img/review-4.png" alt="">
-                                            </div>
-                                            <div>
-                                                <div class="fw-500">Ronald Richards</div>
-
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-interaction me-2">
-                                                <i class="fas fa-thumbs-up"></i> 128
-                                            </button>
-                                            <button class="btn btn-interaction">
-                                                <i class="fas fa-thumbs-down"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -1253,72 +1147,664 @@ function single_data(item) {
                     </div>
                 </div>
             </div>`
-    }
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Image Modal Handling
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const mainImage = document.getElementById('mainImage');
-    const prevArrow = document.getElementById('prevArrow');
-    const nextArrow = document.getElementById('nextArrow');
-
-    let currentIndex = 0;
-
-    // Update the main image and active thumbnail
-    function updateMainImage(index) {
-        if (!thumbnails.length) return;
-
-        currentIndex = index;
-        const largeImageURL = thumbnails[index].getAttribute('data-large');
-        
-        if (mainImage) {
-            mainImage.src = largeImageURL;
-        }
-
-        // Update active thumbnail
-        thumbnails.forEach((thumb) => thumb.classList.remove('active'));
-        thumbnails[index].classList.add('active');
-    }
-
-    // Thumbnail click event
-    thumbnails.forEach((thumbnail, index) => {
-        thumbnail.addEventListener('click', () => {
-            updateMainImage(index);
-        });
-    });
-
-    // Previous arrow click event
-    if (prevArrow) {
-        prevArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-            updateMainImage(currentIndex);
-        });
-    }
-
-    // Next arrow click event
-    if (nextArrow) {
-        nextArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % thumbnails.length;
-            updateMainImage(currentIndex);
-        });
-    }
-
-    // Swiper Initialization
-    if (typeof Swiper !== 'undefined') {
-        const thumbSwiper = new Swiper('.r_shadow', {
+        // Initialize main Swiper for product images
+        const thumbSwiper = new Swiper('.thumb-swiper', {
             spaceBetween: 10,
             slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        const mainSwiper = new Swiper('.main-swiper', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+
+        // Color and Size Selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelector('.color-option.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelector('.size-option.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            const images = card.querySelectorAll('.slider-image');
+            const thumbnails = card.querySelectorAll('.thumbnail');
+            const dots = card.querySelectorAll('.dot');
+            let currentIndex = 0;
+
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+
+            const autoplayInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 3000);
+
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', () => {
+                    clearInterval(autoplayInterval);
+                    currentIndex = index;
+                    showImage(currentIndex);
+                });
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    clearInterval(autoplayInterval); // 
+                    currentIndex = parseInt(dot.getAttribute('data-index'), 10);
+                    showImage(currentIndex);
+                });
+            });
+        });
+
+        const swiper = new Swiper('.swiper', {
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            loop: true,
+            loop: true, // Optional: Enable looping
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+        // Add click event listeners to all thumbnail images
+        document.querySelectorAll('.thumbnail').forEach((thumbnail) => {
+            thumbnail.addEventListener('click', function () {
+                // Get the "data-large" attribute of the clicked thumbnail
+                const largeImageUrl = this.getAttribute('data-large');
+                // Update the "src" of the modal image
+                document.getElementById('modalImage').src = largeImageUrl;
+            });
+        });
+
+
+
+        // JavaScript for handling thumbnail clicks and arrow navigation
+        const modal = document.getElementById('imageModal');
+        const mainImage = document.getElementById('mainImage');
+        const modalThumbnails = modal.querySelectorAll('.modal-thumbnail');
+        const prevArrow = document.getElementById('prevArrow');
+        const nextArrow = document.getElementById('nextArrow');
+        let currentImageIndex = 0;
+
+        let currentIndex = 0;
+
+        // Update the main image and active thumbnail
+        function updateModalImage(index) {
+            currentImageIndex = index;
+            mainImage.src = `/img/${item.images[index]}`;
+
+            // Update active thumbnail
+            modalThumbnails.forEach(thumb => thumb.classList.remove('active'));
+            modalThumbnails[index].classList.add('active');
+        }
+
+        // Thumbnail click event
+        modalThumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                updateModalImage(index);
+            });
+        });
+
+        // Previous arrow click event
+        prevArrow.addEventListener('click', () => {
+            let newIndex = currentImageIndex - 1;
+            if (newIndex < 0) newIndex = item.images.length - 1;
+            updateModalImage(newIndex);
+        });
+
+        // Next arrow click event
+        nextArrow.addEventListener('click', () => {
+            let newIndex = currentImageIndex + 1;
+            if (newIndex >= item.images.length) newIndex = 0;
+            updateModalImage(newIndex);
+        });
+
+        document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+            thumb.addEventListener('click', () => {
+                updateModalImage(index);
+            });
+        });
+
+        modal.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevArrow.click();
+            } else if (e.key === 'ArrowRight') {
+                nextArrow.click();
+            }
         });
     }
+}
+
+// review filter
+function handleRatingFilter(reviews) {
+    // debugger
+    const selectedRatings = Array.from(document.querySelectorAll('.rating-filter:checked'))
+        .map(checkbox => parseInt(checkbox.value));
+
+    let filteredReviews = [];
+
+    if (selectedRatings.length === 0) {
+        // If no ratings are selected, show all reviews
+        filteredReviews = reviews;
+    } else {
+        // Filter reviews based on selected star ratings
+        filteredReviews = reviews.filter(review => selectedRatings.includes(review.star));
+    }
+
+    console.log(reviews.filter(review => selectedRatings.includes(review.star)))
+
+    // Update the reviews display
+    document.getElementById('filteredReviews').innerHTML = generateReviewHTML(filteredReviews);
+}
+
+// filtering review
+
+function filterReviews(filterType, reviews) {
+    const buttons = document.querySelectorAll('.r_reviewbutons');
+    buttons.forEach(button => button.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const selectedRatings = Array.from(document.querySelectorAll('.rating-filter:checked'))
+        .map(checkbox => parseInt(checkbox.value));
+
+    let filteredReviews = reviews;
+
+    if (selectedRatings.length > 0) {
+        filteredReviews = reviews.filter(review => selectedRatings.includes(review.star));
+    }
+
+    // Then apply button filter
+    switch (filterType) {
+        case 'media':
+            filteredReviews = filteredReviews.filter(review => review.img && review.img !== '');
+            break;
+        case 'description':
+            filteredReviews = filteredReviews.filter(review => review.desc && review.desc.trim() !== '');
+            break;
+    }
+
+    // Update the reviews display
+    document.getElementById('filteredReviews').innerHTML = generateReviewHTML(filteredReviews);
+}
+
+// The generateReviewHTML function remains the same
+function generateReviewHTML(reviews) {
+    return reviews.map(review => `
+        <div class="review-item">
+            <div class="mb-2">
+                ${generateStars(review.star)}
+            </div>
+            <p class="mb-0 fw-bold">${review.desc}</p>
+            ${review.img ? `<img src="/r_img/${review.img}" alt="" style="width: 40px; height: 40px;object-fit: cover;box-sizing: border-box;">` : ''}
+            <div class="review-date mb-3">${review.datetime}</div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <div class="user-avatar me-2">
+                        <img src="/r_img/${review.userimg}" alt="">
+                    </div>
+                    <div>
+                        <div class="fw-500">${review.username}</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-interaction me-2">
+                        <i class="fas fa-thumbs-up"></i> 128
+                    </button>
+                    <button class="btn btn-interaction">
+                        <i class="fas fa-thumbs-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Wait for DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+
 });
 
 
-window.onload = geturl;
+async function loadSimilarProduct() {
+    try {
+        const response = await fetch('./../data/db.json');
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const product = data.products.slice(0, 4);
+
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        const productHtml = product.map((item, index) => {
+
+            const isWishlist = wishlist.includes(item.id);
+
+            return `
+                <div class="col-xl-3 col-sm-6 text p-2">
+                    <a href="productdetails.html?id=${item.id}">
+                        <div class="dk_browsing_products">
+                            <div class="card" data-card-index="${index}">
+                                <div class="icon-container">
+                                    <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
+                                       <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+
+                                    </span>
+                                    <span style="cursor: pointer !important;">
+                                        <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                            alt="Cart Icon" class="cart-icon">
+                                    </span>
+                                </div>
+
+                                <div class="slider">
+                                    ${item.images.map((img, imgIndex) =>
+                `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="dots-container">
+                                    ${item.images.map((_, dotIndex) =>
+                `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
+            ).join('')}
+                                </div>
+
+                                <h2>${item.name}</h2>
+                                <p>${item.categorydesc}</p>
+
+                                <div class="thumbnails">
+                                    ${item.thumbnail.map((thumb, thumbIndex) =>
+                `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
+            ).join('')}
+                                </div>
+
+                                <div class="off">
+                                    <span class="off-price">${item.discount}% OFF</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
+                                    <span class="original-price">$${item.price}</span>
+                                </div>
+                            </div>
+                            <button class="buy-now">Buy Now</button>
+                        </div>
+                    </a>
+                </div>
+            `;
+        }).join("");
+
+        if (document.getElementById("dk_similarproduct")) {
+            document.getElementById("dk_similarproduct").innerHTML = productHtml;
+        }
+
+        initializeSliders();
+
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+
+
+function addToCart(event, productId) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    // Get existing cart items from localStorage or initialize empty array
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Check if item already exists in cart
+    const existingItem = cartItems.find(item => item.id === productId);
+
+    if (!existingItem) {
+        fetch('./../data/db.json')
+            .then(response => response.json())
+            .then(data => {
+                const product = data.products.find(item => item.id === productId);
+
+                if (product) {
+                    const cartProduct = {
+                        ...product,
+                        quantity: 1
+                    };
+
+                    cartItems.push(cartProduct);
+
+                    
+
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                    alert('Product added to cart successfully!');
+                }
+            })
+            .catch(error => {
+                console.error('Error adding to cart:', error);
+            });
+    } else {
+        alert('This item is already in your cart!');
+    }
+}
+
+// var cupanPrice = 0
+// const handleDiscount = (price) => {
+//     cupanPrice = parseInt(price)
+//     console.log("ghdfgderghderg ",cupanPrice);
+//     calculateCartTotals(cupanPrice)
+// }
+
+
+async function loadcartdata() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+     const savedCheckboxStates = JSON.parse(localStorage.getItem('checkboxStates')) || {};
+
+    const productHtml = cartItems.map((item, index) => {
+        const isChecked = savedCheckboxStates[item.id] !== undefined ? savedCheckboxStates[item.id] : false;
+        const discountedPrice = (item.price - (item.price * (item.discount / 100))).toFixed(0);
+        const itemTotal = item.itemTotal ? item.itemTotal.toFixed(0) : (discountedPrice * item.quantity).toFixed(0);
+
+        return `
+        <div class="">
+            <div class="" style="width:100%;">
+                <div class="d-flex align-items-center mb-4 ">
+                    <span class="pe-3">
+                        <input class="item-checkbox" style="width: 20px; height: 20px;"
+                            type="checkbox" ${isChecked ? 'checked' : ''}>
+                    </span>
+                    <div class="row justify-content-between w-100 dk_product_card_without_add"
+                        style="margin: 0px 0px !important;" data-item-id="${item.id}">
+                        <!-- Previous HTML content remains the same -->
+                        <div class="col-xxl-2 col-sm-6">
+                            ${item.bestseller === true ? ` <div class="dk_best_seller_cart_add">Best Seller</div>` : ""}
+                            <img class="dk_highlander_add w-100"
+                                src="/img/${item.images[0]}" alt="">
+                        </div>
+                        <div class="col-xxl-5 col-sm-6">
+                            <h3 class="mb-0">${item.name}</h3>
+                            <h6 class="mb-2">${item.categorydesc}</h6>
+                            <div class="dk_rating">
+                                ${generateStars(item.totalrank)}
+                            </div>
+                            <div class="dk_pro_size">
+                                <p>Size : <b style="color: #000000;">${item.size[0]}</b></p>
+                                <p style="padding-left: 16px;">Color : <b style="color: #000000;">${item.color[0]}</b></p>
+                            </div>
+                            <p>7 days return</p>
+                            <h2 class="dk_pro_price">$${item.price}</h2>
+                        </div>
+                        <div class="col-xxl-5">
+                            <!-- Quantity controls and other elements remain the same -->
+                            <div class="dk_move_to_remove">
+                                <div class="dk_pro_remove">
+                                    <a href="" onclick="removeFromCart(${item.id})">Remove</a>
+                                    <p>Delivered by :<b style="color: #000000;">${getDeliveryDate()}</b></p>
+                                    <div class="align-content-center dk_move_to_wishlist_main">
+                                        <div onclick="toggleWishlist(event, ${item.id})">
+                                            <button class="dk_move_to_wishlist">Move to Wishlist</button>
+                                        </div>
+                                        <div class="dk_pro_caounting">
+                                            <a  class="decrease dk_cursor" onclick="updateQuantity(${item.id}, 'decrease')">
+                                                <i class="fa-solid fa-minus" style="padding-right: 15px;"></i>
+                                            </a>
+                                            <span class="quantity">${item.quantity}</span>
+                                            <a class="increase dk_cursor" onclick="updateQuantity(${item.id}, 'increase')">
+                                                <i class="fa-solid fa-plus" style="padding-left: 15px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    }).join("");
+
+    if (document.getElementById("dk_cartdata")) {
+        document.getElementById("dk_cartdata").innerHTML = productHtml;
+    }
+
+ 
+    
+    updateCartTotals();
+    addItemCheckboxListeners();
+    updateSelectAllStatus();
+}
+
+
+function calculateCartTotals(cartItems , cupanPrice) {
+    let subtotal = 0;
+    let totalDiscount = 0;
+    let itemCount = 0;
+
+    cartItems.forEach(item => {
+        const originalPrice = item.price * item.quantity;
+        const discountAmount = originalPrice * (item.discount / 100);
+        const itemTotal = originalPrice - discountAmount;
+
+        subtotal += originalPrice;
+        totalDiscount += discountAmount;
+        itemCount += item.quantity;
+    });
+
+    console.log(cartItems)
+
+ 
+
+    const platformFee = 1;
+    const deliveryCharge = 0; // FREE delivery
+    const totalAmount = subtotal - totalDiscount + platformFee + deliveryCharge;
+
+    const bill ={
+        subtotal,
+        totalDiscount,
+        itemCount,
+        totalAmount
+    }
+
+    localStorage.setItem("bill",JSON.stringify(bill))
+
+    return {
+        subtotal,
+        totalDiscount,
+        itemCount,
+        platformFee,
+        deliveryCharge,
+        totalAmount
+    };
+}
+
+
+
+function updateOrderSummary(totals) {
+    // Update the order summary section
+    const orderSummaryHtml = `
+    <div class="dk_order_payment_det">
+        <div class="dk_order_payment_det_sub">
+            <h2>Price (${totals.itemCount} Items)</h2>
+            <p>$${totals.subtotal.toFixed(0)}</p>
+        </div>
+        <div class="dk_order_payment_det_sub">
+            <h2>Discount</h2>
+            <p style="color:#0F993E;">-$${totals.totalDiscount.toFixed(0)}</p>
+        </div>
+        <div class="dk_order_payment_det_sub">
+            <h2>Platform Fee</h2>
+            <p>$${totals.platformFee}</p>
+        </div>
+        <div class="dk_order_payment_det_sub">
+            <h2>Delivery Charges</h2>
+            <p style="color: #0F993E;"><span style="color: #727272; padding-right: 5px;"><del>$20</del></span>FREE</p>
+        </div>
+        </div>
+        <div class="dk_total_amount_cwa">
+                <h2>Total Amount</h2>
+                <p>$${totals.totalAmount.toFixed(0)}</p>
+        </div>
+    `;
+
+    const orderDetailsElement = document.querySelector('#dk_billcount');
+    if (orderDetailsElement) {
+        orderDetailsElement.innerHTML = orderSummaryHtml;
+    }
+
+    // Update the savings amount
+    const savingsElement = document.querySelector('.dk_you_will_save h2');
+    if (savingsElement) {
+        savingsElement.textContent = `You will save $${totals.totalDiscount.toFixed(0)} on this order`;
+    }
+}
+
+
+function getDeliveryDate() {
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 3);
+    return deliveryDate.toLocaleDateString('en-US', {
+        day: '2-digit',
+        month: 'short',
+        weekday: 'short'
+    });
+}
+
+async function updateQuantity(productId, action) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const itemIndex = cartItems.findIndex(item => item.id === productId);
+
+    if (itemIndex !== -1) {
+        // Update quantity
+        if (action === 'increase') {
+            cartItems[itemIndex].quantity++;
+        } else if (action === 'decrease' && cartItems[itemIndex].quantity > 1) {
+            cartItems[itemIndex].quantity--;
+        }
+
+        // Update localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Update quantity display in DOM
+        const productCard = document.querySelector(`.dk_product_card_without_add[data-item-id="${productId}"]`);
+        if (productCard) {
+            const quantityElement = productCard.querySelector('.quantity');
+            if (quantityElement) {
+                quantityElement.textContent = cartItems[itemIndex].quantity;
+            }
+
+            // Update item total price
+            const discountedPrice = (cartItems[itemIndex].price - (cartItems[itemIndex].price * (cartItems[itemIndex].discount / 100))).toFixed(0);
+            const itemTotal = (discountedPrice * cartItems[itemIndex].quantity).toFixed(0);
+            const priceElement = productCard.querySelector('.dk_pro_price');
+            if (priceElement) {
+                priceElement.textContent = `$${itemTotal}`;
+            }
+        }
+
+        // Update order summary without reloading cart
+        updateCartTotals();
+    }
+}
+
+function updateCartTotals() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const selectedItems = [];
+    
+    // Get selected items based on checkboxes
+    document.querySelectorAll('.item-checkbox').forEach((checkbox, index) => {
+        if (checkbox.checked && cartItems[index]) {
+            selectedItems.push(cartItems[index]);
+        }
+    });
+
+    // Calculate totals for selected items
+    const totals = calculateCartTotals(selectedItems);
+    updateOrderSummary(totals);
+}
+
+// Cart manipulation functions
+function removeFromCart(productId) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems = cartItems.filter(item => item.id !== productId);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    loadCartData();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    selectAllCheckbox.addEventListener('change', handleSelectAll);
+
+    // Initial load of cart data
+    loadcartdata().then(() => {
+        // Add listeners to individual checkboxes after cart is loaded
+        addItemCheckboxListeners();
+    });
+});
+
+function handleSelectAll(event) {
+    const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+    itemCheckboxes.forEach(checkbox => {
+        checkbox.checked = event.target.checked;
+    });
+    calculateSelectedItems();
+}
+
+function addItemCheckboxListeners() {
+    const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+    itemCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            updateSelectAllStatus();
+            calculateSelectedItems();
+        });
+    });
+}
+
+function updateSelectAllStatus() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+    const allChecked = Array.from(itemCheckboxes).every(checkbox => checkbox.checked);
+    selectAllCheckbox.checked = allChecked;
+}
+
+function calculateSelectedItems() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const selectedItems = [];
+    
+    document.querySelectorAll('.item-checkbox').forEach((checkbox, index) => {
+        if (checkbox.checked && cartItems[index]) {
+            selectedItems.push(cartItems[index]);
+        }
+    });
+
+    const totals = calculateCartTotals(selectedItems);
+    updateOrderSummary(totals);
+}
