@@ -474,7 +474,7 @@ async function trendingDeal() {
     const trendingDealHtml = trendingDeal
       .map(
         (item) => `
-       <div class="swiper-slide">
+         <div class="swiper-slide">
             <div class="product-card w-100">
                 <a href="../darshit/${item.link}.html">
                     <div class="swiper innerSwiper">
@@ -517,11 +517,56 @@ async function trendingDeal() {
                 </a>
             </div>
         </div>
-          `
+        `
       )
       .join("");
 
+    // Append HTML before initializing Swipers
     document.getElementById("dk_trending_deals").innerHTML = trendingDealHtml;
+
+    // Initialize inner sliders for each product card
+    document.querySelectorAll(".innerSwiper").forEach((innerSlider) => {
+      new Swiper(innerSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: innerSlider.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+      });
+    });
+
+    // Initialize main outer slider for product cards
+    var mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".mainSwiper .swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        425: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
   } catch (error) {
     console.error("Error loading categories:", error);
   }

@@ -355,61 +355,131 @@ async function electronicsNewQuickcart() {
 }
 
 // electronics page Trending Deals
-const electronics_trending_dealing = [
-  {
-    id: "1",
-    images: [
-      "new_trending_sony.png",
-      "new_trending_sony.png",
-      "new_trending_sony.png",
-      "new_trending_sony.png",
-      "new_trending_sony.png",
-    ],
-    name: "SONY",
-    categorydesc: "Sony Bravia 9 4k TV ",
-    thumbnail: ["new_trending_sony1.png", "new_trending_sony1.png"],
-    discount: "40",
-    price: "799",
-    link: "productdetails",
-  },
-  {
-    id: "2",
-    images: [
-      "new_trending_dell.png",
-      "new_trending_dell.png",
-      "new_trending_dell.png",
-      "new_trending_dell.png",
-      "new_trending_dell.png",
-    ],
-    name: "Dell",
-    categorydesc: "new inspiron 14 plus laptop",
-    thumbnail: ["new_trending_dell1.png"],
-    discount: "50",
-    price: "399",
-    link: "productdetails",
-  },
-  {
-    id: "3",
-    images: [
-      "new_trending_lg.png",
-      "new_trending_lg.png",
-      "new_trending_lg.png",
-      "new_trending_lg.png",
-      "new_trending_lg.png",
-    ],
-    name: "LG",
-    categorydesc: "Refrigerator 630L, Side by Side",
-    thumbnail: ["new_trending_lg1.png", "new_trending_lg1.png"],
-    discount: "40",
-    price: "299",
-    link: "productdetails",
-  },
-];
+// const electronics_trending_dealing = [
+//   {
+//     id: "1",
+//     images: [
+//       "new_trending_sony.png",
+//       "new_trending_sony.png",
+//       "new_trending_sony.png",
+//       "new_trending_sony.png",
+//       "new_trending_sony.png",
+//     ],
+//     name: "SONY",
+//     categorydesc: "Sony Bravia 9 4k TV ",
+//     thumbnail: ["new_trending_sony1.png", "new_trending_sony1.png"],
+//     discount: "40",
+//     price: "799",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "2",
+//     images: [
+//       "new_trending_dell.png",
+//       "new_trending_dell.png",
+//       "new_trending_dell.png",
+//       "new_trending_dell.png",
+//       "new_trending_dell.png",
+//     ],
+//     name: "Dell",
+//     categorydesc: "new inspiron 14 plus laptop",
+//     thumbnail: ["new_trending_dell1.png"],
+//     discount: "50",
+//     price: "399",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "3",
+//     images: [
+//       "new_trending_lg.png",
+//       "new_trending_lg.png",
+//       "new_trending_lg.png",
+//       "new_trending_lg.png",
+//       "new_trending_lg.png",
+//     ],
+//     name: "LG",
+//     categorydesc: "Refrigerator 630L, Side by Side",
+//     thumbnail: ["new_trending_lg1.png", "new_trending_lg1.png"],
+//     discount: "40",
+//     price: "299",
+//     link: "productdetails",
+//   },
+// ];
 
-const electronicstrending_deals = electronics_trending_dealing
-  .map((item) => {
-    return `
-        <div class="swiper-slide">
+// const electronicstrending_deals = electronics_trending_dealing
+//   .map((item) => {
+//     return `
+//         <div class="swiper-slide">
+//             <div class="product-card w-100">
+//             <a href="../darshit/${item.link}.html">
+//                 <div class="swiper innerSwiper">
+//                     <div class="swiper-wrapper">
+//                             ${item.images
+//                               .map(
+//                                 (img) =>
+//                                   `<div class="swiper-slide">
+//                                 <img src="../mv_image/${img}" alt="${item.name} Image" class="r_v1img">
+//                             </div>`
+//                               )
+//                               .join("")}
+//                         </div>
+//                             <div class="swiper-pagination"></div>
+//                         </div>
+//                             <h5 style="color: #000000;" class="mv_tsmh">${
+//                               item.name
+//                             }</h5>
+//                             <p  style="color: #000000;" class="mv_tssh text-start">${
+//                               item.categorydesc
+//                             }</p>
+//                         <div class="r_thumbnailimg d-flex align-items-center">
+//                             ${item.thumbnail
+//                               .map(
+//                                 (thumb) =>
+//                                   `<img src="../mv_image/${thumb}" alt="${item.name} Thumbnail">`
+//                               )
+//                               .join("")}
+//                         </div>
+//                         <div class="mv_discount_text">${
+//                           item.discount
+//                         }% OFF</div>
+//                         <p class="text-start m-0">
+//                         <strong class="mv_less_discount_price">$${
+//                           item.price -
+//                           (item.price * (item.discount / 100)).toFixed(0)
+//                         }</strong>
+//                         <del class="mv_without_discount_price">$${
+//                           item.price
+//                         }</del>
+//                     </p>
+//                      </a>
+//              </div>
+//         </div>
+//     `;
+//   })
+//   .join("");
+
+// document.getElementById("dk_electronics_trend_deals").innerHTML =
+//   electronicstrending_deals;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await electronicsTrendingDeal();
+});
+
+async function electronicsTrendingDeal() {
+  try {
+    const response = await fetch("./../data/db.json");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const electronicsTrendingDeal = data.electronicsTrendingDeal;
+
+    const electronicsTrendingDealHtml = electronicsTrendingDeal
+      .map(
+        (item) => `
+            <div class="swiper-slide">
             <div class="product-card w-100">
             <a href="../darshit/${item.link}.html">                      
                 <div class="swiper innerSwiper">
@@ -454,12 +524,61 @@ const electronicstrending_deals = electronics_trending_dealing
                      </a>
              </div>
         </div>
-    `;
-  })
-  .join("");
+          `
+      )
+      .join("");
 
-document.getElementById("dk_electronics_trend_deals").innerHTML =
-  electronicstrending_deals;
+    // Append HTML before initializing Swipers
+    document.getElementById("dk_electronics_trend_deals").innerHTML =
+      electronicsTrendingDealHtml;
+
+    // Initialize inner sliders for each product card
+    document.querySelectorAll(".innerSwiper").forEach((innerSlider) => {
+      new Swiper(innerSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: innerSlider.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+      });
+    });
+
+    // Initialize main outer slider for product cards
+    var mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".mainSwiper .swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        425: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  } catch (error) {
+    console.error("Error loading categories:", error);
+  }
+}
 
 //electronic page Trending in Electronics
 // const electronic_trend_accessories = [

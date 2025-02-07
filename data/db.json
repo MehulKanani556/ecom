@@ -1,1126 +1,1433 @@
 {
-    "homecategory": [
+  "homecategory": [
+    {
+      "id": 1,
+      "img": "man.png",
+      "name": "Mens Fashion",
+      "link": "MensCategory"
+    },
+    {
+      "id": 2,
+      "img": "woman.png",
+      "name": "Womens Fashion",
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "img": "kids.png",
+      "name": "Kids Fashion",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img": "electorics.png",
+      "name": "Electronics",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img": "beuty.png",
+      "name": "Beauty",
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "img": "sports.png",
+      "name": "Sports",
+      "link": "productdetails"
+    }
+  ],
+  "homefootwear": [
+    {
+      "id": 1,
+      "img": "dsaggg 1.png",
+      "name": "Sports Shoes",
+      "link": "sportswear"
+    },
+    {
+      "id": 2,
+      "img": "pair-brown-shoes-with-black-leather-sole-word-bottom 1.png",
+      "name": "Mens Shoes",
+      "link": "sportswear"
+    },
+    {
+      "id": 3,
+      "img": "small-purse-studio-still-life 1.png",
+      "name": "Handbags",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img": "high-heel-shoes 1.png",
+      "name": "Women Heels",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img": "infant-background-birthday-child-newborn 1.png",
+      "name": "Kids Shoes",
+      "link": "sportswear"
+    }
+  ],
+  "homebestelectronic": [
+    {
+      "id": 1,
+      "img": "image 383.png",
+      "name": "Xiaomi Smart TV",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 2,
+      "img": "image 384.png",
+      "name": "Dell Laptop",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "img": "image 385.png",
+      "name": "Smartphones",
+      "startprice": "30%",
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "img": "Frame 1000003134.png",
+      "name": "Gaming Accessories",
+      "startprice": "20%",
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "img": "image 380.png",
+      "name": "Wireless Speakers",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "img": "rendering-smart-home-device 1.png",
+      "name": "Smart Watches",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 7,
+      "img": "image 379.png",
+      "name": "Noise Earbuds",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 8,
+      "img": "image 2.png",
+      "name": "JBL Headphones",
+      "startprice": "$99",
+      "link": "productdetails"
+    },
+    {
+      "id": 9,
+      "img": "Frame 1000003136.png",
+      "name": "Tablets",
+      "startprice": "30%",
+      "link": "productdetails"
+    },
+    {
+      "id": 10,
+      "img": "image 389.png",
+      "name": "Gaming Laptops",
+      "startprice": "20%",
+      "link": "productdetails"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
         {
-            "id": 1,
-            "img": "man.png",
-            "name": "Mens Fashion",
-            "link": "MensCategory"
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 2,
-            "img": "woman.png",
-            "name": "Womens Fashion",
-            "link": "productdetails"
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         },
         {
-            "id": 3,
-            "img": "kids.png",
-            "name": "Kids Fashion",
-            "link": "productdetails"
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 4,
-            "img": "electorics.png",
-            "name": "Electronics",
-            "link": "productdetails"
-        },
-        {
-            "id": 5,
-            "img": "beuty.png",
-            "name": "Beauty",
-            "link": "productdetails"
-        },
-        {
-            "id": 6,
-            "img": "sports.png",
-            "name": "Sports",
-            "link": "productdetails"
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         }
-    ],
-    "homefootwear":[
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 2,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
         {
-            "id": 1,
-            "img": "dsaggg 1.png",
-            "name": "Sports Shoes",
-            "link": "sportswear"
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 2,
-            "img": "pair-brown-shoes-with-black-leather-sole-word-bottom 1.png",
-            "name": "Mens Shoes",
-            "link": "sportswear"
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         },
         {
-            "id": 3,
-            "img": "small-purse-studio-still-life 1.png",
-            "name": "Handbags",
-            "link": "productdetails"
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 4,
-            "img": "high-heel-shoes 1.png",
-            "name": "Women Heels",
-            "link": "productdetails"
-        },
-        {
-            "id": 5,
-            "img": "infant-background-birthday-child-newborn 1.png",
-            "name": "Kids Shoes",
-            "link": "sportswear"
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         }
-    ],
-    "homebestelectronic":[
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
         {
-            "id": 1,
-            "img": "image 383.png",
-            "name": "Xiaomi Smart TV",
-            "startprice": "$99",
-            "link": "productdetails"
-
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 2,
-            "img": "image 384.png",
-            "name": "Dell Laptop",
-            "startprice": "$99",
-            "link": "productdetails"
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         },
         {
-            "id": 3,
-            "img": "image 385.png",
-            "name": "Smartphones",
-            "startprice": "30%",
-            "link": "productdetails"
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 4,
-            "img": "Frame 1000003134.png",
-            "name": "Gaming Accessories",
-            "startprice": "20%",
-            "link": "productdetails"
-        },
-        {
-            "id": 5,
-            "img": "image 380.png",
-            "name": "Wireless Speakers",
-            "startprice": "$99",
-            "link": "productdetails"
-        },
-        {
-            "id": 6,
-            "img": "rendering-smart-home-device 1.png",
-            "name": "Smart Watches",
-            "startprice": "$99",
-            "link": "productdetails"
-        },
-        {
-            "id": 7,
-            "img": "image 379.png",
-            "name": "Noise Earbuds",
-            "startprice": "$99",
-            "link": "productdetails"
-        },
-        {
-            "id": 8,
-            "img": "image 2.png",
-            "name": "JBL Headphones",
-            "startprice": "$99",
-            "link": "productdetails"
-        },
-        {
-            "id": 9,
-            "img": "Frame 1000003136.png",
-            "name": "Tablets",
-            "startprice": "30%",
-            "link": "productdetails"
-        },
-        {
-            "id": 10,
-            "img": "image 389.png",
-            "name": "Gaming Laptops",
-            "startprice": "20%",
-            "link": "productdetails"
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         }
-    ],
-    "products":[
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
         {
-            "id": 1,
-            "images": ["kotty.png", "vero moda.png", "kotty.png", "kotty.png", "kotty.png"],
-            "name": "Kottysssss",
-            "category":"women",
-            "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-            "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 2,
-            "images": ["vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Flared High-Rise Parallel Trousers",
-            "thumbnail": ["vero moda sub.png", "vero moda sub.png", "vero moda sub.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         },
         {
-            "id": 3,
-            "images": ["vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
-            "thumbnail": ["vero modo sub2.png", "vero modo sub2.png", "vero modo sub2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
         },
         {
-            "id": 4,
-            "images": ["vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
-            "thumbnail": ["vano modo sub3.png", "vano modo sub3.png", "vano modo sub3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 5,
-            "images": ["kotty.png", "vero moda.png", "kotty.png", "kotty.png", "kotty.png"],
-            "name": "Kottysssss",
-            "category":"women",
-            "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-            "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 6,
-            "images": ["vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Flared High-Rise Parallel Trousers",
-            "thumbnail": ["vero moda sub.png", "vero moda sub.png", "vero moda sub.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 7,
-            "images": ["vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
-            "thumbnail": ["vero modo sub2.png", "vero modo sub2.png", "vero modo sub2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 8,
-            "images": ["vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
-            "thumbnail": ["vano modo sub3.png", "vano modo sub3.png", "vano modo sub3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 9,
-            "images": ["kotty.png", "vero moda.png", "kotty.png", "kotty.png", "kotty.png"],
-            "name": "Kottysssss",
-            "category":"women",
-            "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-            "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 10,
-            "images": ["vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png", "vero moda.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Flared High-Rise Parallel Trousers",
-            "thumbnail": ["vero moda sub.png", "vero moda sub.png", "vero moda sub.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 11,
-            "images": ["vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png", "vro modo2.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
-            "thumbnail": ["vero modo sub2.png", "vero modo sub2.png", "vero modo sub2.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 12,
-            "images": ["vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png", "vro moda3.png"],
-            "name": "Vero Moda",
-            "category":"women",
-            "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
-            "thumbnail": ["vano modo sub3.png", "vano modo sub3.png", "vano modo sub3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":true,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 13,
-            "images": ["sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png"],
-            "category":"electronic",
-            "name":"Samsung Galaxy S23 Ultra 5G AI Smartphone",
-            "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-            "thumbnail": ["sumsung demo1.png", "sumsung demo2.png", "sumsung demo3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 14,
-            "images": ["sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png"],
-            "category":"electronic",
-            "name":"Samsung Galaxy S23 Ultra 5G AI Smartphone",
-            "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-            "thumbnail": ["sumsung demo1.png", "sumsung demo2.png", "sumsung demo3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 15,
-            "images": ["sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png"],
-            "name":"Samsung Galaxy S23 Ultra 5G AI Smartphone",
-            "category":"electronic",
-            "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-            "thumbnail": ["sumsung demo1.png", "sumsung demo2.png", "sumsung demo3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
-        },
-        {
-            "id": 16,
-            "images": ["sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png", "sumsung.png"],
-            "name":"Samsung Galaxy S23 Ultra 5G AI Smartphone",
-            "category":"electronic",
-            "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
-            "thumbnail": ["sumsung demo1.png", "sumsung demo2.png", "sumsung demo3.png"],
-            "discount": "30",
-            "price": "200",
-            "bestseller":false,
-            "desc":"Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-            "size":["M","L","XL","2XL","3XL"],
-            "color":["t-2r4.png","t-2r1.png","t-2r2.png","t-2r5.png","t-2r4.png","t-2r3.png"],
-            "pattern":"Solid",
-            "length":"Regular",
-            "neck":"Polo Collar",
-            "sleeve":"Short / Half Sleeve",
-            "fabric":"Pure Cotton",
-            "fit":"Regular Fit",
-            "washcare":"Machine Wash",
-            "occasional":"Casual",
-            "sustainable":"Regular",
-            "description":["Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.","Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."],
-            "totalrank":"4",
-            "totalreview":"125k",
-            "reviews":[
-                {
-                    "star":5,
-                    "desc":"",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":4,
-                    "desc":"This is amazing product I have.",
-                    "img":"",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                },
-                {
-                    "star":3,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darrell Steward"
-                },
-                {
-                    "star":5,
-                    "desc":"This is amazing product I have.",
-                    "img":"b-4.png",
-                    "datetime":"July 2, 2020 03:29 PM",
-                    "userimg":"review-1.png",
-                    "username":"Darlene Robertson"
-                }
-            ],
-            "link": "productdetails"
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
         }
-    ],
-    "topBrands": [
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 7,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 8,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 9,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 10,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 11,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 12,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": true,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 13,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "category": "electronic",
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 14,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "category": "electronic",
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 15,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "category": "electronic",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    },
+    {
+      "id": 16,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "category": "electronic",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur. Posuere risus urna vel faucibus at amet elementum purus. Tincidunt cursus dictum auctor viverra nibh at. Facilisis nibh sit lobortis urna dictumst nibh. Aliquam tellus mauris aliquam malesuada accumsan non lorem.",
+        "Justo elementum in sit mauris metus mattis quis mi enim. Tellus magnis cursus vel neque mattis integer odio tristique consectetur. Maecenas dignissim dictum nisl sagittis. Sapien accumsan id iaculis posuere suspendisse lectus dignissim. Ultrices sed maecenas viverra arcu quisque. Elementum non dictum donec enim ac at ligula vel elit. Nisl ut non ornare massa. Cras fames at rhoncus eu nulla amet leo."
+      ],
+      "totalrank": "4",
+      "totalreview": "125k",
+      "reviews": [
+        {
+          "star": 5,
+          "desc": "",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 4,
+          "desc": "This is amazing product I have.",
+          "img": "",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        },
+        {
+          "star": 3,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darrell Steward"
+        },
+        {
+          "star": 5,
+          "desc": "This is amazing product I have.",
+          "img": "b-4.png",
+          "datetime": "July 2, 2020 03:29 PM",
+          "userimg": "review-1.png",
+          "username": "Darlene Robertson"
+        }
+      ],
+      "link": "productdetails"
+    }
+  ],
+  "topBrands": [
     {
       "id": 1,
       "img": "adidas.png",
@@ -1652,6 +1959,1292 @@
       "info": "*T&C Apply",
       "link": "productdetails"
     }
-  ]  
+  ],
+  "beautyExporingBox": [
+    {
+      "id": "1",
+      "img": "beauty_ex1.png",
+      "name": "It’s Makeup Time",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "beauty_ex2.png",
+      "name": "",
+      "btn": "Shop Now",
+      "showFinalTouch": "true",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "beauty_ex3.png",
+      "name": "NEW STYLES",
+      "description": "Beauty meets style",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "beauty_ex4.png",
+      "name": "Beauty Accessories",
+      "description": "Your beauty, our Priority",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    }
+  ],
+
+  "luggageTopBrand": [
+    {
+      "id": "1",
+      "img": "Luggage_brand1.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "Luggage_brand2.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "Luggage_brand3.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "Luggage_brand4.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "Luggage_brand5.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "Luggage_brand6.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "7",
+      "img": "Luggage_brand7.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "8",
+      "img": "Luggage_brand8.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "9",
+      "img": "Luggage_brand9.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "10",
+      "img": "Luggage_brand10.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "11",
+      "img": "Luggage_brand11.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "12",
+      "img": "Luggage_brand12.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "13",
+      "img": "Luggage_brand13.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "14",
+      "img": "Luggage_brand14.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "15",
+      "img": "Luggage_brand15.png",
+      "discount": "10",
+      "link": "productdetails"
+    }
+  ],
+  "luggageExploreMore": [
+    {
+      "id": "1",
+      "img": "Luggage_trolly.png",
+      "name": "Trolley",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "Luggage_bags.png",
+      "name": "Bags",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "Luggage_combos.png",
+      "name": "Combos",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "Luggage_duffle_bags.png",
+      "name": "Duffle bags",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "Luggage_backpaks.png",
+      "name": "Backpacks",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "Luggage_accesseries'.png",
+      "name": "Accessories",
+      "link": "productdetails"
+    }
+  ],
+  "luggageNewQuickcart": [
+    {
+      "id": "1",
+      "img1": "monos2.png",
+      "img2": "sm_monos.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img1": "away2.png",
+      "img2": "sm_away.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img1": "rimova2.png",
+      "img2": "sm_rimova.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img1": "louis vuitton2.png",
+      "img2": "sm_loise_viutton.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img1": "delsay2.png",
+      "img2": "sm_dilsay.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img1": "monos2.png",
+      "img2": "sm_monos.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "luggageTrendingDeal": [
+    {
+      "id": "1",
+      "images": [
+        "lagage_safari_dels.png",
+        "lagage_safari_dels.png",
+        "lagage_safari_dels.png",
+        "lagage_safari_dels.png",
+        "lagage_safari_dels.png"
+      ],
+      "name": "SAFARI",
+      "categorydesc": "Polaris Castle Black Trolley Bag  ",
+      "thumbnail": ["lagage_safari_dels1.png", "lagage_safari_dels1.png"],
+      "discount": "40",
+      "price": "799",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "images": [
+        "lagage_paris_dels.png",
+        "lagage_paris_dels.png",
+        "lagage_paris_dels.png",
+        "lagage_paris_dels.png",
+        "lagage_paris_dels.png"
+      ],
+      "name": "DELSEY PARIS",
+      "categorydesc": "TURENNE Duffle Bag (55cm)",
+      "thumbnail": ["lagage_paris_dels1.png", "lagage_paris_dels1.png"],
+      "discount": "50",
+      "price": "399",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "images": [
+        "lagage_remova_dels.png",
+        "lagage_remova_dels.png",
+        "lagage_remova_dels.png",
+        "lagage_remova_dels.png",
+        "lagage_remova_dels.png"
+      ],
+      "name": "REMOWA",
+      "categorydesc": "Signature - Flap Backpack Large",
+      "thumbnail": [
+        "lagage_remova_dels1.png",
+        "lagage_remova_dels1.png",
+        "lagage_remova_dels1.png"
+      ],
+      "discount": "40",
+      "price": "299",
+      "link": "productdetails"
+    }
+  ],
+  "luggageTrendAcc": [
+    {
+      "id": "1",
+      "img": "Luggage_trand1.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "Luggage_trand2.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "Luggage_trand3.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "Luggage_trand4.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "Luggage_trand5.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "Luggage_trand2.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "luggageExporingBox": [
+    {
+      "id": "1",
+      "img": "lagage_ex4.png",
+      "name": "Keep up with the Trends",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "lagage_ex1.png",
+      "name": "Voyage Premium Luggage",
+      "btn": "Shop Now",
+      "showFinalTouch": "true",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "lagage_ex3.png",
+      "name": "Travel with Culture",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "lagage_ex2.png",
+      "name": "Luggage Accessories",
+      "description": "Travel in Style & Comfort",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    }
+  ],
+  "electonicsTopBrands": [
+    {
+      "id": "1",
+      "img": "lg.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "whirlpool.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "sony.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "samsung.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "haier.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "apple.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "7",
+      "img": "asus.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "8",
+      "img": "hp.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "9",
+      "img": "dell_technologies.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "10",
+      "img": "vivo.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "11",
+      "img": "mi.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "12",
+      "img": "godrej.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "13",
+      "img": "panasonic.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "14",
+      "img": "noice.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "15",
+      "img": "jbl.png",
+      "discount": "10",
+      "link": "productdetails"
+    }
+  ],
+  "electronicsExploreMore": [
+    {
+      "id": "1",
+      "img": "mobiles.png",
+      "name": "Trolley",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "television.png",
+      "name": "Television",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "refrigerators.png",
+      "name": "Refrigerators",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "air_conditioners.png",
+      "name": "Air Conditioners",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "washing_machin.png",
+      "name": "Washing Machin",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "laptop.png",
+      "name": "Laptop",
+      "link": "productdetails"
+    }
+  ],
+  "electronicsNewQuickcart": [
+    {
+      "id": "1",
+      "img1": "new_samsung.png",
+      "img2": "logo_samsung.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img1": "new_asus.png",
+      "img2": "logo_asus.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img1": "new_sony.png",
+      "img2": "logo_sony.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img1": "new_noise.png",
+      "img2": "logo_noise.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img1": "new_apple.png",
+      "img2": "logo_apple.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img1": "new_samsung.png",
+      "img2": "logo_samsung.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "electronicsTrendingDeal": [
+    {
+      "id": "1",
+      "images": [
+        "new_trending_sony.png",
+        "new_trending_sony.png",
+        "new_trending_sony.png",
+        "new_trending_sony.png",
+        "new_trending_sony.png"
+      ],
+      "name": "SONY",
+      "categorydesc": "Sony Bravia 9 4k TV ",
+      "thumbnail": ["new_trending_sony1.png", "new_trending_sony1.png"],
+      "discount": "40",
+      "price": "799",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "images": [
+        "new_trending_dell.png",
+        "new_trending_dell.png",
+        "new_trending_dell.png",
+        "new_trending_dell.png",
+        "new_trending_dell.png"
+      ],
+      "name": "Dell",
+      "categorydesc": "new inspiron 14 plus laptop",
+      "thumbnail": ["new_trending_dell1.png"],
+      "discount": "50",
+      "price": "399",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "images": [
+        "new_trending_lg.png",
+        "new_trending_lg.png",
+        "new_trending_lg.png",
+        "new_trending_lg.png",
+        "new_trending_lg.png"
+      ],
+      "name": "LG",
+      "categorydesc": "Refrigerator 630L, Side by Side",
+      "thumbnail": ["new_trending_lg1.png", "new_trending_lg1.png"],
+      "discount": "40",
+      "price": "299",
+      "link": "productdetails"
+    }
+  ],
+  "electronicTrendAcc": [
+    {
+      "id": "1",
+      "img": "new_laptop.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "new_vivo.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "new_refrigerators.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "new_watch.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "new_jbl.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "new_laptop.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "electronicExporingBox": [
+    {
+      "id": "1",
+      "img": "electronic_explore_1.png",
+      "name": "Audible Accessories",
+      "description": "Your comfort, our Priority",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "electronic_explore_2.png",
+      "name": "Home Appliances",
+      "btn": "Shop Now",
+      "showFinalTouch": "true",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "electronic_explore_3.png",
+      "name": "Top deals on Laptops",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "electronic_explore_4.png",
+      "name": "Cinema is coming home",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    }
+  ],
+
+  "mensCategoryTopBrands": [
+    {
+      "id": "1",
+      "img": "levis.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "r&b.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "jack.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "Tommy.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "us.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "raymond.svg",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "7",
+      "img": "HRX.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "8",
+      "img": "puma.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "9",
+      "img": "Nike.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "10",
+      "img": "skechers.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "11",
+      "img": "peter.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "12",
+      "img": "celio.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "13",
+      "img": "h&m.svg",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "14",
+      "img": "lecooper.png",
+      "discount": "10",
+      "link": "productdetails"
+    },
+    {
+      "id": "15",
+      "img": "adidas.png",
+      "discount": "10",
+      "link": "productdetails"
+    }
+  ],
+  "mensCategoryExploreMore": [
+    {
+      "id": "1",
+      "img": "man.png",
+      "name": "Mens",
+      "link": "MensCategory"
+    },
+    {
+      "id": "2",
+      "img": "bottom.png",
+      "name": "Womens",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "suit.png",
+      "name": "Kids",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "shoes.png",
+      "name": "Footewear",
+      "link": "sportswear"
+    },
+    {
+      "id": "5",
+      "img": "runner.png",
+      "name": "Fitness Equipment",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "cover.png",
+      "name": "Accessories",
+      "link": "productdetails"
+    }
+  ],
+  "mensCategoryNewOnQuickcart": [
+    {
+      "id": "1",
+      "img1": "blue.png",
+      "img2": "calvin.svg",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img1": "bagman.png",
+      "img2": "Louis.svg",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img1": "all.png",
+      "img2": "venheusen.svg",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img1": "pink.png",
+      "img2": "allensolly.svg",
+      "name": "Mens",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img1": "gray.png",
+      "img2": "zara.svg",
+      "name": "Mens",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img1": "blue.png",
+      "img2": "calvin.svg",
+      "name": "Mens",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "mensCategoryAcc": [
+    {
+      "id": "1",
+      "img": "watch.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "wallet.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "belt.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "perfume.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "5",
+      "img": "gogals.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    },
+    {
+      "id": "6",
+      "img": "blue.png",
+      "discount": "20",
+      "info": "*T&C Apply",
+      "link": "productdetails"
+    }
+  ],
+  "mensCategoryExporingBox": [
+    {
+      "id": "1",
+      "img": "wear-1.png",
+      "name": "Kurta Jacket Pairs",
+      "description": "Sartorial Ensembles",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "2",
+      "img": "wear-2.png",
+      "name": "Indo Fusion Edi",
+      "description": "Rediscover Your Modern Chic Charm",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "3",
+      "img": "wear-3.png",
+      "name": "Kurta Sets",
+      "description": "Latest Kurta Jacket Set",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    },
+    {
+      "id": "4",
+      "img": "wear-4.png",
+      "name": "Swooning Sherwani",
+      "description": "Redefining Majestic Wedding Wear",
+      "btn": "Shop Now",
+      "link": "productdetails"
+    }
+  ],
+  "topwearProducts": [
+    {
+      "id": 1,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "5",
+      "price": "30",
+      "bestseller": false,
+      "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "color": [
+        "t-2r4.png",
+        "t-2r1.png",
+        "t-2r2.png",
+        "t-2r5.png",
+        "t-2r4.png",
+        "t-2r3.png"
+      ],
+      "pattern": "Solid",
+      "length": "Regular",
+      "neck": "Polo Collar",
+      "sleeve": "Short / Half Sleeve",
+      "fabric": "Pure Cotton",
+      "fit": "Regular Fit",
+      "washcare": "Machine Wash",
+      "occasional": "Casual",
+      "sustainable": "Regular",
+      "link": "productdetails"
+    },
+    {
+      "id": 2,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "20",
+      "price": "50",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 3,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "30",
+      "price": "100",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 4,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "30",
+      "price": "150",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 5,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "20",
+      "price": "200",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 6,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "20",
+      "price": "250",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 7,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "10",
+      "price": "200",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 8,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "20",
+      "price": "80",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 9,
+      "images": [
+        "kotty.png",
+        "vero moda.png",
+        "kotty.png",
+        "kotty.png",
+        "kotty.png"
+      ],
+      "name": "Kottysssss",
+      "category": "women",
+      "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
+      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "discount": "50",
+      "price": "10",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 10,
+      "images": [
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png",
+        "vero moda.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Flared High-Rise Parallel Trousers",
+      "thumbnail": [
+        "vero moda sub.png",
+        "vero moda sub.png",
+        "vero moda sub.png"
+      ],
+      "discount": "60",
+      "price": "45",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 11,
+      "images": [
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png",
+        "vro modo2.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Ribbed Cotton Pullover Navy Blue Sweater",
+      "thumbnail": [
+        "vero modo sub2.png",
+        "vero modo sub2.png",
+        "vero modo sub2.png"
+      ],
+      "discount": "15",
+      "price": "200",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 12,
+      "images": [
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png",
+        "vro moda3.png"
+      ],
+      "name": "Vero Moda",
+      "category": "women",
+      "categorydesc": "Women Geometric Printed Straight Fit Culottes Trousers",
+      "thumbnail": [
+        "vano modo sub3.png",
+        "vano modo sub3.png",
+        "vano modo sub3.png"
+      ],
+      "discount": "30",
+      "price": "90",
+      "bestseller": true,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 13,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "category": "electronic",
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "10",
+      "price": "200",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 14,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "category": "electronic",
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "20",
+      "price": "200",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 15,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "category": "electronic",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "link": "productdetails"
+    },
+    {
+      "id": 16,
+      "images": [
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png",
+        "sumsung.png"
+      ],
+      "name": "Samsung Galaxy S23 Ultra 5G AI Smartphone",
+      "category": "electronic",
+      "categorydesc": "Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB, 256GB Storage)",
+      "thumbnail": [
+        "sumsung demo1.png",
+        "sumsung demo2.png",
+        "sumsung demo3.png"
+      ],
+      "discount": "30",
+      "price": "200",
+      "bestseller": false,
+      "link": "productdetails"
+    }
+  ]
 }
-  

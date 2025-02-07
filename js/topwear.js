@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
   await topwearProducts();
   setupDiscountFilter();
+  setupSizeFilter();
+  setupPriceFilter();
 });
 
-async function topwearProducts(selectedDiscounts = []) {
+async function topwearProducts(
+  selectedDiscounts = [],
+  selectedSizes = [],
+  selectedPrice = 300
+) {
   try {
     const response = await fetch("./../data/db.json");
     if (!response.ok) {
@@ -19,6 +25,18 @@ async function topwearProducts(selectedDiscounts = []) {
         selectedDiscounts.some((discount) => item.discount >= discount)
       );
     }
+
+    // Apply size filtering
+    if (selectedSizes.length > 0) {
+      topwearProducts = topwearProducts.filter((item) =>
+        selectedSizes.some((size) => item.sizes.includes(size))
+      );
+    }
+
+    // Apply price filtering
+    topwearProducts = topwearProducts.filter(
+      (item) => item.price - (item.price * item.discount) / 100 <= selectedPrice
+    );
 
     const topwearProductsHtml = topwearProducts
       .map(
@@ -118,16 +136,48 @@ async function topwearProducts(selectedDiscounts = []) {
 
 function setupDiscountFilter() {
   const discountCheckboxes = document.querySelectorAll(
-    '.accordion-body input[type="checkbox"]'
+    '.accordion-body input[type="checkbox"][id^="discount"]'
   );
 
   discountCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
-      const selectedDiscounts = Array.from(discountCheckboxes)
-        .filter((cb) => cb.checked)
-        .map((cb) => parseInt(cb.id.replace("discount", "")));
-
-      topwearProducts(selectedDiscounts);
-    });
+    checkbox.addEventListener("change", updateFilters);
   });
+}
+
+function setupSizeFilter() {
+  const sizeCheckboxes = document.querySelectorAll(
+    '.accordion-body input[type="checkbox"][id^="size"]'
+  );
+
+  sizeCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateFilters);
+  });
+}
+
+function setupPriceFilter() {
+  const priceRange = document.getElementById("priceRange");
+  const priceValue = document.getElementById("priceValue");
+
+  priceRange.addEventListener("input", () => {
+    priceValue.textContent = `$${priceRange.value}`;
+    updateFilters();
+  });
+}
+
+function updateFilters() {
+  const selectedDiscounts = Array.from(
+    document.querySelectorAll(
+      '.accordion-body input[type="checkbox"][id^="discount"]:checked'
+    )
+  ).map((cb) => parseInt(cb.id.replace("discount", "")));
+
+  const selectedSizes = Array.from(
+    document.querySelectorAll(
+      '.accordion-body input[type="checkbox"][id^="size"]:checked'
+    )
+  ).map((cb) => cb.id.replace("size", ""));
+
+  const selectedPrice = document.getElementById("priceRange").value;
+
+  topwearProducts(selectedDiscounts, selectedSizes, selectedPrice);
 }

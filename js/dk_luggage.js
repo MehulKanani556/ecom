@@ -354,65 +354,135 @@ async function luggageNewQuickcart() {
 }
 
 // luggage page Trending Deals
-const luggage_trending_dealing = [
-  {
-    id: "1",
-    images: [
-      "lagage_safari_dels.png",
-      "lagage_safari_dels.png",
-      "lagage_safari_dels.png",
-      "lagage_safari_dels.png",
-      "lagage_safari_dels.png",
-    ],
-    name: "SAFARI",
-    categorydesc: "Polaris Castle Black Trolley Bag  ",
-    thumbnail: ["lagage_safari_dels1.png", "lagage_safari_dels1.png"],
-    discount: "40",
-    price: "799",
-    link: "productdetails",
-  },
-  {
-    id: "2",
-    images: [
-      "lagage_paris_dels.png",
-      "lagage_paris_dels.png",
-      "lagage_paris_dels.png",
-      "lagage_paris_dels.png",
-      "lagage_paris_dels.png",
-    ],
-    name: "DELSEY PARIS",
-    categorydesc: "TURENNE Duffle Bag (55cm)",
-    thumbnail: ["lagage_paris_dels1.png", "lagage_paris_dels1.png"],
-    discount: "50",
-    price: "399",
-    link: "productdetails",
-  },
-  {
-    id: "3",
-    images: [
-      "lagage_remova_dels.png",
-      "lagage_remova_dels.png",
-      "lagage_remova_dels.png",
-      "lagage_remova_dels.png",
-      "lagage_remova_dels.png",
-    ],
-    name: "REMOWA",
-    categorydesc: "Signature - Flap Backpack Large",
-    thumbnail: [
-      "lagage_remova_dels1.png",
-      "lagage_remova_dels1.png",
-      "lagage_remova_dels1.png",
-    ],
-    discount: "40",
-    price: "299",
-    link: "productdetails",
-  },
-];
+// const luggage_trending_dealing = [
+//   {
+//     id: "1",
+//     images: [
+//       "lagage_safari_dels.png",
+//       "lagage_safari_dels.png",
+//       "lagage_safari_dels.png",
+//       "lagage_safari_dels.png",
+//       "lagage_safari_dels.png",
+//     ],
+//     name: "SAFARI",
+//     categorydesc: "Polaris Castle Black Trolley Bag  ",
+//     thumbnail: ["lagage_safari_dels1.png", "lagage_safari_dels1.png"],
+//     discount: "40",
+//     price: "799",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "2",
+//     images: [
+//       "lagage_paris_dels.png",
+//       "lagage_paris_dels.png",
+//       "lagage_paris_dels.png",
+//       "lagage_paris_dels.png",
+//       "lagage_paris_dels.png",
+//     ],
+//     name: "DELSEY PARIS",
+//     categorydesc: "TURENNE Duffle Bag (55cm)",
+//     thumbnail: ["lagage_paris_dels1.png", "lagage_paris_dels1.png"],
+//     discount: "50",
+//     price: "399",
+//     link: "productdetails",
+//   },
+//   {
+//     id: "3",
+//     images: [
+//       "lagage_remova_dels.png",
+//       "lagage_remova_dels.png",
+//       "lagage_remova_dels.png",
+//       "lagage_remova_dels.png",
+//       "lagage_remova_dels.png",
+//     ],
+//     name: "REMOWA",
+//     categorydesc: "Signature - Flap Backpack Large",
+//     thumbnail: [
+//       "lagage_remova_dels1.png",
+//       "lagage_remova_dels1.png",
+//       "lagage_remova_dels1.png",
+//     ],
+//     discount: "40",
+//     price: "299",
+//     link: "productdetails",
+//   },
+// ];
 
-const luggagetrending_deals = luggage_trending_dealing
-  .map((item) => {
-    return `
-        <div class="swiper-slide">
+// const luggagetrending_deals = luggage_trending_dealing
+//   .map((item) => {
+//     return `
+//         <div class="swiper-slide">
+//             <div class="product-card w-100">
+//             <a href="../darshit/${item.link}.html">
+//                 <div class="swiper innerSwiper">
+//                     <div class="swiper-wrapper">
+//                             ${item.images
+//                               .map(
+//                                 (img) =>
+//                                   `<div class="swiper-slide">
+//                                 <img src="../img/${img}" alt="${item.name} Image" class="r_v1img">
+//                             </div>`
+//                               )
+//                               .join("")}
+//                         </div>
+//                             <div class="swiper-pagination"></div>
+//                         </div>
+//                             <h5 style="color: #000000;" class="mv_tsmh">${
+//                               item.name
+//                             }</h5>
+//                             <p  style="color: #000000;" class="mv_tssh text-start">${
+//                               item.categorydesc
+//                             }</p>
+//                         <div class="r_thumbnailimg d-flex align-items-center">
+//                             ${item.thumbnail
+//                               .map(
+//                                 (thumb) =>
+//                                   `<img src="../img/${thumb}" alt="${item.name} Thumbnail">`
+//                               )
+//                               .join("")}
+//                         </div>
+//                         <div class="mv_discount_text">${
+//                           item.discount
+//                         }% OFF</div>
+//                         <p class="text-start m-0">
+//                         <strong class="mv_less_discount_price">$${
+//                           item.price -
+//                           (item.price * (item.discount / 100)).toFixed(0)
+//                         }</strong>
+//                         <del class="mv_without_discount_price">$${
+//                           item.price
+//                         }</del>
+//                     </p>
+//                      </a>
+//              </div>
+//         </div>
+//     `;
+//   })
+//   .join("");
+
+// document.getElementById("dk_luggage_trending").innerHTML =
+//   luggagetrending_deals;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await luggageTrendingDeal();
+});
+
+async function luggageTrendingDeal() {
+  try {
+    const response = await fetch("./../data/db.json");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const luggageTrendingDeal = data.luggageTrendingDeal;
+
+    const luggageTrendingDealHtml = luggageTrendingDeal
+      .map(
+        (item) => `
+         <div class="swiper-slide">
             <div class="product-card w-100">
             <a href="../darshit/${item.link}.html">                      
                 <div class="swiper innerSwiper">
@@ -457,13 +527,61 @@ const luggagetrending_deals = luggage_trending_dealing
                      </a>
              </div>
         </div>
-    `;
-  })
-  .join("");
+        `
+      )
+      .join("");
 
+    // Append HTML before initializing Swipers
+    document.getElementById("dk_luggage_trending").innerHTML =
+      luggageTrendingDealHtml;
 
-document.getElementById("dk_luggage_trending").innerHTML =
-  luggagetrending_deals;
+    // Initialize inner sliders for each product card
+    document.querySelectorAll(".innerSwiper").forEach((innerSlider) => {
+      new Swiper(innerSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: innerSlider.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+      });
+    });
+
+    // Initialize main outer slider for product cards
+    var mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".mainSwiper .swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        425: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  } catch (error) {
+    console.error("Error loading categories:", error);
+  }
+}
 
 //luggage page Trending in Beauty & Makeup
 // const luggage_trend_accessories = [
