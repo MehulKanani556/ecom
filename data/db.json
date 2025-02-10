@@ -154,20 +154,32 @@
       "name": "Kottysssss",
       "category": "women",
       "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
-      "discount": "30",
-      "price": "200",
+      "thumbnail": [
+        "ketty2.png",
+        "ketty2.png",
+        "ketty2.png"
+      ],
+      "discount": "10",
+      "price": "50",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"Allen Solly",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
@@ -240,15 +252,23 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"Allen Solly",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
@@ -321,15 +341,23 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"Allen Solly",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
@@ -398,19 +426,27 @@
         "vano modo sub3.png",
         "vano modo sub3.png"
       ],
-      "discount": "30",
+      "discount": "20",
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"Allen Solly",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
@@ -474,24 +510,36 @@
       "name": "Kottysssss",
       "category": "women",
       "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "thumbnail": [
+        "ketty2.png",
+        "ketty2.png",
+        "ketty2.png"
+      ],
       "discount": "30",
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "brand":"H&M",
+      "topwear":"shirt",
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
-      "sleeve": "Short / Half Sleeve",
+      "sleeve": "Half Sleeve",
       "fabric": "Pure Cotton",
       "fit": "Regular Fit",
       "washcare": "Machine Wash",
@@ -560,19 +608,27 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "brand":"H&M",
+      "topwear":"shirt",
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
-      "sleeve": "Short / Half Sleeve",
+      "sleeve": "Half Sleeve",
       "fabric": "Pure Cotton",
       "fit": "Regular Fit",
       "washcare": "Machine Wash",
@@ -641,15 +697,23 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"Allen Solly",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
@@ -722,19 +786,27 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
       ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
+      ],
+      "brand":"H&M",
+      "topwear":"shirt",
       "pattern": "Solid",
       "length": "Regular",
       "neck": "Polo Collar",
-      "sleeve": "Short / Half Sleeve",
+      "sleeve": "Half Sleeve",
       "fabric": "Pure Cotton",
       "fit": "Regular Fit",
       "washcare": "Machine Wash",
@@ -794,19 +866,29 @@
       "name": "Kottysssss",
       "category": "women",
       "categorydesc": "Hot Pink V-Neck Bishop Sleeve Satin Wrap Crop Top",
-      "thumbnail": ["ketty2.png", "ketty2.png", "ketty2.png"],
+      "thumbnail": [
+        "ketty2.png",
+        "ketty2.png",
+        "ketty2.png"
+      ],
       "discount": "30",
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -880,14 +962,20 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -961,14 +1049,20 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1042,14 +1136,20 @@
       "price": "200",
       "bestseller": true,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1123,14 +1223,20 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1204,14 +1310,20 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1285,14 +1397,20 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1366,14 +1484,20 @@
       "price": "200",
       "bestseller": false,
       "desc": "Lorem ipsum dolor sit amet consectetur. Massa facilisis scelerisque iaculis habitant congue est",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
-      "color": [
-        "t-2r4.png",
-        "t-2r1.png",
-        "t-2r2.png",
-        "t-2r5.png",
-        "t-2r4.png",
-        "t-2r3.png"
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "color":[
+        {"id":1, "colorimg":"t-2r4.png","colorname":"gray"},
+        {"id":2, "colorimg":"t-2r1.png","colorname":"yellow"},
+        {"id":3, "colorimg":"t-2r2.png","colorname":"white"},
+        {"id":4, "colorimg":"t-2r5.png","colorname":"green"},
+        {"id":5, "colorimg":"t-2r4.png","colorname":"blue"},
+        {"id":5, "colorimg":"t-2r5.png","colorname":"red"}
       ],
       "pattern": "Solid",
       "length": "Regular",
@@ -1619,7 +1743,11 @@
       ],
       "name": "New Balance",
       "categorydesc": "Men's Fresh Foam X 1080v14",
-      "thumbnail": ["new_balance1.png", "new_balance2.png", "new_balance3.png"],
+      "thumbnail": [
+        "new_balance1.png",
+        "new_balance2.png",
+        "new_balance3.png"
+      ],
       "discount": "40",
       "price": "700",
       "link": "productdetails"
@@ -1635,7 +1763,9 @@
       ],
       "name": "Reebok",
       "categorydesc": "Women's Running App",
-      "thumbnail": ["trending_reebok1.png"],
+      "thumbnail": [
+        "trending_reebok1.png"
+      ],
       "discount": "50",
       "price": "399",
       "link": "productdetails"
@@ -1651,7 +1781,10 @@
       ],
       "name": "SKECHERS",
       "categorydesc": "Unisex Adults SK FIT YOGA MAT..",
-      "thumbnail": ["trending_skechers1.png", "trending_skechers1.png"],
+      "thumbnail": [
+        "trending_skechers1.png",
+        "trending_skechers1.png"
+      ],
       "discount": "40",
       "price": "299",
       "link": "productdetails"
@@ -1734,7 +1867,6 @@
       "link": "productdetails"
     }
   ],
-
   "beautyTopbrands": [
     {
       "id": "1",
@@ -1915,7 +2047,6 @@
       "link": "productdetails"
     }
   ],
-
   "beautyTrendAcc": [
     {
       "id": "1",

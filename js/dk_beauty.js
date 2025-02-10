@@ -310,6 +310,7 @@ async function beautyExploreMore() {
 
 document.addEventListener("DOMContentLoaded", async () => {
   await beautyNewOnQuickCart();
+  await beautytrending_deals();
 });
 
 async function beautyNewOnQuickCart() {
@@ -353,61 +354,23 @@ async function beautyNewOnQuickCart() {
 }
 
 // beauty page Trending Deals
-const beauty_trending_dealing = [
-  {
-    id: "1",
-    images: [
-      "renee_dels.png",
-      "renee_dels.png",
-      "renee_dels.png",
-      "renee_dels.png",
-      "renee_dels.png",
-    ],
-    name: "RENEE",
-    categorydesc: "Madness pH Lipstick, 3gm",
-    thumbnail: ["renee_dels_sm.png"],
-    discount: "40",
-    price: "799",
-    link: "productdetails",
-  },
-  {
-    id: "2",
-    images: [
-      "sugar_dels.png",
-      "sugar_dels.png",
-      "sugar_dels.png",
-      "sugar_dels.png",
-      "sugar_dels.png",
-    ],
-    name: "SUGAR",
-    categorydesc: "Powder Play Banana Compact",
-    thumbnail: ["sugar_dels_sm.png"],
-    discount: "50",
-    price: "399",
-    link: "productdetails",
-  },
-  {
-    id: "3",
-    images: [
-      "colorbar_dels.png",
-      "colorbar_dels.png",
-      "colorbar_dels.png",
-      "colorbar_dels.png",
-      "colorbar_dels.png",
-    ],
-    name: "COLORBAR",
-    categorydesc: "Berry Blush Eyeshadow Palette",
-    thumbnail: ["colorbar_dels_sm.png"],
-    discount: "40",
-    price: "299",
-    link: "productdetails",
-  },
-];
 
-const beautytrending_deals = beauty_trending_dealing
-  .map((item) => {
-    return `
-        <div class="swiper-slide">
+
+async function beautytrending_deals() {
+  try {
+    const response = await fetch("./../data/db.json");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const beautyNewOnQuickCart = data.trendingDeal;
+
+    const beautyNewOnQuickCartHtml = beautyNewOnQuickCart
+      .map(
+        (item) => `
+         <div class="swiper-slide">
             <div class="product-card w-100">
             <a href="../darshit/${item.link}.html">                      
                 <div class="swiper innerSwiper">
@@ -416,7 +379,7 @@ const beautytrending_deals = beauty_trending_dealing
                               .map(
                                 (img) =>
                                   `<div class="swiper-slide">
-                                <img src="../img/${img}" alt="${item.name} Image" class="r_v1img">
+                                <img src="/mv_image/${img}" alt="${item.name} Image" class="r_v1img">
                             </div>`
                               )
                               .join("")}                 
@@ -433,7 +396,7 @@ const beautytrending_deals = beauty_trending_dealing
                             ${item.thumbnail
                               .map(
                                 (thumb) =>
-                                  `<img src="../img/${thumb}" alt="${item.name} Thumbnail">`
+                                  `<img src="/mv_image/${thumb}" alt="${item.name} Thumbnail">`
                               )
                               .join("")}
                         </div>
@@ -442,8 +405,7 @@ const beautytrending_deals = beauty_trending_dealing
                         }% OFF</div>
                         <p class="text-start m-0">
                         <strong class="mv_less_discount_price">$${
-                          item.price -
-                          (item.price * (item.discount / 100)).toFixed(0)
+                          (item.price - item.price * (item.discount / 100)).toFixed(0)
                         }</strong>
                         <del class="mv_without_discount_price">$${
                           item.price
@@ -452,12 +414,117 @@ const beautytrending_deals = beauty_trending_dealing
                      </a>
              </div>
         </div>
-    `;
-  })
-  .join("");
+        `
+      )
+      .join("");
 
-document.getElementById("beauty_trending_deals").innerHTML =
-  beautytrending_deals;
+    // Append HTML before initializing Swipers
+    document.getElementById("beauty_trending_deals").innerHTML = beautyNewOnQuickCartHtml;
+
+    // Initialize inner sliders for each product card
+    document.querySelectorAll(".innerSwiper").forEach((innerSlider) => {
+      new Swiper(innerSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: innerSlider.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+      });
+    });
+
+    // Initialize main outer slider for product cards
+    var mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".mainSwiper .swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        425: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+  } catch (error) {
+    console.error("Error loading categories:", error);
+  }
+}
+
+
+// const beautytrending_deals = beauty_trending_dealing
+//   .map((item) => {
+//     return `
+//         <div class="swiper-slide">
+//             <div class="product-card w-100">
+//             <a href="../darshit/${item.link}.html">                      
+//                 <div class="swiper innerSwiper">
+//                     <div class="swiper-wrapper">
+//                             ${item.images
+//                               .map(
+//                                 (img) =>
+//                                   `<div class="swiper-slide">
+//                                 <img src="../img/${img}" alt="${item.name} Image" class="r_v1img">
+//                             </div>`
+//                               )
+//                               .join("")}                 
+//                         </div>               
+//                             <div class="swiper-pagination"></div>
+//                         </div>              
+//                             <h5 style="color: #000000;" class="mv_tsmh">${
+//                               item.name
+//                             }</h5>
+//                             <p  style="color: #000000;" class="mv_tssh text-start">${
+//                               item.categorydesc
+//                             }</p>
+//                         <div class="r_thumbnailimg d-flex align-items-center">
+//                             ${item.thumbnail
+//                               .map(
+//                                 (thumb) =>
+//                                   `<img src="../img/${thumb}" alt="${item.name} Thumbnail">`
+//                               )
+//                               .join("")}
+//                         </div>
+//                         <div class="mv_discount_text">${
+//                           item.discount
+//                         }% OFF</div>
+//                         <p class="text-start m-0">
+//                         <strong class="mv_less_discount_price">$${
+//                           item.price -
+//                           (item.price * (item.discount / 100)).toFixed(0)
+//                         }</strong>
+//                         <del class="mv_without_discount_price">$${
+//                           item.price
+//                         }</del>
+//                     </p>
+//                      </a>
+//              </div>
+//         </div>
+//     `;
+//   })
+//   .join("");
+
+// document.getElementById("beauty_trending_deals").innerHTML =
+//   beautytrending_deals;
 
 //beauty page Trending in Beauty & Makeup
 // const beauty_trend_accessories = [
