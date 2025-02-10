@@ -1990,6 +1990,7 @@ a{
     z-index: 0; 
     width: 50%;
 }
+
 .dk_order_tracking_step:not(:last-child) .dk_order_tracking_line {
     width: 100%;
 }

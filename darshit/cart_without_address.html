@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        .dk_ordder_tracking_without_address {
+        .dk_ordder_tracking_without_address,
+        .dk_ordder_tracking_without_address1 {
             position: absolute;
             top: 27%;
             left: 14px;
@@ -30,6 +31,11 @@
             background-color: #d2d2d2;
             z-index: 0;
             width: 95%;
+        }
+
+        .dk_ordder_tracking_without_address.active,
+        .dk_ordder_tracking_without_address1.active {
+            background-color: #000;
         }
 
         @media (max-width:575px) {
@@ -85,7 +91,7 @@
                                 </div>
                                 <h4>Delivery Details</h4>
                             </div>
-                            <div class="dk_ordder_tracking_without_address"></div>
+                            <div class="dk_ordder_tracking_without_address dk_ordder_tracking_without_address1"></div>
                             <div class="dk_order_tracking_step">
                                 <div class="dk_order_tracking_circle">
                                     <i class="fa-solid fa-dollar-sign"></i>
@@ -183,7 +189,7 @@
                                                             </div>
                                                             <div>
                                                                 <a href="../darshit/order_confirmation.html">
-                                                                    <button class="dk_pay_payment_button">Pay
+                                                                    <button class="dk_pay_payment_button dk_pay_amt">Pay
                                                                         $497</button>
                                                                 </a>
                                                             </div>
@@ -252,7 +258,8 @@
                                                     </div>
                                                     <div class="text-center">
                                                         <a href="../darshit/order_confirmation.html">
-                                                            <button class="dk_pay_payment_button">Pay $497</button>
+                                                            <button class="dk_pay_payment_button dk_pay_amt">Pay
+                                                                $497</button>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -293,7 +300,8 @@
                                                         </div>
                                                         <div class="text-center">
                                                             <a href="../darshit/order_confirmation.html">
-                                                                <button class="dk_pay_payment_button">Pay $497</button>
+                                                                <button class="dk_pay_payment_button dk_pay_amt">Pay
+                                                                    $497</button>
                                                             </a>
                                                         </div>
                                                     </div>

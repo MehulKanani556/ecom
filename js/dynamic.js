@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadBrowsingproduct();
     await loadwishlistdata();
     await loadSimilarProduct();
+    await loadYoulikeproduct();
     await loadcartdata();
     // await loadtopwearProduct();
 
@@ -301,7 +302,6 @@ async function loadBestsellerProduct() {
 
             return `
                 <div class="col-xl-3 col-sm-6 text p-2">
-                    <a>
                         <div class="dk_browsing_products">
                             <div class="card" data-card-index="${index}">
                                  <div class="dk_bedge">
@@ -340,7 +340,6 @@ async function loadBestsellerProduct() {
                             </div>
                             <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
-                    </a>
                 </div>
             `;
         }).join("");
@@ -377,7 +376,6 @@ async function loadTopsellingSmartphone() {
 
             return `
                 <div class="col-xl-3 col-sm-6 text p-2">
-                    <a>
                         <div class="dk_browsing_products">
                             <div class="card" data-card-index="${index}">
                                  <div class="dk_bedge">
@@ -386,7 +384,6 @@ async function loadTopsellingSmartphone() {
                                 <div class="icon-container">
                                     <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
-
                                     </span>
                                     <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
@@ -425,7 +422,6 @@ async function loadTopsellingSmartphone() {
                             </div>
                             <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
                         </div>
-                    </a>
                 </div>
             `;
         }).join("");
@@ -574,6 +570,7 @@ async function loadwishlistdata() {
         const dk_wishlistdata = document.querySelector("#dk_wishlistdata");
         const wishlistCount = document.getElementById("wishlist_count");
 
+
         const wishlistProducts = data.products.filter(product => wishlist.includes(product.id));
 
         if (wishlistProducts?.length > 0) {
@@ -613,6 +610,10 @@ async function loadwishlistdata() {
                                 <a href="productdetails.html?id=${item.id}">
                                 <h2>${item.name}</h2>
                                 <p>${item.categorydesc}</p>
+
+                                <div class="dk_rating">
+                                ${generateStars(item.totalrank)}
+                            </div>
 
                                 <div class="thumbnails">
                                     ${item.thumbnail.map((thumb, thumbIndex) =>
@@ -839,7 +840,7 @@ function single_data(item) {
 
                     <!-- Buttons for Cart and Wishlist -->
                     <div class="mt-3">
-                        <button class="r_buttons me-3">Add to Cart</button>
+                        <button class="r_buttons me-3" onclick="addToCart(event, ${item.id})">Add to Cart</button>
                         <button class="r_buttons" onclick="toggleWishlist(event, ${item.id})">Add to Wishlist</button>
                     </div>
 
@@ -1444,7 +1445,8 @@ async function loadSimilarProduct() {
 
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-        const productHtml = product.map((item, index) => {
+
+        const similarHtml = product.map((item, index) => {
 
             const isWishlist = wishlist.includes(item.id);
 
@@ -1503,7 +1505,7 @@ async function loadSimilarProduct() {
         }).join("");
 
         if (document.getElementById("dk_similarproduct")) {
-            document.getElementById("dk_similarproduct").innerHTML = productHtml;
+            document.getElementById("dk_similarproduct").innerHTML = similarHtml;
         }
 
         initializeSliders();
@@ -1538,8 +1540,6 @@ function addToCart(event, productId) {
 
                     cartItems.push(cartProduct);
 
-
-
                     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
                     alert('Product added to cart successfully!');
@@ -1568,16 +1568,16 @@ async function loadcartdata() {
         cartItems.filter(item => savedCheckboxStates[item.id]) :
         cartItems;
 
-        if (!cartItems || cartItems.length === 0) {
-            if (emptycartdata) emptycartdata.style.display = "block";
-            if (dk_cartdata) dk_cartdata.style.display = "none";
-            if (cartSection) cartSection.style.display = "none";
-            return; 
-        }
-    
-        if (emptycartdata) emptycartdata.style.display = "none";
-        if (dk_cartdata) dk_cartdata.style.display = "block";
-        if (cartSection) cartSection.style.display = "block";
+    if (!cartItems || cartItems.length === 0) {
+        if (emptycartdata) emptycartdata.style.display = "block";
+        if (dk_cartdata) dk_cartdata.style.display = "none";
+        if (cartSection) cartSection.style.display = "none";
+        return;
+    }
+
+    if (emptycartdata) emptycartdata.style.display = "none";
+    if (dk_cartdata) dk_cartdata.style.display = "block";
+    if (cartSection) cartSection.style.display = "block";
 
 
     const productHtml = itemsToDisplay.map((item, index) => {
@@ -1753,6 +1753,11 @@ function updateOrderSummary(totals) {
         const totalSavings = totals.totalDiscount + (totals.couponDiscount || 0);
         savingsElement.textContent = `You will save $${totalSavings.toFixed(0)} on this order`;
     }
+
+    const payElements = document.querySelectorAll(".dk_pay_amt");
+    payElements.forEach(pay => {
+        pay.textContent = `Pay $${totals.totalAmount.toFixed(0)}`;
+    });
 }
 
 
@@ -2018,6 +2023,8 @@ function updateOrderSummaryWithDelivery(deliveryCharge) {
 function updateOrderTrackingUI(step) {
     const circles = document.querySelectorAll('.dk_order_tracking_circle');
     const steps = document.querySelectorAll('.dk_order_tracking_step h4, .dk_order_tracking_step h3');
+    const addressCircles = document.querySelectorAll('.dk_ordder_tracking_without_address');
+    const lines = document.querySelectorAll('.dk_ordder_tracking_without_address');
 
     circles.forEach((circle, index) => {
         if (index < step) {
@@ -2027,9 +2034,28 @@ function updateOrderTrackingUI(step) {
         }
     });
 
+    addressCircles.forEach((circle, index) => {
+        if (step == 2) { 
+            circle.style.backgroundColor = '#000'; 
+        } else {
+            circle.style.backgroundColor = '';
+        }
+    });
+
+    lines.forEach((line, index) => {
+        if (index < step - 1) {
+            line.classList.add('active');
+        } else {
+            line.classList.remove('active');
+        }
+    });
+
     steps.forEach((stepText, index) => {
         if (index < step) {
             stepText.style.color = '#000000';
+        }
+        else {
+            stepText.style.color = '';
         }
     });
 }
@@ -2072,7 +2098,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-async function loadSimilarProduct() {
+async function loadYoulikeproduct() {
     try {
         const response = await fetch('./../data/db.json');
 
@@ -2156,106 +2182,7 @@ async function loadSimilarProduct() {
 
 // top wear js file
 
-// async function loadtopwearProduct() {
-//     try {
-//         const response = await fetch('./../data/db.json');
-
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-
-//         const data = await response.json();
-//         const product = data.products;
-
-//         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-//         const productHtml = product.map((item, index) => {
-
-//             const isWishlist = wishlist.includes(item.id);
-
-//             return `
-//                 <div class="col-12 col-md-6 col-lg-3 mb-4">
-//                     <a href="productdetails.html?id=${item.id}">
-//                         <div class="dk_browsing_products">
-//                             <div class="card" data-card-index="${index}">
-//                                 <div class="icon-container">
-//                                     <span onclick="toggleWishlist(event, ${item.id})" style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'}; class="icon heart" data-product-id="${item.id}">
-//                                        <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
-
-//                                     </span>
-//                                     <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
-//                                         <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
-//                                             alt="Cart Icon" class="cart-icon">
-//                                     </span>
-//                                 </div>
-
-//                                 <div class="slider">
-//                                     ${item.images.map((img, imgIndex) =>
-//                 `<img src="/img/${img}" alt="Product Image" class="slider-image ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">`
-//             ).join('')}
-//                                 </div>
-
-//                                 <div class="dots-container">
-//                                     ${item.images.map((_, dotIndex) =>
-//                 `<span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>`
-//             ).join('')}
-//                                 </div>
-// <a href="productdetails.html?id=${item.id}">
-//                                 <h2>${item.name}</h2>
-//                                 <p>${item.categorydesc}</p>
-
-//                                 <div class="thumbnails">
-//                                     ${item.thumbnail.map((thumb, thumbIndex) =>
-//                 `<img src="/img/${thumb}" alt="Thumbnail" class="thumbnail" data-index="${thumbIndex}">`
-//             ).join('')}
-//                                 </div>
-
-//                                 <div class="off">
-//                                     <span class="off-price">${item.discount}% OFF</span>
-//                                 </div>
-
-//                                 <div class="price">
-//                                     <span class="discount-price">$${(item.price - (item.price * (item.discount / 100))).toFixed(0)}</span>
-//                                     <span class="original-price">$${item.price}</span>
-//                                 </div>
-//                                 </a>
-//                             </div>
-//                             <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
-//                         </div>
-//                     </a>
-//                 </div>
-//             `;
-//         }).join("");
-
-//         if (document.getElementById("topwears_products")) {
-//             document.getElementById("topwears_products").innerHTML = productHtml;
-//         }
-
-//         initializeSliders();
-
-//     } catch (error) {
-//         console.error("Error loading products:", error);
-//     }
-// }
-
-// Global variables to store filter states
-let activeFilters = {
-    discount: [],
-    priceRange: 100,
-    size: [],
-    brand: [],
-    color: [],
-    rating: [],
-    sleeve: [],
-    fit: [],
-    material: [],
-    pattern: [],
-    dressStyle: []
-};
-
-let originalProducts = [];
-
-async function loadTopwearProducts() {
+async function loadtopwearProduct() {
     try {
         const response = await fetch('./../data/db.json');
         if (!response.ok) {
@@ -2263,297 +2190,326 @@ async function loadTopwearProducts() {
         }
 
         const data = await response.json();
-        originalProducts = data.products.slice(0, 8);
-        renderProducts(originalProducts);
-        initializeFilters();
+        let products = data.products.slice(0, 8);
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+
+        // Add click handlers for topwear category buttons
+        const topwearButtons = document.querySelectorAll('.r_border');
+        topwearButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Remove active class from all buttons
+                topwearButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Get the category text
+                const categoryText = button.querySelector('span').textContent.trim().toLowerCase();
+                filterProducts(categoryText);
+            });
+        });
+
+        // Get all discount checkboxes
+        const filterElements = {
+            sleeve: ['sleeveFull', 'sleeveHalf'],
+            brand: ['brand1', 'brand2', 'brand3', 'brand4', 'brand5'],
+            fit: ['fitRegular', 'fitSlim'],
+            fabric: ['Cotton', 'PolyCotton'],
+            discount: ['discount10', 'discount20', 'discount30'],
+            pattern: ['patternSolid', 'patternPrinted'],
+            dressStyle: ['dressCasual', 'dressFormal'],
+            size: ['sizeS', 'sizeM', 'sizeL', 'sizeXL'],
+            rating: ['rating5', 'rating4'],
+            color: ['colorBlack', 'colorWhite', 'colorOrange', 'colorBlue', 'colorGreen']
+        };
+
+        // Add event listeners to all filter checkboxes
+        Object.values(filterElements).flat().forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('change', filterProducts);
+            }
+        });
+
+        const priceRange = document.getElementById('priceRange');
+        if (priceRange) {
+            priceRange.addEventListener('input', filterProducts);
+        }
+
+        function filterProducts(selectedTopwear = null) {
+            let filteredProducts = [...products];
+
+            // Topwear category filter
+            if (typeof selectedTopwear === 'string' && selectedTopwear.trim() !== '') {
+                filteredProducts = filteredProducts.filter(product =>
+                    product.topwear.toLowerCase() === selectedTopwear.toLowerCase()
+                );
+            }
+
+            // Sleeve Type Filter
+            const selectedSleeves = filterElements.sleeve
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('sleeve', '').toLowerCase());
+
+            if (selectedSleeves.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedSleeves.some(sleeve =>
+                        product.sleeve.toLowerCase().includes(sleeve)
+                    )
+                );
+            }
+
+            // Price Range Filter
+            const selectedPrice = parseInt(document.getElementById('priceRange').value);
+            if (selectedPrice) {
+                filteredProducts = filteredProducts.filter(product => {
+                    const discountedPrice = product.price - (product.price * (product.discount / 100));
+                    return discountedPrice <= selectedPrice;
+                });
+            }
+
+            // Color Filter
+            const selectedColors = filterElements.color
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('color', '').toLowerCase());
+
+            if (selectedColors.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    product.color.some(colorObj =>
+                        selectedColors.includes(colorObj.colorname.toLowerCase())
+                    )
+                );
+            }
+
+            // Brand Filter
+            const selectedBrands = filterElements.brand
+                .filter(id => document.getElementById(id).checked)
+                .map(id => {
+                    const label = document.querySelector(`label[for="${id}"]`);
+                    return label ? label.textContent.split('(')[0].trim() : '';
+                });
+
+            if (selectedBrands.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedBrands.includes(product.brand)
+                );
+            }
+
+            // Fit Type Filter
+            const selectedFits = filterElements.fit
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('fit', '').toLowerCase());
+
+            if (selectedFits.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedFits.includes(product.fit.toLowerCase())
+                );
+            }
+
+            // Material Filter
+            const selectedMaterials = filterElements.fabric
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('fabric', '').toLowerCase());
+
+            if (selectedMaterials.length > 0) {
+                debugger
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedMaterials.some(material =>
+                        product.fabric.toLowerCase().includes(material)
+                    )
+                );
+            }
+
+            // Pattern Filter
+            const selectedPatterns = filterElements.pattern
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('pattern', ''));
+
+            if (selectedPatterns.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedPatterns.includes(product.pattern)
+                );
+            }
+
+            // Dress Style Filter
+            const selectedStyles = filterElements.dressStyle
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('dress', '').toLowerCase());
+
+            if (selectedStyles.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedStyles.includes(product.occasional.toLowerCase())
+                );
+            }
+
+            // Size Filter
+            const selectedSizes = filterElements.size
+                .filter(id => document.getElementById(id).checked)
+                .map(id => id.replace('size', ''));
+
+            if (selectedSizes.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    selectedSizes.some(size => product.size.includes(size))
+                );
+            }
+
+            // Rating Filter
+            const selectedRatings = filterElements.rating
+                .filter(id => document.getElementById(id).checked)
+                .map(id => parseInt(id.replace('rating', '')));
+
+            if (selectedRatings.length > 0) {
+                filteredProducts = filteredProducts.filter(product => {
+                    const productRating = parseInt(product.totalrank);
+                    return selectedRatings.some(rating => {
+                        if (rating === 5) return productRating === 5;
+                        if (rating === 4) return productRating === 4;
+                        return false;
+                    });
+                });
+            }
+
+            // Discount Filter
+            const discountFilters = {
+                'discount10': 10,
+                'discount20': 20,
+                'discount30': 30
+            };
+
+            const activeDiscountFilters = Object.entries(discountFilters)
+                .filter(([id, _]) => document.getElementById(id).checked)
+                .map(([_, value]) => value);
+
+            if (activeDiscountFilters.length > 0) {
+                filteredProducts = filteredProducts.filter(product =>
+                    activeDiscountFilters.some(minDiscount =>
+                        parseInt(product.discount) >= minDiscount
+                    )
+                );
+            }
+
+            renderProducts(filteredProducts);
+        }
+
+        // Clear All Filters
+        const clearAllButton = document.querySelector('.r_clear');
+        if (clearAllButton) {
+            clearAllButton.addEventListener('click', () => {
+                // Uncheck all checkboxes
+                Object.values(filterElements).flat().forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) {
+                        checkbox.checked = false;
+                    }
+                });
+
+                // Remove active class from topwear buttons
+                document.querySelectorAll('.r_border').forEach(btn =>
+                    btn.classList.remove('active')
+                );
+
+                // Reset price range if it exists
+                const priceRange = document.getElementById('priceRange');
+                if (priceRange) {
+                    priceRange.value = priceRange.defaultValue;
+                    const priceValue = document.getElementById('priceValue');
+                    if (priceValue) {
+                        priceValue.textContent = `$${priceRange.defaultValue}`;
+                    }
+                }
+
+                // Render all products
+                renderProducts(products);
+            });
+        }
+
+        function renderProducts(productsToRender) {
+            const productHtml = productsToRender.map((item, index) => {
+                const isWishlist = wishlist.includes(item.id);
+                const discountedPrice = (item.price - (item.price * (item.discount / 100))).toFixed(0);
+
+                return `
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+                            <div class="dk_browsing_products">
+                                <div class="card" data-card-index="${index}">
+                                    <div class="icon-container">
+                                        <span onclick="toggleWishlist(event, ${item.id})" 
+                                              style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'};" 
+                                              class="icon heart" 
+                                              data-product-id="${item.id}">
+                                            <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
+                                        </span>
+                                        <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
+                                            <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png"
+                                                alt="Cart Icon" class="cart-icon">
+                                        </span>
+                                    </div>
+
+                                    <div class="slider">
+                                        ${item.images.map((img, imgIndex) =>
+                    `<img src="/img/${img}" 
+                                                  alt="Product Image" 
+                                                  class="slider-image ${imgIndex === 0 ? 'active' : ''}" 
+                                                  data-index="${imgIndex}">`
+                ).join('')}
+                                    </div>
+
+                                    <div class="dots-container">
+                                        ${item.images.map((_, dotIndex) =>
+                    `<span class="dot ${dotIndex === 0 ? 'active' : ''}" 
+                                                   data-index="${dotIndex}"></span>`
+                ).join('')}
+                                    </div>
+
+                                    <a href="productdetails.html?id=${item.id}">
+                                        <h2>${item.name}</h2>
+                                        <p>${item.categorydesc}</p>
+
+                                        <div class="dk_rating">
+                                ${generateStars(item.totalrank)}
+                            </div>
+
+                                        <div class="thumbnails">
+                                            ${item.thumbnail.map((thumb, thumbIndex) =>
+                    `<img src="/img/${thumb}" 
+                                                      alt="Thumbnail" 
+                                                      class="thumbnail" 
+                                                      data-index="${thumbIndex}">`
+                ).join('')}
+                                        </div>
+
+                                        <div class="off">
+                                            <span class="off-price">${item.discount}% OFF</span>
+                                        </div>
+
+                                        <div class="price">
+                                            <span class="discount-price">$${discountedPrice}</span>
+                                            <span class="original-price">$${item.price}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
+                            </div>
+                    </div>
+                `;
+            }).join("");
+
+            const productsContainer = document.getElementById("topwears_products");
+            if (productsContainer) {
+                productsContainer.innerHTML = productHtml;
+            }
+
+            initializeSliders();
+        }
+
+        // Initial render
+        renderProducts(products);
+
     } catch (error) {
         console.error("Error loading products:", error);
     }
 }
 
-function initializeFilters() {
-    // Discount filters
-    document.querySelectorAll('[id^="discount"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const discount = parseInt(checkbox.id.replace('discount', ''));
-            updateFilter('discount', discount, checkbox.checked);
-        });
-    });
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', loadtopwearProduct);
 
-    // Price range filter
-    const priceRange = document.getElementById('priceRange');
-    const priceValue = document.getElementById('priceValue');
-    if (priceRange && priceValue) {
-        priceRange.addEventListener('input', (e) => {
-            const value = parseInt(e.target.value);
-            activeFilters.priceRange = value;
-            priceValue.textContent = `$${value}`;
-            applyFilters();
-        });
-    }
-
-    // Size filters
-    document.querySelectorAll('[id^="size"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const size = checkbox.id.replace('size', '');
-            updateFilter('size', size, checkbox.checked);
-        });
-    });
-
-    // Brand filters
-    document.querySelectorAll('[id^="brand"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const brandLabel = checkbox.nextElementSibling.textContent.split(' ')[0].trim();
-            updateFilter('brand', brandLabel, checkbox.checked);
-        });
-    });
-
-    // Color filters
-    document.querySelectorAll('[id^="color"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const color = checkbox.id.replace('color', '');
-            updateFilter('color', color, checkbox.checked);
-        });
-    });
-
-    // Rating filters
-    document.querySelectorAll('[id^="rating"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const rating = parseInt(checkbox.id.replace('rating', ''));
-            updateFilter('rating', rating, checkbox.checked);
-        });
-    });
-
-    // Sleeve type filters
-    document.querySelectorAll('[id^="sleeve"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const sleeveType = checkbox.id.replace('sleeve', '');
-            updateFilter('sleeve', sleeveType, checkbox.checked);
-        });
-    });
-
-    // Fit type filters
-    document.querySelectorAll('[id^="fit"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const fitType = checkbox.id.replace('fit', '');
-            updateFilter('fit', fitType, checkbox.checked);
-        });
-    });
-
-    // Material filters
-    document.querySelectorAll('[id^="material"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const material = checkbox.id.replace('material', '');
-            updateFilter('material', material, checkbox.checked);
-        });
-    });
-
-    // Pattern filters
-    document.querySelectorAll('[id^="pattern"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const pattern = checkbox.id.replace('pattern', '');
-            updateFilter('pattern', pattern, checkbox.checked);
-        });
-    });
-
-    // Dress style filters
-    document.querySelectorAll('[id^="dress"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            const style = checkbox.id.replace('dress', '');
-            updateFilter('dressStyle', style, checkbox.checked);
-        });
-    });
-
-    // Clear all filters
-    document.querySelector('.r_clear').addEventListener('click', clearAllFilters);
-}
-
-function updateFilter(filterType, value, isActive) {
-    if (isActive) {
-        if (!activeFilters[filterType].includes(value)) {
-            activeFilters[filterType].push(value);
-        }
-    } else {
-        activeFilters[filterType] = activeFilters[filterType].filter(v => v !== value);
-    }
-    applyFilters();
-}
-
-function applyFilters() {
-    let filteredProducts = originalProducts.filter(product => {
-        // Discount filter
-        if (activeFilters.discount.length > 0) {
-            const meetsDiscount = activeFilters.discount.some(minDiscount => 
-                parseInt(product.discount) >= minDiscount
-            );
-            if (!meetsDiscount) return false;
-        }
-
-        // Price filter
-        const discountedPrice = product.price - (product.price * (product.discount / 100));
-        if (discountedPrice > activeFilters.priceRange) return false;
-
-        // Size filter
-        if (activeFilters.size.length > 0) {
-            const hasSize = activeFilters.size.some(size => 
-                product.size.includes(size)
-            );
-            if (!hasSize) return false;
-        }
-
-        // Brand filter
-        if (activeFilters.brand.length > 0) {
-            if (!activeFilters.brand.includes(product.brand)) return false;
-        }
-
-        // Color filter
-        if (activeFilters.color.length > 0) {
-            if (!activeFilters.color.some(color => product.color.includes(color))) return false;
-        }
-
-        // Rating filter
-        if (activeFilters.rating.length > 0) {
-            if (!activeFilters.rating.some(rating => product.rating >= rating)) return false;
-        }
-
-        // Sleeve filter
-        if (activeFilters.sleeve.length > 0) {
-            if (!activeFilters.sleeve.includes(product.sleeveType)) return false;
-        }
-
-        // Fit filter
-        if (activeFilters.fit.length > 0) {
-            if (!activeFilters.fit.includes(product.fitType)) return false;
-        }
-
-        // Material filter
-        if (activeFilters.material.length > 0) {
-            if (!activeFilters.material.includes(product.material)) return false;
-        }
-
-        // Pattern filter
-        if (activeFilters.pattern.length > 0) {
-            if (!activeFilters.pattern.includes(product.pattern)) return false;
-        }
-
-        // Dress Style filter
-        if (activeFilters.dressStyle.length > 0) {
-            if (!activeFilters.dressStyle.includes(product.dressStyle)) return false;
-        }
-
-        return true;
-    });
-
-    renderProducts(filteredProducts);
-}
-
-function clearAllFilters() {
-    // Reset all checkboxes
-    document.querySelectorAll('.form-check-input').forEach(checkbox => {
-        checkbox.checked = false;
-    });
-
-    // Reset price range
-    const priceRange = document.getElementById('priceRange');
-    if (priceRange) {
-        priceRange.value = 100;
-        document.getElementById('priceValue').textContent = '$100';
-    }
-
-    // Reset filter state
-    activeFilters = {
-        discount: [],
-        priceRange: 100,
-        size: [],
-        brand: [],
-        color: [],
-        rating: [],
-        sleeve: [],
-        fit: [],
-        material: [],
-        pattern: [],
-        dressStyle: []
-    };
-
-    // Reset display to show all products
-    renderProducts(originalProducts);
-}
-
-function renderProducts(products) {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    
-    const productHtml = products.map((item, index) => {
-        const isWishlist = wishlist.includes(item.id);
-        const discountedPrice = (item.price - (item.price * (item.discount / 100))).toFixed(0);
-        
-        return `
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
-                <div class="dk_browsing_products">
-                    <div class="card" data-card-index="${index}">
-                        <div class="icon-container">
-                            <span onclick="toggleWishlist(event, ${item.id})" 
-                                  style="cursor: pointer !important; color: ${isWishlist ? '#ff0000' : '#000000'};" 
-                                  class="icon heart" 
-                                  data-product-id="${item.id}">
-                                <i class="fa-${isWishlist ? 'solid' : 'regular'} fa-heart"></i>
-                            </span>
-                            <span onclick="addToCart(event, ${item.id})" style="cursor: pointer !important;">
-                                <img height="25px" width="25px" src="/mv_image/icon_cart_selected.png" alt="Cart Icon" class="cart-icon">
-                            </span>
-                        </div>
-
-                        <div class="slider">
-                            ${item.images.map((img, imgIndex) => `
-                                <img src="/img/${img}" 
-                                     alt="Product Image" 
-                                     class="slider-image ${imgIndex === 0 ? 'active' : ''}" 
-                                     data-index="${imgIndex}">
-                            `).join('')}
-                        </div>
-
-                        <div class="dots-container">
-                            ${item.images.map((_, dotIndex) => `
-                                <span class="dot ${dotIndex === 0 ? 'active' : ''}" 
-                                      data-index="${dotIndex}"></span>
-                            `).join('')}
-                        </div>
-
-                        <a href="productdetails.html?id=${item.id}">
-                            <h2>${item.name}</h2>
-                            <p>${item.categorydesc}</p>
-
-                            <div class="thumbnails">
-                                ${item.thumbnail.map((thumb, thumbIndex) => `
-                                    <img src="/img/${thumb}" 
-                                         alt="Thumbnail" 
-                                         class="thumbnail" 
-                                         data-index="${thumbIndex}">
-                                `).join('')}
-                            </div>
-
-                            <div class="off">
-                                <span class="off-price">${item.discount}% OFF</span>
-                            </div>
-
-                            <div class="price">
-                                <span class="discount-price">$${discountedPrice}</span>
-                                <span class="original-price">$${item.price}</span>
-                            </div>
-                        </a>
-                    </div>
-                    <a href="productdetails.html?id=${item.id}" class="buy-now">Buy Now</a>
-                </div>
-            </div>
-        `;
-    }).join('');
-
-    const productsContainer = document.getElementById('topwears_products');
-    if (productsContainer) {
-        productsContainer.innerHTML = productHtml;
-    }
-
-    initializeSliders();
-}
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', loadTopwearProducts);

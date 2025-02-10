@@ -29,7 +29,7 @@
       <div class="col-md-3 col-lg-2 filter-sidebar">
         <div class="d-flex justify-content-between mt-2">
           <h5>Filters</h5>
-          <p class="r_clear">Clear All</p>
+          <p class="r_clear" style="cursor: pointer;">Clear All</p>
         </div>
 
         <div class="filter-accordion accordion" id="filterAccordion" style="background-color: transparent; margin: 0">
@@ -71,10 +71,10 @@
             <div id="priceCollapse" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
               <div class="accordion-body">
                 <div class="price-range-container">
-                  <input type="range" class="form-range" id="priceRange" min="0" max="100" />
+                  <input type="range" class="form-range" id="priceRange" min="0" max="5000" />
                   <div class="d-flex justify-content-between">
                     <span>$0</span>
-                    <span id="priceValue">$100</span>
+                    <span id="priceValue">$5000</span>
                   </div>
                 </div>
               </div>
@@ -123,23 +123,23 @@
               <div class="accordion-body">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="brand1" />
-                  <label class="form-check-label" for="brand1">Allen Solly (10)</label>
+                  <label class="form-check-label" for="brand1">Allen Solly <span>(10)</span></label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="brand2" />
-                  <label class="form-check-label" for="brand2">H&M (20)</label>
+                  <label class="form-check-label" for="brand2">H&M <span>(20)</span></label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="brand3" />
-                  <label class="form-check-label" for="brand3">JACK & JONES (30)</label>
+                  <label class="form-check-label" for="brand3">JACK & JONES <span>(30)</span></label>
                 </div>
                 <div class="form-check hidden-item">
                   <input class="form-check-input" type="checkbox" id="brand4" />
-                  <label class="form-check-label" for="brand4">U.S. POLO ASSN. (20)</label>
+                  <label class="form-check-label" for="brand4">U.S. POLO ASSN. <span>(40)</span></label>
                 </div>
                 <div class="form-check hidden-item">
                   <input class="form-check-input" type="checkbox" id="brand5" />
-                  <label class="form-check-label" for="brand5">Raymond (42)</label>
+                  <label class="form-check-label" for="brand5">Raymond <span>(42)</span></label>
                 </div>
                 <button class="show-more-btn" data-section="brand">
                   Show More
@@ -314,11 +314,11 @@
             <div id="materialCollapse" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
               <div class="accordion-body">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="materialCotton" />
+                  <input class="form-check-input" type="checkbox" id="Cotton" />
                   <label class="form-check-label" for="materialCotton">Cotton</label>
                 </div>
                 <div class="form-check hidden-item">
-                  <input class="form-check-input" type="checkbox" id="materialPolyCotton" />
+                  <input class="form-check-input" type="checkbox" id="PolyCotton" />
                   <label class="form-check-label" for="materialPolyCotton">Poly Cotton</label>
                 </div>
                 <button class="show-more-btn" data-section="material">
@@ -387,27 +387,27 @@
             <h3>Topwear</h3>
           </div>
           <div class="d-flex flex-wrap">
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/redtshirt.svg" alt="" />
               <span class="mb-0">T Shirt</span>
             </div>
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/purple.svg" alt="" />
               <span class="mb-0">Shirt</span>
             </div>
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/black.svg" alt="" />
               <span class="mb-0">Sweatshirt & Hoodies</span>
             </div>
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/brown.svg" alt="" />
               <span class="mb-0">Jackets</span>
             </div>
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/suit.svg" alt="" />
               <span class="mb-0">Suits</span>
             </div>
-            <div class="d-flex align-items-center r_border">
+            <div class="d-flex align-items-center r_border dk_cursor">
               <img src="../r_img/graytshirt.svg" alt="" />
               <span class="mb-0">Sweaters</span>
             </div>
