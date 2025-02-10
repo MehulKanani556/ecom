@@ -3,12 +3,27 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupDiscountFilter();
   setupSizeFilter();
   setupPriceFilter();
+  setupSearchFilter();
 });
 
+// Add new search setup function
+function setupSearchFilter() {
+  const searchInput = document.querySelector(".dk_search_bar input");
+
+  // Add debounce to prevent too many API calls
+  let debounceTimer;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      updateFilters();
+    }, 300);
+  });
+}
 async function topwearProducts(
   selectedDiscounts = [],
   selectedSizes = [],
-  selectedPrice = 300
+  selectedPrice = 300,
+  searchQuery = ""
 ) {
   try {
     const response = await fetch("./../data/db.json");
@@ -18,6 +33,16 @@ async function topwearProducts(
 
     const data = await response.json();
     let topwearProducts = data.topwearProducts;
+
+    // Apply search filter if search query exists
+    if (searchQuery.trim() !== "") {
+      const searchTerm = searchQuery.toLowerCase().trim();
+      topwearProducts = topwearProducts.filter(
+        (item) =>
+          item.name.toLowerCase().includes(searchTerm) ||
+          item.categorydesc.toLowerCase().includes(searchTerm)
+      );
+    }
 
     // Filter products based on selected discounts
     if (selectedDiscounts.length > 0) {
@@ -38,6 +63,21 @@ async function topwearProducts(
       (item) => item.price - (item.price * item.discount) / 100 <= selectedPrice
     );
 
+    // Show "No products found" message if no results
+    if (topwearProducts.length === 0) {
+      document.getElementById("topwears_products").innerHTML = `
+         <section>
+            <div class="container">
+                <div class="dk_search_page">
+                    <img src="../img/searchpage.png" alt="">
+                    <h2>No Result Found</h2>
+                    <p>We have no items to show you according to your search please <br> search with some other keyword</p>
+                </div>
+            </div>
+         </section>
+      `;
+      return;
+    }
     const topwearProductsHtml = topwearProducts
       .map(
         (item) => `
@@ -179,5 +219,8 @@ function updateFilters() {
 
   const selectedPrice = document.getElementById("priceRange").value;
 
-  topwearProducts(selectedDiscounts, selectedSizes, selectedPrice);
+  // Get search query
+  const searchQuery = document.querySelector(".dk_search_bar input").value;
+
+  topwearProducts(selectedDiscounts, selectedSizes, selectedPrice, searchQuery);
 }
